@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>最近30天新闻日报</title>
+<style>
+:root {
+  --bg: #f5f6f8; --card-bg: #ffffff;
+  --text: #1a1a2e; --text-secondary: #5a5a7a; --text-muted: #8e8ea8;
+  --border: #e4e6ed; --accent: #2563eb; --accent-light: #e8f0fe;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --radius: 10px;
+  --cat-finance: #e85d04; --cat-finance-bg: #fff2e8;
+  --cat-quant: #7c3aed;   --cat-quant-bg: #f3eeff;
+  --cat-ai: #059669;      --cat-ai-bg: #e6f7ef;
+  --cat-tech: #2563eb;    --cat-tech-bg: #e8f0fe;
+  --cat-media: #db2777;   --cat-media-bg: #fde8f0;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh;
+}
+.header {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: #fff; padding: 36px 24px 28px; text-align: center;
+  position: sticky; top: 0; z-index: 100;
+}
+.header h1 { font-size: 26px; font-weight: 700; letter-spacing: 1px; margin-bottom: 4px; }
+.header .subtitle { font-size: 13px; opacity: 0.7; }
+.header .stats-row { margin-top: 14px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.header .stat { background: rgba(255,255,255,0.1); border-radius: 8px; padding: 8px 14px; font-size: 12px; }
+.header .stat strong { font-size: 18px; display: block; }
+.container { max-width: 960px; margin: 0 auto; padding: 20px 16px 60px; }
+.filter-bar {
+  background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 16px 18px; margin-bottom: 18px; display: flex; flex-wrap: wrap;
+  gap: 10px; align-items: center;
+}
+.filter-bar label { font-size: 13px; color: var(--text-secondary); white-space: nowrap; }
+.filter-bar input[type="text"] {
+  flex: 1 1 160px; min-width: 120px; padding: 7px 10px;
+  border: 1px solid var(--border); border-radius: 6px; font-size: 13px; outline: none;
+}
+.filter-bar input[type="text"]:focus { border-color: var(--accent); }
+.filter-bar input[type="date"] {
+  padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px;
+  font-size: 12px; outline: none; color: var(--text-secondary);
+}
+.filter-bar .btn-clear { padding: 7px 14px; border: 1px solid var(--border); border-radius: 6px; background: #fff; color: var(--text-secondary); font-size: 12px; cursor: pointer; }
+.filter-bar .btn-clear:hover { background: #f1f5f9; }
+.cat-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.cat-chip {
+  padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 500;
+  cursor: pointer; border: 1px solid var(--border); background: #fff;
+  color: var(--text-secondary); transition: all 0.2s; user-select: none;
+}
+.cat-chip:hover { border-color: var(--accent); color: var(--accent); }
+.cat-chip.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.summary-toggle {
+  display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px;
+  border-radius: 8px; font-size: 13px; font-weight: 500; cursor: pointer;
+  background: var(--card-bg); border: 1px solid var(--border); color: var(--text);
+  margin-bottom: 14px; transition: all 0.2s;
+}
+.summary-toggle:hover { background: var(--accent-light); border-color: var(--accent); }
+.summary-toggle .arrow { transition: transform 0.2s; font-size: 11px; }
+.summary-toggle.open .arrow { transform: rotate(180deg); }
+.daily-summary { background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px 22px; margin-bottom: 18px; display: none; }
+.daily-summary.show { display: block; }
+.daily-summary h3 { font-size: 15px; margin-bottom: 10px; color: var(--text); }
+.daily-summary p { font-size: 13px; color: var(--text-secondary); line-height: 1.8; }
+.news-list { display: flex; flex-direction: column; gap: 18px; }
+.day-group { }
+.day-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; padding-bottom: 7px; border-bottom: 2px solid var(--accent); }
+.day-header .date-label { font-size: 14px; font-weight: 700; color: var(--text); }
+.day-header .day-count { font-size: 11px; color: var(--text-muted); background: var(--accent-light); padding: 2px 9px; border-radius: 10px; }
+.day-header .weekday { font-size: 12px; color: var(--text-muted); }
+.news-card { background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 8px; overflow: hidden; transition: box-shadow 0.2s, transform 0.15s; }
+.news-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); transform: translateY(-1px); }
+.news-card-inner { padding: 14px 18px; display: flex; gap: 12px; align-items: flex-start; }
+.news-card .cat-dot { margin-top: 2px; flex-shrink: 0; }
+.news-card .cat-badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: 600; letter-spacing: 0.5px; }
+.cat-badge.finance { background: var(--cat-finance-bg); color: var(--cat-finance); }
+.cat-badge.quant   { background: var(--cat-quant-bg);   color: var(--cat-quant); }
+.cat-badge.ai      { background: var(--cat-ai-bg);      color: var(--cat-ai); }
+.cat-badge.tech    { background: var(--cat-tech-bg);    color: var(--cat-tech); }
+.cat-badge.media   { background: var(--cat-media-bg);   color: var(--cat-media); }
+.news-card .content { flex: 1; min-width: 0; }
+.news-card .title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+.news-card .title a { color: inherit; text-decoration: none; }
+.news-card .title a:hover { color: var(--accent); }
+.news-card .summary { font-size: 12px; color: var(--text-secondary); line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.news-card .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; font-size: 11px; color: var(--text-muted); align-items: center; }
+.news-card .source-link { color: var(--accent); text-decoration: none; font-weight: 500; }
+.news-card .source-link:hover { text-decoration: underline; }
+.empty-state { text-align: center; padding: 50px 20px; color: var(--text-muted); }
+.empty-state .icon { font-size: 40px; margin-bottom: 10px; }
+.empty-state p { font-size: 13px; }
+.loading { text-align: center; padding: 50px; color: var(--text-muted); font-size: 13px; }
+.spinner { width: 28px; height: 28px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto 10px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (max-width: 640px) {
+  .header { padding: 26px 14px 22px; }
+  .header h1 { font-size: 20px; }
+  .filter-bar { flex-direction: column; align-items: stretch; }
+  .news-card-inner { flex-direction: column; gap: 4px; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>最近30天新闻日报</h1>
+  <div class="subtitle" id="dateRangeLabel">数据加载中…</div>
+  <div class="stats-row">
+    <div class="stat">总条数<strong id="statTotal">--</strong></div>
+    <div class="stat">覆盖天数<strong id="statDays">--</strong></div>
+    <div class="stat">分类数<strong id="statCats">--</strong></div>
+  </div>
+</div>
+<div class="container">
+  <div class="cat-chips" id="catChips">
+    <span class="cat-chip active" data-cat="all">全部</span>
+    <span class="cat-chip" data-cat="AI">AI</span>
+    <span class="cat-chip" data-cat="量化">量化</span>
+    <span class="cat-chip" data-cat="财经">财经</span>
+    <span class="cat-chip" data-cat="科技">科技</span>
+    <span class="cat-chip" data-cat="自媒体">自媒体</span>
+  </div>
+  <div class="filter-bar">
+    <label>搜索</label>
+    <input type="text" id="searchInput" placeholder="搜索标题、摘要、来源…" autocomplete="off">
+    <label>从</label><input type="date" id="dateFrom">
+    <label>至</label><input type="date" id="dateTo">
+    <button class="btn-clear" id="btnClear">清除</button>
+  </div>
+  <button class="summary-toggle" id="summaryToggle">AI 日报摘要 <span class="arrow">▾</span></button>
+  <div class="daily-summary" id="dailySummary"><h3>AI 生成的今日新闻摘要</h3><p id="summaryContent">摘要生成中…</p></div>
+  <div class="news-list" id="newsList"><div class="loading"><div class="spinner"></div>新闻加载中…</div></div>
+</div>
+<script src="news-data.js"></script>
+<script>
+const WEEKDAYS = ['周日','周一','周二','周三','周四','周五','周六'];
+const BUILTIN_DATA = [];
+function weekday(d) { return WEEKDAYS[new Date(d+'T00:00:00').getDay()]; }
+function catClass(c) { var m = { '财经':'finance','量化':'quant','AI':'ai','科技':'tech','自媒体':'media' }; return m[c]||''; }
+var allNews = [], activeCat = 'all', searchText = '', dateFrom = '', dateTo = '';
+
+function loadData() {
+  if (typeof window.NEWS_DATA !== 'undefined' && Array.isArray(window.NEWS_DATA) && window.NEWS_DATA.length > 0)
+    allNews = window.NEWS_DATA;
+  else
+    allNews = BUILTIN_DATA;
+  allNews.sort(function(a,b) { return b.date.localeCompare(a.date); });
+  updateStats(); render();
+}
+function updateStats() {
+  var f = getFiltered();
+  var days = new Set(f.map(function(n){return n.date;}));
+  var cats = new Set(f.map(function(n){return n.category;}));
+  document.getElementById('statTotal').textContent = f.length;
+  document.getElementById('statDays').textContent = days.size;
+  document.getElementById('statCats').textContent = cats.size;
+  if (allNews.length > 0) {
+    var dates = allNews.map(function(n){return n.date;}).sort();
+    document.getElementById('dateRangeLabel').textContent = '数据范围: ' + dates[0] + ' ~ ' + dates[dates.length-1];
+  }
+}
+function getFiltered() {
+  return allNews.filter(function(n) {
+    if (activeCat !== 'all' && n.category !== activeCat) return false;
+    if (searchText) {
+      var q = searchText.toLowerCase();
+      if (n.title.toLowerCase().indexOf(q)===-1 && n.summary.toLowerCase().indexOf(q)===-1 && n.source.toLowerCase().indexOf(q)===-1) return false;
+    }
+    if (dateFrom && n.date < dateFrom) return false;
+    if (dateTo && n.date > dateTo) return false;
+    return true;
+  });
+}
+function render() {
+  var filtered = getFiltered();
+  updateStats(); updateSummary(filtered);
+  if (filtered.length === 0) {
+    document.getElementById('newsList').innerHTML = '<div class="empty-state"><div class="icon">0</div><p>没有找到匹配的新闻</p></div>';
+    return;
+  }
+  var groups = new Map();
+  filtered.forEach(function(n) {
+    if (!groups.has(n.date)) groups.set(n.date, []);
+    groups.get(n.date).push(n);
+  });
+  var html = '';
+  groups.forEach(function(items, date) {
+    html += '<div class="day-group"><div class="day-header"><span class="date-label">' + date + '</span><span class="weekday">' + weekday(date) + '</span><span class="day-count">' + items.length + ' 条</span></div>';
+    items.forEach(function(n) {
+      html += '<div class="news-card"><div class="news-card-inner"><div class="cat-dot"><span class="cat-badge '+catClass(n.category)+'">'+n.category+'</span></div><div class="content"><div class="title"><a href="'+(n.sourceUrl||'#')+'" target="_blank" rel="noopener">'+highlight(n.title)+'</a></div><div class="summary">'+highlight(n.summary)+'</div><div class="meta"><span>'+n.date+'</span><a class="source-link" href="'+(n.sourceUrl||'#')+'" target="_blank" rel="noopener">'+n.source+'</a></div></div></div></div>';
+    });
+    html += '</div>';
+  });
+  document.getElementById('newsList').innerHTML = html;
+}
+function highlight(text) {
+  if (!searchText) return text;
+  var re = new RegExp('(' + searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+  return text.replace(re, '<mark style="background:#fde68a;padding:0 2px;border-radius:2px;">$1</mark>');
+}
+function updateSummary(filtered) {
+  if (filtered.length === 0) { document.getElementById('summaryContent').textContent = '当前筛选条件下没有新闻数据。'; return; }
+  var cc = {}; filtered.forEach(function(n){cc[n.category]=(cc[n.category]||0)+1;});
+  var latestDate = filtered[0].date;
+  var headlines = filtered.filter(function(n){return n.date===latestDate;}).slice(0,5).map(function(n){return n.title;}).join('；');
+  var days = new Set(filtered.map(function(n){return n.date;})).size;
+  var cl = Object.entries(cc).sort(function(a,b){return b[1]-a[1];}).map(function(p){return p[0]+'('+p[1]+'条)';}).join('、');
+  document.getElementById('summaryContent').innerHTML = '<strong>覆盖范围：</strong>共 <strong>'+filtered.length+'</strong> 条，跨越 <strong>'+days+'</strong> 天，覆盖 '+cl+'。<br><br><strong>今日要闻（'+latestDate+'）：</strong>'+headlines+'。<br><br><em style="color:#8e8ea8;font-size:12px;">提示：接入 AI 后自动生成日报摘要。当前为数据结构化摘要。</em>';
+}
+document.getElementById('catChips').addEventListener('click', function(e) {
+  var chip = e.target.closest('.cat-chip'); if (!chip) return;
+  activeCat = chip.dataset.cat;
+  document.querySelectorAll('#catChips .cat-chip').forEach(function(c){c.classList.remove('active');});
+  chip.classList.add('active'); render();
+});
+var searchTimer;
+document.getElementById('searchInput').addEventListener('input', function() {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(function() { searchText = document.getElementById('searchInput').value.trim(); render(); }, 200);
+});
+document.getElementById('dateFrom').addEventListener('change', function() { dateFrom = this.value; render(); });
+document.getElementById('dateTo').addEventListener('change', function() { dateTo = this.value; render(); });
+document.getElementById('btnClear').addEventListener('click', function() {
+  activeCat = 'all'; searchText = ''; dateFrom = ''; dateTo = '';
+  document.getElementById('searchInput').value = '';
+  document.getElementById('dateFrom').value = '';
+  document.getElementById('dateTo').value = '';
+  document.querySelectorAll('#catChips .cat-chip').forEach(function(c){c.classList.remove('active');});
+  document.querySelector('#catChips [data-cat="all"]').classList.add('active');
+  render();
+});
+document.getElementById('summaryToggle').addEventListener('click', function() {
+  document.getElementById('dailySummary').classList.toggle('show');
+  document.getElementById('summaryToggle').classList.toggle('open');
+});
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey||e.metaKey) && e.key === 'k') { e.preventDefault(); document.getElementById('searchInput').focus(); }
+  if (e.key === 'Escape') { document.getElementById('btnClear').click(); }
+});
+loadData();
+</script>
+</body>
+</html>

@@ -1,11 +1,187 @@
 [
   {
-    "date": "2026-06-24",
-    "title": "超额收敛成常态 量化大咖共商进化新路径",
-    "summary": "量化超额持续走弱，行业从粗放增长进入系统性竞争时代。聚宽投资AI方法论新因子占比超70%。2026年进入范式重构阶段：AI自主完成因子组合动态迭代。灵均投资指出策略同质化和单一容量见顶两大风险。",
+    "date": "2026-06-25",
+    "title": "OpenAI再次升级GPT-5.5 Instant：更具洞察力，购物推荐更实用",
+    "summary": "OpenAI宣布升级GPT-5.5 Instant模型，更能洞察用户表达意图，并在处理复杂任务时更可靠。该模型于5月首次推出，在医学、法律和金融等高风险主题上表现优异。",
+    "source": "IT之家",
+    "sourceUrl": "https://www.ithome.com/0/968/241.htm",
+    "category": "AI"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "英伟达股价创历史新高，黄仁勋称机器人是AI之后英伟达最大机遇",
+    "summary": "英伟达召开年度股东大会，黄仁勋明确表示机器人技术是AI之后英伟达最大的机遇，代表数万亿美元增长机会。自动驾驶汽车将成为机器人技术首个主要商业应用领域。英伟达市值超越微软重回全球第一。",
+    "source": "每日经济新闻",
+    "sourceUrl": "https://www.nbd.com.cn/articles/2025-06-26/3922130.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "中国AI大模型词元调用量连续稳居全球首位",
+    "summary": "中国AI大模型周调用量达18.81万亿词元，连续八周稳居全球首位。DeepSeek-V4-Flash连续五周蝉联国内调用量榜首，国产大模型集体崛起态势明确。",
+    "source": "浙江在线",
+    "sourceUrl": "https://china.zjol.com.cn/gnxw/202606/t20260625_31745851.shtml",
+    "category": "AI"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "世界模型混战，Momenta携R7世界模型率先冲刺港股IPO",
+    "summary": "Momenta定位为物理AI基座模型构建者，携R7世界模型冲刺港股IPO，成为世界模型赛道首家冲刺上市的公司。世界模型被视为通往AGI的核心路径之一。",
+    "source": "量子位",
+    "sourceUrl": "https://www.qbitai.com/2026/06/438179.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "2025大模型半年回顾：o3、Agent和Scaling Law新范式",
+    "summary": "36氪回顾2025上半年大模型发展：o3推理模型引领新范式、AI Agent从概念走向落地、Scaling Law持续验证。国产大模型GLM-5.2、DeepSeek V4等集体崛起改变全球竞争格局。",
+    "source": "36氪",
+    "sourceUrl": "https://www.36kr.com/p/3351694604595844.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "AI重塑量化行业竞争格局：人机协同成最优模式",
+    "summary": "2026年大模型能力迭代后，AI开始重构因子挖掘、组合构建、交易风控全业务链路。聚宽投资AI方法论新因子占比超70%。贝莱德基金加速训练AIM机器学习系统，弱化对基本面信号单一依赖。",
     "source": "证券时报",
     "sourceUrl": "https://stcn.com/article/detail/3975640.html",
     "category": "量化"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "2026年中期策略：新旧主线切换下的量化策略应对",
+    "summary": "华福证券指出情绪评分创近两年新高，科创板策略5月绝对收益13.25%年内累计56.98%。银河证券建议下半年关注AI基建、周期与制造、红利板块三大主线。小市值风格6月更受看好。",
+    "source": "新浪财经",
+    "sourceUrl": "http://vip.stock.finance.sina.com.cn/q/go.php/vReport_Show/kind/lastest/rptid/834922908780/index.phtml",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "量化私募马太效应加剧：头部壁垒中小机构突围路径失效",
+    "summary": "百亿级机构受限于策略容量推进全球化多资产布局，头部每年数十亿级算力和人才投入形成天然壁垒。中小机构依靠单点模型突围的路径已失效，行业进入以算力、AI研发、人才梯队为核心的精细化竞争时代。",
+    "source": "中国金融信息网",
+    "sourceUrl": "https://wt.cfi.cn/p20260617000723.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "鹏扬景科混合基金：债券底仓+量化增强布局均衡配置窗口",
+    "summary": "鹏扬景科混合基金采用债券底仓+沪深300/中证2000量化增强策略，做股债再平衡。科技交易拥挤叠加中报窗口临近，均衡配置窗口打开。",
+    "source": "界面新闻",
+    "sourceUrl": "https://www.jiemian.com/article/14637688.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "沪指创年内新高，创业板指大涨3.11%，券商股强势领涨",
+    "summary": "上证指数涨1.03%收报3455.97点创年内新高，创业板指大涨3.11%收报2128.39点。两市成交额约16028亿元放量约1882亿元，近3900只个股上涨。券商、军工、半导体板块领涨。",
+    "source": "中新网",
+    "sourceUrl": "http://www.chinanews.com.cn/cj/2025/06-25/10437783.shtml",
+    "category": "财经"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "六部门联合印发金融支持提振消费19项重磅举措",
+    "summary": "央行等六部门联合印发《关于金融支持提振和扩大消费的指导意见》，提出推动中长期资金入市、创新金融产品等19项举措。商务部启动2025年千县万镇新能源汽车消费季。",
+    "source": "智通财经",
+    "sourceUrl": "https://m.zhitongcaijing.com/contentnew/appcontentdetail.html?content_id=1309292",
+    "category": "财经"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "港股收盘：恒指收涨1.23%，国泰君安国际暴涨近200%",
+    "summary": "恒指收涨1.23%报24474.67点，成交额约2678亿港元。国泰君安国际因首家获香港虚拟资产交易牌照中资券商暴涨198.4%。京东物流涨7.15%拓展外卖配送，三花智控涨6.04%创历史新高。",
+    "source": "智通财经",
+    "sourceUrl": "https://m.zhitongcaijing.com/contentnew/appcontentdetail.html?content_id=1309509",
+    "category": "财经"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "中国资产全线爆发，高盛瑞银集体唱多维持超配建议",
+    "summary": "高盛维持对A股和港股的超配建议，沪深300目标位4600点隐含约10%上行空间。瑞银海外路演显示外资对中国投资情绪明显改善。花旗上调6月澳门博彩收入预测。美国出口管制加码催化国产替代预期。",
+    "source": "蓝鲸财经",
+    "sourceUrl": "https://news.lanjinger.com/t/989977",
+    "category": "财经"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "美联储鲍威尔听证会：不急于降息但也不排除提前降息可能",
+    "summary": "美联储主席鲍威尔在听证会上表示关税将对通胀产生显著影响，重申不急于降息立场，但同时表示不排除在经济恶化时提前降息的可能。市场对年内降息路径预期持续分化。",
+    "source": "财联社",
+    "sourceUrl": "https://api3.cls.cn/share/article/2067153",
+    "category": "财经"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "SK keyfoundry开发出基于双向SCR的片上EMC保护技术，已进入量产",
+    "summary": "韩国8英寸纯晶圆代工厂SK keyfoundry成功开发基于双向可控硅整流器的片上电磁兼容保护技术。该技术大幅提升汽车半导体电磁兼容性能，已应用于0.13微米BCD工艺产品并进入量产，对新能源汽车芯片抗干扰能力意义重大。",
+    "source": "科创板日报",
+    "sourceUrl": "https://www.chinastarmarket.cn/detail/2408589",
+    "category": "科技"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "特斯拉AI6芯片有望刷新单块晶圆可用算力纪录",
+    "summary": "马斯克宣称特斯拉AI6芯片算力在AI5基础上再次倍增，全面重构处理器运算与内存管理架构。搭载LPDDR6低功耗内存，约半数张量加速器与高速SRAM直接封装。与三星签订165亿美元代工协议，2028年下半年投产。",
+    "source": "站长之家",
+    "sourceUrl": "https://www.chinaz.com/2026/0615/1758842.shtml",
+    "category": "科技"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "韩国拟投超5000亿韩元重塑功率半导体产业链",
+    "summary": "韩国政府投入5000亿韩元（约22.3亿人民币），民间配套后总规模达7500亿韩元。将功率半导体提升至堪比存储芯片的核心战略产业，攻关SiC、GaN化合物半导体，覆盖材料→器件→模块→系统全周期。",
+    "source": "东方财富",
+    "sourceUrl": "https://fund.eastmoney.com/a/202606153771101245.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "SNEC 2026：AI芯片深度嵌入光储能源系统，储能展馆首超光伏",
+    "summary": "SNEC 2026储能展馆数量首次超越光伏，光储融合成核心主题。兆易创新MCU+AFE方案覆盖光储充全场景，方正微电子车规级SiC MOSFET累计出货突破3000万颗。功率半导体进入上行周期。",
+    "source": "OFweek",
+    "sourceUrl": "https://ee.ofweek.com/2026-06/ART-8110-2801-30691933.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "从功率器件到AI智能体：芯力量重构光储产业逻辑",
+    "summary": "隔离芯片、通信模组企业加速切入2000V+高压系统场景。AI服务器800V高压直流、固态变压器等新应用加速拉动高端功率器件需求，SiC/GaN市场进入高增长通道。",
+    "source": "OFweek",
+    "sourceUrl": "https://ee.ofweek.com/2026-06/ART-8110-2801-30691933.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "AI短剧，谁是主角？从量变走向质变的产业拐点",
+    "summary": "2026年Q1全行业上线微短剧约12.8万部，AI微短剧占比超95%。两部AI竖屏短剧入选戛纳国际电影节展演。AI短剧成本降至传统1/10，制作周期缩短2/3，但4月新增AI剧播放破亿占比仅0.6%。",
+    "source": "中国城市网",
+    "sourceUrl": "http://www.zgcsb.com/news/shouYe/2026-06/25/a_674275.html",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "AI短视频博主崛起：0基础小白也能月入数十万",
+    "summary": "大量无专业背景用户借助AI工具迅速起号，头部博主商单报价达1秒1万元，30秒视频报价近30万元。国外博主Veo 3制作视频在Instagram播放超2.5亿。AI作品直接商业化已取代卖课变现成为主流。",
+    "source": "DoNews",
+    "sourceUrl": "https://www.donews.com/news/detail/4/5678708.html",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "我靠AI当上了网红：一人即剧组的超级个体时代来临",
+    "summary": "AI短视频博主成为超级个体，一人完成脚本、转场、镜头构思全流程。制作一条AI视频仅需约2小时播放稳定在10万左右。全国一人有限责任公司突破1600万家，AI让个人能力边界大幅拓宽。",
+    "source": "36氪",
+    "sourceUrl": "https://m.36kr.com/p/3381205512760068",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "抖音AI内容渗透率突破65%，9大关键词定义行业新格局",
+    "summary": "抖音AI内容渗透率突破65%，携手即梦AI推出创作浪潮计划累计播放超630亿次。AI生成内容强制标识新规全面实施，6类必选标签落地。平台对低质AI内容审核持续收紧，合规能力成为竞争壁垒。",
+    "source": "百度开发者",
+    "sourceUrl": "https://developer.baidu.com/article/detail.html?id=7443009",
+    "category": "自媒体"
   },
   {
     "date": "2026-06-24",
@@ -998,14 +1174,6 @@
     "source": "Reddit",
     "sourceUrl": "https://www.youtube.com/watch?v=h6gE3ltLsfQ",
     "category": "科技"
-  },
-  {
-    "date": "2026-06-17",
-    "title": "量化私募出现负超额，极致分化行情拷问策略有效性",
-    "summary": "5月量化私募指增产品平均超额收益-0.98%，中证1000指增首尾差超7个百分点。分散持仓策略在极端结构性行情下面临挑战。",
-    "source": "中国金融信息网",
-    "sourceUrl": "https://wt.cfi.cn/p20260617000723.html",
-    "category": "量化"
   },
   {
     "date": "2026-06-17",

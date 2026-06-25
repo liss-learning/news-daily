@@ -145,14 +145,6 @@
   },
   {
     "date": "2026-06-25",
-    "title": "从功率器件到AI智能体：芯力量重构光储产业逻辑",
-    "summary": "隔离芯片、通信模组企业加速切入2000V+高压系统场景。AI服务器800V高压直流、固态变压器等新应用加速拉动高端功率器件需求，SiC/GaN市场进入高增长通道。",
-    "source": "OFweek",
-    "sourceUrl": "https://ee.ofweek.com/2026-06/ART-8110-2801-30691933.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-25",
     "title": "AI短剧，谁是主角？从量变走向质变的产业拐点",
     "summary": "2026年Q1全行业上线微短剧约12.8万部，AI微短剧占比超95%。两部AI竖屏短剧入选戛纳国际电影节展演。AI短剧成本降至传统1/10，制作周期缩短2/3，但4月新增AI剧播放破亿占比仅0.6%。",
     "source": "中国城市网",
@@ -334,6 +326,150 @@
     "source": "钛媒体",
     "sourceUrl": "https://www.tmtpost.com/8038797.html",
     "category": "AI"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "Magnetar Capital",
+    "summary": "Magnetar Capital",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://www.hedgeweek.com/magnetar-to-launch-ai-powered-hedge-fund-with-bots-replacing-analyst-teams/",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "Citadel's Ken Griffin",
+    "summary": "Citadel's Ken Griffin",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://www.kucoin.com/news/flash/citadel-ceo-says-ai-agents-complete-complex-finance-tasks-in-days",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "Omphalos Fund",
+    "summary": "Omphalos Fund",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://funds-europe.com/machines-take-the-helm-the-asset-manager-of-2030-is-already-here/",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "TradingAgents",
+    "summary": "TradingAgents",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://apidog.com/blog/tradingagents-multi-agent-llm-trading/",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "QuantDinger",
+    "summary": "QuantDinger",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://github.com/brokermr810/QuantDinger",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "LLM-TradeBot",
+    "summary": "LLM-TradeBot",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://github.com/EthanAlgoX/LLM-TradeBot",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "QuantClaw",
+    "summary": "QuantClaw",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://www.npmjs.com/package/quantclaw",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "Interactive Brokers",
+    "summary": "Interactive Brokers",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://www.thearmchairtrader.com/brokers/interactive-brokers-opens-the-door-to-ai-agents/",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "Robinhood",
+    "summary": "Robinhood",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://techcrunch.com/2026/05/27/robinhood-now-lets-your-ai-agents-trade-stocks/",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "蝶威量化",
+    "summary": "蝶威量化",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://epaper.cs.com.cn/zgzqb/html/2026-03/30/nw.D110000zgzqb_20260330_1-J03.htm",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "NVIDIA's technical blog",
+    "summary": "NVIDIA's technical blog",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://developer.nvidia.com/blog/automating-and-optimizing-financial-signal-discovery-with-multi-agent-systems/",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "Baidu Developer's architecture guides",
+    "summary": "Baidu Developer's architecture guides",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://developer.baidu.com/article/detail.html?id=7415675",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "CSDN's OpenClaw quant tutorial",
+    "summary": "CSDN's OpenClaw quant tutorial",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://deep-learning.blog.csdn.net/article/details/159354851",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "Vibe Coding",
+    "summary": "Vibe Coding",
+    "source": "last30days 合成报告",
+    "sourceUrl": "http://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/search/rptid/827339646951/index.phtml",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "June 2026 arXiv audit",
+    "summary": "June 2026 arXiv audit",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://browse-export.arxiv.org/abs/2606.08285",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "dev.to's framework comparison",
+    "summary": "dev.to's framework comparison",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://dev.to/lightningdev123/best-ai-trading-agents-in-2026-can-they-really-deliver-consistent-returns-2fgl",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "r/algotrading",
+    "summary": "r/algotrading",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://www.reddit.com/r/algotrading/comments/1tsl3ef/48_days_of_ai_agent_paper_trading_3245_total_pl/",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "中国债券信息网",
+    "summary": "中国债券信息网",
+    "source": "last30days 合成报告",
+    "sourceUrl": "https://www.cfbond.com/2026/03/30/991124950.html",
+    "category": "量化"
   },
   {
     "date": "2026-06-23",
@@ -1825,14 +1961,6 @@
   },
   {
     "date": "2026-05-31",
-    "title": "48 days of AI agent paper trading: +$3,245 total P&L, two trailing stop exits over $1,700 each, putting real money in June 13",
-    "summary": "Been running a paper trading desk with 14 AI agents since March. Scanner runs every morning, CrewAI handles the logic, trailing stops execute exits automatically. Two big winners: ARM — entered $210, trailing stop walked to $254, exited automatically — +$2,048 AMD — entered $420, trailing stop walke",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/algotrading/comments/1tsl3ef/48_days_of_ai_agent_paper_trading_3245_total_pl/",
-    "category": "量化"
-  },
-  {
-    "date": "2026-05-31",
     "title": "This Stock Market is not real",
     "summary": "This Stock Market is not real",
     "source": "Reddit",
@@ -1862,14 +1990,6 @@
     "source": "Reddit",
     "sourceUrl": "https://www.youtube.com/watch?v=Q9CjDUDGRhU",
     "category": "自媒体"
-  },
-  {
-    "date": "2026-05-29",
-    "title": "Robinhood now lets your AI agents trade stocks",
-    "summary": "Robinhood now lets your AI agents trade stocks",
-    "source": "Hacker News",
-    "sourceUrl": "https://techcrunch.com/2026/05/27/robinhood-now-lets-your-ai-agents-trade-stocks/",
-    "category": "量化"
   },
   {
     "date": "2026-05-29",

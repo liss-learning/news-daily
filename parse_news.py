@@ -94,7 +94,7 @@ def main():
         print(f"ERROR: {input_dir} not found"); sys.exit(1)
 
     all_articles = []
-    for f in input_dir.glob("*-raw-v3*.md"):
+    all_files = list(input_dir.glob("*-raw-v3*.md")) + list(input_dir.glob("*-synthesis-*.md"))
         cat = infer_category(str(f))
         arts = parse_raw_v3(str(f))
         print(f"  {f.name} -> [{cat}] {len(arts)} articles")

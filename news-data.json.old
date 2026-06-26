@@ -1,61 +1,5 @@
 [
   {
-    "date": "2026-06-26",
-    "title": "超额收敛成常态，量化大咖共商进化新路径",
-    "summary": "金长江私募基金发展论坛上，灵均投资、蒙玺投资、黑翼资产、聚宽投资等头部量化私募一致认为国内量化行业已彻底告别依靠市场红利扩张的粗放增长阶段，超额收益持续走弱。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/3975640.html",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-26",
-    "title": "策略化选股月报：情绪评分创近两年新高，科创策略超额显著",
-    "summary": "5月科创板策略收益13.25%超额1.60%，情绪价量策略超额6.40%。多策略选股和红利+优选策略录得负超额，市场风格分化加剧。",
-    "source": "新浪财经",
-    "sourceUrl": "http://vip.stock.finance.sina.com.cn/q/go.php/vReport_Show/kind/lastest/rptid/834336061870/index.phtml",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-26",
-    "title": "GPT-5.6深夜遭曝光：2026下半场成AI检测AI绞肉机",
-    "summary": "OpenAI首席科学家内部预览GPT-5.6模型，被视为防御性发布。Superhuman溢价收购AI文本检测独角兽GPTZero，企业一边用AI生成内容一边用AI检测幻觉，形成荒诞商业闭环。",
-    "source": "36氪",
-    "sourceUrl": "https://36kr.com/p/3869201971877120",
-    "category": "AI"
-  },
-  {
-    "date": "2026-06-26",
-    "title": "北京推进242款大模型备案上线，数量居全国第一",
-    "summary": "北京市推进242款大模型备案上线，头部大模型累计注册用户达20.5亿，面向全国近5万家机构提供API服务。",
-    "source": "人民网",
-    "sourceUrl": "http://bj.people.com.cn/n2/2026/0626/c14540-41621622.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-06-26",
-    "title": "五大信披媒体精华摘要：科创板扩容至AI大模型等硬科技",
-    "summary": "科创板第五套上市标准适用范围扩大至AI领域，允许未盈利硬核AI企业上市，同时支持量子科技、生物制造、具身智能等硬科技企业上市。主动ETF试点即将推出，首批商业不动产REITs试点挂牌。",
-    "source": "中国金融信息网",
-    "sourceUrl": "https://www.cnfin.com/yw-lb/detail/20260626/4432026_1.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-26",
-    "title": "IBM发布全球首颗0.7纳米芯片：指甲大小藏近千亿晶体管",
-    "summary": "IBM在2026年VLSI大会上发布全球首个突破1纳米门槛的0.7纳米芯片，采用纳米堆叠3D晶体管架构，性能较2纳米芯片提升50%，能效提升70%，预计5年内量产。",
-    "source": "星岛日报",
-    "sourceUrl": "https://www.stheadline.com/realtime-world/3587156",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-26",
-    "title": "AI数字人短视频技术爆发：百亿级市场的创业新蓝海",
-    "summary": "AI数字人技术在电商直播、教育、政务等场景加速落地。预计到2027年70%短视频将由AI自主创作，数字人将具备跨平台内容迁移能力和接近真人的情感交互水平。",
-    "source": "百度开发者",
-    "sourceUrl": "https://developer.baidu.com/article/detail.html?id=7574093",
-    "category": "自媒体"
-  },
-  {
     "date": "2026-06-25",
     "title": "OpenAI再次升级GPT-5.5 Instant：更具洞察力，购物推荐更实用",
     "summary": "OpenAI宣布升级GPT-5.5 Instant模型，更能洞察用户表达意图，并在处理复杂任务时更可靠。该模型于5月首次推出，在医学、法律和金融等高风险主题上表现优异。",
@@ -97,10 +41,26 @@
   },
   {
     "date": "2026-06-25",
+    "title": "AI重塑量化行业竞争格局：人机协同成最优模式",
+    "summary": "2026年大模型能力迭代后，AI开始重构因子挖掘、组合构建、交易风控全业务链路。聚宽投资AI方法论新因子占比超70%。贝莱德基金加速训练AIM机器学习系统，弱化对基本面信号单一依赖。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/3975640.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-25",
     "title": "2026年中期策略：新旧主线切换下的量化策略应对",
     "summary": "华福证券指出情绪评分创近两年新高，科创板策略5月绝对收益13.25%年内累计56.98%。银河证券建议下半年关注AI基建、周期与制造、红利板块三大主线。小市值风格6月更受看好。",
     "source": "新浪财经",
     "sourceUrl": "http://vip.stock.finance.sina.com.cn/q/go.php/vReport_Show/kind/lastest/rptid/834922908780/index.phtml",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "量化私募马太效应加剧：头部壁垒中小机构突围路径失效",
+    "summary": "百亿级机构受限于策略容量推进全球化多资产布局，头部每年数十亿级算力和人才投入形成天然壁垒。中小机构依靠单点模型突围的路径已失效，行业进入以算力、AI研发、人才梯队为核心的精细化竞争时代。",
+    "source": "中国金融信息网",
+    "sourceUrl": "https://wt.cfi.cn/p20260617000723.html",
     "category": "量化"
   },
   {
@@ -161,6 +121,14 @@
   },
   {
     "date": "2026-06-25",
+    "title": "特斯拉AI6芯片有望刷新单块晶圆可用算力纪录",
+    "summary": "马斯克宣称特斯拉AI6芯片算力在AI5基础上再次倍增，全面重构处理器运算与内存管理架构。搭载LPDDR6低功耗内存，约半数张量加速器与高速SRAM直接封装。与三星签订165亿美元代工协议，2028年下半年投产。",
+    "source": "站长之家",
+    "sourceUrl": "https://www.chinaz.com/2026/0615/1758842.shtml",
+    "category": "科技"
+  },
+  {
+    "date": "2026-06-25",
     "title": "韩国拟投超5000亿韩元重塑功率半导体产业链",
     "summary": "韩国政府投入5000亿韩元（约22.3亿人民币），民间配套后总规模达7500亿韩元。将功率半导体提升至堪比存储芯片的核心战略产业，攻关SiC、GaN化合物半导体，覆盖材料→器件→模块→系统全周期。",
     "source": "东方财富",
@@ -205,46 +173,6 @@
     "summary": "抖音AI内容渗透率突破65%，携手即梦AI推出创作浪潮计划累计播放超630亿次。AI生成内容强制标识新规全面实施，6类必选标签落地。平台对低质AI内容审核持续收紧，合规能力成为竞争壁垒。",
     "source": "百度开发者",
     "sourceUrl": "https://developer.baidu.com/article/detail.html?id=7443009",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-25",
-    "title": "AI短剧狂飙：一场人与工具的再谈判，精品化成唯一出路",
-    "summary": "行业共识从拼速度拼数量转向拼品质拼创意。红果短剧大规模治理低质AI剧处置超万部，审核堪称史上最严。纯靠产能赚钱的窗口期正在缩短，部分公司选择出海寻求新增长。",
-    "source": "中国青年网",
-    "sourceUrl": "https://news.youth.cn/gj/202606/t20260610_16705814.htm",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-25",
-    "title": "中国大模型跻身全球AI第一梯队，开源改写中西方竞争规则",
-    "summary": "第21届开源中国高峰论坛上，陆首群指出中国以开源为底座的低成本路径正改写全球竞争规则，DeepSeek、Qwen、MiniMax、智谱GLM等国产模型已跻身全球AI第一梯队。",
-    "source": "网易",
-    "sourceUrl": "https://www.163.com/dy/article/L0A4L5VI0511FQO9.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-06-25",
-    "title": "AI推理群雄逐鹿：英伟达守擂，OpenAI等攻擂",
-    "summary": "OpenAI发布首款AI推理芯片Jalapeno联手博通，高通拟40亿美元收购AI芯片公司Modular，英伟达黄仁勋称Token经济时代算力就是收入。",
-    "source": "证券时报",
-    "sourceUrl": "https://www.stcn.com/article/detail/3980971.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-06-25",
-    "title": "A股三大指数分化：创业板指与科创50双双刷新历史新高",
-    "summary": "6月25日上证指数收4120.28点涨0.23%，创业板指收4371.99点涨2.84%刷新纪录，科创50收2066.33点涨3.87%。三市成交额达3.62万亿元，呈现典型K型结构性分化行情。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202606183775829794.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-25",
-    "title": "AI短剧狂飙：4月抖音AI剧新增4.42万部，是真人短剧13倍",
-    "summary": "抖音原生端4月单月新增AI剧及漫剧4.42万部，是同期真人实拍微短剧的13倍多。红果短剧用户量超3亿，热播榜前10中AI短剧占一半以上。但播放破亿比例仅0.6%，同质化严重。",
-    "source": "36氪",
-    "sourceUrl": "https://36kr.com/p/3867071765402630.html",
     "category": "自媒体"
   },
   {
@@ -297,11 +225,43 @@
   },
   {
     "date": "2026-06-24",
+    "title": "AI微短剧正在跨过奇点：人民日报发文评AI短剧产业化",
+    "summary": "2026年已上线AI微短剧超20万部，Q1 AI短剧占新增短剧超95%。Seedance 2.0标志性突破终结AIGC童年时代。可灵AI月活超1200万年化收入破3亿美元。AI短剧成本降至传统1/10，一人剧组成新范式。",
+    "source": "人民日报",
+    "sourceUrl": "http://paper.people.com.cn/rmrb/pc/content/202606/09/content_30161914.html",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-06-24",
+    "title": "抖音征召AI视频英才：单人最高100万奖金 95%AI短剧沦为数字尘埃",
+    "summary": "抖音AI创作大赛总奖池400万现金+2000万即梦积分，贾樟柯陈思诚等任命题嘉宾。AI短剧日上新峰值2000+部远超真人剧，但95%供给未转化为用户感知。广东出台OPC方案、上海最高奖励300万培育超级创作者。",
+    "source": "量子位",
+    "sourceUrl": "https://www.qbitai.com/2026/06/433832.html",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-06-24",
+    "title": "AI短剧狂飙：一场人与工具的再谈判 从量变走向质变",
+    "summary": "4月起AI漫剧纳入备案审核持证上岗，红果一周下架低质漫剧3522部。广电明确AI电视剧与普通剧集统一纳入规范管理。行业共识：技术只是入场券，叙事能力与创意水平决定成败。",
+    "source": "中国青年网",
+    "sourceUrl": "https://news.youth.cn/gj/202606/t20260610_16705814.htm",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-06-24",
     "title": "一人公司OPC崛起：10天3000元拍出千万播放AI短片",
     "summary": "非科班婚礼摄影师Mx-Shell用10天约3000元Token成本制作3分钟AI短片《丧尸清道夫》，海外播放超千万。广东出台支持AI OPC创新发展行动方案(2026-2028年)，北京亦庄模数OPC社区启航。",
     "source": "中国报道",
     "sourceUrl": "http://new.chinareports.org.cn/index/index/news/101274.html",
     "category": "自媒体"
+  },
+  {
+    "date": "2026-06-24",
+    "title": "Wolfspeed发布第五代碳化硅MOSFET：比导通电阻较业界最优低27%",
+    "summary": "Wolfspeed Gen 5 SiC MOSFET在175℃下比导通电阻低至3.4 mΩ·cm²，较自身Gen 4降41%，支持200℃长期运行。目标直指新能源汽车800V平台与AI数据中心高压供电两大核心赛道。",
+    "source": "电子产品世界",
+    "sourceUrl": "https://www.eepw.com.cn/article/202606/481929.htm",
+    "category": "科技"
   },
   {
     "date": "2026-06-24",
@@ -366,14 +326,6 @@
     "source": "钛媒体",
     "sourceUrl": "https://www.tmtpost.com/8038797.html",
     "category": "AI"
-  },
-  {
-    "date": "2026-06-24",
-    "title": "量化大咖共议行业新格局：超额收敛已成常态，AI重塑竞争格局",
-    "summary": "2026年大模型能力迭代后AI开始重构因子挖掘、组合构建、交易风控全业务链路，聚宽投资AI方法论新因子占比超70%，但人机协同仍被认为是最优模式。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/3968478.html",
-    "category": "量化"
   },
   {
     "date": "2026-06-23",
@@ -712,20 +664,12 @@
     "category": "AI"
   },
   {
-    "date": "2026-06-23",
-    "title": "豆包2.1 Pro模型发布，Coding与Agent能力跨越质变点",
-    "summary": "火山引擎发布豆包大模型2.1 Pro，在Coding、Agent、VLM三大方向跨越生产级质变点，多项评测优于Claude Opus 4.6，综合使用成本降低近80%，日均Token调用量突破180万亿。",
-    "source": "新华网",
-    "sourceUrl": "http://www3.xinhuanet.com/tech/20260623/acd6f2f27fc34459a7d1684c03278431/c.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "基本半导体通过港交所聆讯，剑指碳化硅芯片第一股",
-    "summary": "清华+剑桥博士团队创立的基本半导体通过港交所聆讯，第三代SiC MOSFET芯片每片晶圆产出较上一代提升40%以上，获20余家主流车企超80款车型design-in，2025年下半年毛利率转正。",
-    "source": "21世纪经济报道",
-    "sourceUrl": "https://www.21jingji.com/article/20260623/herald/58b13753be6f47a1f9c61c9eea9c73ca.html",
-    "category": "科技"
+    "date": "2026-06-22",
+    "title": "量化私募超额收益均值回归：5月指增产品正超额占比仅44.6%",
+    "summary": "私募排排网数据显示，5月1251只指数增强产品平均超额-0.98%，正超额占比仅44.6%。行业进入结构性分化阶段。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/3968478.html",
+    "category": "量化"
   },
   {
     "date": "2026-06-22",
@@ -1281,9 +1225,9 @@
   },
   {
     "date": "2026-06-18",
-    "title": "2026陆家嘴论坛释放政策信号：利率走廊收窄至50个基点",
-    "summary": "陆家嘴论坛释放多项重磅政策：临时隔夜正/逆回购操作利率区间由70个基点收窄至50个基点，创设境外央行回购工具支撑人民币国际化，研究设立非银流动性支持工具。",
-    "source": "央广网",
+    "title": "2026陆家嘴论坛释放重磅政策：科创板扩至AI、利率走廊收窄",
+    "summary": "央行行长潘功胜宣布利率走廊从70BP收窄至50BP；证监会主席吴清宣布科创板第五套标准扩至AI大模型；金融监管总局推动中长期资金入市。",
+    "source": "新华社",
     "sourceUrl": "https://finance.cnr.cn/ycbd/20260618/t20260618_527666624.shtml",
     "category": "财经"
   },
@@ -1368,22 +1312,6 @@
     "category": "科技"
   },
   {
-    "date": "2026-06-18",
-    "title": "多家外资机构看好中国科技创新带来的长期投资机会",
-    "summary": "瑞银、摩根士丹利、富达等机构一致看多AI驱动的中国科技创新投资机会，预计2026年全部A股盈利增速有望从3.9%提升至11%。全球资本争夺战已然打响。",
-    "source": "搜狐财经",
-    "sourceUrl": "https://www.sohu.com/a/1040618172_121857546",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-17",
-    "title": "量化私募跑出负超额，极致分化行情拷问策略有效性",
-    "summary": "5月份1251只有业绩记录的指数增强私募基金平均超额收益为-0.98%，正超额产品占比仅44.6%。微盘股指数自5月中旬以来跌幅超17%，量化策略遭受重创。",
-    "source": "中国基金报",
-    "sourceUrl": "https://wt.cfi.cn/p20260617000723.html",
-    "category": "量化"
-  },
-  {
     "date": "2026-06-17",
     "title": "陆家嘴论坛：中长期资金持有A股流通市值增长85%",
     "summary": "证监会透露中长期资金持有A股流通市值已增长85%，净买入约1.3万亿元。工行等五大行落地离岸人民币外汇试点交易。",
@@ -1422,14 +1350,6 @@
     "source": "Reddit",
     "sourceUrl": "https://www.youtube.com/watch?v=05lvoHekH1E",
     "category": "自媒体"
-  },
-  {
-    "date": "2026-06-17",
-    "title": "吴清重磅发声：社保保险资金两年净买入A股约1.3万亿",
-    "summary": "证监会主席吴清在陆家嘴论坛宣布新国九条落地两年多来社保、保险资金持有A股流通市值增长85%，净买入约1.3万亿元。近20条新政即将推出，包括并购重组快速审核、储架发行等。",
-    "source": "央视财经",
-    "sourceUrl": "https://finance.cctv.com/2026/06/17/ARTIYPywBfZELLKRJyNGujDq260617.shtml",
-    "category": "财经"
   },
   {
     "date": "2026-06-16",
@@ -1509,22 +1429,6 @@
     "summary": "特斯拉AI5已流片算力达双AI4的5倍；AI6性能再翻倍，搭载LPDDR6内存。三星代工合同165亿美元，优先用于Optimus机器人。",
     "source": "IT之家",
     "sourceUrl": "https://m.ithome.com/html/964051.htm",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-15",
-    "title": "韩国拟投超5000亿韩元攻关功率半导体，重塑产业链",
-    "summary": "韩国启动超级创新经济项目，投入5000亿韩元国家专项资金攻关碳化硅和氮化镓等化合物半导体，将功率半导体定位为堪比存储芯片的核心战略产业。全球功率半导体出现结构性紧缺。",
-    "source": "21世纪经济报道",
-    "sourceUrl": "https://www.21jingji.com/article/20260615/herald/e17d3f4f8db3fffc7057a283f2187369.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-14",
-    "title": "马斯克放话：特斯拉AI6芯片有望刷新单块晶圆可用算力纪录",
-    "summary": "特斯拉第六代智驾芯片AI6工程设计评审出色，有望刷新单块晶圆算力纪录。已与三星签订165亿美元合作协议由德州新工厂代工，联合英特尔、SpaceX推进TERAFAB先进制程项目。",
-    "source": "站长之家",
-    "sourceUrl": "https://www.chinaz.com/2026/0615/1758842.shtml",
     "category": "科技"
   },
   {
@@ -1665,14 +1569,6 @@
   },
   {
     "date": "2026-06-11",
-    "title": "Wolfspeed发布第五代碳化硅MOSFET，卡位新能源车与AI双赛道",
-    "summary": "Wolfspeed发布Gen 5 SiC MOSFET，1200V器件比导通电阻低至3.4mOcm2较业界最优降低27%，支持200度长期运行。公司完成债务重组手持约12亿美元现金。",
-    "source": "电子产品世界",
-    "sourceUrl": "https://www.eepw.com.cn/article/202606/481929.htm",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-11",
     "title": "公募量化基金爆发：年内发行规模大增9倍至289亿元",
     "summary": "截至5月底，年内成立量化基金23只，发行规模288.97亿元，同比增超9倍。公募量化总规模近6000亿元，指数增强类占比超六成。",
     "source": "中国证券报",
@@ -1710,14 +1606,6 @@
     "source": "Hacker News",
     "sourceUrl": "https://www.economist.com/science-and-technology/2026/06/07/how-artificial-intelligence-got-better-at-building-itself",
     "category": "AI"
-  },
-  {
-    "date": "2026-06-10",
-    "title": "抖音征召AI视频英才：400万现金+2000万即梦积分办创作大赛",
-    "summary": "抖音发起AI创作大赛总奖池400万现金+2000万即梦积分，单人最高可获100万现金。评审团涵盖贾樟柯、陈思诚、紫金陈等，强调内容核心地位而非炫技。",
-    "source": "量子位",
-    "sourceUrl": "https://www.qbitai.com/2026/06/433832.html",
-    "category": "自媒体"
   },
   {
     "date": "2026-06-10",
@@ -1793,11 +1681,11 @@
   },
   {
     "date": "2026-06-09",
-    "title": "AI微短剧正在跨过奇点：一季度全行业上线超12.8万部",
-    "summary": "人民日报评论指出AI微短剧已跨过奇点。2026年一季度全行业上线微短剧约12.8万部，AI微短剧约12.2万部占比超95%。AI短剧成本下降80%-90%，周期缩短三分之二。",
-    "source": "人民日报",
-    "sourceUrl": "http://paper.people.com.cn/rmrb/pc/content/202606/09/content_30161914.html",
-    "category": "自媒体"
+    "title": "科创板量化策略年内收益56.98%，情绪价量策略超额显著",
+    "summary": "华福证券月报：科创板策略年内收益56.98%，相对科创50超额20.49%。情绪价量策略top100绝对收益7.44%，超额6.99%。",
+    "source": "新浪财经",
+    "sourceUrl": "http://vip.stock.finance.sina.com.cn/q/go.php/vReport_Show/kind/lastest/rptid/834336061870/index.phtml",
+    "category": "量化"
   },
   {
     "date": "2026-06-09",
@@ -1886,14 +1774,6 @@
     "source": "Reddit",
     "sourceUrl": "https://www.reddit.com/r/ArtificialInteligence/comments/1u0kzxn/is_agi_artificial_general_intelligence_actually/",
     "category": "AI"
-  },
-  {
-    "date": "2026-06-08",
-    "title": "景顺长城量化选股混合正在发行：风格轮动+智能量化双轮驱动",
-    "summary": "景顺长城量化选股混合采用风格轮动模型与智能量化选股双轮驱动，将因子划分为成长、价值、质量、技术面、低波和机构行为六大风格进行轮动配置。2026年公募量化基金发行规模较去年同期增长超9倍。",
-    "source": "上海证券报",
-    "sourceUrl": "https://www.cnstock.com/commonDetail/727518",
-    "category": "量化"
   },
   {
     "date": "2026-06-07",

@@ -119,7 +119,4 @@ def main():
         cats[a["category"]] = cats.get(a["category"], 0) + 1
         days.add(a["date"])
     print(f"Done: {len(unique)} articles, {len(days)} days, cats: {cats}")
-    print(f"Output: {out}")
-
-if __name__ == "__main__":
-    main()
+    print(f"Outp

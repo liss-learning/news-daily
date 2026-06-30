@@ -1,5 +1,301 @@
 window.NEWS_DATA = [
   {
+    "date": "2026-06-30",
+    "title": "1-5月工业企业利润同比增长18.8%：电子行业利润翻倍大增103.9%",
+    "summary": "1-5月全国规上工业企业利润同比增长18.8%加快0.6个百分点，5月单月增长21.1%。电子行业利润同比增长103.9%贡献率达43.1%，AI产业链利润效应全面释放。",
+    "source": "中国金融信息网",
+    "sourceUrl": "https://www.cnfin.com/yw-lb/detail/20260629/4432810_2.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "马斯克宣布Grok 4.5开启内部私测，基于1.5万亿参数V9基础模型",
+    "summary": "马斯克宣布基于1.5万亿参数V9基础模型打造的Grok 4.5在SpaceX和特斯拉内部开启私测，已整合AI编程工具Cursor数据，早期评测显示性能接近甚至可能超越Claude Opus。",
+    "source": "每日经济新闻",
+    "sourceUrl": "https://m.nbd.com.cn/articles/2026-06-29/4439928.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "惠普与OpenAI达成战略合作：全球业务全面部署Frontier智能体平台",
+    "summary": "惠普与OpenAI签署战略合作协议，将在全球业务全面部署OpenAI Frontier智能体平台。国家级标准《人工智能智能体互联》7项标准正式发布，标志智能体从概念走向标准化生态。",
+    "source": "IT之家",
+    "sourceUrl": "https://www.ithome.com/0/969/743.htm",
+    "category": "AI"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "A股两融余额首破3万亿元创历史新高，创业板指与科创50刷新纪录",
+    "summary": "A股两融余额首次突破3万亿元，增量资金集中在AI硬件与半导体。科创50暴涨超4%再创新高，两市成交额3.54万亿元。但全市场约70%个股下跌呈现典型K型分化格局。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202606293785666645.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "AI短剧制作成本降90%但流量成本涨超100%：行业陷量升利降困局",
+    "summary": "AI短剧制作成本仅为真人1/10，但流量成本同比上涨超100%千次播放收益从60元腰斩至15~30元，投流ROI降至1.03~1.07微利区间。日均上线超1300部但爆款率已不足0.1%。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/3984242.html",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "AI短剧分类分层管理7月1日正式施行：广电总局出重拳规范行业",
+    "summary": "广电总局发布AI微短剧分类分层管理标准按题材和投资额分类管理7月1日起施行，推进AI换皮魔改侵权专项治理。红果短剧大规模治理低质AI剧处置超万部，审核堪称史上最严。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/3984143.html",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "韩国5000亿韩元攻关SiC/GaN功率半导体，全球功率半导体竞争白热化",
+    "summary": "韩国政府投入5000亿韩元攻关碳化硅和氮化镓等化合物半导体定位为堪比存储芯片的核心战略产业。赛晶科技发布2300V高压SiC MOSFET打破海外垄断，基本半导体启动港交所招股。",
+    "source": "中国能源新闻网",
+    "sourceUrl": "https://www.cnenergynews.cn/article/4RzJv8JjYv0",
+    "category": "科技"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "AI赋能量化进入范式重构阶段：聚宽AI因子占比超70%，人机协同成主流",
+    "summary": "蒙玺投资划分三阶段：模型替换→全链路提效→范式重构。2026年至今AI自主完成因子组合动态迭代。聚宽投资来自AI方法论的新因子占比已超70%，研究员把控方向+AI批量执行的人机协同成主流。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/3968478.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "百亿量化私募达71家，量化股票基金总规模升至2.25万亿元",
+    "summary": "百亿级量化私募已达71家，2026年前4月新增16家。量化股票基金总规模升至2.25万亿元（中信证券测算），头部机构每年数十亿级算力和人才投入形成天然壁垒。",
+    "source": "中国金融新闻网",
+    "sourceUrl": "https://www.cnfin.com/gs-lb/detail/20260608/4423223_1.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "特斯拉AI6芯片有望刷新单晶圆算力纪录：算力较AI5翻倍，2028年投产",
+    "summary": "马斯克披露特斯拉第六代智驾芯片AI6工程设计评审顺利，算力约为第五代2倍架构全面重构搭载LPDDR6内存，已与三星签订165亿美元代工协议预计2028年下半年投产。",
+    "source": "站长之家",
+    "sourceUrl": "https://www.chinaz.com/2026/0615/1758842.shtml",
+    "category": "科技"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "AI短剧全面爆发：Q1全行业上线12.8万部AI占比超95%，全年预计240亿元",
+    "summary": "2026年Q1全行业上线微短剧约12.8万部AI微短剧约12.2万部占比超95%，抖音4月单月新增AI剧4.42万部为真人短剧13倍。全年市场规模预计达240亿元用户规模突破2.8亿。",
+    "source": "光明网",
+    "sourceUrl": "https://m.gmw.cn/2026-06/01/content_38803124.htm",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "智谱开源GLM-5.2：百万级上下文从纸面参数推进至生产可用，登顶CodeArena第一",
+    "summary": "智谱GLM-5.2核心突破在于将百万级上下文推进至生产可用，可在一轮连续任务中处理88万以上token。登顶CodeArena全球可用模型第一，与Claude Opus 4.8差距收窄至1%-4%，同步完成8个国产算力平台Day0适配，Token市场份额升至15%以上。",
+    "source": "澎湃新闻",
+    "sourceUrl": "https://m.thepaper.cn/newsDetail_forward_33468269",
+    "category": "AI"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "Wolfspeed发布第五代碳化硅MOSFET：比导通电阻低至3.4mΩ·cm²降幅达41%",
+    "summary": "Wolfspeed Gen 5 1200V SiC MOSFET在175℃下比导通电阻低至3.4mΩ·cm²较业界最优降低27%较上代降低41%，支持200℃长期运行芯片数量可减少约40%，卡位新能源汽车800V与AI数据中心双赛道。",
+    "source": "电子产品世界",
+    "sourceUrl": "https://www.eepw.com.cn/article/202606/481929.htm",
+    "category": "科技"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "IBM发布全球首颗0.7纳米芯片：指甲大小集成近1000亿晶体管",
+    "summary": "IBM在2026年VLSI大会上发布全球首颗突破1纳米门槛的0.7纳米芯片，采用纳米堆叠3D晶体管架构，性能较2纳米提升50%能效提升70%，预计5年内量产。",
+    "source": "TrendForce",
+    "sourceUrl": "https://www.trendforce.cn/industry-news/semiconductors/20260626-5883.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "AI短剧出海加速：海外规模预计6.5亿美元，AI剧占比从2%飙至16%",
+    "summary": "2026年海外AI生成短剧市场规模预计达6.5亿美元。Q1海外短剧素材榜TOP100中AI剧占比从2%飙升到16%，增长最快的不是纯AI剧而是AI仿真人+真人素材AI二次加工等混合形态。",
+    "source": "中国城市网",
+    "sourceUrl": "http://www.zgcsb.com/news/shouYe/2026-06/25/a_674275.html",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "量化大咖共识：行业告别粗放增长进入精细化竞争，超额中枢预判收敛至5%",
+    "summary": "灵均投资、蒙玺投资、黑翼资产、聚宽投资等头部机构一致判断：浅层量价因子饱和，超额回落是合理均值回归。增量Alpha来自小众生态、跨周期融合、基本面量化三类低拥挤赛道。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/3975640.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "GPT-5.6系列深夜遭曝光：Sol旗舰版超越Claude Mythos 5，仅向可信合作伙伴开放",
+    "summary": "OpenAI发布GPT-5.6系列Sol/Terra/Luna三版本，Sol在Terminal-Bench 2.1跑分达91.9%超越Claude Mythos 5。应美国政府安全审查要求，目前仅向约20家可信合作伙伴开放。分析认为这是防御性发布，因GPT-5.5在代码能力被阿里和Anthropic围追堵截。",
+    "source": "36氪",
+    "sourceUrl": "https://36kr.com/p/3869201971877120",
+    "category": "AI"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "EIS电池安全芯片集中爆发：电池进入电芯级心电图时代提前30分钟预警热失控",
+    "summary": "小鹏GX首款量产搭载ADI EIS芯片，欣旺达发布单电芯专属芯片方案，国轩高科G垣智慧电池可监测33项指标提前30分钟预警热失控，亿纬锂能发布AI Battery融合EIS感知。",
+    "source": "OFweek",
+    "sourceUrl": "https://ee.ofweek.com/2026-06/ART-8110-2801-30691933.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "OpenAI联手博通发布自研AI推理芯片Jalapeño，进军芯片战场",
+    "summary": "OpenAI发布首款专为大语言模型推理设计的定制芯片Jalapeño，联手博通打造。英伟达AI推理算力年增长高达122%，高通拟以约40亿美元收购AI芯片初创公司Modular进入数据中心市场。",
+    "source": "证券时报",
+    "sourceUrl": "https://www.stcn.com/article/detail/3980971.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "公募量化逆势扩张：年内发行规模289亿元同比增超9倍，量化总规模近6000亿",
+    "summary": "截至5月底，年内成立量化基金23只发行规模288.97亿元同比增长超9倍。公募量化总规模近6000亿元，百亿级量化私募达71家。景顺长城推出风格轮动模型+智能量化选股新策略。",
+    "source": "上海证券报",
+    "sourceUrl": "https://m.cnstock.com/commonDetail/727518",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "豆包大模型2.1 Pro发布：Coding进入国际第一梯队，日均Tokens突破180万亿",
+    "summary": "火山引擎发布Doubao-Seed-2.1 Pro，编程、智能体、视觉语言理解三大方向突破，多项Benchmark接近GPT-5.5和Claude Opus 4.7水平。豆包日均tokens调用量达180万亿，过去一年涨幅超10倍，火山引擎以49.5%市场份额居中国MaaS第一。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202606243780388470.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "中国碳化硅芯片第一股基本半导体启动港交所招股：全链条IDM布局",
+    "summary": "基本半导体通过港交所聆讯启动招股，为国内唯一实现SiC芯片设计、晶圆制造、模块封装、栅极驱动全链条自主的IDM企业，已应用于超14万辆新能源汽车获20余家车企超80款车型design-in。",
+    "source": "21世纪经济报道",
+    "sourceUrl": "https://www.21jingji.com/article/20260623/herald/15e1060968063a23d250ae7d8abcf39f.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "AI视频从抽卡时代进入可编辑时代：Seedance 2.5即将上线",
+    "summary": "字节跳动Seedance 2.5预计7月初上线支持单段30秒原生生成50个全模态参考局部编辑。竞争焦点从谁能生成更好看视频变为谁能生成可被持续修改控制复用的内容，创作者从剪辑师向模型导演进化。",
+    "source": "36氪",
+    "sourceUrl": "https://36kr.com/p/3839968025705096",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "AI内容强制标识管理全面落地：视频开头3秒须醒目标注违规将下架封号",
+    "summary": "6月14日起各大平台全面执行AI生成内容强制标识办法，发布视频须必选AI生成标签开篇3秒内醒目标注。恶意隐瞒面临下架限流封号。广电总局提出AI内容创作三原则：尊重人放大人成就人。",
+    "source": "云南网",
+    "sourceUrl": "http://news.yunnan.cn/system/2026/06/23/034053848.shtml",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "证监会主席吴清：严查借科技之名蹭热点炒概念",
+    "summary": "吴清在陆家嘴论坛表态严查借科技之名蹭热点炒概念操纵市场内幕交易。社保保险资金持有A股流通市值增长85%净买入约1.3万亿元。近期50多家A股公司针对热点概念发布风险提示公告。",
+    "source": "央视财经",
+    "sourceUrl": "https://finance.cctv.com/2026/06/17/ARTIYPywBfZELLKRJyNGujDq260617.shtml",
+    "category": "财经"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "金刚石散热技术突破芯片瓶颈：MIT将氮化镓嵌入单晶金刚石传热能力提升80%",
+    "summary": "MIT团队将氮化镓芯粒嵌入单晶金刚石基底微腔实现芯片级热管理，金刚石导热率是铜5倍硅10倍。郑州超算中心规模化应用后芯片模组传热能力提升80%性能提升10%温度下降5°C。",
+    "source": "新华社",
+    "sourceUrl": "http://www.xinhuanet.com/liangzi/20260610/455cf7f516634ef79985a7c41c5ec698/c.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "北大联合DeepSeek开源DSpark推理框架：同等硬件生成速度提升60%-85%",
+    "summary": "北大联合DeepSeek开源推理框架DSpark，通过并行运算与草稿预生成机制，同等硬件下生成速度提升60%-85%，已完成DeepSeek V4全系适配，大幅降低大模型部署成本。",
+    "source": "网易",
+    "sourceUrl": "https://www.163.com/dy/article/L0KB04PR05568W0A.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "甲骨文裁员2.1万人首次明确归因AI技术替代，AI行业进入商业化验证阶段",
+    "summary": "甲骨文宣布裁员2.1万人，全球员工从16.2万降至14.1万，重组成本约18亿美元。全球生成式AI年化收入达1750亿美元，Q1首超基础设施折旧成本1110亿美元，标志商业化拐点。",
+    "source": "每日经济新闻",
+    "sourceUrl": "https://www.nbd.com.cn/articles/2026-06-29/4439922.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "200+AI专家集结北京共议世界模型、智能体与具身智能",
+    "summary": "智源大会提出AI正从预测下一个Token迈向预测下一个物理状态的范式变革，发布世界基座模型悟界Physis-v0.1和具身大脑悟界RoboBrain Orca。世界模型初创公司Odyssey ML获亚马逊等3.1亿美元融资估值14.5亿美元。",
+    "source": "网易",
+    "sourceUrl": "https://www.163.com/dy/article/KVB6GUJ1051180F7.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "量化超额收益系统性收敛：5月指增产品平均超额-0.98%，正超额占比不足45%",
+    "summary": "5月全市场1251只指增产品平均超额收益-0.98%，正超额产品占比仅44.6%，连续7月维持正超额产品占比不足14%。微盘股指数自5月中旬以来跌幅超17%。",
+    "source": "中国基金报",
+    "sourceUrl": "https://fund.eastmoney.com/a/202606173774841153.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "量化策略进化四大新路径：多频段融合、量价+基本面、多资产全球化、风格轮动",
+    "summary": "头部量化机构提出：蒙玺投资多频段信号融合对冲单周期波动、黑翼资产量价+基本面双线并行、全球化多资产布局突破A股容量约束、景顺长城风格轮动六大维度智能配置。",
+    "source": "东方财富",
+    "sourceUrl": "https://fund.eastmoney.com/a/202606243780129386.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "国常会加力推进AI创新突破：加快超大规模智算集群建设",
+    "summary": "国务院总理李强主持召开国常会，要求加快关键技术攻关和超大规模智算集群建设，深入实施人工智能+行动。韩国宣布总额超千万亿韩元的AI和半导体投资计划，三星投资2655万亿韩元SK集团投资2100万亿韩元。",
+    "source": "中国金融信息网",
+    "sourceUrl": "https://www.cnfin.com/sdbjh-lb/detail/20260630/4433425_1.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "A股千亿市值阵营大扩容至208家，科技与金融股旗鼓相当",
+    "summary": "截至6月29日A股超千亿元市值公司达208家较年初增32家同比增74家。电子、银行、非银金融位列行业前三，科技制造类企业数量已与金融类企业旗鼓相当。",
+    "source": "经济参考报",
+    "sourceUrl": "http://jjckb.xinhuanet.com/20260630/b4d809764a8741e097a25aa45ec2d7b1/c.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "DeepSeek V4定档7月中旬：引入峰谷API定价机制高峰时段价格翻倍",
+    "summary": "DeepSeek V4正式版计划7月中旬上线，同步引入峰谷API定价机制——高峰时段（上午9-12点、下午2-6点）价格为平时2倍。首轮融资超500亿元投后估值突破4000亿元。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/3987881.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "百只翻倍基涌现最高涨175%：财通多策略福鑫领跑，绩优产品青睐AI赛道",
+    "summary": "今年以来净值翻倍的主动权益基金突破百只，财通多策略福鑫净值增长率达175.21%排名第一。绩优产品以青睐AI等科技赛道为主，公募基金总规模截至5月底达39.48万亿元。",
+    "source": "网易",
+    "sourceUrl": "https://www.163.com/dy/article/L0LKUBFN05568W0A.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "存储三巨头遭美国集体诉讼：被指合谋操纵DRAM价格四年暴涨约700%",
+    "summary": "三星、SK海力士和美光被指合谋操纵DRAM价格致价格四年暴涨约700%，引发苹果iPad和Mac价格上涨。韩国综合指数6月24日暴跌9.99%两次熔断。美国将修改PCE统计方法。",
+    "source": "搜狐",
+    "sourceUrl": "https://www.sohu.com/a/1043525476_115433",
+    "category": "财经"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "AI短剧触顶后抖音选新路：扶持真人+AI混合模式，S级最高100万保底",
+    "summary": "抖音推出真人主演+AI制作竖屏短剧激励政策S级最高100万元保底。腾讯视频提出AI短剧全栈重构，快手8亿资金探索多元分账。行业从纯AI替代转向真人+AI协作——真人负责表演温度AI负责降本增效。",
+    "source": "21世纪经济报道",
+    "sourceUrl": "https://m.21jingji.com/article/20260626/herald/9770b017c5e8b355bdd910cd9eec3802.html",
+    "category": "自媒体"
+  },
+  {
     "date": "2026-06-29",
     "title": "广电总局推进微短剧精品创作五个一批工程：AI微短剧纳入统一管理",
     "summary": "广电总局发布微短剧精品创作传播五个一批工程，鼓励AI提效率降成本赋能精良制作。AI电视剧与普通剧集统一纳入规范管理体系，AI漫剧正式纳入备案审核体系需持证上岗。演员委员会呼吁建立AI演艺内容授权核验长效机制。",
@@ -30,14 +326,6 @@ window.NEWS_DATA = [
     "source": "网易",
     "sourceUrl": "https://www.163.com/dy/article/L0J3UFV705198CJN.html",
     "category": "科技"
-  },
-  {
-    "date": "2026-06-29",
-    "title": "1-5月工业企业利润同比增长18.8%：电子行业利润翻倍大增103.9%",
-    "summary": "1-5月全国规模以上工业企业利润同比增长18.8%，5月单月增长21.1%。计算机通信和其他电子设备制造业利润同比大增103.9%，有色金属冶炼加工业增长117.1%，AI产业链利润效应全面释放。",
-    "source": "中国金融信息网",
-    "sourceUrl": "https://www.cnfin.com/yw-lb/detail/20260629/4432810_2.html",
-    "category": "财经"
   },
   {
     "date": "2026-06-29",
@@ -73,26 +361,10 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-29",
-    "title": "马斯克宣布Grok 4.5开启内部私测，基于1.5万亿参数V9基础模型",
-    "summary": "马斯克宣布基于1.5万亿参数V9基础模型打造的Grok 4.5在SpaceX和特斯拉内部开启私测，已整合AI编程工具Cursor数据，早期评测显示性能接近甚至可能超越Claude Opus，后续每月将发布全新模型。",
-    "source": "每日经济新闻",
-    "sourceUrl": "https://m.nbd.com.cn/articles/2026-06-29/4439928.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-06-29",
     "title": "谷歌因算力紧张限制Gemini使用额度，AI算力供给短缺成核心瓶颈",
     "summary": "Gemini API需求激增导致谷歌开始收紧算力分配并限制部分客户使用额度，Meta因未能获得所需算力配额而内部AI项目推进受影响。算力供给短缺成为大模型商业化核心瓶颈，英伟达数据中心交换机营收暴增193%。",
     "source": "每日经济新闻",
     "sourceUrl": "http://www.nbd.com.cn/articles/2026-06-29/4439922.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-06-29",
-    "title": "惠普与OpenAI达成战略合作：全球业务全面部署Frontier智能体平台",
-    "summary": "惠普与OpenAI签署战略合作协议，将在全球业务全面部署OpenAI Frontier智能体平台，推动企业级AI转型，覆盖办公、IT管理、客户服务等核心业务场景。",
-    "source": "IT之家",
-    "sourceUrl": "https://www.ithome.com/0/969/743.htm",
     "category": "AI"
   },
   {
@@ -153,14 +425,6 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-29",
-    "title": "A股两融余额首破3万亿元：增量资金涌入AI硬件与半导体，K型分化加剧",
-    "summary": "A股两融余额首次突破3万亿元创历史新高，增量资金集中在AI硬件与半导体等高景气赛道。年初全市场约70%个股下跌、涨跌幅中位数-16%，呈现典型指数强个股弱的K型分化格局。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202606293785666645.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-29",
     "title": "陆家嘴财经早餐6月29日：美伊同意停火，美联储加息预期提前至9月",
     "summary": "美伊同意停止相互打击本周卡塔尔会晤磋商霍尔木兹海峡问题。美联储加息预期从2027年1月提前至2026年9月，美元指数升至101.4。A股两融破3万亿，6月新基金发行超千亿。6月超1700家公司分红5690亿元。",
     "source": "网易",
@@ -209,26 +473,10 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-29",
-    "title": "AI短剧制作成本降90%但流量成本涨超100%：行业陷入量升利降困局",
-    "summary": "AI短剧制作成本仅为真人1/10，一人1~3天一部剧成常态。但流量成本同比上涨超100%，千次播放收益从60元腰斩至15~30元，投流ROI降至1.03~1.07微利区间，腰部公司盈利比例或低至3%~5%。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/3984242.html",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-29",
     "title": "每天1300部AI短剧上线：日产量破纪录，投流成本攀升堆量模式难以为继",
     "summary": "日均上线超1300部新AI短剧，3月单月新增近5万部。前5个月国内AI短剧市场规模超220亿元，抖音AI创作浪潮计划累计播放超750亿次。但爆款率已不足0.1%，纯堆量模式宣告终结。",
     "source": "东方财富",
     "sourceUrl": "https://finance.eastmoney.com/a/202606293785643464.html",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-29",
-    "title": "AI短剧分类分层管理7月1日正式施行：广电总局出台新规规范行业",
-    "summary": "广电总局发布管理提示AI微短剧分类分层标准，按题材和投资额分类管理，7月1日起施行。同时推进AI换皮魔改侵权专项治理，版权管理从事后追责转向事前授权标准化许可。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/3984143.html",
     "category": "自媒体"
   },
   {
@@ -249,35 +497,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-28",
-    "title": "韩国5000亿韩元攻关下一代功率半导体SiC/GaN",
-    "summary": "韩国政府启动超级创新经济项目，计划投入5000亿韩元攻关下一代功率半导体SiC/GaN，将功率半导体定位为堪比存储芯片的核心战略产业。AI数据中心正从48V配电转向400V甚至800V HVDC架构。",
-    "source": "中国能源新闻网",
-    "sourceUrl": "https://www.cnenergynews.cn/article/4RzJv8JjYv0",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-28",
     "title": "金价跌破4000美元，黄金ETF规模缩水500亿元",
     "summary": "国际金价跌破4000美元关口，黄金ETF规模缩水约500亿元。地缘风险溢价消退与美元利率环境变化是主因，分析认为短期仍不建议抄底。",
     "source": "中国网财经",
     "sourceUrl": "http://finance.china.com.cn/money/fund/index.shtml?kqbmw.html",
     "category": "财经"
-  },
-  {
-    "date": "2026-06-28",
-    "title": "量化超额收益系统性收敛：前4月私募指增超额均值仅4.06%近乎腰斩",
-    "summary": "2026年前4个月私募指增产品超额收益均值仅4.06%，较去年同期的逾9%近乎腰斩。中证1000指增和中证500指增超额均值分别仅3.24%和1.93%，资金供需+市场结构+行业生态三重共振。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/3968478.html",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-28",
-    "title": "量化行业长期超额中枢预判将收敛至5%左右",
-    "summary": "业界共识：增量Alpha聚焦多频段信号融合、基本面量化与另类数据、风格轮动模型。行业超额中枢预判将收敛至5%左右，策略同质化与容量瓶颈是核心挑战。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/3968478.html",
-    "category": "量化"
   },
   {
     "date": "2026-06-28",
@@ -321,30 +545,6 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-28",
-    "title": "百亿量化私募达71家，量化股票基金总规模升至2.25万亿",
-    "summary": "百亿级量化私募已达71家，2026年前4月新增16家。量化股票基金总规模升至2.25万亿元（中信证券测算），头部机构每年数十亿级算力和人才投入形成天然壁垒。",
-    "source": "中国金融新闻网",
-    "sourceUrl": "https://www.cnfin.com/gs-lb/detail/20260608/4423223_1.html",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-28",
-    "title": "特斯拉AI6芯片有望刷新单块晶圆可用算力纪录",
-    "summary": "马斯克披露特斯拉第六代智驾芯片AI6工程设计评审顺利，算力约为第五代的2倍，架构全面重构搭载LPDDR6内存，近半数张量加速器与高速SRAM直接封装。已与三星签订165亿美元代工协议，预计2028年下半年投产。",
-    "source": "站长之家",
-    "sourceUrl": "https://www.chinaz.com/2026/0615/1758842.shtml",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-28",
-    "title": "活人感成为核心竞争力：行业从模板化转向真实人格化IP",
-    "summary": "行业从精致剧本/模板化内容全面转向野生、真实、有活人感的原生内容。复旦大学教授称人格化IP大于内容形式。MIT实验警示长期将创作外包给AI会导致人类思考能力持续退化。选题和情绪表达必须由人主导。",
-    "source": "光明网",
-    "sourceUrl": "https://m.gmw.cn/2026-06/01/content_38803124.htm",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-28",
     "title": "抖音力推真人主演+AI制作混合模式，S级最高100万保底",
     "summary": "抖音推出真人主演结合AI制作的竖屏短剧激励政策，S级最高100万元保底。腾讯视频提出AI短剧全栈重构，快手拿8亿资金探索多元分账。混合模式整体节省约60%特效和场地费用。",
     "source": "OFweek",
@@ -361,14 +561,6 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-28",
-    "title": "中国AI全球影响力上升：智谱GLM-5.2登顶CodeArena第一",
-    "summary": "华盛顿邮报报道中国AI以更低成本更高效率抢占全球市场。智谱GLM-5.2登顶CodeArena全球可用模型第一，与Claude Opus 4.8差距收窄至1%-4%，同步完成8个国产算力平台Day0适配。",
-    "source": "澎湃新闻",
-    "sourceUrl": "https://m.thepaper.cn/newsDetail_forward_33468269",
-    "category": "AI"
-  },
-  {
-    "date": "2026-06-28",
     "title": "《人工智能智能体互联》7项国家标准正式发布",
     "summary": "国家标准《人工智能智能体互联》覆盖身份码、描述、发现、交互、工具调用等全环节的7项标准正式发布，标志着智能体从概念走向标准化生态。",
     "source": "多家综合",
@@ -377,27 +569,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-28",
-    "title": "Wolfspeed发布第五代碳化硅MOSFET，卡位新能源车与AI数据中心",
-    "summary": "Wolfspeed Gen 5 1200V SiC MOSFET比导通电阻低至3.4 mΩ·cm²（175℃），支持200℃长期运行，芯片数量可减少约40%，卡位新能源汽车800V平台与AI数据中心800V高压供电双赛道。",
-    "source": "电子产品世界",
-    "sourceUrl": "https://www.eepw.com.cn/article/202606/481929.htm",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-28",
     "title": "Seedance 2.5即将上线：AI视频生成从抽卡走向可控生产",
     "summary": "字节跳动Seedance 2.5预计7月初上线，支持单段30秒原生视频生成、50个全模态参考素材输入、局部视频编辑。AI视频生成正从抽卡式创作走向可控内容生产。",
     "source": "阿里云开发者社区",
     "sourceUrl": "https://developer.aliyun.com/article/1743729",
     "category": "自媒体"
-  },
-  {
-    "date": "2026-06-28",
-    "title": "IBM发布全球首款0.7纳米芯片：指甲大小藏近千亿晶体管",
-    "summary": "IBM在2026年VLSI大会上发布全球首颗突破1纳米门槛的0.7纳米芯片，采用纳米堆叠3D晶体管架构，指甲大小集成近1000亿晶体管，性能提升50%能效提升70%，预计5年内量产。",
-    "source": "TrendForce/36氪",
-    "sourceUrl": "https://www.trendforce.cn/industry-news/semiconductors/20260626-5883.html",
-    "category": "科技"
   },
   {
     "date": "2026-06-28",
@@ -417,38 +593,6 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-28",
-    "title": "AI赋能量化进入范式重构阶段：聚宽AI因子占比超70%",
-    "summary": "蒙玺投资划分三阶段：模型替换→全链路提效→范式重构（2026年至今），AI已开始自主完成因子组合动态迭代。聚宽投资来自AI方法论的新因子占比已超70%，贝莱德持续迭代AIM系统。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/3968478.html",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-28",
-    "title": "AI短剧出海：海外规模预计6.5亿美元，AI剧占比从2%飙至16%",
-    "summary": "2026年海外AI生成短剧市场规模预计达6.5亿美元（2025年仅1亿）。Q1海外短剧素材榜TOP100中AI剧占比从2%飙升到16%。听花岛等头部公司已把重心转向海外AI漫剧。",
-    "source": "中国城市网",
-    "sourceUrl": "http://www.zgcsb.com/news/shouYe/2026-06/25/a_674275.html",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-28",
-    "title": "AI短剧全面爆发：Q1全行业上线12.8万部，AI占比超95%",
-    "summary": "2026年Q1全行业上线微短剧约12.8万部，其中AI微短剧约12.2万部占比超95%。抖音4月新增AI剧4.42万部为真人短剧13倍。覆盖用户规模达7.18亿。郑州多个拍摄基地空置，真人短剧行业遭受冲击。",
-    "source": "光明网",
-    "sourceUrl": "https://m.gmw.cn/2026-06/01/content_38803124.htm",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-28",
-    "title": "AI季度收入首超折旧成本，全球年化收入达1750亿美元",
-    "summary": "全球生成式AI年化收入达1750亿美元，Q1首次超过基础设施折旧成本1110亿美元，标志商业化拐点。黄仁勋称AI基建周期数十年，物理AI是下一波浪潮。",
-    "source": "CMoney",
-    "sourceUrl": "https://cmnews.com.tw/article/cmoneyairesearcher-1dfbb8b2-7252-11f1-9742-c2b926277aaf",
-    "category": "AI"
-  },
-  {
-    "date": "2026-06-28",
     "title": "AI基建投资推高通胀压力，预计今年达7450亿美元",
     "summary": "科技巨头AI资本开支预计今年达7450亿美元，2027-2028年或超万亿美元。AI基础设施建设的初期阶段具有通胀性，可能迫使美联储重新评估中性利率。苹果已因存储成本上升提高iPad/MacBook价格。",
     "source": "搜狐财经",
@@ -462,14 +606,6 @@ window.NEWS_DATA = [
     "source": "中国网",
     "sourceUrl": "http://www.china.com.cn/opinion2020/2026-06/23/content_118559677.shtml",
     "category": "自媒体"
-  },
-  {
-    "date": "2026-06-26",
-    "title": "超额收敛成常态，量化大咖共商进化新路径",
-    "summary": "金长江私募基金发展论坛上，灵均投资、蒙玺投资、黑翼资产、聚宽投资等头部量化私募一致认为国内量化行业已彻底告别依靠市场红利扩张的粗放增长阶段，超额收益持续走弱。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/3975640.html",
-    "category": "量化"
   },
   {
     "date": "2026-06-26",
@@ -502,14 +638,6 @@ window.NEWS_DATA = [
     "source": "星岛日报",
     "sourceUrl": "https://www.stheadline.com/realtime-world/3587156",
     "category": "科技"
-  },
-  {
-    "date": "2026-06-26",
-    "title": "GPT-5.6深夜遭曝光：2026下半场成AI检测AI绞肉机",
-    "summary": "OpenAI首席科学家内部预览GPT-5.6模型，被视为防御性发布。Superhuman溢价收购AI文本检测独角兽GPTZero，企业一边用AI生成内容一边用AI检测幻觉，形成荒诞商业闭环。",
-    "source": "36氪",
-    "sourceUrl": "https://36kr.com/p/3869201971877120",
-    "category": "AI"
   },
   {
     "date": "2026-06-26",
@@ -625,14 +753,6 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-25",
-    "title": "SNEC 2026：AI芯片深度嵌入光储能源系统，储能展馆首超光伏",
-    "summary": "SNEC 2026储能展馆数量首次超越光伏，光储融合成核心主题。兆易创新MCU+AFE方案覆盖光储充全场景，方正微电子车规级SiC MOSFET累计出货突破3000万颗。功率半导体进入上行周期。",
-    "source": "OFweek",
-    "sourceUrl": "https://ee.ofweek.com/2026-06/ART-8110-2801-30691933.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-25",
     "title": "SK keyfoundry开发出基于双向SCR的片上EMC保护技术，已进入量产",
     "summary": "韩国8英寸纯晶圆代工厂SK keyfoundry成功开发基于双向可控硅整流器的片上电磁兼容保护技术。该技术大幅提升汽车半导体电磁兼容性能，已应用于0.13微米BCD工艺产品并进入量产，对新能源汽车芯片抗干扰能力意义重大。",
     "source": "科创板日报",
@@ -678,14 +798,6 @@ window.NEWS_DATA = [
     "source": "36氪",
     "sourceUrl": "https://36kr.com/p/3867071765402630.html",
     "category": "自媒体"
-  },
-  {
-    "date": "2026-06-25",
-    "title": "AI推理群雄逐鹿：英伟达守擂，OpenAI等攻擂",
-    "summary": "OpenAI发布首款AI推理芯片Jalapeno联手博通，高通拟40亿美元收购AI芯片公司Modular，英伟达黄仁勋称Token经济时代算力就是收入。",
-    "source": "证券时报",
-    "sourceUrl": "https://www.stcn.com/article/detail/3980971.html",
-    "category": "AI"
   },
   {
     "date": "2026-06-25",
@@ -742,14 +854,6 @@ window.NEWS_DATA = [
     "source": "网易",
     "sourceUrl": "https://www.163.com/dy/article/L060DQ9405198CJN.html",
     "category": "财经"
-  },
-  {
-    "date": "2026-06-24",
-    "title": "景顺长城量化选股混合正在发行：风格轮动+智能量化双轮驱动",
-    "summary": "景顺长城推出风格轮动模型+智能量化选股策略，底层因子划分为成长、价值、质量、技术面、低波和机构行为六大风格，结合宏观环境轮动配置。量化基金年内发行规模较去年同期增长超9倍。",
-    "source": "上海证券报",
-    "sourceUrl": "https://m.cnstock.com/commonDetail/727518",
-    "category": "量化"
   },
   {
     "date": "2026-06-24",
@@ -816,14 +920,6 @@ window.NEWS_DATA = [
     "category": "AI"
   },
   {
-    "date": "2026-06-24",
-    "title": "AI早报：豆包大模型2.1 Pro发布；Meta推出299美元智能眼镜新系列",
-    "summary": "豆包大模型2.1 Pro正式发布；Meta推出299美元新款智能眼镜系列；高通接近以约40亿美元收购AI芯片初创公司Modular；甲骨文裁员2.1万人首次明确归因AI技术替代。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202606243780388470.html",
-    "category": "AI"
-  },
-  {
     "date": "2026-06-23",
     "title": "麦格纳芯片推出第六代600V MOSFET，专攻AI服务器及电动车",
     "summary": "韩国麦格纳发布两款第六代600V超结MOSFET，导通电阻低至36mΩ。内置ESD保护与快速恢复体二极管，专攻AI服务器电源和电动车充电系统。",
@@ -846,14 +942,6 @@ window.NEWS_DATA = [
     "source": "新华网",
     "sourceUrl": "http://www3.xinhuanet.com/tech/20260623/acd6f2f27fc34459a7d1684c03278431/c.html",
     "category": "AI"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "蝶威量化",
-    "summary": "蝶威量化",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://epaper.cs.com.cn/zgzqb/html/2026-03/30/nw.D110000zgzqb_20260330_1-J03.htm",
-    "category": "量化"
   },
   {
     "date": "2026-06-23",
@@ -902,14 +990,6 @@ window.NEWS_DATA = [
     "source": "21世纪经济报道",
     "sourceUrl": "https://www.21jingji.com/article/20260623/herald/1e8abc8b5bc44bb56a116471574fed94.html",
     "category": "财经"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "基本半导体通过港交所聆讯，清华剑桥团队剑指碳化硅芯片第一股",
-    "summary": "基本半导体凭借IDM全栈能力通过港交所聆讯，有望成为中国碳化硅芯片第一股。累计170项授权专利，第三代SiC MOSFET每片晶圆产出较上代提升40%以上，获20余家车企80余款车型design-in。",
-    "source": "21世纪经济报道",
-    "sourceUrl": "https://www.21jingji.com/article/20260623/herald/15e1060968063a23d250ae7d8abcf39f.html",
-    "category": "科技"
   },
   {
     "date": "2026-06-23",
@@ -977,14 +1057,6 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-23",
-    "title": "中国债券信息网",
-    "summary": "中国债券信息网",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://www.cfbond.com/2026/03/30/991124950.html",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
     "title": "中信建投：A股流动性温和回升，关注景气度从AI蔓延至新方向",
     "summary": "市场风格或迎来再平衡，海外地缘和流动性风险逐步落地。美股纳指跌1.32%，SpaceX跌超16%市值蒸发4000亿美元。黄金涨至4209美元。",
     "source": "博时基金",
@@ -1017,78 +1089,6 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-23",
-    "title": "r/algotrading",
-    "summary": "r/algotrading",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://www.reddit.com/r/algotrading/comments/1tsl3ef/48_days_of_ai_agent_paper_trading_3245_total_pl/",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "dev.to's framework comparison",
-    "summary": "dev.to's framework comparison",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://dev.to/lightningdev123/best-ai-trading-agents-in-2026-can-they-really-deliver-consistent-returns-2fgl",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "Vibe Coding",
-    "summary": "Vibe Coding",
-    "source": "last30days 合成报告",
-    "sourceUrl": "http://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/search/rptid/827339646951/index.phtml",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "TradingAgents",
-    "summary": "TradingAgents",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://apidog.com/blog/tradingagents-multi-agent-llm-trading/",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "Robinhood",
-    "summary": "Robinhood",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://techcrunch.com/2026/05/27/robinhood-now-lets-your-ai-agents-trade-stocks/",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "QuantDinger",
-    "summary": "QuantDinger",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://github.com/brokermr810/QuantDinger",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "QuantClaw",
-    "summary": "QuantClaw",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://www.npmjs.com/package/quantclaw",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "Omphalos Fund",
-    "summary": "Omphalos Fund",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://funds-europe.com/machines-take-the-helm-the-asset-manager-of-2030-is-already-here/",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "NVIDIA's technical blog",
-    "summary": "NVIDIA's technical blog",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://developer.nvidia.com/blog/automating-and-optimizing-financial-signal-discovery-with-multi-agent-systems/",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
     "title": "MiniMax启动回A冲刺科创板，总市值1934亿港元",
     "summary": "MiniMax股价最高触及637.5港元，总市值较年初涨近3倍，已启动回A股冲刺科创板。DeepSeek完成首轮融资超74亿美元，估值或超500亿美元。",
     "source": "北京商报",
@@ -1097,83 +1097,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-23",
-    "title": "Magnetar Capital",
-    "summary": "Magnetar Capital",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://www.hedgeweek.com/magnetar-to-launch-ai-powered-hedge-fund-with-bots-replacing-analyst-teams/",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "LLM-TradeBot",
-    "summary": "LLM-TradeBot",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://github.com/EthanAlgoX/LLM-TradeBot",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "June 2026 arXiv audit",
-    "summary": "June 2026 arXiv audit",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://browse-export.arxiv.org/abs/2606.08285",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "Interactive Brokers",
-    "summary": "Interactive Brokers",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://www.thearmchairtrader.com/brokers/interactive-brokers-opens-the-door-to-ai-agents/",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "Citadel's Ken Griffin",
-    "summary": "Citadel's Ken Griffin",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://www.kucoin.com/news/flash/citadel-ceo-says-ai-agents-complete-complex-finance-tasks-in-days",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "CSDN's OpenClaw quant tutorial",
-    "summary": "CSDN's OpenClaw quant tutorial",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://deep-learning.blog.csdn.net/article/details/159354851",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "Baidu Developer's architecture guides",
-    "summary": "Baidu Developer's architecture guides",
-    "source": "last30days 合成报告",
-    "sourceUrl": "https://developer.baidu.com/article/detail.html?id=7415675",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-23",
     "title": "A股成交3.76万亿创历史第二高位，创业板指再创历史新高",
     "summary": "上证指数4163.10点涨1.78%，创业板指4359.39点涨2.52%。券商板块涨逾6%东方财富涨12.74%。智谱市值突破万亿港元盘中涨超42%。",
     "source": "中国金融信息网",
     "sourceUrl": "https://www.cnfin.com/gs-lb/detail/20260623/4430265_1.html",
     "category": "财经"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "AI视频集体告别抽卡模式：可编辑时代来临，导演模型要火",
-    "summary": "AI视频从随机抽卡转向可编辑控制：Gemini Omni对话式编辑、Runway Aleph 2.0精准局部修改、可灵O1整合生成修改镜头延展。创作者变成模型导演。",
-    "source": "36氪",
-    "sourceUrl": "https://36kr.com/p/3839968025705096",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "AI内容强制标识管理全面落地：视频开头3秒内需醒目标注",
-    "summary": "6月14日起各大平台全面落地AI生成内容强制标识：必须在视频开头3秒内标注，标识不小于画面宽度5%。违规将被下架限流封号。监管从事后追惩迈向事前阻断。",
-    "source": "云南网",
-    "sourceUrl": "http://news.yunnan.cn/system/2026/06/23/034053848.shtml",
-    "category": "自媒体"
   },
   {
     "date": "2026-06-22",
@@ -1192,139 +1120,11 @@ window.NEWS_DATA = [
     "category": "财经"
   },
   {
-    "date": "2026-06-22",
-    "title": "【AI漫剧】剧本+分镜+静帧+视频+配音+剪辑一键生成！ 手把手教你ComfyUI+豆包+即梦AI玩转AI漫剧赛道，零基础小白也能轻松学会！",
-    "summary": "【AI漫剧】剧本+分镜+静帧+视频+配音+剪辑一键生成！ 手把手教你ComfyUI+豆包+即梦AI玩转AI漫剧赛道，零基础小白也能轻松学会！",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=yRFHRQMWWwo",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-22",
-    "title": "What is GLM-5.2? Another open-source Chinese AI model has Silicon Valley's attention.",
-    "summary": "What is GLM-5.2? Another open-source Chinese AI model has Silicon Valley's attention.",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1uc5hjh/what_is_glm52_another_opensource_chinese_ai_model/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-22",
-    "title": "Microsoft’s Satya Nadella: We Can’t Let AI Giants Eat the Economy",
-    "summary": "Microsoft’s Satya Nadella: We Can’t Let AI Giants Eat the Economy",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1uc948k/microsofts_satya_nadella_we_cant_let_ai_giants/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-22",
-    "title": "Maybe the AI race isn’t about models at all, but about trust and organizational intelligence",
-    "summary": "Maybe the AI race isn’t about models at all, but about trust and organizational intelligence",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/artificial/comments/1uc7mk8/maybe_the_ai_race_isnt_about_models_at_all_but/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-22",
-    "title": "Americans Have Turned Against AI in Incredible Numbers",
-    "summary": "Americans Have Turned Against AI in Incredible Numbers",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/singularity/comments/1uc9757/americans_have_turned_against_ai_in_incredible/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "黃仁勳沒說的實話：實體AI（Physical AI）才是終局！為什麼特斯拉、NVIDIA瘋搶這塊大餅？🤖",
-    "summary": "黃仁勳沒說的實話：實體AI（Physical AI）才是終局！為什麼特斯拉、NVIDIA瘋搶這塊大餅？🤖",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=62PrAdMQJLM",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "‘We created a monster’: companies rein in AI usage as costs strain budgets — Amazon, Walmart and Uber are among early adopters that have introduced caps or discouraged wasteful activity",
-    "summary": "‘We created a monster’: companies rein in AI usage as costs strain budgets — Amazon, Walmart and Uber are among early adopters that have introduced caps or discouraged wasteful activity",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1ubryyn/we_created_a_monster_companies_rein_in_ai_usage/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "it's always funny to see people on Chinese social media genuinely don't understand the AI hate on western social media.",
-    "summary": "it's always funny to see people on Chinese social media genuinely don't understand the AI hate on western social media.",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/singularity/comments/1uc2gd0/its_always_funny_to_see_people_on_chinese_social/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Yann LeCun says xAI is \"kind of a failure\" – and the whole AI industry might be headed for a reset",
-    "summary": "Yann LeCun says xAI is \"kind of a failure\" – and the whole AI industry might be headed for a reset",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1ubo5r8/yann_lecun_says_xai_is_kind_of_a_failure_and_the/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Yann LeCun says xAI is \"kind of a failure\" and the whole AI industry might be headed for a reset",
-    "summary": "Yann LeCun says xAI is \"kind of a failure\" and the whole AI industry might be headed for a reset",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/singularity/comments/1ubswog/yann_lecun_says_xai_is_kind_of_a_failure_and_the/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Why can't LLMs be trained to think in an optimized AI language rather than English?",
-    "summary": "Why can't LLMs be trained to think in an optimized AI language rather than English?",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/singularity/comments/1ubdjso/why_cant_llms_be_trained_to_think_in_an_optimized/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Why an AI company cleaned my New York City apartment for free",
-    "summary": "Why an AI company cleaned my New York City apartment for free",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1uc23x3/why_an_ai_company_cleaned_my_new_york_city/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Why Amazon hates 'human-in-the-loop' AI governance | VP Eric Brandwine explains people aren't all that great, actually",
-    "summary": "Why Amazon hates 'human-in-the-loop' AI governance | VP Eric Brandwine explains people aren't all that great, actually",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/singularity/comments/1ubrhi7/why_amazon_hates_humanintheloop_ai_governance_vp/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "What do you think is currently the biggest technical limitation in generative AI video?",
-    "summary": "What do you think is currently the biggest technical limitation in generative AI video?",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/artificial/comments/1ubne3w/what_do_you_think_is_currently_the_biggest/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "What Are Your Moves Tomorrow, June 22, 2026",
-    "summary": "What Are Your Moves Tomorrow, June 22, 2026",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/wallstreetbets/comments/1ubznyl/what_are_your_moves_tomorrow_june_22_2026/",
-    "category": "财经"
-  },
-  {
     "date": "2026-06-21",
     "title": "Ukraine launches TrophyLab platform to share captured Russian weapons’ technology with allies — “Every missile, drone, and vehicle seized on the battlefield is now a source of knowledge for the free w",
     "summary": "Ukraine launches TrophyLab platform to share captured Russian weapons’ technology with allies — “Every missile, drone, and vehicle seized on the battlefield is now a source of knowledge for the free world”",
     "source": "Reddit",
     "sourceUrl": "https://www.reddit.com/r/technology/comments/1ubcc1a/ukraine_launches_trophylab_platform_to_share/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Three RTX 3060s vs One RTX 3090 for Local AI: What a $1,500 Build Actually Measured",
-    "summary": "Three RTX 3060s vs One RTX 3090 for Local AI: What a $1,500 Build Actually Measured",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/nvidia/comments/1uc1x08/three_rtx_3060s_vs_one_rtx_3090_for_local_ai_what/",
     "category": "科技"
   },
   {
@@ -1345,218 +1145,10 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-21",
-    "title": "Study says AI in schools may be doing more harm than good",
-    "summary": "Study says AI in schools may be doing more harm than good",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1ubtcod/study_says_ai_in_schools_may_be_doing_more_harm/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Reuters: Norway imposes near ban on AI in elementary school",
-    "summary": "Reuters: Norway imposes near ban on AI in elementary school",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/singularity/comments/1ubvhok/reuters_norway_imposes_near_ban_on_ai_in/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Polymarket Accused of Using Fake Winning Bets to Fuel Viral Growth",
-    "summary": "Polymarket Accused of Using Fake Winning Bets to Fuel Viral Growth",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1ubnbyu/polymarket_accused_of_using_fake_winning_bets_to/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Mythos was not trained on 'hacking'. Other Ai labs also will reach Mythos-level capabilities in the future",
-    "summary": "Mythos was not trained on 'hacking'. Other Ai labs also will reach Mythos-level capabilities in the future",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/singularity/comments/1ubnlre/mythos_was_not_trained_on_hacking_other_ai_labs/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "My personal experience from last 4 years about AI",
-    "summary": "My personal experience from last 4 years about AI",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/artificial/comments/1ubpzj7/my_personal_experience_from_last_4_years_about_ai/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Most AI security tools inspect messages. Arc Gate inspects sessions.",
-    "summary": "Most AI security tools inspect messages. Arc Gate inspects sessions.",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/artificial/comments/1ubt8qj/most_ai_security_tools_inspect_messages_arc_gate/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Meta Exec Admits Zuckerberg Has Crushed Workers’ Spirits",
-    "summary": "Meta Exec Admits Zuckerberg Has Crushed Workers’ Spirits",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1ubx8s5/meta_exec_admits_zuckerberg_has_crushed_workers/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Is it just me or is ChatGPT/OpenAI the Microsoft of AI?",
-    "summary": "Is it just me or is ChatGPT/OpenAI the Microsoft of AI?",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/artificial/comments/1uc4l3x/is_it_just_me_or_is_chatgptopenai_the_microsoft/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "In just three years, the number of AI-generated books released skyrocketed",
-    "summary": "In just three years, the number of AI-generated books released skyrocketed",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/singularity/comments/1ubqlym/in_just_three_years_the_number_of_aigenerated/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "I've made loss in every AI stock!",
-    "summary": "I've made loss in every AI stock!",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/wallstreetbets/comments/1ube9u3/ive_made_loss_in_every_ai_stock/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "I made my first AI short-film trailer — an Ottoman-era alien invasion (Ottoman Entity) Yapay Labs",
-    "summary": "I made my first AI short-film trailer — an Ottoman-era alien invasion (Ottoman Entity) Yapay Labs",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/aivideo/comments/1ubt5ls/i_made_my_first_ai_shortfilm_trailer_an/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Half Of US Workers Now Use AI At Work",
-    "summary": "Half Of US Workers Now Use AI At Work",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1ubub1v/half_of_us_workers_now_use_ai_at_work/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Estimated share of newly written code that was AI-generated or AI-assisted",
-    "summary": "Estimated share of newly written code that was AI-generated or AI-assisted",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/singularity/comments/1ubnedd/estimated_share_of_newly_written_code_that_was/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
     "title": "Energy Security, Not Climate Goals, Is Now Driving the Clean Power Boom. This year's rush for renewable energy marks a historic sea change in geopolitics and a tipping point for the global energy tran",
     "summary": "Energy Security, Not Climate Goals, Is Now Driving the Clean Power Boom. This year's rush for renewable energy marks a historic sea change in geopolitics and a tipping point for the global energy transition. We are now in a distinctive third era of clean energy growth. It's all about energy security",
     "source": "Reddit",
     "sourceUrl": "https://www.reddit.com/r/energy/comments/1ubud22/energy_security_not_climate_goals_is_now_driving/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Did AI Deep Research get lazy?",
-    "summary": "Did AI Deep Research get lazy?",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/artificial/comments/1ubskzk/did_ai_deep_research_get_lazy/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Data from ‘half a million hours of Ukraine conflict drone footage’ now available to train AI",
-    "summary": "Data from ‘half a million hours of Ukraine conflict drone footage’ now available to train AI",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1ubox9h/data_from_half_a_million_hours_of_ukraine/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Daily General Discussion and Advice Thread - June 21, 2026",
-    "summary": "Daily General Discussion and Advice Thread - June 21, 2026",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/investing/comments/1ubk8b5/daily_general_discussion_and_advice_thread_june/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Chinese AI models raise ‘sleeper agent’ fears after report finds more vulnerable code for US users",
-    "summary": "Chinese AI models raise ‘sleeper agent’ fears after report finds more vulnerable code for US users",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1ubtx7n/chinese_ai_models_raise_sleeper_agent_fears_after/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Can anybody tell me if they know a good ai for text to video generation?",
-    "summary": "Can anybody tell me if they know a good ai for text to video generation?",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/StableDiffusion/comments/1ubxpyk/can_anybody_tell_me_if_they_know_a_good_ai_for/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Brands using AI-generated influencers to promote products on social media | AI (artificial intelligence) | The Guardian",
-    "summary": "Brands using AI-generated influencers to promote products on social media | AI (artificial intelligence) | The Guardian",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/artificial/comments/1ubk0io/brands_using_aigenerated_influencers_to_promote/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Big corporate energy rebrands are hiding the massive grid capacity bottleneck and everyone is falling for it",
-    "summary": "Big corporate energy rebrands are hiding the massive grid capacity bottleneck and everyone is falling for it",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/energy/comments/1ubpg8n/big_corporate_energy_rebrands_are_hiding_the/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "Americans Have Turned Against AI in Incredible Numbers",
-    "summary": "Americans Have Turned Against AI in Incredible Numbers",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1ubsugh/americans_have_turned_against_ai_in_incredible/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "America's flagship automaker (GM) enters the home energy market",
-    "summary": "America's flagship automaker (GM) enters the home energy market",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/electricvehicles/comments/1ubi0p3/americas_flagship_automaker_gm_enters_the_home/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "AI might make me fail my class",
-    "summary": "AI might make me fail my class",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/artificial/comments/1ubzc6m/ai_might_make_me_fail_my_class/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-20",
-    "title": "豪門老公聯手小三囚禁我親生女十年？今日我以集團股份為刃，送這對渣男賤女入獄！【燼火十年】 #短剧 #豪门 #revenge",
-    "summary": "豪門老公聯手小三囚禁我親生女十年？今日我以集團股份為刃，送這對渣男賤女入獄！【燼火十年】 #短剧 #豪门 #revenge",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=nXc7_q65KNk",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-20",
-    "title": "經濟學人｜2026.06.20「商業版塊」解析：AI淪為天價碎鈔機？百年巨頭集體躺平吃老本！全球商業迎來殘酷大洗牌，從美國車企到傳統豪門，普通人如何看透底層邏輯，逆勢抄底❓｜TheEconomist",
-    "summary": "經濟學人｜2026.06.20「商業版塊」解析：AI淪為天價碎鈔機？百年巨頭集體躺平吃老本！全球商業迎來殘酷大洗牌，從美國車企到傳統豪門，普通人如何看透底層邏輯，逆勢抄底❓｜TheEconomist",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=8NGDDKs_IOA",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-20",
-    "title": "台積電兩奈米神技曝光！超級電軌+矽光子，為何三星與英特爾難以超越？",
-    "summary": "台積電兩奈米神技曝光！超級電軌+矽光子，為何三星與英特爾難以超越？",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=7kYINpKoDKc",
     "category": "科技"
   },
   {
@@ -1577,50 +1169,10 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-20",
-    "title": "New Kia is cheapest in its class",
-    "summary": "New Kia is cheapest in its class",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/electricvehicles/comments/1ubamsh/new_kia_is_cheapest_in_its_class/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-20",
-    "title": "Morale is so bad at Mark Zuckerberg's Meta even the company's own CTO admits it's 'probably the worst it's ever been'",
-    "summary": "Morale is so bad at Mark Zuckerberg's Meta even the company's own CTO admits it's 'probably the worst it's ever been'",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1ub7r1y/morale_is_so_bad_at_mark_zuckerbergs_meta_even/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-20",
     "title": "LTX Director 2.0 Update - A Free Open Source All-In-One Tool for Creating AI Videos in ComfyUI. Complete Overhaul now with full AI video editing support, IC-LoRA, Retake Mode, Audio Inpainting and muc",
     "summary": "LTX Director 2.0 Update - A Free Open Source All-In-One Tool for Creating AI Videos in ComfyUI. Complete Overhaul now with full AI video editing support, IC-LoRA, Retake Mode, Audio Inpainting and much more!",
     "source": "Reddit",
     "sourceUrl": "https://www.reddit.com/r/StableDiffusion/comments/1ub4jpk/ltx_director_20_update_a_free_open_source/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-20",
-    "title": "Intel and AMD's new ACE CPU extensions bring an efficient AI-oriented instruction set to x86 — a new design makes matrix multiplication more power- and density-efficient",
-    "summary": "Intel and AMD's new ACE CPU extensions bring an efficient AI-oriented instruction set to x86 — a new design makes matrix multiplication more power- and density-efficient",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/hardware/comments/1uav9g5/intel_and_amds_new_ace_cpu_extensions_bring_an/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-20",
-    "title": "Google loses two top AI researchers to OpenAI and Anthropic",
-    "summary": "Google loses two top AI researchers to OpenAI and Anthropic",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/stocks/comments/1ub8yux/google_loses_two_top_ai_researchers_to_openai_and/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-20",
-    "title": "Five Chinese AI Labs Cut Token Prices Up to 99%",
-    "summary": "Five Chinese AI Labs Cut Token Prices Up to 99%",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/singularity/comments/1ub06rj/five_chinese_ai_labs_cut_token_prices_up_to_99/",
     "category": "自媒体"
   },
   {
@@ -1630,54 +1182,6 @@ window.NEWS_DATA = [
     "source": "Reddit",
     "sourceUrl": "https://www.reddit.com/r/investing/comments/1ub82mk/does_anybody_know_what_business_mogel_greg_lansky/",
     "category": "财经"
-  },
-  {
-    "date": "2026-06-20",
-    "title": "DeepSeek’s Series A isn’t about valuation - it’s about which industrial blocs are aligning behind which AI stacks",
-    "summary": "DeepSeek’s Series A isn’t about valuation - it’s about which industrial blocs are aligning behind which AI stacks",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/China/comments/1ubauac/deepseeks_series_a_isnt_about_valuation_its_about/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-20",
-    "title": "Daily General Discussion and Advice Thread - June 20, 2026",
-    "summary": "Daily General Discussion and Advice Thread - June 20, 2026",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/StockMarket/comments/1uatr1q/daily_general_discussion_and_advice_thread_june/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-20",
-    "title": "China unifies tech sector to build grid-free orbiting satellite AI data centers, challenging Elon Musk's SpaceX — Beijing's forced chip and satellite alliance announced a week before Musk’s AI1 reveal",
-    "summary": "China unifies tech sector to build grid-free orbiting satellite AI data centers, challenging Elon Musk's SpaceX — Beijing's forced chip and satellite alliance announced a week before Musk’s AI1 reveal",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/China/comments/1ub6swg/china_unifies_tech_sector_to_build_gridfree/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-19",
-    "title": "The New Chevy Bolt Was Driven Until It Died. Here’s What Its Battery Buffer Looks Like",
-    "summary": "The New Chevy Bolt Was Driven Until It Died. Here’s What Its Battery Buffer Looks Like",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/electricvehicles/comments/1ua75do/the_new_chevy_bolt_was_driven_until_it_died_heres/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-19",
-    "title": "Loving my new RTX 5070 Ti! 90+ FPS on everything.",
-    "summary": "Loving my new RTX 5070 Ti! 90+ FPS on everything.",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/nvidia/comments/1uaeoz8/loving_my_new_rtx_5070_ti_90_fps_on_everything/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-19",
-    "title": "Let's discuss the value of content creators and how AI may threaten it..",
-    "summary": "Let's discuss the value of content creators and how AI may threaten it..",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/contentcreation/comments/1uagvz2/lets_discuss_the_value_of_content_creators_and/",
-    "category": "自媒体"
   },
   {
     "date": "2026-06-19",
@@ -1696,46 +1200,6 @@ window.NEWS_DATA = [
     "category": "科技"
   },
   {
-    "date": "2026-06-19",
-    "title": "How the stock market became Trump’s most favored adviser",
-    "summary": "How the stock market became Trump’s most favored adviser",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/Economics/comments/1ua6370/how_the_stock_market_became_trumps_most_favored/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-19",
-    "title": "How long do you expect the AI gold rush to last?",
-    "summary": "How long do you expect the AI gold rush to last?",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/stocks/comments/1ua8ukh/how_long_do_you_expect_the_ai_gold_rush_to_last/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-19",
-    "title": "Amazon in Talks to Sell AI Chips Competing With Nvidia to Other Companies",
-    "summary": "Amazon in Talks to Sell AI Chips Competing With Nvidia to Other Companies",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/hardware/comments/1u9yixz/amazon_in_talks_to_sell_ai_chips_competing_with/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-19",
-    "title": "AI data centers just got a government-mandated fast lane to the grid",
-    "summary": "AI data centers just got a government-mandated fast lane to the grid",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/Economics/comments/1ua07ck/ai_data_centers_just_got_a_governmentmandated/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-18",
-    "title": "莫斯科陷入火海，烏克蘭猛攻；25名中國人被捕，激烈交火；英國共諜重刑入獄！美伊協議生效，60天考核倒計時；賴清德重申台灣防衛能力【全球新聞】2026-06-18",
-    "summary": "莫斯科陷入火海，烏克蘭猛攻；25名中國人被捕，激烈交火；英國共諜重刑入獄！美伊協議生效，60天考核倒計時；賴清德重申台灣防衛能力【全球新聞】2026-06-18",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=ZixMxHKJzEU",
-    "category": "科技"
-  },
-  {
     "date": "2026-06-18",
     "title": "多家外资机构看好中国科技创新带来的长期投资机会",
     "summary": "瑞银、摩根士丹利、富达等机构一致看多AI驱动的中国科技创新投资机会，预计2026年全部A股盈利增速有望从3.9%提升至11%。全球资本争夺战已然打响。",
@@ -1745,75 +1209,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-18",
-    "title": "前世她為渣男送命，他卻專寵白月光！死後才知高中死對頭愛她入骨，重生一世她主動吻上死對頭：這一世，換我來愛你！💥#短劇 #drama #逆襲 #霸總 #追妻火葬場",
-    "summary": "前世她為渣男送命，他卻專寵白月光！死後才知高中死對頭愛她入骨，重生一世她主動吻上死對頭：這一世，換我來愛你！💥#短劇 #drama #逆襲 #霸總 #追妻火葬場",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=1CTyxWnYze4",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-18",
     "title": "Team Trump keeps using tax dollars to scuttle renewable energy projects. At a time when the US needs more renewable energy, Trump is spending roughly $2.6 billion in taxpayer money to scuttle renewabl",
     "summary": "Team Trump keeps using tax dollars to scuttle renewable energy projects. At a time when the US needs more renewable energy, Trump is spending roughly $2.6 billion in taxpayer money to scuttle renewable energy projects. “It is hard to imagine a more backwards use of taxpayer money.\"",
     "source": "Reddit",
     "sourceUrl": "https://www.reddit.com/r/energy/comments/1u9dlyf/team_trump_keeps_using_tax_dollars_to_scuttle/",
     "category": "科技"
-  },
-  {
-    "date": "2026-06-18",
-    "title": "Researchers build brain-like memory device for AI sensors that may improve energy efficiency — phototransistor device combines light sensing, memory, and processing to cut data movement",
-    "summary": "Researchers build brain-like memory device for AI sensors that may improve energy efficiency — phototransistor device combines light sensing, memory, and processing to cut data movement",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/hardware/comments/1u92ky7/researchers_build_brainlike_memory_device_for_ai/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-18",
-    "title": "Nvidia conceded China's AI chip market and names like Cambricon are absorbing that demand",
-    "summary": "Nvidia conceded China's AI chip market and names like Cambricon are absorbing that demand",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/ChinaStocks/comments/1u9eked/nvidia_conceded_chinas_ai_chip_market_and_names/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-18",
-    "title": "MULTISUB📢新番上线《家父人类议长，你要与我拼背景？》第1~82集丨学渣觉醒星空系统，练废法满级扮猪吃虎，迎战星虫族爆笑逆袭！#最新漫剧 #破晓动漫社",
-    "summary": "MULTISUB📢新番上线《家父人类议长，你要与我拼背景？》第1~82集丨学渣觉醒星空系统，练废法满级扮猪吃虎，迎战星虫族爆笑逆袭！#最新漫剧 #破晓动漫社",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=h6gE3ltLsfQ",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-18",
-    "title": "Jeff Bezos called Washington Post his worst investment staffed with ‘terrible’ people, before laying off over 300 — “They don’t listen. My other companies, they listen”",
-    "summary": "Jeff Bezos called Washington Post his worst investment staffed with ‘terrible’ people, before laying off over 300 — “They don’t listen. My other companies, they listen”",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1u99mvv/jeff_bezos_called_washington_post_his_worst/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-18",
-    "title": "Bernie Sanders wants to give every American $1000 a year from AI profits and the reasoning actually makes sense",
-    "summary": "Bernie Sanders wants to give every American $1000 a year from AI profits and the reasoning actually makes sense",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/artificial/comments/1u9ifn2/bernie_sanders_wants_to_give_every_american_1000/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-18",
-    "title": "Apple to raise prices as AI boom pushes up chip costs",
-    "summary": "Apple to raise prices as AI boom pushes up chip costs",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/hardware/comments/1u9c39m/apple_to_raise_prices_as_ai_boom_pushes_up_chip/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-18",
-    "title": "Accenture shares fall to lowest since 2017 as AI threat mounts",
-    "summary": "Accenture shares fall to lowest since 2017 as AI threat mounts",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/StockMarket/comments/1u98x2k/accenture_shares_fall_to_lowest_since_2017_as_ai/",
-    "category": "财经"
   },
   {
     "date": "2026-06-18",
@@ -1840,46 +1240,6 @@ window.NEWS_DATA = [
     "category": "量化"
   },
   {
-    "date": "2026-06-17",
-    "title": "吴清重磅发声：社保保险资金两年净买入A股约1.3万亿",
-    "summary": "证监会主席吴清在陆家嘴论坛宣布新国九条落地两年多来社保、保险资金持有A股流通市值增长85%，净买入约1.3万亿元。近20条新政即将推出，包括并购重组快速审核、储架发行等。",
-    "source": "央视财经",
-    "sourceUrl": "https://finance.cctv.com/2026/06/17/ARTIYPywBfZELLKRJyNGujDq260617.shtml",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-17",
-    "title": "i pulled all my money out of the stock market in 2025 and now with historic highs i can't get back in",
-    "summary": "i pulled all my money out of the stock market in 2025 and now with historic highs i can't get back in",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/stocks/comments/1u80mp7/i_pulled_all_my_money_out_of_the_stock_market_in/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-17",
-    "title": "Meta内部员工终于炸锅了 | 员工直播怒骂高管 | 扎克伯格和CTO纷纷道歉 | AI转型混乱 | Applied AI | 员工用来训练数据 | 一个经理管五十人 | 三重错位",
-    "summary": "Meta内部员工终于炸锅了 | 员工直播怒骂高管 | 扎克伯格和CTO纷纷道歉 | AI转型混乱 | Applied AI | 员工用来训练数据 | 一个经理管五十人 | 三重错位",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=05lvoHekH1E",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-17",
-    "title": "Has anyone ever heard of a \"K-Shaped stock market\"?",
-    "summary": "Has anyone ever heard of a \"K-Shaped stock market\"?",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/StockMarket/comments/1u8qkqm/has_anyone_ever_heard_of_a_kshaped_stock_market/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-17",
-    "title": "\"Substack is infected with AI\", Evan Armstrong 2026-05-08 (Pangram analysis)",
-    "summary": "\"Substack is infected with AI\", Evan Armstrong 2026-05-08 (Pangram analysis)",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/MediaSynthesis/comments/1u7v39n/substack_is_infected_with_ai_evan_armstrong/",
-    "category": "自媒体"
-  },
-  {
     "date": "2026-06-16",
     "title": "外资行集体看多中国资产：AI与制造业优势突出",
     "summary": "瑞银、摩根士丹利、汇丰等外资机构表示中国资产吸引力增强，创新生态和AI产业优势成为外资增配中国的核心理由。",
@@ -1889,27 +1249,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-16",
-    "title": "Do I need to mark a video as \"AI use\" if I'm using YouTube Music's AI generated 60-second music clips?",
-    "summary": "Do I need to mark a video as \"AI use\" if I'm using YouTube Music's AI generated 60-second music clips?",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/youtubers/comments/1u771ro/do_i_need_to_mark_a_video_as_ai_use_if_im_using/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-16",
     "title": "DeepSeek完成首轮融资超500亿，投后估值破4000亿元",
     "summary": "DeepSeek确认完成首轮外部融资超500亿元，投后估值突破4000亿元，创始人梁文锋个人出资200亿。",
     "source": "证券时报",
     "sourceUrl": "https://stcn.com",
     "category": "AI"
-  },
-  {
-    "date": "2026-06-16",
-    "title": "DESPICABLE ME 2 REACTION – AGNES IS DESTROYING US – FIRST TIME WATCHING – REVIEW -MINIONS",
-    "summary": "DESPICABLE ME 2 REACTION – AGNES IS DESTROYING US – FIRST TIME WATCHING – REVIEW -MINIONS",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=n9w8WGQ5aYY",
-    "category": "自媒体"
   },
   {
     "date": "2026-06-15",
@@ -1929,59 +1273,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-15",
-    "title": "穷小伙穿成高武废柴，开局遭退婚当众受辱！绝境中觉醒天命系统，一路夺得绝世机缘，一人抵挡万军征战边疆屡立战功！#Drama #AI真人#逆袭 #爽劇",
-    "summary": "穷小伙穿成高武废柴，开局遭退婚当众受辱！绝境中觉醒天命系统，一路夺得绝世机缘，一人抵挡万军征战边疆屡立战功！#Drama #AI真人#逆袭 #爽劇",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=qhcpaFwbrao",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-15",
     "title": "公募基金总规模创新高：截至5月底达39.48万亿元",
     "summary": "公募基金总规模突破39万亿元关口，ETF和量化产品贡献主要增量。科技主题基金规模增长最为迅猛。",
     "source": "证券时报",
     "sourceUrl": "https://www.stcn.com/article/detail/3970880.html",
     "category": "财经"
-  },
-  {
-    "date": "2026-06-15",
-    "title": "WSP WordPress MCP – Connect AI Agents to WordPress",
-    "summary": "WSP WordPress MCP – Connect AI Agents to WordPress",
-    "source": "Hacker News",
-    "sourceUrl": "https://github.com/bilalnaseer/wsp-wordpress-mcp",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-15",
-    "title": "AI 頻道月入幾萬美金？現在做還來得及嗎｜6 種做法全拆解",
-    "summary": "AI 頻道月入幾萬美金？現在做還來得及嗎｜6 種做法全拆解",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=n5DnmFKbvIc",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-15",
-    "title": "AI is scaling. Infrastructure must evolve.",
-    "summary": "AI is scaling. Infrastructure must evolve.",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/ChinaStocks/comments/1u6g36e/ai_is_scaling_infrastructure_must_evolve/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-14",
-    "title": "【AI真人短剧】一小时收入1500+，“豆包+即梦+剪映”2小时快速掌握AI视频制作技巧，分镜脚本+人物设计+视频生成+剪辑配音配乐",
-    "summary": "【AI真人短剧】一小时收入1500+，“豆包+即梦+剪映”2小时快速掌握AI视频制作技巧，分镜脚本+人物设计+视频生成+剪辑配音配乐",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=r_34fmgsReY",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-14",
-    "title": "Ponytail – make your AI agent think like the laziest senior dev in the room",
-    "summary": "Ponytail – make your AI agent think like the laziest senior dev in the room",
-    "source": "Hacker News",
-    "sourceUrl": "https://github.com/DietrichGebert/ponytail",
-    "category": "量化"
   },
   {
     "date": "2026-06-14",
@@ -2017,27 +1313,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-13",
-    "title": "史诗级崩盘预警！为什么SpaceX急着上市？你的养老金正沦为硅谷大佬的“提款机”！华尔街的终极阳谋，对散户的收割你根本逃不掉! 【艾财说210】",
-    "summary": "史诗级崩盘预警！为什么SpaceX急着上市？你的养老金正沦为硅谷大佬的“提款机”！华尔街的终极阳谋，对散户的收割你根本逃不掉! 【艾财说210】",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=fRpkfwdCqZg",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-13",
     "title": "Judge overturns DOE’s cancellation of $82.1M in clean energy grants. Plaintiffs argued the projects located in New York, Oregon, Connecticut, Minnesota, and Colorado were targeted because those states",
     "summary": "Judge overturns DOE’s cancellation of $82.1M in clean energy grants. Plaintiffs argued the projects located in New York, Oregon, Connecticut, Minnesota, and Colorado were targeted because those states voted for Kamala Harris. \"Partisan discrimination and retribution are not a rational basis...\"",
     "source": "Reddit",
     "sourceUrl": "https://www.reddit.com/r/energy/comments/1u4towx/judge_overturns_does_cancellation_of_821m_in/",
     "category": "科技"
-  },
-  {
-    "date": "2026-06-12",
-    "title": "The Environmental Cost of Artificial Intelligence: Carbon, Water and Land",
-    "summary": "The Environmental Cost of Artificial Intelligence: Carbon, Water and Land",
-    "source": "Hacker News",
-    "sourceUrl": "https://unu.edu/inweh/collection/environmental-cost-of-AIs-Enrgy-Use-Carbon-water-and-land-footprints",
-    "category": "AI"
   },
   {
     "date": "2026-06-12",
@@ -2049,51 +1329,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-12",
-    "title": "Guardian Runtime – Local firewall for AI coding agents and runaway costs",
-    "summary": "Guardian Runtime – Local firewall for AI coding agents and runaway costs",
-    "source": "Hacker News",
-    "sourceUrl": "https://pypi.org/project/guardian-runtime/",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-12",
     "title": "Google's Genie 3 turns a text prompt into a playable open world you can explore. It's rough now. Future of games, or a tech demo?",
     "summary": "Google's Project Genie went global this week and I have not stopped thinking about it. You type a sentence, or upload an image, and it generates an open world you can actually walk around in, in real time. No code, no game engine. Someone made a GTA-style open world of Istanbul and just strolled thr",
     "source": "Reddit",
     "sourceUrl": "https://www.reddit.com/r/artificial/comments/1u3jlw6/googles_genie_3_turns_a_text_prompt_into_a/",
     "category": "AI"
-  },
-  {
-    "date": "2026-06-12",
-    "title": "EV sales in the U.S. just hit their best month since federal tax credits ended (estimate at over 85,000 EVs were sold in May 2026, with average transaction price of new EV at $54,532)",
-    "summary": "EV sales in the U.S. just hit their best month since federal tax credits ended (estimate at over 85,000 EVs were sold in May 2026, with average transaction price of new EV at $54,532)",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/electricvehicles/comments/1u3fnuk/ev_sales_in_the_us_just_hit_their_best_month/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-12",
-    "title": "Chinese investors rush to open Hong Kong accounts amid Beijing crackdown",
-    "summary": "Chinese investors rush to open Hong Kong accounts amid Beijing crackdown",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/China/comments/1u412oz/chinese_investors_rush_to_open_hong_kong_accounts/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-12",
-    "title": "Anyone tried AI upscaling tools for older video footage?",
-    "summary": "Anyone tried AI upscaling tools for older video footage?",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/contentcreation/comments/1u49xyp/anyone_tried_ai_upscaling_tools_for_older_video/",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-12",
-    "title": "AI agent bankrupted their operator while trying to scan DN42",
-    "summary": "AI agent bankrupted their operator while trying to scan DN42",
-    "source": "Hacker News",
-    "sourceUrl": "https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/",
-    "category": "量化"
   },
   {
     "date": "2026-06-12",
@@ -2112,68 +1352,12 @@ window.NEWS_DATA = [
     "category": "量化"
   },
   {
-    "date": "2026-06-11",
-    "title": "The AI Agent in the Billing Department of Verizon Is a Mentally Handicapped Thug",
-    "summary": "The AI Agent in the Billing Department of Verizon Is a Mentally Handicapped Thug",
-    "source": "Hacker News",
-    "sourceUrl": "https://samhenrycliff.medium.com/the-ai-agent-in-the-billing-department-of-verizon-wireless-is-a-mentally-handicapped-thug-99890a389ff5",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-11",
-    "title": "Landmark German ruling declares Google's AI Overviews are Google's own words and makes it liable for false answers",
-    "summary": "Landmark German ruling declares Google's AI Overviews are Google's own words and makes it liable for false answers",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1u2jt3g/landmark_german_ruling_declares_googles_ai/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-11",
-    "title": "Artificial intelligence got better at building itself",
-    "summary": "Artificial intelligence got better at building itself",
-    "source": "Hacker News",
-    "sourceUrl": "https://www.economist.com/science-and-technology/2026/06/07/how-artificial-intelligence-got-better-at-building-itself",
-    "category": "AI"
-  },
-  {
-    "date": "2026-06-11",
-    "title": "AI agent runs amok in Fedora and elsewhere",
-    "summary": "AI agent runs amok in Fedora and elsewhere",
-    "source": "Hacker News",
-    "sourceUrl": "https://lwn.net/SubscriberLink/1077035/c7e7c14fbd60fae9/",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-10",
-    "title": "金刚石散热突破芯片瓶颈：MIT将单晶金刚石嵌入GaN芯片",
-    "summary": "金刚石导热率是铜的5倍、硅的10倍。英伟达Vera Rubin GPU已采用金刚石-铜复合散热方案，芯片性能提升10%。",
-    "source": "新华社",
-    "sourceUrl": "http://www.xinhuanet.com/liangzi/20260610/455cf7f516634ef79985a7c41c5ec698/c.html",
-    "category": "科技"
-  },
-  {
     "date": "2026-06-10",
     "title": "抖音征召AI视频英才：400万现金+2000万即梦积分办创作大赛",
     "summary": "抖音发起AI创作大赛总奖池400万现金+2000万即梦积分，单人最高可获100万现金。评审团涵盖贾樟柯、陈思诚、紫金陈等，强调内容核心地位而非炫技。",
     "source": "量子位",
     "sourceUrl": "https://www.qbitai.com/2026/06/433832.html",
     "category": "自媒体"
-  },
-  {
-    "date": "2026-06-10",
-    "title": "THE VAMPIRE LESTAT EPISODE 1 REACTION - Sam Reid Is Absolutely INSANE As Rockstar Lestat!",
-    "summary": "THE VAMPIRE LESTAT EPISODE 1 REACTION - Sam Reid Is Absolutely INSANE As Rockstar Lestat!",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=mF1sy0iqupE",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-10",
-    "title": "Summarized my journey for designing an AI Accelerator",
-    "summary": "Summarized my journey for designing an AI Accelerator",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/chipdesign/comments/1u1v77m/summarized_my_journey_for_designing_an_ai/",
-    "category": "科技"
   },
   {
     "date": "2026-06-10",
@@ -2185,67 +1369,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-10",
-    "title": "Lua.ex: Sandboxed Lua 5.3 on the Beam, Built for AI Agents · Lua.ex",
-    "summary": "Lua.ex: Sandboxed Lua 5.3 on the Beam, Built for AI Agents · Lua.ex",
-    "source": "Hacker News",
-    "sourceUrl": "https://deflua.com/",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-10",
-    "title": "Claude Fable 5 Launches at #1 on the Artificial Analysis Intelligence Index",
-    "summary": "Claude Fable 5 Launches at #1 on the Artificial Analysis Intelligence Index",
-    "source": "Hacker News",
-    "sourceUrl": "https://artificialanalysis.ai/articles/claude-fable-5-mythos-intelligence-index",
-    "category": "AI"
-  },
-  {
-    "date": "2026-06-10",
-    "title": "Apache Burr: Build reliable AI agents and applications",
-    "summary": "Apache Burr: Build reliable AI agents and applications",
-    "source": "Hacker News",
-    "sourceUrl": "https://burr.apache.org/",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-10",
     "title": "Anthropic发布Claude Fable 5和Mythos 5，随即被美国政府要求暂停",
     "summary": "Claude Fable 5号称最强通用模型，Mythos 5为移除安全限制的旗舰版。但因美国政府要求暂停用户访问，上线即引发争议。",
     "source": "机器之心",
     "sourceUrl": "https://www.jiqizhixin.com",
     "category": "AI"
-  },
-  {
-    "date": "2026-06-10",
-    "title": "A €0.01 bank transfer could compromise a banking AI agent",
-    "summary": "A €0.01 bank transfer could compromise a banking AI agent",
-    "source": "Hacker News",
-    "sourceUrl": "https://blue41.com/blog/how-we-helped-bunq-secure-their-financial-ai-assistant/",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-09",
-    "title": "Mythos/Fable intentionally hinders requests involving AI Research Development",
-    "summary": "Mythos/Fable intentionally hinders requests involving AI Research Development",
-    "source": "Hacker News",
-    "sourceUrl": "https://twitter.com/eliebakouch/status/2064399902684139852",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-09",
-    "title": "Judge Learns Lawyers on Both Sides of Case Used AI, Cancels Trial, Kicks Everyone Off the Case",
-    "summary": "Judge Learns Lawyers on Both Sides of Case Used AI, Cancels Trial, Kicks Everyone Off the Case",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1u18o6n/judge_learns_lawyers_on_both_sides_of_case_used/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-09",
-    "title": "Build a Basic AI Agent from Scratch: Long Task Planning",
-    "summary": "Build a Basic AI Agent from Scratch: Long Task Planning",
-    "source": "Hacker News",
-    "sourceUrl": "https://medium.com/@rogi23696/build-a-basic-ai-agent-from-scratch-long-task-planning-14e803f9bd6d",
-    "category": "量化"
   },
   {
     "date": "2026-06-09",
@@ -2281,43 +1409,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-08",
-    "title": "The Artificial Intelligence Revolution (2015)",
-    "summary": "The Artificial Intelligence Revolution (2015)",
-    "source": "Hacker News",
-    "sourceUrl": "https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-06-08",
-    "title": "Show HN: Web Speed – A shared web-map registry for AI agents (MCP, open source)",
-    "summary": "Show HN: Web Speed – A shared web-map registry for AI agents (MCP, open source)",
-    "source": "Hacker News",
-    "sourceUrl": "https://www.getwebspeed.io/",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-08",
-    "title": "Judge tosses Trump bid to restrict renewable energy tax credits",
-    "summary": "Judge tosses Trump bid to restrict renewable energy tax credits",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/energy/comments/1u0hjg5/judge_tosses_trump_bid_to_restrict_renewable/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-08",
     "title": "Is AGI (Artificial General Intelligence) actually inevitable, or are we hitting a wall?",
     "summary": "Literally everyone in tech keeps saying AGI (Artificial General Intelligence) is coming in like 2 to 3 years. But honestly, looking at how things are going right now, I’m starting to doubt it. Is true human-level AI actually inevitable, or are we just hyping it up too much? Here is why I feel like i",
     "source": "Reddit",
     "sourceUrl": "https://www.reddit.com/r/ArtificialInteligence/comments/1u0kzxn/is_agi_artificial_general_intelligence_actually/",
     "category": "AI"
-  },
-  {
-    "date": "2026-06-08",
-    "title": "Hong Kong tycoon bets China will overtake US economy ‘in next decade or so’",
-    "summary": "Hong Kong tycoon bets China will overtake US economy ‘in next decade or so’",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/China/comments/1tzvgx2/hong_kong_tycoon_bets_china_will_overtake_us/",
-    "category": "财经"
   },
   {
     "date": "2026-06-08",
@@ -2336,36 +1432,12 @@ window.NEWS_DATA = [
     "category": "自媒体"
   },
   {
-    "date": "2026-06-07",
-    "title": "AI Data Centers’ Water Consumption Breaks 264 Billion Gallons in 2025 as Devastating Drought Hits Nearly 63% of U.S.",
-    "summary": "AI Data Centers’ Water Consumption Breaks 264 Billion Gallons in 2025 as Devastating Drought Hits Nearly 63% of U.S.",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1tzgq5m/ai_data_centers_water_consumption_breaks_264/",
-    "category": "科技"
-  },
-  {
     "date": "2026-06-06",
     "title": "车规级存储芯片价格暴涨180%，十余家新能源车企上调售价",
     "summary": "受AI服务器需求挤压产能影响，车规级存储芯片近三个月价格暴涨180%，十余家新能源车企被迫上调售价。",
     "source": "IT之家",
     "sourceUrl": "https://www.ithome.com",
     "category": "科技"
-  },
-  {
-    "date": "2026-06-06",
-    "title": "The South Korean stock market experienced a massive shock. You guys ok?",
-    "summary": "The South Korean stock market experienced a massive shock. You guys ok?",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/stocks/comments/1tyc3dq/the_south_korean_stock_market_experienced_a/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-05",
-    "title": "GPT还能这样玩？5个超实用AI高级玩法，小白也能学会！从图片到视频！GPT进阶应用全攻略（附实操教程）",
-    "summary": "GPT还能这样玩？5个超实用AI高级玩法，小白也能学会！从图片到视频！GPT进阶应用全攻略（附实操教程）",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=bjf9jiV3_Ug",
-    "category": "自媒体"
   },
   {
     "date": "2026-06-05",
@@ -2376,36 +1448,12 @@ window.NEWS_DATA = [
     "category": "科技"
   },
   {
-    "date": "2026-06-05",
-    "title": "Anthropic calls for global freeze in AI development",
-    "summary": "Anthropic calls for global freeze in AI development",
-    "source": "Hacker News",
-    "sourceUrl": "https://www.telegraph.co.uk/business/2026/06/04/worlds-most-valuable-ai-start-up-calls-for-global-freeze-in/",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-05",
-    "title": "Anthropic Urges Global Pause in AI Development, Flags 'Self-Improvement' Risk",
-    "summary": "Anthropic Urges Global Pause in AI Development, Flags 'Self-Improvement' Risk",
-    "source": "Hacker News",
-    "sourceUrl": "https://www.wsj.com/tech/ai/anthropic-urges-global-pause-in-ai-development-flags-self-improvement-risk-99cefb73",
-    "category": "量化"
-  },
-  {
     "date": "2026-06-04",
     "title": "Ted Chiang: No, Artificial Intelligence is not Conscious",
     "summary": "submitted by /u/BubBidderskins to r/singularity [link] [comments]",
     "source": "Reddit",
     "sourceUrl": "https://www.reddit.com/r/singularity/comments/1tw8gvj/ted_chiang_no_artificial_intelligence_is_not/",
     "category": "AI"
-  },
-  {
-    "date": "2026-06-04",
-    "title": "Show HN: Intencion – Product analytics that improves your AI agents continuously",
-    "summary": "Show HN: Intencion – Product analytics that improves your AI agents continuously",
-    "source": "Hacker News",
-    "sourceUrl": "https://intencion.io",
-    "category": "量化"
   },
   {
     "date": "2026-06-03",
@@ -2417,51 +1465,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-03",
-    "title": "Leiden Declaration on Artificial Intelligence and Mathematics",
-    "summary": "Leiden Declaration on Artificial Intelligence and Mathematics",
-    "source": "Hacker News",
-    "sourceUrl": "https://leidendeclaration.ai/",
-    "category": "AI"
-  },
-  {
-    "date": "2026-06-03",
     "title": "Google just dropped Gemma 4 12B on your laptop!!",
     "summary": "bro google just casually released a 12 billion parameter multimodal model that runs on 16gb of ram like… your macbook pro can run this. no cloud. no api calls. no monthly bill. it’s encoder-free, handles images and text, apache 2.0 license so you can do whatever with it commercially the “cloud is th",
     "source": "Reddit",
     "sourceUrl": "https://www.reddit.com/r/artificial/comments/1tw0cqv/google_just_dropped_gemma_4_12b_on_your_laptop/",
     "category": "AI"
-  },
-  {
-    "date": "2026-06-03",
-    "title": "Artificial intelligence is not conscious – Ted Chiang",
-    "summary": "Artificial intelligence is not conscious – Ted Chiang",
-    "source": "Hacker News",
-    "sourceUrl": "https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/",
-    "category": "AI"
-  },
-  {
-    "date": "2026-06-03",
-    "title": "AI Agents Enable Adaptive Computer Worms",
-    "summary": "AI Agents Enable Adaptive Computer Worms",
-    "source": "Hacker News",
-    "sourceUrl": "https://arxiv.org/abs/2606.03811",
-    "category": "量化"
-  },
-  {
-    "date": "2026-06-02",
-    "title": "The Psychology of Wealth Building (3 Hours of Powerful Lessons)",
-    "summary": "The Psychology of Wealth Building (3 Hours of Powerful Lessons)",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=FLRO5S7e6j4",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-06-02",
-    "title": "Now AI agents need what RSS does",
-    "summary": "Now AI agents need what RSS does",
-    "source": "Hacker News",
-    "sourceUrl": "https://julienreszka.com/blog/rss-is-back-ai-agents-are-reading-it/",
-    "category": "量化"
   },
   {
     "date": "2026-06-02",
@@ -2473,66 +1481,10 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-06-02",
-    "title": "Bernie Sanders pushes for 50% public ownership of American AI companies — proposes AI sovereign wealth fund that would hold direct ownership stakes in largest AI firms",
-    "summary": "Bernie Sanders pushes for 50% public ownership of American AI companies — proposes AI sovereign wealth fund that would hold direct ownership stakes in largest AI firms",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/technology/comments/1turxho/bernie_sanders_pushes_for_50_public_ownership_of/",
-    "category": "科技"
-  },
-  {
-    "date": "2026-06-02",
     "title": "AI isn’t the Problem - it’s Capitalism",
     "summary": "If you work a white collar job, you’re probably scared of AI replacing you. AI started at the desk — data entry, customer service, software. Now its stepping onto the factory floor: Amazon robots moving inventory, Figure bots handling BMW parts, Tesla building Optimus for repetitive labor, and wareh",
     "source": "Reddit",
     "sourceUrl": "https://www.reddit.com/r/artificial/comments/1tumllh/ai_isnt_the_problem_its_capitalism/",
     "category": "AI"
-  },
-  {
-    "date": "2026-06-01",
-    "title": "The stock market just did something eerily similar to the dot-com bubble top in 2000",
-    "summary": "The stock market just did something eerily similar to the dot-com bubble top in 2000",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/Economics/comments/1ttuhzk/the_stock_market_just_did_something_eerily/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-06-01",
-    "title": "AI Agent Guidelines for CS336 at Stanford",
-    "summary": "AI Agent Guidelines for CS336 at Stanford",
-    "source": "Hacker News",
-    "sourceUrl": "https://github.com/stanford-cs336/assignment1-basics/blob/main/CLAUDE.md",
-    "category": "量化"
-  },
-  {
-    "date": "2026-05-31",
-    "title": "This Stock Market is not real",
-    "summary": "This Stock Market is not real",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/wallstreetbets/comments/1tt7g02/this_stock_market_is_not_real/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-05-31",
-    "title": "I only took Business Economics on level D, but I can see the problem.",
-    "summary": "I only took Business Economics on level D, but I can see the problem.",
-    "source": "Reddit",
-    "sourceUrl": "https://www.reddit.com/r/wallstreetbets/comments/1tsl7o8/i_only_took_business_economics_on_level_d_but_i/",
-    "category": "财经"
-  },
-  {
-    "date": "2026-05-30",
-    "title": "零門檻AI廣告設計｜3 分鐘將 Logo、產品圖轉換為專業級UGC廣告和3D動畫｜Filmora 教學",
-    "summary": "零門檻AI廣告設計｜3 分鐘將 Logo、產品圖轉換為專業級UGC廣告和3D動畫｜Filmora 教學",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=Q9CjDUDGRhU",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-05-30",
-    "title": "99%的人都做錯了！AI影片真正難的根本不是生成畫面，GPT Image2 ＋ Seedance 「無斷層」做60秒AI短片！Novi AI 實測",
-    "summary": "99%的人都做錯了！AI影片真正難的根本不是生成畫面，GPT Image2 ＋ Seedance 「無斷層」做60秒AI短片！Novi AI 實測",
-    "source": "Reddit",
-    "sourceUrl": "https://www.youtube.com/watch?v=Bw8lxVPj8rQ",
-    "category": "自媒体"
   }
 ];

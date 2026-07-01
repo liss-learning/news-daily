@@ -1,5 +1,173 @@
 [
   {
+    "date": "2026-07-01",
+    "title": "OpenAI推动ChatGPT与Codex合并打造超级应用：从聊天走向执行",
+    "summary": "OpenAI推动ChatGPT与智能体Codex深度整合形成统一入口超级应用。Codex专注执行——写邮件、管理日程、制作报告等，智能体任务算力消耗是聊天的10-100倍。",
+    "source": "潮新闻",
+    "sourceUrl": "https://zjnews.zjol.com.cn/zjnews/202607/t20260701_31756814.shtml",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "OpenAI找到推理成本减半方案：模型量化+KV缓存+批量处理组合优化",
+    "summary": "OpenAI工程师找到全新优化方案可将模型推理运行成本降低一半以上，涉及模型量化、键值缓存、请求批量处理等技术，为实现全年52%毛利率目标增添砝码。",
+    "source": "网易",
+    "sourceUrl": "https://www.163.com/dy/article/L0NBV3CS05568W0A.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "美团龙猫2.0发布：首个全国产算力万亿参数大模型，匿名冲榜进全球前三",
+    "summary": "美团发布LongCat-2.0总参数达1.6万亿，是国内首个在五万卡国产算力集群上完成训练与推理全流程的万亿参数大模型，匿名接入OpenRouter调用量已跻身全球前三。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202607013788815581.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "谷歌发布Gemini Omni多模态模型：支持对话式视频编辑加速内容创作",
+    "summary": "谷歌发布全新AI创作工具Gemini Omni支持文本图像音频视频输入，最突出的是对话式编辑功能——用户用自然语言描述需求即可自动完成视频编辑。",
+    "source": "36氪",
+    "sourceUrl": "https://36kr.com/newsflashes/3876293824737544",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "Anthropic与OpenAI双双提交IPO申请：估值分别达9650亿和8520亿美元",
+    "summary": "Anthropic和OpenAI分别于6月向美国SEC提交上市申请，Anthropic年化收入达300亿美元超过OpenAI的250亿。AI代理软件支出从864亿飙升至2065亿美元。",
+    "source": "钛媒体",
+    "sourceUrl": "https://www.tmtpost.com/8047904.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "天风证券发布AI量化行业轮动新模型：从大类行业下沉至二级细分赛道",
+    "summary": "天风证券推出全新细分行业轮动模型，深度神经网络改进Beta系数测算，聚类分析内在验证。在原有全市场选股及ETF轮动基础上实现配置精细化升级。",
+    "source": "同花顺",
+    "sourceUrl": "http://stock.10jqka.com.cn/20260701/c677851155.shtml",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "A股量化交易下散户生存之道：借势+中长线避开量化短线主战场",
+    "summary": "分析人士指量化在中长期产业变革预测能力不占优。建议散户偏中大市值机构重仓标的，中长线低换手规避量化高频博弈优势，单票不超过20%定期重估持仓逻辑。",
+    "source": "东方财富",
+    "sourceUrl": "https://caifuhao.eastmoney.com/news/20260701074740876928740",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "2026量化交易前瞻：LLM生成价格路径、分域建模、另类资产成新方向",
+    "summary": "华泰证券策略首席提出Order as Token概念用Transformer架构生成未来价格路径。传统Alpha衰减下分域建模成趋势，加密货币套利等另类资产成对冲新拼图。",
+    "source": "老虎证券",
+    "sourceUrl": "https://www.itiger.com/hans/news/2606274064",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "证监会召开财务造假综合惩防推进会：铲除造假滋生土壤",
+    "summary": "证监会主席吴清主持召开央地协同推进会，强调营造不敢造假不能造假不想造假的市场生态，坚决铲除财务造假滋生的土壤和条件。",
+    "source": "中国金融信息网",
+    "sourceUrl": "https://www.cnfin.com/gs-lb/detail/20260701/4434007_1.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "八部门推动工业互联网高质量发展：目标2030年核心产业增加值破2.5万亿",
+    "summary": "工信部等八部门发布实施意见建设5万张工业5G专网培育5个国际影响力综合型平台。6月制造业PMI 50.3%重返扩张区间，高技术制造业PMI 53.5%明显高于总体。",
+    "source": "新华财经",
+    "sourceUrl": "https://www.cnfin.com/gs-lb/detail/20260701/4433956_1.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "A股上半年成绩单：科创50暴涨64.25%总成交317.53万亿同比放量97%",
+    "summary": "上证指数收4094点上半年+3.16%，科创综指+53.99%科创50+64.25%。A股总市值升至118.95万亿较去年末增9.41%。中船特气暴涨766.85%成涨幅冠军，2763家公司分红约9245亿创新高。",
+    "source": "陆家嘴财经早餐",
+    "sourceUrl": "https://www.163.com/dy/article/L0O05QH905198RSU.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "日经225大涨超2.6%：日元创近40年新低跌破162关口",
+    "summary": "日经225指数上半年累涨39%7月1日当天涨超2.6%。日元兑美元跌破162关口为1986年以来首次。韩国推出约1.3万亿美元半导体/AI/机器人超级投资计划。",
+    "source": "21世纪经济报道",
+    "sourceUrl": "https://m.21jingji.com/article/20260701/herald/95b55ed6d0a2ebb4d1cce151a8ba32fb.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "银河证券：市场对AI的共识将从主题炒作转向业绩验证",
+    "summary": "银河证券指出AI产业链为核心主线但将进入业绩验证阶段。上半年国企利润同比增3.5%证券交易印花税增88.8%。美联储克利夫兰行长暗示可能加息。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/3991142.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "罗姆成功开发第五代SiC MOSFET：175°C导通电阻较上代降30%",
+    "summary": "罗姆第五代SiC MOSFET高温下导通电阻较第四代降低约30%，7月起提供样品主攻电动汽车牵引逆变器和AI服务器电源。英飞凌AI数据中心电源营收预计从7亿→15亿→25亿欧元连续翻倍。",
+    "source": "雅虎财经",
+    "sourceUrl": "https://tw.stock.yahoo.com/news/羅姆成功開發出第五代sic-mosfet-搶攻xev-ai資料中心龐大商機-073421342.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "英飞凌推出1200V CoolSiC JFET：极低导通损耗适配AI数据中心固态断路器",
+    "summary": "英飞凌推出全新1200V CoolSiC JFET器件QDPAK封装，具备极低导通损耗与超高短路耐受能力，适用于AI数据中心热插拔和车载电池隔离开关。提前投入5亿欧元加速AI产能扩张。",
+    "source": "电子产品世界",
+    "sourceUrl": "https://www.eepw.com.cn/article/202606/482119.htm",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "宁德时代新获电池散热专利：芯片导热连接显著提升电池可靠性",
+    "summary": "宁德时代获电池装置及用电设备专利，通过在电芯表面导热连接芯片显著提升芯片散热效果与电池可靠性。联合动力获功率模块专利优化芯片布局减小体积降低不均流度。",
+    "source": "证券之星",
+    "sourceUrl": "https://wap.stockstar.com/detail/RB2026070100003355",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "慕尼黑上海电子展：SiC/GaN宽禁带半导体成AI算力与人形机器人核心推手",
+    "summary": "TI展示集成GaN开关稳压器和新一代储能EIS方案。人形机器人48V低压大电流MOSFET需求激增，低空经济eVTOL高压SiC功率器件加速落地。功率半导体进入AI驱动的超级景气周期。",
+    "source": "德州仪器",
+    "sourceUrl": "https://www.ti.com.cn/zh-cn/about-ti/events/electronica-china.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "羊城晚报×书旗启动千文创境AI漫剧大赛：5万+IP授权+一人公司扶持",
+    "summary": "羊城晚报与书旗中文网联合启动AI漫剧创作大赛，开放5万+优质IP授权提供ManClaw AI创作工具。AI漫剧市场规模预计达240亿元用户规模突破2.8亿，书旗IP改编漫剧播放量破100亿次。",
+    "source": "羊城晚报",
+    "sourceUrl": "https://news.ycwb.com/ikimvkltkj/content_54205074.htm",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "Seedance 2.5即将上线：单段30秒原生4K生成+局部编辑，AI视频进入可控生产时代",
+    "summary": "字节跳动Seedance 2.5预计7月初上线，支持单段30秒原生生成50个全模态参考局部编辑原生4K直出。从抽卡式创作升级为可控内容生产，Seedance 2.0单月营收已超10亿元。",
+    "source": "阿里云开发者社区",
+    "sourceUrl": "https://developer.aliyun.com/article/1743729",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "Google NotebookLM推出TikTok风格AI短视频：60秒自动回顾研究笔记",
+    "summary": "Google旗下AI笔记工具NotebookLM上线新功能将研究资料自动生成60秒竖屏AI短视频，用AI图像与旁白完成要点讲解面向付费用户优先开放。",
+    "source": "网易",
+    "sourceUrl": "https://www.163.com/dy/article/L0O7APHE0511BLFD.html",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "白玉兰论坛共识：AI短剧从拼数量转向重质量，AI救的是成本不是创作",
+    "summary": "爱奇艺腾讯视频芒果TV红果等头部平台达成共识：AI已从实验性工具变为生产链路稳定环节。核心观点：AI救的是成本抢的是赚快钱的人的饭碗，守住以真动人的创作初心。",
+    "source": "澎湃新闻",
+    "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_33485184",
+    "category": "自媒体"
+  },
+  {
     "date": "2026-06-30",
     "title": "1-5月工业企业利润同比增长18.8%：电子行业利润翻倍大增103.9%",
     "summary": "1-5月全国规上工业企业利润同比增长18.8%加快0.6个百分点，5月单月增长21.1%。电子行业利润同比增长103.9%贡献率达43.1%，AI产业链利润效应全面释放。",
@@ -566,14 +734,6 @@
     "source": "多家综合",
     "sourceUrl": "https://www.tmtpost.com/8043209.html",
     "category": "AI"
-  },
-  {
-    "date": "2026-06-28",
-    "title": "Seedance 2.5即将上线：AI视频生成从抽卡走向可控生产",
-    "summary": "字节跳动Seedance 2.5预计7月初上线，支持单段30秒原生视频生成、50个全模态参考素材输入、局部视频编辑。AI视频生成正从抽卡式创作走向可控内容生产。",
-    "source": "阿里云开发者社区",
-    "sourceUrl": "https://developer.aliyun.com/article/1743729",
-    "category": "自媒体"
   },
   {
     "date": "2026-06-28",

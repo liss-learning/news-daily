@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News Daily — 新闻日报</title>
+<style>
+:root { color-scheme: light; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e2e8f0;
+  padding: 20px 24px 16px;
+}
+.header-inner { max-width: 860px; margin: 0 auto; }
+.header-top {
+  display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+.title {
+  font-size: 20px; font-weight: 700; color: #0f172a;
+}
+.live-dot {
+  display: inline-block; width: 8px; height: 8px;
+  border-radius: 50%; background: #2563eb;
+  animation: pulse 2s ease-in-out infinite;
+  margin-right: 4px; vertical-align: middle; position: relative; top: -1px;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.8); }
+}
+.live-label {
+  font-size: 11px; font-weight: 600; color: #3b82f6;
+  letter-spacing: 0.5px; text-transform: uppercase;
+}
+.date-display {
+  font-size: 13px; color: #64748b; margin-left: auto; font-weight: 500;
+}
+.stats-bar {
+  font-size: 13px; color: #64748b; display: flex; gap: 18px;
+  flex-wrap: wrap; margin-top: 2px;
+}
+.stats-bar span { white-space: nowrap; }
+.stats-bar strong { color: #334155; }
+
+.search-wrap {
+  margin-top: 12px; position: relative; max-width: 400px;
+}
+.search-input {
+  width: 100%; padding: 8px 14px 8px 36px;
+  border: 1px solid #cbd5e1; border-radius: 6px;
+  font-size: 14px; background: #f8fafc; color: #1e293b;
+  font-family: inherit; outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.search-input:focus {
+  border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+}
+.search-input::placeholder { color: #94a3b8; }
+.search-icon {
+  position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+  color: #94a3b8; font-size: 15px; pointer-events: none;
+}
+
+.pills {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;
+}
+.pill {
+  padding: 5px 13px; border-radius: 6px;
+  font-size: 13px; font-weight: 500; cursor: pointer;
+  border: 1px solid #cbd5e1; background: transparent;
+  color: #64748b; transition: all 0.15s;
+  font-family: inherit; user-select: none;
+}
+.pill:hover { border-color: #94a3b8; color: #334155; }
+.pill.active { color: #fff; border-color: transparent; }
+.pill.active[data-cat="all"] { background: #475569; border-color: #475569; }
+.pill.active[data-cat="AI"] { background: #2563eb; border-color: #2563eb; }
+.pill.active[data-cat="量化"] { background: #6366f1; border-color: #6366f1; }
+.pill.active[data-cat="财经"] { background: #0891b2; border-color: #0891b2; }
+.pill.active[data-cat="科技"] { background: #0284c7; border-color: #0284c7; }
+.pill.active[data-cat="自媒体"] { background: #4f46e5; border-color: #4f46e5; }
+.pill-count { font-size: 11px; opacity: 0.7; margin-left: 2px; }
+
+.main { max-width: 860px; margin: 0 auto; padding: 20px 24px 60px; }
+
+.day-group { margin-bottom: 32px; }
+.day-header {
+  font-size: 14px; font-weight: 600; color: #334155;
+  padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 12px; display: flex; align-items: baseline; gap: 10px;
+}
+.day-count {
+  font-size: 12px; color: #94a3b8; font-weight: 400;
+}
+.today-badge {
+  font-size: 10px; font-weight: 700; color: #2563eb;
+  background: rgba(37,99,235,0.08); padding: 2px 8px; border-radius: 4px;
+  letter-spacing: 0.5px; text-transform: uppercase;
+}
+
+.card {
+  background: #fff; border: 1px solid #e2e8f0;
+  border-left: 3px solid #cbd5e1; border-radius: 0 4px 4px 0;
+  padding: 14px 18px; margin-bottom: 8px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.card:hover {
+  border-color: #94a3b8;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.card.dimmed { opacity: 0.25; pointer-events: none; }
+
+.card-title {
+  font-size: 15px; font-weight: 600; line-height: 1.5;
+  color: #0f172a; margin-bottom: 6px;
+}
+.card-summary {
+  font-size: 13.5px; color: #475569; line-height: 1.65;
+  margin-bottom: 8px; display: -webkit-box;
+  -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.card-meta {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  font-size: 12px; color: #94a3b8;
+}
+.card-source { font-weight: 500; color: #64748b; }
+.card-link {
+  color: #475569; text-decoration: none; font-size: 12px;
+  transition: color 0.15s; margin-left: auto;
+}
+.card-link:hover { color: #2563eb; }
+
+.cat-tag {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.3px;
+  padding: 2px 7px; border-radius: 3px;
+}
+
+.border-AI { border-left-color: #2563eb; }
+.border-量化 { border-left-color: #6366f1; }
+.border-财经 { border-left-color: #0891b2; }
+.border-科技 { border-left-color: #0284c7; }
+.border-自媒体 { border-left-color: #4f46e5; }
+
+.tag-AI { background: rgba(37,99,235,0.08); color: #2563eb; }
+.tag-量化 { background: rgba(99,102,241,0.08); color: #6366f1; }
+.tag-财经 { background: rgba(8,145,178,0.08); color: #0891b2; }
+.tag-科技 { background: rgba(2,132,199,0.08); color: #0284c7; }
+.tag-自媒体 { background: rgba(79,70,229,0.08); color: #4f46e5; }
+
+.no-results {
+  text-align: center; padding: 48px 24px; color: #94a3b8;
+  font-size: 15px; display: none;
+}
+.no-results.visible { display: block; }
+
+@media (max-width: 600px) {
+  .header { padding: 14px 16px 12px; }
+  .main { padding: 14px 16px 40px; }
+  .title { font-size: 18px; }
+  .card { padding: 12px 14px; }
+  .card-title { font-size: 14px; }
+  .stats-bar { gap: 8px; font-size: 12px; }
+  .pills { gap: 5px; }
+  .pill { padding: 4px 10px; font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-dot { animation: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="header-top">
+      <h1 class="title">新闻日报</h1>
+      <span class="live-dot"></span>
+      <span class="live-label">今日更新</span>
+      <span class="date-display" id="todayDate"></span>
+    </div>
+    <div class="stats-bar" id="statsBar"></div>
+    <div class="search-wrap">
+      <span class="search-icon">&#9906;</span>
+      <input class="search-input" type="text" id="searchInput" placeholder="搜索标题、摘要、来源… / 聚焦" autocomplete="off">
+    </div>
+    <nav class="pills" id="pills"></nav>
+  </div>
+</header>
+
+<main class="main" id="main"></main>
+
+<script src="news-data.js"></script>
+<script>
+const DATA = window.NEWS_DATA || [];
+
+const CATS = ['AI','量化','财经','科技','自媒体'];
+let activeCategory = 'all';
+let searchQuery = '';
+
+function groupByDate(items) {
+  const groups = {};
+  items.forEach(function(item) {
+    if (!groups[item.date]) groups[item.date] = [];
+    groups[item.date].push(item);
+  });
+  return Object.entries(groups).sort(function(a,b) { return b[0].localeCompare(a[0]); });
+}
+
+function formatDate(dateStr) {
+  var d = new Date(dateStr + 'T00:00:00');
+  var today = new Date();
+  today.setHours(0,0,0,0);
+  var target = new Date(dateStr + 'T00:00:00');
+  var diff = Math.round((today - target) / 86400000);
+  if (diff === 0) return '今天';
+  if (diff === 1) return '昨天';
+  if (diff === 2) return '前天';
+  var days = ['周日','周一','周二','周三','周四','周五','周六'];
+  return dateStr.slice(5) + ' ' + days[target.getDay()];
+}
+
+function getFiltered() {
+  var items = DATA;
+  if (activeCategory !== 'all') {
+    items = items.filter(function(i) { return i.category === activeCategory; });
+  }
+  if (searchQuery.trim()) {
+    var q = searchQuery.trim().toLowerCase();
+    items = items.filter(function(i) {
+      return i.title.toLowerCase().indexOf(q) !== -1 ||
+             i.summary.toLowerCase().indexOf(q) !== -1 ||
+             i.source.toLowerCase().indexOf(q) !== -1;
+    });
+  }
+  return items;
+}
+
+function escHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function render() {
+  var todayStr = new Date().toISOString().slice(0,10);
+  document.getElementById('todayDate').textContent = todayStr;
+
+  var byCat = {};
+  CATS.forEach(function(c) { byCat[c] = DATA.filter(function(i) { return i.category === c; }).length; });
+  var total = DATA.length;
+  var daysCount = new Set(DATA.map(function(i) { return i.date; })).size;
+  var todayCount = DATA.filter(function(i) { return i.date === todayStr; }).length;
+  document.getElementById('statsBar').innerHTML =
+    '<span>共 <strong>' + total + '</strong> 条</span>' +
+    '<span>覆盖 <strong>' + daysCount + '</strong> 天</span>' +
+    '<span>今日 <strong>' + todayCount + '</strong> 条</span>' +
+    CATS.map(function(c) { return '<span><strong>' + byCat[c] + '</strong> ' + c + '</span>'; }).join('');
+
+  document.getElementById('pills').innerHTML =
+    '<button class="pill' + (activeCategory === 'all' ? ' active' : '') + '" data-cat="all" onclick="setCategory(\'all\')">全部<span class="pill-count"> ' + total + '</span></button>' +
+    CATS.map(function(c) {
+      return '<button class="pill' + (activeCategory === c ? ' active' : '') + '" data-cat="' + c + '" onclick="setCategory(\'' + c + '\')">' + c + '<span class="pill-count"> ' + byCat[c] + '</span></button>';
+    }).join('');
+
+  var filtered = getFiltered();
+  var main = document.getElementById('main');
+  if (filtered.length === 0) {
+    main.innerHTML = '<div class="no-results visible">没有匹配的新闻</div>';
+    return;
+  }
+
+  var groups = groupByDate(filtered);
+  var html = '';
+  var animDelay = 0;
+  groups.forEach(function(pair) {
+    var date = pair[0], items = pair[1];
+    var isToday = date === todayStr;
+    html += '<section class="day-group"><div class="day-header"><span class="day-label">' + formatDate(date) + '</span><span class="day-count">' + items.length + ' 条</span>' + (isToday ? '<span class="today-badge">Today</span>' : '') + '</div>';
+    items.forEach(function(item) {
+      var url = item.sourceUrl || '#';
+      html += '<article class="card border-' + item.category + '" style="animation-delay:' + animDelay + 's" data-cat="' + item.category + '">';
+      html += '<h2 class="card-title">' + escHtml(item.title) + '</h2>';
+      html += '<p class="card-summary">' + escHtml(item.summary) + '</p>';
+      html += '<div class="card-meta"><span class="cat-tag tag-' + item.category + '">' + item.category + '</span><span class="card-source">' + escHtml(item.source) + '</span><span>' + item.date + '</span><a class="card-link" href="' + url + '" target="_blank" rel="noopener">阅读原文 →</a></div>';
+      html += '</article>';
+      animDelay = Math.min(animDelay + 0.03, 0.8);
+    });
+    html += '</section>';
+  });
+  main.innerHTML = html;
+}
+
+function setCategory(cat) {
+  activeCategory = cat;
+  document.getElementById('main').scrollIntoView({behavior:'smooth',block:'start'});
+  render();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  render();
+  document.getElementById('searchInput').addEventListener('input', function() {
+    searchQuery = this.value;
+    render();
+  });
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === '/' && document.activeElement !== document.getElementById('searchInput')) {
+    e.preventDefault();
+    document.getElementById('searchInput').focus();
+  }
+  if (e.key === 'Escape') {
+    document.getElementById('searchInput').blur();
+  }
+});
+</script>
+</body>
+</html>

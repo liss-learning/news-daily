@@ -2022,13 +2022,5 @@ window.NEWS_DATA = [
     "source": "21世纪经济报道",
     "sourceUrl": "https://www.21jingji.com/article/20260623/herald/58b13753be6f47a1f9c61c9eea9c73ca.html",
     "category": "科技"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "中信建投：国产模型加速迭代，Token消耗量指数增长算力景气度持续",
-    "summary": "中信建投研报指出国产大模型步入密集爆发期（智谱GLM-5.2、Kimi K2.7、DeepSeek-V4等），能力全线挺进全球第一梯队。Token消耗量指数级增长，算力存储及租赁服务景气度有望延续。",
-    "source": "智通财经",
-    "sourceUrl": "https://m.jrj.com.cn/madapter/finance/2026/06/21073857533333.shtml",
-    "category": "AI"
   }
 ];

@@ -1,5 +1,213 @@
 window.NEWS_DATA = [
   {
+    "date": "2026-08-03",
+    "title": "量化周报：成交缩量下贴水处于中等分位，市场博弈进入新阶段",
+    "summary": "最新量化资金面跟踪周报显示，A股成交缩量背景下股指期货贴水处于中等分位。量化策略在低成交量环境下面临新的挑战，行业正从因子驱动转向多维度风险预算管理模式，精细化运营成为核心竞争力。",
+    "source": "新浪财经",
+    "sourceUrl": "http://vip.stock.finance.sina.com.cn/q/go.php/vReport_Show/kind/lastest/rptid/839041515825/index.phtml",
+    "category": "量化"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "A股量化择时研究报告：AI识图关注红利低波、现金流、价值方向",
+    "summary": "最新量化择时研究指出，AI图像识别技术应用于市场择时分析，当前建议关注红利低波、现金流充沛和价值风格标的。在市场风格切换频繁的背景下，多因子风险模型和动态配置能力成为量化策略制胜关键。",
+    "source": "新浪财经",
+    "sourceUrl": "https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/11/rptid/839012460227/index.phtml",
+    "category": "量化"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "指增基金逆市录得正超额，量化策略优势在震荡市中凸显",
+    "summary": "在A股持续震荡调整的市场环境下，部分指数增强基金逆市录得正超额收益。量化策略凭借系统化选股和严格风控能力在分化行情中展现出独特优势，行业正从普遍超额向结构性超额转变。",
+    "source": "中国财经信息网",
+    "sourceUrl": "https://wt.cfi.cn/p20260802000198.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "科技抱团松动后指增量化产品全面回暖，策略多元化成趋势",
+    "summary": "随着科技股抱团松动，指增量化产品在风格切换中全面回暖。多家量化私募通过因子多元化和策略分散化成功捕捉风格轮动机会，行业从单一微盘策略向双创因子和多策略配置方向加速转型。",
+    "source": "中国财经信息网",
+    "sourceUrl": "https://wt.cfi.cn/p20260802000126.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "8月A股怎么走？量化时代的无奈与大级别反弹展望",
+    "summary": "深入分析8月A股走势与量化交易时代的关系。在市场风格频繁切换和量化资金博弈加剧的背景下，分析认为大级别反弹应该会继续，但量化策略的同质化仍是制约市场健康发展的重要因素，差异化策略配置成为共识。",
+    "source": "网易财经",
+    "sourceUrl": "https://m.163.com/dy/article_v5/L3B1S9U00519KGDA.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "东方财富陈果：海外波动加剧并未改变A股内部再平衡方向",
+    "summary": "东方财富首席策略分析师陈果指出，尽管海外市场波动加剧，但A股内部的结构性再平衡方向并未改变。科技板块调整后价值板块和中小盘股轮动机会显现，市场正从单一风格驱动转向多元均衡配置格局。",
+    "source": "界面新闻",
+    "sourceUrl": "https://m.jiemian.com/article/14863493.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "兴业证券首席经济学家刘郁：政策部署释放稳增长稳预期稳市场信号",
+    "summary": "兴业证券首席经济学家刘郁解读最新政策部署，认为当前政策组合拳释放了稳增长、稳预期、稳市场的三重积极信号。货币政策稳健偏松、产业政策精准发力、资本市场改革持续深化，为A股企稳回升提供坚实支撑。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/4054228.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "机构展望：8月A股或进入修复时间窗口，配置回归基本面定价逻辑",
+    "summary": "多家主流机构发布8月A股展望，认为市场或进入修复时间窗口。分析指出配置逻辑应从情绪驱动回归基本面定价，建议关注半年报业绩确定性强的板块。科技板块调整已较充分，中长期配置价值逐步显现。",
+    "source": "中国证券报",
+    "sourceUrl": "https://www.cnstock.com/commonDetail/754227",
+    "category": "财经"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "美股科技巨头遭财报杀，市场进入AI回报验证期",
+    "summary": "美股科技巨头近期密集发布财报，部分公司业绩不及预期引发股价大幅波动，市场正式进入AI回报验证期。投资者从概念炒作转向业绩兑现，AI产业链的投资逻辑正在经历从预期到现实的关键转变。",
+    "source": "中国金融信息网",
+    "sourceUrl": "https://m.cnfin.com/gs-lb//zixun/20260803/4449719_1.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "AI短剧驶入转型窗口期：产能狂涨难掩内容贫血",
+    "summary": "AI短剧产业在产能狂涨的同时面临内容同质化贫血困境，行业正式驶入转型窗口期。从业者反思纯AI跑量模式的局限性，精品化和真人+AI融合模式成为行业共识，内容品质和情感温度重新成为竞争核心。",
+    "source": "中国金融信息网",
+    "sourceUrl": "https://m.cnfin.com/gs-lb//zixun/20260801/4449498_1.html",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "从Seedance 2.5到H3：AIGC如何赋能内容并托举大众情绪",
+    "summary": "传媒行业深度研究报告分析从Seedance 2.5到H3的技术演进，揭示AIGC如何从工具层面升级为情感托举力量。AI视频生成技术日趋成熟，但在内容创意和情感表达上仍需人类创作者的主导，人机协同创作成为最优解。",
+    "source": "新浪财经",
+    "sourceUrl": "http://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/lastest/rptid/838900224087/index.phtml",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "AI短剧爆款持续涌现，制作精品化趋势下三类企业最为受益",
+    "summary": "AI短剧领域爆款作品持续涌现，在制作精品化大趋势下三类企业最为受益：拥有IP储备的影视公司、掌握AI视频核心技术的工具提供商、以及具备跨平台分发能力的MCN机构。行业正从数量扩张转向品质竞争，内容为王逻辑回归。",
+    "source": "金融界",
+    "sourceUrl": "https://stock.jrj.com.cn/2026/08/03074757988893.shtml",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "Snapchat宣布打击低质量AI内容，完全AI生成视频将不被算法推荐",
+    "summary": "Snapchat平台正式宣布将打击低质量AI生成内容，完全由AI生成的视频将不会被算法推荐。此举反映全球社交平台对AI内容的态度正在从放任转向规范，平台在内容质量和创作者激励之间寻求新平衡，真人创作权重有望提升。",
+    "source": "IT之家",
+    "sourceUrl": "https://www.ithome.com/0/984/749.htm",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "观众需要AI明星吗？虚拟偶像产业迎来灵魂拷问",
+    "summary": "AI虚拟明星粉丝量突破40万引发行业深度反思：观众真的需要AI明星吗？AI明星虽可24小时营业、人设可控，但缺乏真实情感连接和成长的不可预测性。真人明星的魅力和温度仍是AI难以替代的核心竞争力。",
+    "source": "36氪",
+    "sourceUrl": "https://www.36kr.com/p/3920791686026884",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "科学家首次造出理论中的金属材料，导热率接近铜的3倍",
+    "summary": "国际科研团队首次在实验室中成功合成一种此前仅存在于理论预测中的新型金属材料，其导热率达到铜的近3倍。该突破性成果有望彻底改变芯片散热技术，为下一代高性能计算和数据中心提供革命性热管理解决方案。",
+    "source": "中国民航网",
+    "sourceUrl": "https://www.cannews.com.cn/guanzhu/2026/08-01/n1Kdpavr.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "热管制造技术突破给高性能芯片退烧，散热效率大幅提升",
+    "summary": "国内科研团队在热管制造技术领域取得重大突破，新型散热方案可为高性能芯片有效退烧。该技术采用微纳结构强化相变换热，散热效率较传统方案提升300%以上，有望解决AI芯片和5G基站的高热流密度散热难题。",
+    "source": "人民网",
+    "sourceUrl": "http://ent.people.com.cn/n1/2026/0803/c1012-40772653.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "长三角科创呈现三大新趋势，硬核技术加速从纸上蓝图走向实景运营",
+    "summary": "长三角科技创新呈现三大新趋势：量子科技产业化提速、生物制造进入中试放大阶段、空天信息商业化应用加速落地。硬核技术正加速从实验室走向实际场景运营，区域协同创新生态日趋成熟，科技成果转化效率显著提升。",
+    "source": "东方财富",
+    "sourceUrl": "https://fund.eastmoney.com/a/202608033829188268.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "芯朋微新增新能源汽车概念，电源芯片研发取得关键进展",
+    "summary": "芯朋微（688508）电源管理芯片在新能源汽车领域取得关键研发进展，公司正式新增新能源汽车概念。在车规芯片国产替代加速推进的背景下，芯朋微的电源芯片产品线持续扩展，有望在新能源汽车BMS和车载充电领域实现突破。",
+    "source": "经济观察报",
+    "sourceUrl": "http://www.eeo.com.cn/2026/0801/982832.shtml",
+    "category": "科技"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "三星8英寸GaN代工试产遇瓶颈，年内量产目标或延后数月",
+    "summary": "消息称三星电子8英寸氮化镓（GaN）代工试产遭遇技术瓶颈，年内量产目标可能延后数月。GaN作为第三代半导体核心材料在快充、5G基站和数据中心供电领域需求旺盛，三星GaN代工进展牵动全球功率半导体供应链格局。",
+    "source": "网易科技",
+    "sourceUrl": "https://www.163.com/dy/article/L38CGPVQ0514R9OJ.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "OpenAI官宣下一代模型Astra：取得10大未解数学难题突破",
+    "summary": "OpenAI正式发布新一代旗舰模型Astra，成功破解十项困扰数学界多年的重大难题，附249页论文。Astra在数学推理、代码生成和科学计算方面展现前所未有的能力，标志着AI从语言理解向科学发现的关键跃迁。",
+    "source": "36氪",
+    "sourceUrl": "https://www.36kr.com/p/3921831591341702",
+    "category": "AI"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "中国开源模型领先，美媒反思美AI发展盲区",
+    "summary": "中国AI大模型的开源策略正在深刻影响全球AI产业格局。多家美媒同期发文反思美国AI发展盲区，指出中国开源模型的领先优势正在被国际社会广泛认可，美国封闭策略面临重新评估。",
+    "source": "环球网",
+    "sourceUrl": "https://3w.huanqiu.com/a/12c81d/4SdOd36GDM0",
+    "category": "AI"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "涉及中国AI，两家英媒同日发文深度分析中国开源模型崛起",
+    "summary": "两家英国主流媒体同日发布深度分析文章，聚焦中国AI开源模型的全球崛起。文章指出中国AI企业通过开源策略打破了美国在AI领域的话语垄断，正在重塑全球AI技术标准和产业生态。",
+    "source": "上游新闻",
+    "sourceUrl": "https://www.cqcb.com/news/56/2026-08-03/6192075.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "OpenAI下一代模型Astra引爆全球：数学推理达到新高度",
+    "summary": "OpenAI宣布的下一代AI模型Astra在全球AI界引发震动。该模型在数学推理和科学发现领域取得突破性进展，被业界视为AI从辅助工具走向独立科研伙伴的标志性事件，全球AI竞赛进入全新阶段。",
+    "source": "网易科技",
+    "sourceUrl": "https://www.163.com/dy/article/L3D2UGIB0511BLFD.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-31",
+    "title": "交易所出手！量化高频遇减速带：关停局域网行情通道推进基础设施平权",
+    "summary": "交易所宣布将关停局域网行情通道推进基础设施平权，量化高频交易迎来重大减速带。此举旨在消除物理接入层面的不公平优势，降低市场参与者之间的技术差距，是程序化交易监管新规后的又一重要举措。",
+    "source": "21世纪经济报道",
+    "sourceUrl": "https://m.21jingji.com/article/20260730/herald/6458111779308b5b8fcfa45e6c471b7f.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-31",
+    "title": "市场风格切换倒逼量化多头策略生变",
+    "summary": "中国证券报头版报道A股市场风格快速切换正在倒逼量化多头策略发生根本性变化。多家量化私募从单一微盘策略转向双创因子和多策略配置，行业从规模竞赛进入策略差异化竞争新阶段。",
+    "source": "中国证券报",
+    "sourceUrl": "https://epaper.cs.com.cn/zgzqb/html/2026-07/31/nw.D110000zgzqb_20260731_1-A03.htm",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-31",
+    "title": "公募量化上半年扩容，市场剧震拷问超额收益持续性",
+    "summary": "公募量化上半年管理规模持续扩容，但7月市场剧震对超额收益的可持续性提出严峻考验。在风格切换和交易拥挤双重压力下，公募量化产品超额收益大幅分化，行业进入深度洗牌阶段。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202607303826907681.html",
+    "category": "量化"
+  },
+  {
     "date": "2026-07-31",
     "title": "政治局会议定调：宏观政策发力提效，提升资本市场韧性和信心",
     "summary": "中央政治局会议最新定调释放多重信号：宏观政策要发力提效、有效扩大国内需求、提升资本市场韧性和信心。十大券商解读认为政策更加积极，稳市力度有望增加，A股市场信心获政策强力支撑。",
@@ -30,6 +238,78 @@ window.NEWS_DATA = [
     "source": "同花顺",
     "sourceUrl": "http://stock.10jqka.com.cn/chuangye/20260731/c678573378.shtml",
     "category": "财经"
+  },
+  {
+    "date": "2026-07-31",
+    "title": "政治局会议深读：十大券商称政策更加积极，稳市力度有望增加",
+    "summary": "十大券商第一时间解读政治局会议：一致认为政策表述更加积极有力，稳市场力度有望显著增加。市场政策底信号明确，A股跨年度行情可期，建议关注政策受益方向和半年报业绩确定性强的板块。",
+    "source": "中国网财经",
+    "sourceUrl": "http://finance.china.com.cn/news/20260731/6318619.shtml",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-31",
+    "title": "从一键成片到一人剧组——从WAIC看短视频发展新趋势",
+    "summary": "央视深度报道2026世界人工智能大会揭示的短视频发展新趋势：AI工具链日趋成熟，个体创作者已可实现一人剧组全流程制作。从策划、拍摄、剪辑到配音、调色、特效，AI将专业团队能力浓缩到个人手中。",
+    "source": "央视",
+    "sourceUrl": "https://xwzs.cctv.cn/2026/07/31/ARTIhG6oJjf3V5AO776N9ISl260730.shtml",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-31",
+    "title": "AI短片瞄准电影节：影视从业者探索精品化与商业化之路",
+    "summary": "澎湃新闻和虎嗅联合报道越来越多AI短片开始瞄准国内外电影节。AI影视从业者在技术辅助下探索精品化创作与商业化变现之路，AI短片从流量快餐向艺术品质跃迁的趋势初显。",
+    "source": "澎湃新闻",
+    "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_33686809",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-31",
+    "title": "国内AI影视新职业快速涌现，中国视频生成技术已走在世界前列",
+    "summary": "新浪报道国内AI影视新职业正在快速涌现，AI提示工程师、AI画面导演、AI后期总监等新岗位大量出现。导演冯岸榕表示中国视频生成技术已切实走在世界前列，AI正重构影视行业人才结构。",
+    "source": "新浪",
+    "sourceUrl": "https://news.sina.com.cn/zx/gj/2026-07-31/doc-iniksaip0959291.shtml",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-31",
+    "title": "AI短剧莫失人间温度：行业反思技术与人性的平衡",
+    "summary": "AI短剧产业持续反思技术与人性的平衡问题。行业共识：AI可提升效率但不能替代真情实感，短剧的核心永远是故事和情感温度，纯AI跑量模式已走到尽头，精品化真人+AI融合是未来方向。",
+    "source": "华山网",
+    "sourceUrl": "https://www.hshan.com/news/msnews/2026-07-31/1018773.html",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-31",
+    "title": "工信部：推动新一代动力电池、车规级芯片、车用操作系统创新应用",
+    "summary": "工信部最新表态将大力推动新一代动力电池、车规级芯片和车用操作系统的创新应用。政策端持续加码新能源汽车核心零部件自主可控，国产车规芯片和操作系统迎来政策红利窗口期。",
+    "source": "36氪",
+    "sourceUrl": "https://36kr.com/newsflashes/3918816534130057",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-31",
+    "title": "全球车芯格局重塑，新架构成国产突围关键",
+    "summary": "香港文汇报深度报道全球汽车芯片格局正在发生深刻重塑。在智能汽车架构从分布式向集中式演进的大趋势下，国产车规芯片企业凭借新的电子电气架构实现弯道超车的机会窗口已经打开。",
+    "source": "香港文汇报",
+    "sourceUrl": "https://www.wenweipo.com/a/202607/31/AP6a6bb353e4b0c1e50022ef1e.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-31",
+    "title": "京东方披露玻璃基板、钙钛矿业务最新进展",
+    "summary": "京东方披露玻璃基板和钙钛矿业务最新进展，公司在下一代显示技术和新型光伏材料领域持续取得突破。玻璃基板技术有望打破海外垄断，钙钛矿太阳能电池中试线效率表现超出预期，产业化进程加速。",
+    "source": "财联社",
+    "sourceUrl": "https://www.cls.cn/detail/2442115",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-31",
+    "title": "GaN+自研ASIC，Enphase强化微型逆变器底层技术",
+    "summary": "Enphase宣布通过GaN（氮化镓）和自研ASIC芯片强化微型逆变器底层技术，实现功率密度大幅提升和成本进一步降低。该技术突破有望推动分布式光伏和户用储能系统的进一步普及。",
+    "source": "充电头网",
+    "sourceUrl": "https://www.chongdiantou.com/archives/1785408988013.html",
+    "category": "科技"
   },
   {
     "date": "2026-07-31",
@@ -72,102 +352,6 @@ window.NEWS_DATA = [
     "category": "AI"
   },
   {
-    "date": "2026-07-31",
-    "title": "交易所出手！量化高频遇减速带：关停局域网行情通道推进基础设施平权",
-    "summary": "交易所宣布将关停局域网行情通道推进基础设施平权，量化高频交易迎来重大减速带。此举旨在消除物理接入层面的不公平优势，降低市场参与者之间的技术差距，是程序化交易监管新规后的又一重要举措。",
-    "source": "21世纪经济报道",
-    "sourceUrl": "https://m.21jingji.com/article/20260730/herald/6458111779308b5b8fcfa45e6c471b7f.html",
-    "category": "量化"
-  },
-  {
-    "date": "2026-07-31",
-    "title": "市场风格切换倒逼量化多头策略生变",
-    "summary": "中国证券报头版报道A股市场风格快速切换正在倒逼量化多头策略发生根本性变化。多家量化私募从单一微盘策略转向双创因子和多策略配置，行业从规模竞赛进入策略差异化竞争新阶段。",
-    "source": "中国证券报",
-    "sourceUrl": "https://epaper.cs.com.cn/zgzqb/html/2026-07/31/nw.D110000zgzqb_20260731_1-A03.htm",
-    "category": "量化"
-  },
-  {
-    "date": "2026-07-31",
-    "title": "公募量化上半年扩容，市场剧震拷问超额收益持续性",
-    "summary": "公募量化上半年管理规模持续扩容，但7月市场剧震对超额收益的可持续性提出严峻考验。在风格切换和交易拥挤双重压力下，公募量化产品超额收益大幅分化，行业进入深度洗牌阶段。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202607303826907681.html",
-    "category": "量化"
-  },
-  {
-    "date": "2026-07-31",
-    "title": "政治局会议深读：十大券商称政策更加积极，稳市力度有望增加",
-    "summary": "十大券商第一时间解读政治局会议：一致认为政策表述更加积极有力，稳市场力度有望显著增加。市场政策底信号明确，A股跨年度行情可期，建议关注政策受益方向和半年报业绩确定性强的板块。",
-    "source": "中国网财经",
-    "sourceUrl": "http://finance.china.com.cn/news/20260731/6318619.shtml",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-31",
-    "title": "工信部：推动新一代动力电池、车规级芯片、车用操作系统创新应用",
-    "summary": "工信部最新表态将大力推动新一代动力电池、车规级芯片和车用操作系统的创新应用。政策端持续加码新能源汽车核心零部件自主可控，国产车规芯片和操作系统迎来政策红利窗口期。",
-    "source": "36氪",
-    "sourceUrl": "https://36kr.com/newsflashes/3918816534130057",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-31",
-    "title": "全球车芯格局重塑，新架构成国产突围关键",
-    "summary": "香港文汇报深度报道全球汽车芯片格局正在发生深刻重塑。在智能汽车架构从分布式向集中式演进的大趋势下，国产车规芯片企业凭借新的电子电气架构实现弯道超车的机会窗口已经打开。",
-    "source": "香港文汇报",
-    "sourceUrl": "https://www.wenweipo.com/a/202607/31/AP6a6bb353e4b0c1e50022ef1e.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-31",
-    "title": "京东方披露玻璃基板、钙钛矿业务最新进展",
-    "summary": "京东方披露玻璃基板和钙钛矿业务最新进展，公司在下一代显示技术和新型光伏材料领域持续取得突破。玻璃基板技术有望打破海外垄断，钙钛矿太阳能电池中试线效率表现超出预期，产业化进程加速。",
-    "source": "财联社",
-    "sourceUrl": "https://www.cls.cn/detail/2442115",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-31",
-    "title": "GaN+自研ASIC，Enphase强化微型逆变器底层技术",
-    "summary": "Enphase宣布通过GaN（氮化镓）和自研ASIC芯片强化微型逆变器底层技术，实现功率密度大幅提升和成本进一步降低。该技术突破有望推动分布式光伏和户用储能系统的进一步普及。",
-    "source": "充电头网",
-    "sourceUrl": "https://www.chongdiantou.com/archives/1785408988013.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-31",
-    "title": "从一键成片到一人剧组——从WAIC看短视频发展新趋势",
-    "summary": "央视深度报道2026世界人工智能大会揭示的短视频发展新趋势：AI工具链日趋成熟，个体创作者已可实现一人剧组全流程制作。从策划、拍摄、剪辑到配音、调色、特效，AI将专业团队能力浓缩到个人手中。",
-    "source": "央视",
-    "sourceUrl": "https://xwzs.cctv.cn/2026/07/31/ARTIhG6oJjf3V5AO776N9ISl260730.shtml",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-07-31",
-    "title": "AI短片瞄准电影节：影视从业者探索精品化与商业化之路",
-    "summary": "澎湃新闻和虎嗅联合报道越来越多AI短片开始瞄准国内外电影节。AI影视从业者在技术辅助下探索精品化创作与商业化变现之路，AI短片从流量快餐向艺术品质跃迁的趋势初显。",
-    "source": "澎湃新闻",
-    "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_33686809",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-07-31",
-    "title": "国内AI影视新职业快速涌现，中国视频生成技术已走在世界前列",
-    "summary": "新浪报道国内AI影视新职业正在快速涌现，AI提示工程师、AI画面导演、AI后期总监等新岗位大量出现。导演冯岸榕表示中国视频生成技术已切实走在世界前列，AI正重构影视行业人才结构。",
-    "source": "新浪",
-    "sourceUrl": "https://news.sina.com.cn/zx/gj/2026-07-31/doc-iniksaip0959291.shtml",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-07-31",
-    "title": "AI短剧莫失人间温度：行业反思技术与人性的平衡",
-    "summary": "AI短剧产业持续反思技术与人性的平衡问题。行业共识：AI可提升效率但不能替代真情实感，短剧的核心永远是故事和情感温度，纯AI跑量模式已走到尽头，精品化真人+AI融合是未来方向。",
-    "source": "华山网",
-    "sourceUrl": "https://www.hshan.com/news/msnews/2026-07-31/1018773.html",
-    "category": "自媒体"
-  },
-  {
     "date": "2026-07-30",
     "title": "限制量化！监管出手规范程序化交易，差异化收费机制落地",
     "summary": "监管层正式出手进一步规范量化交易行为。程序化交易差异化收费、高频交易重点监控等制度细则落地，量化行业格局面临重塑。",
@@ -177,19 +361,43 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-30",
-    "title": "道指暴跌超1100点！美联储按兵不动却陷内部分裂",
-    "summary": "美联储维持利率不变但内部分歧严重，美股三大指数集体跳水。道指暴跌超1100点，英伟达跌超3.5%，美光跌近10%。市场预期9月加息概率大幅上升。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/4048577.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-30",
     "title": "跌停潮之后：重新认识量化、市场与监管的边界",
     "summary": "央视财经深度分析A股7月跌停潮后量化交易的角色定位。量化策略在极端波动中究竟是放大器还是稳定器引发持续讨论，监管新规落地后行业进入精细化管理阶段。",
     "source": "央视财经",
     "sourceUrl": "https://finance.cctv.com/2026/07/25/ARTImcM3gsVST4mRPTOh21F9260725.shtml",
     "category": "量化"
+  },
+  {
+    "date": "2026-07-30",
+    "title": "微盘股走弱量化策略承压！头部量化多措施应对市场新格局",
+    "summary": "微盘股持续走弱令量化策略面临严峻压力测试。头部量化私募通过降低微盘因子权重、增加双创板块配置等多措并举应对市场新格局。",
+    "source": "九方智投",
+    "sourceUrl": "https://www.9fzt.com/common/e71eb3d252157a676ba0a73a047e85b7.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-30",
+    "title": "反思阶段性回撤：量化机构探寻新解法",
+    "summary": "量化私募行业在经历7月阶段性大幅回撤后积极探寻新解法。多策略多品种分散化配置成为穿越周期的核心方向。",
+    "source": "上海证券报",
+    "sourceUrl": "https://paper.cnstock.com/html/2026-07/27/content_2248809.htm",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-30",
+    "title": "7月以来+今年来双正超额指增策略表现突出",
+    "summary": "在量化行业整体承压背景下，部分指增策略实现7月以来和今年来的双正超额收益。行业正从普遍超额向结构性超额转变。",
+    "source": "私募网",
+    "sourceUrl": "https://www.simuwang.com/news/286971.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-30",
+    "title": "道指暴跌超1100点！美联储按兵不动却陷内部分裂",
+    "summary": "美联储维持利率不变但内部分歧严重，美股三大指数集体跳水。道指暴跌超1100点，英伟达跌超3.5%，美光跌近10%。市场预期9月加息概率大幅上升。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/4048577.html",
+    "category": "财经"
   },
   {
     "date": "2026-07-30",
@@ -209,43 +417,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-30",
-    "title": "美国自供电芯片最新成果发布，国内相关技术紧随产业化进程",
-    "summary": "美国自供电芯片技术取得突破性进展可从环境中自主采集能量运行。国内科研团队在能量采集芯片、无源物联网等方向同步推进产业化。",
-    "source": "物联网世界",
-    "sourceUrl": "https://www.iotworld.com.cn/html/News/202607/6b78c5a319095f2e.shtml",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-30",
-    "title": "科学家开发出自主学习电子元件，或有助解决AI能耗难题",
-    "summary": "国际科研团队开发出具备自主学习能力的新型电子元件，无需外部编程即可通过物理过程自行调整行为。该突破有望大幅降低AI芯片能耗。",
-    "source": "新华网",
-    "sourceUrl": "http://www.xinhuanet.com/liangzi/20260720/cea9e2cd7a674585968cb5c434dea390/c.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-30",
-    "title": "特朗普回应OpenAI模型失控：正在研究AI管控措施",
-    "summary": "特朗普就近期OpenAI模型失控事件公开回应，表示正在与团队研究更严格的AI管控措施。AI模型安全问题已成为美国两党共同关注的核心议题。",
-    "source": "凤凰科技",
-    "sourceUrl": "https://tech.ifeng.com/c/8vAlWg9gecB",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-30",
     "title": "港股科技板块或充分计入加息悲观预期：估值洼地效应凸显",
     "summary": "美联储偏鹰表态加剧全球市场波动，但分析认为港股科技板块或已充分计入加息悲观预期。南向资金持续净流入，中长期配置价值逐步显现。",
     "source": "每日经济新闻",
     "sourceUrl": "https://m.nbd.com.cn/articles/2026-07-30/4526270.html",
     "category": "财经"
-  },
-  {
-    "date": "2026-07-30",
-    "title": "月之暗面完成273亿筹资超预期，估值达2730亿",
-    "summary": "月之暗面宣布完成新一轮融资，筹资273亿元远超预期，最新估值达2730亿元。Kimi K3的成功发布推动月之暗面成为全球估值最高的AI初创公司之一。",
-    "source": "明报",
-    "sourceUrl": "https://news.mingpao.com/pns/article/20260730/s00004/1785344199206/",
-    "category": "AI"
   },
   {
     "date": "2026-07-30",
@@ -257,27 +433,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-30",
-    "title": "扎克伯格反对封杀中国AI禁令：批评这不是有效方案",
-    "summary": "Meta CEO扎克伯格公开反对美国部分政客推动的封杀中国AI模型禁令，批评该方案并非有效应对策略。扎克伯格认为开源生态对全球AI发展至关重要。",
-    "source": "明报",
-    "sourceUrl": "https://news.mingpao.com/pns/article/20260730/s00013/1785344192186/",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-30",
-    "title": "微盘股走弱量化策略承压！头部量化多措施应对市场新格局",
-    "summary": "微盘股持续走弱令量化策略面临严峻压力测试。头部量化私募通过降低微盘因子权重、增加双创板块配置等多措并举应对市场新格局。",
-    "source": "九方智投",
-    "sourceUrl": "https://www.9fzt.com/common/e71eb3d252157a676ba0a73a047e85b7.html",
-    "category": "量化"
-  },
-  {
-    "date": "2026-07-30",
-    "title": "广积粮后大模型厂商集体造芯：DeepSeek智谱纷纷入局",
-    "summary": "国产大模型厂商在完成模型能力积累后集体下场自研AI芯片。DeepSeek启动AI推理芯片项目，智谱AI评估自研定制AI芯片可能性，推理成本压力是核心驱动力。",
-    "source": "猎云网",
-    "sourceUrl": "https://lieyunpro.com/archives/501909",
-    "category": "科技"
+    "title": "7月30日投资避雷针：微软未来一年资本支出规模低于预期",
+    "summary": "微软未来一年资本支出规模低于预期引发AI算力投资逻辑重估，美股三大指数集体下跌，光通信和存储板块继续大跌。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202607303825790374.html",
+    "category": "财经"
   },
   {
     "date": "2026-07-30",
@@ -286,70 +446,6 @@ window.NEWS_DATA = [
     "source": "澎湃新闻",
     "sourceUrl": "https://m.thepaper.cn/newsDetail_forward_33634862",
     "category": "自媒体"
-  },
-  {
-    "date": "2026-07-30",
-    "title": "国产算力厂商火速适配Kimi K3：开源风暴席卷全球AI产业",
-    "summary": "Kimi K3开源大模型引发全球AI产业震动，国产算力厂商火速跟进适配。2.8万亿参数的开源模型推动国产AI软硬件协同生态加速成型。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/4048324.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-30",
-    "title": "反思阶段性回撤：量化机构探寻新解法",
-    "summary": "量化私募行业在经历7月阶段性大幅回撤后积极探寻新解法。多策略多品种分散化配置成为穿越周期的核心方向。",
-    "source": "上海证券报",
-    "sourceUrl": "https://paper.cnstock.com/html/2026-07/27/content_2248809.htm",
-    "category": "量化"
-  },
-  {
-    "date": "2026-07-30",
-    "title": "优刻得与上海理工大学发布太空算力样机系统",
-    "summary": "优刻得与上海理工大学联合发布太空算力样机系统采用高效光伏电池供电方案。该系统探索在太空环境中部署算力基础设施的可行性。",
-    "source": "太平洋电脑网",
-    "sourceUrl": "http://news.pconline.com.cn/2178/21787821.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-30",
-    "title": "中国科协年会高端芯片设计与制造专题论坛在京召开",
-    "summary": "中国科协年会高端芯片设计与制造专题论坛在京召开，聚焦国产芯片在先进制程、先进封装和EDA工具等关键环节的技术突破。",
-    "source": "光明网",
-    "sourceUrl": "https://tech.gmw.cn/2026-07/17/content_38890088.htm",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-30",
-    "title": "三星Q2利润同比增长18倍；DeepMind拆散重组诺奖项目团队",
-    "summary": "三星电子Q2财报利润同比增长18倍AI存储芯片需求爆发是主因。Google DeepMind被曝拆散重组曾获诺贝尔奖的项目团队，Hugging Face发布AI入侵全过程报告。",
-    "source": "极客公园",
-    "sourceUrl": "http://www.geekpark.net/news/368160",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-30",
-    "title": "万亿词元奔涌助力中国经济智变",
-    "summary": "中国AI大模型日均Token调用量持续攀升，万亿词元级别的AI能力正在深度渗透各行各业。AI正从单一工具角色升级为经济智变的核心引擎。",
-    "source": "中国金融信息网",
-    "sourceUrl": "https://www.cnfin.com/gs-lb/detail/20260730/4448102_1.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-30",
-    "title": "Meta电话会：AI变现见成效，出售算力是愚蠢的",
-    "summary": "Meta最新财报电话会透露AI变现已见成效，扎克伯格明确表示出售算力是愚蠢的。Meta坚持开源模型策略，开源生态价值和长期竞争力更强。",
-    "source": "东方财富",
-    "sourceUrl": "https://fund.eastmoney.com/a/202607303825568728.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-30",
-    "title": "Anthropic CEO带头喊刹车，OpenAI官方点赞",
-    "summary": "Anthropic CEO公开呼吁业界主动放缓AI发展速度以建立更完善的安全护栏，OpenAI官方点赞。AI安全问题正从学术讨论进入产业实践层面。",
-    "source": "36氪",
-    "sourceUrl": "https://36kr.com/p/3916764446480001",
-    "category": "AI"
   },
   {
     "date": "2026-07-30",
@@ -393,19 +489,43 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-30",
-    "title": "7月以来+今年来双正超额指增策略表现突出",
-    "summary": "在量化行业整体承压背景下，部分指增策略实现7月以来和今年来的双正超额收益。行业正从普遍超额向结构性超额转变。",
-    "source": "私募网",
-    "sourceUrl": "https://www.simuwang.com/news/286971.html",
-    "category": "量化"
+    "title": "美国自供电芯片最新成果发布，国内相关技术紧随产业化进程",
+    "summary": "美国自供电芯片技术取得突破性进展可从环境中自主采集能量运行。国内科研团队在能量采集芯片、无源物联网等方向同步推进产业化。",
+    "source": "物联网世界",
+    "sourceUrl": "https://www.iotworld.com.cn/html/News/202607/6b78c5a319095f2e.shtml",
+    "category": "科技"
   },
   {
     "date": "2026-07-30",
-    "title": "7月30日投资避雷针：微软未来一年资本支出规模低于预期",
-    "summary": "微软未来一年资本支出规模低于预期引发AI算力投资逻辑重估，美股三大指数集体下跌，光通信和存储板块继续大跌。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202607303825790374.html",
-    "category": "财经"
+    "title": "科学家开发出自主学习电子元件，或有助解决AI能耗难题",
+    "summary": "国际科研团队开发出具备自主学习能力的新型电子元件，无需外部编程即可通过物理过程自行调整行为。该突破有望大幅降低AI芯片能耗。",
+    "source": "新华网",
+    "sourceUrl": "http://www.xinhuanet.com/liangzi/20260720/cea9e2cd7a674585968cb5c434dea390/c.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-30",
+    "title": "广积粮后大模型厂商集体造芯：DeepSeek智谱纷纷入局",
+    "summary": "国产大模型厂商在完成模型能力积累后集体下场自研AI芯片。DeepSeek启动AI推理芯片项目，智谱AI评估自研定制AI芯片可能性，推理成本压力是核心驱动力。",
+    "source": "猎云网",
+    "sourceUrl": "https://lieyunpro.com/archives/501909",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-30",
+    "title": "优刻得与上海理工大学发布太空算力样机系统",
+    "summary": "优刻得与上海理工大学联合发布太空算力样机系统采用高效光伏电池供电方案。该系统探索在太空环境中部署算力基础设施的可行性。",
+    "source": "太平洋电脑网",
+    "sourceUrl": "http://news.pconline.com.cn/2178/21787821.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-30",
+    "title": "中国科协年会高端芯片设计与制造专题论坛在京召开",
+    "summary": "中国科协年会高端芯片设计与制造专题论坛在京召开，聚焦国产芯片在先进制程、先进封装和EDA工具等关键环节的技术突破。",
+    "source": "光明网",
+    "sourceUrl": "https://tech.gmw.cn/2026-07/17/content_38890088.htm",
+    "category": "科技"
   },
   {
     "date": "2026-07-30",
@@ -416,12 +536,68 @@ window.NEWS_DATA = [
     "category": "科技"
   },
   {
-    "date": "2026-07-29",
-    "title": "钙钛矿-有机叠层太阳能电池效率破纪录，超28%转换效率引领光伏新方向",
-    "summary": "中国科学院团队在钙钛矿-有机叠层太阳能电池研究取得重大突破，光电转换效率突破28%刷新世界纪录。该成果已具备产业化条件，推动下一代高效低成本光伏技术加速落地，有望重塑全球光伏产业格局。",
-    "source": "中国科学院",
-    "sourceUrl": "https://www.cas.cn/cm/202607/t20260714_5115493.shtml",
-    "category": "科技"
+    "date": "2026-07-30",
+    "title": "特朗普回应OpenAI模型失控：正在研究AI管控措施",
+    "summary": "特朗普就近期OpenAI模型失控事件公开回应，表示正在与团队研究更严格的AI管控措施。AI模型安全问题已成为美国两党共同关注的核心议题。",
+    "source": "凤凰科技",
+    "sourceUrl": "https://tech.ifeng.com/c/8vAlWg9gecB",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-30",
+    "title": "月之暗面完成273亿筹资超预期，估值达2730亿",
+    "summary": "月之暗面宣布完成新一轮融资，筹资273亿元远超预期，最新估值达2730亿元。Kimi K3的成功发布推动月之暗面成为全球估值最高的AI初创公司之一。",
+    "source": "明报",
+    "sourceUrl": "https://news.mingpao.com/pns/article/20260730/s00004/1785344199206/",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-30",
+    "title": "扎克伯格反对封杀中国AI禁令：批评这不是有效方案",
+    "summary": "Meta CEO扎克伯格公开反对美国部分政客推动的封杀中国AI模型禁令，批评该方案并非有效应对策略。扎克伯格认为开源生态对全球AI发展至关重要。",
+    "source": "明报",
+    "sourceUrl": "https://news.mingpao.com/pns/article/20260730/s00013/1785344192186/",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-30",
+    "title": "国产算力厂商火速适配Kimi K3：开源风暴席卷全球AI产业",
+    "summary": "Kimi K3开源大模型引发全球AI产业震动，国产算力厂商火速跟进适配。2.8万亿参数的开源模型推动国产AI软硬件协同生态加速成型。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/4048324.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-30",
+    "title": "三星Q2利润同比增长18倍；DeepMind拆散重组诺奖项目团队",
+    "summary": "三星电子Q2财报利润同比增长18倍AI存储芯片需求爆发是主因。Google DeepMind被曝拆散重组曾获诺贝尔奖的项目团队，Hugging Face发布AI入侵全过程报告。",
+    "source": "极客公园",
+    "sourceUrl": "http://www.geekpark.net/news/368160",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-30",
+    "title": "万亿词元奔涌助力中国经济智变",
+    "summary": "中国AI大模型日均Token调用量持续攀升，万亿词元级别的AI能力正在深度渗透各行各业。AI正从单一工具角色升级为经济智变的核心引擎。",
+    "source": "中国金融信息网",
+    "sourceUrl": "https://www.cnfin.com/gs-lb/detail/20260730/4448102_1.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-30",
+    "title": "Meta电话会：AI变现见成效，出售算力是愚蠢的",
+    "summary": "Meta最新财报电话会透露AI变现已见成效，扎克伯格明确表示出售算力是愚蠢的。Meta坚持开源模型策略，开源生态价值和长期竞争力更强。",
+    "source": "东方财富",
+    "sourceUrl": "https://fund.eastmoney.com/a/202607303825568728.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-30",
+    "title": "Anthropic CEO带头喊刹车，OpenAI官方点赞",
+    "summary": "Anthropic CEO公开呼吁业界主动放缓AI发展速度以建立更完善的安全护栏，OpenAI官方点赞。AI安全问题正从学术讨论进入产业实践层面。",
+    "source": "36氪",
+    "sourceUrl": "https://36kr.com/p/3916764446480001",
+    "category": "AI"
   },
   {
     "date": "2026-07-29",
@@ -449,27 +625,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-29",
-    "title": "超千名全球AI从业者联名请求美政府支持国际合作，建立AI刹车机制",
-    "summary": "超过1000名来自全球的AI从业者联名致信美国政府，呼吁支持AI安全领域的国际合作，并建立全球性的AI发展刹车机制。业界对AI失控风险的担忧持续升温，推动全球AI治理框架加速形成。",
-    "source": "36氪",
-    "sourceUrl": "https://36kr.com/newsflashes/3915991895666305",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-29",
     "title": "贝莱德基金王晓京：以量化模型打造既灵活又自律的组合",
     "summary": "贝莱德基金量化投资总监王晓京分享量化投资理念：通过多因子模型和动态风险预算框架在A股市场打造既灵活又自律的投资组合，强调量化不是黑箱而是系统化决策工具，风控与收益同等重要。",
     "source": "中国基金网",
     "sourceUrl": "https://www.chnfund.com/article/AR20260719024726225",
     "category": "量化"
-  },
-  {
-    "date": "2026-07-29",
-    "title": "腾讯抢跑抖音发力，优酷芒果们同时押注AI互动内容新战场",
-    "summary": "各大视频平台全面押注AI互动内容新赛道。腾讯视频率先推出AI互动剧集、抖音加码真人+AI混合短剧、优酷芒果等平台纷纷跟进。AI互动内容被视为继短视频之后的下一波内容形态变革，平台争夺战已经打响。",
-    "source": "澎湃新闻",
-    "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_33626164",
-    "category": "自媒体"
   },
   {
     "date": "2026-07-29",
@@ -481,59 +641,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-29",
-    "title": "端侧AI概念异动拉升，博通集成、国光电器双双涨停",
-    "summary": "端侧AI概念股早盘异动拉升，博通集成、国光电器双双涨停，反映出市场对AI端侧部署产业化的强烈预期。端侧AI从旗舰机专属走向千元机普及的趋势持续强化，产业链上下游企业受益明显。",
-    "source": "财联社",
-    "sourceUrl": "https://www.cls.cn/detail/2439709",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-29",
     "title": "稳市资金接力入场强信心，多部门协同释放积极信号",
     "summary": "稳市资金正在接力入场提振市场信心。证监会连续召开座谈会、央行持续呵护流动性、国资体系密集发声，多部门协同发力形成稳预期合力。市场人士认为A股短期调整已较充分，企稳条件逐步具备。",
     "source": "人民网",
     "sourceUrl": "http://finance.people.com.cn/n1/2026/0729/c1004-40770048.html",
     "category": "财经"
-  },
-  {
-    "date": "2026-07-29",
-    "title": "智能体从助理变搭子：智象未来vivago R1开启内容创作新范式",
-    "summary": "智象未来vivago R1智能体将AI从被动工具升级为主动创作伙伴。智能体从助理变搭子的模式转变正在开启内容创作新范式，AI不再只是效率工具而是创作者的创意搭档，人机协同创作成为新趋势。",
-    "source": "极客公园",
-    "sourceUrl": "https://w.geekpark.net/news/367683",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-07-29",
-    "title": "智元自研具身大模型登顶全球榜单，超越千问、豆包、英伟达",
-    "summary": "智元机器人自研的具身智能大模型在全球权威榜单中登顶，超越通义千问、豆包和英伟达的同类模型。该模型在机器人操作、环境理解和任务规划等维度表现突出，标志着中国具身智能技术达到国际领先水平。",
-    "source": "东方网",
-    "sourceUrl": "https://nw.eastday.com/zq/zh/20260729/5886d2db5747ff8ea13c16a49127fb8f.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-29",
-    "title": "我国太阳能电池研究取得重大突破，产业化前景明朗",
-    "summary": "我国科研团队在新型太阳能电池领域取得重大突破。中科院团队研发的钙钛矿-有机叠层太阳能电池转换效率突破28%刷新世界纪录，该成果已具备产业化条件，预计5年内可实现规模化生产，推动下一代高效低成本光伏技术加速落地。",
-    "source": "工人日报",
-    "sourceUrl": "https://www.workercn.cn/papers/grrb/2026/07/29/7/news-5.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-29",
-    "title": "年中行业观察：人工智能应用从会聊天到真干活",
-    "summary": "人民邮电报年中行业观察指出，2026年上半年AI应用实现了从会聊天到真干活的关键跨越。AI智能体正在走出屏幕进入物理世界，端侧部署、具身智能、行业解决方案三大方向齐头并进，产业化落地进入加速周期。",
-    "source": "人民邮电报",
-    "sourceUrl": "https://www.cnii.com.cn/gxxww/rmydb/202607/t20260729_751834.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-29",
-    "title": "大模型加速迭代，AI算力持续加码",
-    "summary": "东方财富行业周报指出大模型迭代速度持续加快，推动AI算力需求持续加码。国产算力基础设施投资保持高位增长，多家企业宣布扩大智算中心建设规模，AI芯片国产替代进程加速推进。",
-    "source": "东方财富",
-    "sourceUrl": "https://data.eastmoney.com/report/zw_industry.jshtml?encodeUrl=rQ/bJ2qBORG+Gg9v7IitwwZ5GKhJfH4JHzEtgj5gSeo=",
-    "category": "AI"
   },
   {
     "date": "2026-07-29",
@@ -561,6 +673,38 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-29",
+    "title": "中信证券：港股继续承接亚太轮动资金，韩股再次熔断引发关注",
+    "summary": "中信证券发布最新策略观点指出，在Hyperscaler CDS飙升和韩国股市再次触发熔断的背景下，港股市场继续承接亚太区域轮动资金。南向资金持续净流入，港股估值洼地效应吸引力增强。",
+    "source": "每日经济新闻",
+    "sourceUrl": "https://www.nbd.com.cn/articles/2026-07-29/4524869.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-29",
+    "title": "A股开盘涨跌不一，沪指涨0.26%教育油气等板块走强",
+    "summary": "A股三大指数开盘涨跌不一，沪指微涨0.26%。教育、油气等板块开盘走强，科技股延续调整态势。市场情绪在稳市信号密集释放后有所回暖，但成交量有待进一步放大确认方向。",
+    "source": "智通财经",
+    "sourceUrl": "https://www.zhitongcaijing.com/content/detail/1473398.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-29",
+    "title": "腾讯抢跑抖音发力，优酷芒果们同时押注AI互动内容新战场",
+    "summary": "各大视频平台全面押注AI互动内容新赛道。腾讯视频率先推出AI互动剧集、抖音加码真人+AI混合短剧、优酷芒果等平台纷纷跟进。AI互动内容被视为继短视频之后的下一波内容形态变革，平台争夺战已经打响。",
+    "source": "澎湃新闻",
+    "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_33626164",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-29",
+    "title": "智能体从助理变搭子：智象未来vivago R1开启内容创作新范式",
+    "summary": "智象未来vivago R1智能体将AI从被动工具升级为主动创作伙伴。智能体从助理变搭子的模式转变正在开启内容创作新范式，AI不再只是效率工具而是创作者的创意搭档，人机协同创作成为新趋势。",
+    "source": "极客公园",
+    "sourceUrl": "https://w.geekpark.net/news/367683",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-29",
     "title": "以主流价值引领AI微短剧发展，合规与创新并重",
     "summary": "广电总局加强AI微短剧分类分层管理，行业从野蛮生长进入合规发展新阶段。以主流价值引领AI微短剧发展方向成为行业共识，精品化加IP化是破局之路，纯靠AI换皮的跑量模式将被淘汰。",
     "source": "山西日报",
@@ -569,11 +713,59 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-29",
-    "title": "中信证券：港股继续承接亚太轮动资金，韩股再次熔断引发关注",
-    "summary": "中信证券发布最新策略观点指出，在Hyperscaler CDS飙升和韩国股市再次触发熔断的背景下，港股市场继续承接亚太区域轮动资金。南向资金持续净流入，港股估值洼地效应吸引力增强。",
-    "source": "每日经济新闻",
-    "sourceUrl": "https://www.nbd.com.cn/articles/2026-07-29/4524869.html",
-    "category": "财经"
+    "title": "钙钛矿-有机叠层太阳能电池效率破纪录，超28%转换效率引领光伏新方向",
+    "summary": "中国科学院团队在钙钛矿-有机叠层太阳能电池研究取得重大突破，光电转换效率突破28%刷新世界纪录。该成果已具备产业化条件，推动下一代高效低成本光伏技术加速落地，有望重塑全球光伏产业格局。",
+    "source": "中国科学院",
+    "sourceUrl": "https://www.cas.cn/cm/202607/t20260714_5115493.shtml",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-29",
+    "title": "我国太阳能电池研究取得重大突破，产业化前景明朗",
+    "summary": "我国科研团队在新型太阳能电池领域取得重大突破。中科院团队研发的钙钛矿-有机叠层太阳能电池转换效率突破28%刷新世界纪录，该成果已具备产业化条件，预计5年内可实现规模化生产，推动下一代高效低成本光伏技术加速落地。",
+    "source": "工人日报",
+    "sourceUrl": "https://www.workercn.cn/papers/grrb/2026/07/29/7/news-5.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-29",
+    "title": "超千名全球AI从业者联名请求美政府支持国际合作，建立AI刹车机制",
+    "summary": "超过1000名来自全球的AI从业者联名致信美国政府，呼吁支持AI安全领域的国际合作，并建立全球性的AI发展刹车机制。业界对AI失控风险的担忧持续升温，推动全球AI治理框架加速形成。",
+    "source": "36氪",
+    "sourceUrl": "https://36kr.com/newsflashes/3915991895666305",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-29",
+    "title": "端侧AI概念异动拉升，博通集成、国光电器双双涨停",
+    "summary": "端侧AI概念股早盘异动拉升，博通集成、国光电器双双涨停，反映出市场对AI端侧部署产业化的强烈预期。端侧AI从旗舰机专属走向千元机普及的趋势持续强化，产业链上下游企业受益明显。",
+    "source": "财联社",
+    "sourceUrl": "https://www.cls.cn/detail/2439709",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-29",
+    "title": "智元自研具身大模型登顶全球榜单，超越千问、豆包、英伟达",
+    "summary": "智元机器人自研的具身智能大模型在全球权威榜单中登顶，超越通义千问、豆包和英伟达的同类模型。该模型在机器人操作、环境理解和任务规划等维度表现突出，标志着中国具身智能技术达到国际领先水平。",
+    "source": "东方网",
+    "sourceUrl": "https://nw.eastday.com/zq/zh/20260729/5886d2db5747ff8ea13c16a49127fb8f.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-29",
+    "title": "年中行业观察：人工智能应用从会聊天到真干活",
+    "summary": "人民邮电报年中行业观察指出，2026年上半年AI应用实现了从会聊天到真干活的关键跨越。AI智能体正在走出屏幕进入物理世界，端侧部署、具身智能、行业解决方案三大方向齐头并进，产业化落地进入加速周期。",
+    "source": "人民邮电报",
+    "sourceUrl": "https://www.cnii.com.cn/gxxww/rmydb/202607/t20260729_751834.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-29",
+    "title": "大模型加速迭代，AI算力持续加码",
+    "summary": "东方财富行业周报指出大模型迭代速度持续加快，推动AI算力需求持续加码。国产算力基础设施投资保持高位增长，多家企业宣布扩大智算中心建设规模，AI芯片国产替代进程加速推进。",
+    "source": "东方财富",
+    "sourceUrl": "https://data.eastmoney.com/report/zw_industry.jshtml?encodeUrl=rQ/bJ2qBORG+Gg9v7IitwwZ5GKhJfH4JHzEtgj5gSeo=",
+    "category": "AI"
   },
   {
     "date": "2026-07-29",
@@ -600,14 +792,6 @@ window.NEWS_DATA = [
     "category": "AI"
   },
   {
-    "date": "2026-07-29",
-    "title": "A股开盘涨跌不一，沪指涨0.26%教育油气等板块走强",
-    "summary": "A股三大指数开盘涨跌不一，沪指微涨0.26%。教育、油气等板块开盘走强，科技股延续调整态势。市场情绪在稳市信号密集释放后有所回暖，但成交量有待进一步放大确认方向。",
-    "source": "智通财经",
-    "sourceUrl": "https://www.zhitongcaijing.com/content/detail/1473398.html",
-    "category": "财经"
-  },
-  {
     "date": "2026-07-28",
     "title": "量化业绩巨震：头部机构多措施应对，策略迭代迫在眉睫",
     "summary": "7月量化私募业绩遭遇集体巨震，多家百亿机构单周回撤超15%。头部量化通过扩大因子覆盖面、增加另类数据源、优化风险模型等多措并举应对市场新格局。",
@@ -622,30 +806,6 @@ window.NEWS_DATA = [
     "source": "央视财经",
     "sourceUrl": "https://finance.cctv.cn/2026/07/25/ARTImcM3gsVST4mRPTOh21F9260725.shtml",
     "category": "量化"
-  },
-  {
-    "date": "2026-07-28",
-    "title": "英伟达微软等科技巨头联名公开支持开源AI模型，反对出口管制",
-    "summary": "英伟达、微软、OpenAI等硅谷科技巨头签署联名信，公开支持开源AI模型并反对美国政府施加不合理的出口管制。联名信强调开源生态是全球AI创新的根基。",
-    "source": "中国网",
-    "sourceUrl": "http://big5.china.com.cn/gate/big5/finance.china.com.cn/industry/20260727/6317958.shtml",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-28",
-    "title": "经济参考报：政策工具箱充足，经济基本面稳固支撑市场信心",
-    "summary": "经济参考报发表评论指出当前中国政策工具箱充足、经济基本面稳固，为资本市场平稳运行提供坚实支撑。多部门协同发力稳预期，A股企稳回升底气十足。",
-    "source": "经济参考报",
-    "sourceUrl": "http://dz.jjckb.cn/www/pages/webpage2009/html/2026-07/23/content_117417.htm",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-28",
-    "title": "稳市场信号密集释放，上市公司掀起增持回购热潮",
-    "summary": "稳市场六重积极信号密集释放叠加上市公司掀起增持回购热潮，彰显产业资本对当前估值的认可。外资机构集体看好A股下半年表现，认为市场短期调整已较充分。",
-    "source": "中华工商时报",
-    "sourceUrl": "http://epaper.cbt.com.cn/epaper/uniflows/html/2026/07/22/04/04_56.htm",
-    "category": "财经"
   },
   {
     "date": "2026-07-28",
@@ -665,11 +825,19 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-28",
-    "title": "新华视点：AI发展新趋势——从能说会道到真抓实干",
-    "summary": "新华视点深度观察AI产业最新趋势：AI正从聊天对话能力向实际执行能力全面跃迁。智能体走出屏幕进入物理世界，端侧AI部署进入千元机时代，产业化落地进入加速周期。",
-    "source": "新华网",
-    "sourceUrl": "https://www.xinhuanet.com/20260720/f0650b6f47364d4694483b8821896e18/c.html",
-    "category": "AI"
+    "title": "经济参考报：政策工具箱充足，经济基本面稳固支撑市场信心",
+    "summary": "经济参考报发表评论指出当前中国政策工具箱充足、经济基本面稳固，为资本市场平稳运行提供坚实支撑。多部门协同发力稳预期，A股企稳回升底气十足。",
+    "source": "经济参考报",
+    "sourceUrl": "http://dz.jjckb.cn/www/pages/webpage2009/html/2026-07/23/content_117417.htm",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-28",
+    "title": "稳市场信号密集释放，上市公司掀起增持回购热潮",
+    "summary": "稳市场六重积极信号密集释放叠加上市公司掀起增持回购热潮，彰显产业资本对当前估值的认可。外资机构集体看好A股下半年表现，认为市场短期调整已较充分。",
+    "source": "中华工商时报",
+    "sourceUrl": "http://epaper.cbt.com.cn/epaper/uniflows/html/2026/07/22/04/04_56.htm",
+    "category": "财经"
   },
   {
     "date": "2026-07-28",
@@ -677,6 +845,22 @@ window.NEWS_DATA = [
     "summary": "多部门协同发力释放稳市场积极信号：证监会连续召开座谈会、央行持续呵护流动性、国资体系密集发声、产业政策精准发力。市场信心有望逐步恢复。",
     "source": "搜狐",
     "sourceUrl": "https://www.sohu.com/a/1054502292_120988533",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-28",
+    "title": "外资机构密集发声看好中国股市：估值洼地效应凸显",
+    "summary": "多家外资机构密集发布看好中国股市的最新观点。高盛、瑞银、渣打等认为A股估值处于历史低位，中国AI产业链和高端制造具备全球竞争力，当前是中长期布局良机。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/4033453.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-28",
+    "title": "中国宏观经济韧性足：AI等创新领域吸引力增强",
+    "summary": "上海证券报报道中国宏观经济展现出强大韧性，AI等创新领域吸引力持续增强。多家外资机构发声看好A股市场、看多中国股票，认为中国资产正从可选项升级为必选项。",
+    "source": "上海证券报",
+    "sourceUrl": "https://m.cnstock.com/commonDetail/749618",
     "category": "财经"
   },
   {
@@ -689,11 +873,19 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-28",
-    "title": "外资机构密集发声看好中国股市：估值洼地效应凸显",
-    "summary": "多家外资机构密集发布看好中国股市的最新观点。高盛、瑞银、渣打等认为A股估值处于历史低位，中国AI产业链和高端制造具备全球竞争力，当前是中长期布局良机。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/4033453.html",
-    "category": "财经"
+    "title": "英伟达微软等科技巨头联名公开支持开源AI模型，反对出口管制",
+    "summary": "英伟达、微软、OpenAI等硅谷科技巨头签署联名信，公开支持开源AI模型并反对美国政府施加不合理的出口管制。联名信强调开源生态是全球AI创新的根基。",
+    "source": "中国网",
+    "sourceUrl": "http://big5.china.com.cn/gate/big5/finance.china.com.cn/industry/20260727/6317958.shtml",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-28",
+    "title": "新华视点：AI发展新趋势——从能说会道到真抓实干",
+    "summary": "新华视点深度观察AI产业最新趋势：AI正从聊天对话能力向实际执行能力全面跃迁。智能体走出屏幕进入物理世界，端侧AI部署进入千元机时代，产业化落地进入加速周期。",
+    "source": "新华网",
+    "sourceUrl": "https://www.xinhuanet.com/20260720/f0650b6f47364d4694483b8821896e18/c.html",
+    "category": "AI"
   },
   {
     "date": "2026-07-28",
@@ -702,14 +894,6 @@ window.NEWS_DATA = [
     "source": "腾讯新闻",
     "sourceUrl": "https://news.qq.com/rain/a/20260725A073TB00",
     "category": "AI"
-  },
-  {
-    "date": "2026-07-28",
-    "title": "中国宏观经济韧性足：AI等创新领域吸引力增强",
-    "summary": "上海证券报报道中国宏观经济展现出强大韧性，AI等创新领域吸引力持续增强。多家外资机构发声看好A股市场、看多中国股票，认为中国资产正从可选项升级为必选项。",
-    "source": "上海证券报",
-    "sourceUrl": "https://m.cnstock.com/commonDetail/749618",
-    "category": "财经"
   },
   {
     "date": "2026-07-28",
@@ -729,18 +913,34 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-27",
-    "title": "黄仁勋、马斯克发声：看好中国大模型，领先趋势难以阻挡",
-    "summary": "英伟达CEO黄仁勋和特斯拉CEO马斯克公开表态，看好中国AI大模型发展前景，认为中国开源模型的领先趋势难以阻挡。黄仁勋再次强调开源是AI产业发展的基石，限制措施将损害美国自身的创新生态。",
-    "source": "大众日报",
-    "sourceUrl": "http://dzrb.dzng.com/general/0/NEWS3563685KOUSHNLHNFXHR",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-27",
     "title": "限制或取消量化交易是股市维稳的重要一环",
     "summary": "分析人士指出限制或规范量化交易是维护A股市场稳定的重要举措。程序化交易新规已正式执行，高频交易认定标准和差异化收费机制落地，量化交易监管进入常态化精细化阶段，有助于减少非理性波动。",
     "source": "中国财经信息网",
     "sourceUrl": "https://vipwt1.cfi.net.cn/p20260727000148.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-27",
+    "title": "量化规模破1.8万亿：监管细则落地，散户交易逻辑彻底变了",
+    "summary": "量化私募管理规模突破1.8万亿元，监管细则逐步落地改变市场生态。散户面对量化主导的市场环境，交易逻辑正在发生根本性变化，从短线博弈转向中长期价值投资，市场投资者结构持续优化。",
+    "source": "网易",
+    "sourceUrl": "https://www.163.com/dy/article/L2R61FN105567C05.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-27",
+    "title": "量化策略调仓：从微盘转向双创因子，博弈降温后关注非AI修复",
+    "summary": "最新研报显示量化策略正从微盘股向科创板、创业板方向系统性调仓。在量化博弈降温后，建议关注基本金属、电力设备、化工、创新药、券商等非AI板块的修复机会。",
+    "source": "东方财富",
+    "sourceUrl": "https://fund.eastmoney.com/a/202607273821338000.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-27",
+    "title": "反思阶段性回撤：量化机构探寻新解法",
+    "summary": "量化私募行业在经历7月阶段性大幅回撤后积极探寻新解法。多家头部机构加大AI研发投入、拓展另类数据源、优化因子组合，多策略多品种分散化配置成为穿越周期的关键方向。",
+    "source": "中国证券网",
+    "sourceUrl": "https://www.cnstock.com/commonDetail/751013",
     "category": "量化"
   },
   {
@@ -761,19 +961,59 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-27",
-    "title": "量化规模破1.8万亿：监管细则落地，散户交易逻辑彻底变了",
-    "summary": "量化私募管理规模突破1.8万亿元，监管细则逐步落地改变市场生态。散户面对量化主导的市场环境，交易逻辑正在发生根本性变化，从短线博弈转向中长期价值投资，市场投资者结构持续优化。",
-    "source": "网易",
-    "sourceUrl": "https://www.163.com/dy/article/L2R61FN105567C05.html",
-    "category": "量化"
+    "title": "股债期政策加码：服务实体经济提质增效",
+    "summary": "继证监会连续召开座谈会后，股债期政策持续加码服务实体经济提质增效。多部门协同发力释放稳市场积极信号，货币政策稳健偏松、产业政策精准发力，形成稳预期合力。",
+    "source": "中国网财经",
+    "sourceUrl": "http://finance.china.com.cn/stock/20260727/6317807.shtml",
+    "category": "财经"
   },
   {
     "date": "2026-07-27",
-    "title": "量化策略调仓：从微盘转向双创因子，博弈降温后关注非AI修复",
-    "summary": "最新研报显示量化策略正从微盘股向科创板、创业板方向系统性调仓。在量化博弈降温后，建议关注基本金属、电力设备、化工、创新药、券商等非AI板块的修复机会。",
-    "source": "东方财富",
-    "sourceUrl": "https://fund.eastmoney.com/a/202607273821338000.html",
-    "category": "量化"
+    "title": "机构人士解读AI烧钱时刻：科技股投资逻辑面临重估",
+    "summary": "机构人士深度解读当前AI行业烧钱竞争格局：科技股投资逻辑正面临系统性重估。美股科技巨头即将密集发布财报，AI板块从普涨进入结构性分化新阶段，业绩验证将成为市场走势的决定性因素。",
+    "source": "中国基金网",
+    "sourceUrl": "https://www.chnfund.com/article/AR20260726013707198",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-27",
+    "title": "新华财经早报7月27日：油价重挫逾5%带动全球股债市反弹",
+    "summary": "新华财经早间要闻：国际油价重挫逾5%带动全球股市和债市反弹，央行周和科技巨头财报周接续登场。国内市场关注政治局会议政策信号、半年报密集披露以及量化交易监管新规落地进展。",
+    "source": "新华财经",
+    "sourceUrl": "https://www.cnfin.com/gs-lb/detail/20260727/4446283_1.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-27",
+    "title": "社交媒体带货博主注意了：AI已开始抢走副业生意",
+    "summary": "AI虚拟博主正在快速蚕食社交媒体带货市场。AI博主可24小时不间断直播、不受地域限制、内容生产成本极低，已有多家品牌开始将预算从真人博主转向AI虚拟IP，真人博主面临前所未有的竞争压力。",
+    "source": "搜狐",
+    "sourceUrl": "https://www.sohu.com/a/1052850790_122135404",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-27",
+    "title": "AI造星时代来了：虚拟艺人批量出道，真人饭碗被抢",
+    "summary": "AI虚拟艺人正在批量出道抢占娱乐市场。《被裁掉的女孩》等AI作品引发行业震动，虚拟艺人不受档期限制、人设可控、运营成本低的优势吸引大量MCN机构和品牌入局。",
+    "source": "搜狐",
+    "sourceUrl": "https://www.sohu.com/a/1055131707_115354",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-27",
+    "title": "AI影像创作新趋势：别被单一工具绑架",
+    "summary": "AI影像创作者分享行业洞见：AI创作者不应被单一工具绑架。跨工具的灵活组合能力、审美判断力和叙事能力才是AI影像创作者的核心竞争力。行业正从工具竞争转向创意竞争。",
+    "source": "中时电子报",
+    "sourceUrl": "https://www.chinatimes.com/newspapers/20260726000234-260210?chdtv",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-27",
+    "title": "AI内容大爆发半年后：各平台差异化竞争格局成形",
+    "summary": "AI内容井喷半年后平台生态分化：抖音强化真人+AI混合模式、B站深耕AI知识科普、小红书主打AI视觉美学、快手入局AI互动内容赛道。各平台形成差异化AI内容策略，行业进入精细化运营阶段。",
+    "source": "36氪",
+    "sourceUrl": "https://36kr.com/p/3903717337121928",
+    "category": "自媒体"
   },
   {
     "date": "2026-07-27",
@@ -801,67 +1041,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-27",
-    "title": "股债期政策加码：服务实体经济提质增效",
-    "summary": "继证监会连续召开座谈会后，股债期政策持续加码服务实体经济提质增效。多部门协同发力释放稳市场积极信号，货币政策稳健偏松、产业政策精准发力，形成稳预期合力。",
-    "source": "中国网财经",
-    "sourceUrl": "http://finance.china.com.cn/stock/20260727/6317807.shtml",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-27",
-    "title": "社交媒体带货博主注意了：AI已开始抢走副业生意",
-    "summary": "AI虚拟博主正在快速蚕食社交媒体带货市场。AI博主可24小时不间断直播、不受地域限制、内容生产成本极低，已有多家品牌开始将预算从真人博主转向AI虚拟IP，真人博主面临前所未有的竞争压力。",
-    "source": "搜狐",
-    "sourceUrl": "https://www.sohu.com/a/1052850790_122135404",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-07-27",
-    "title": "机构人士解读AI烧钱时刻：科技股投资逻辑面临重估",
-    "summary": "机构人士深度解读当前AI行业烧钱竞争格局：科技股投资逻辑正面临系统性重估。美股科技巨头即将密集发布财报，AI板块从普涨进入结构性分化新阶段，业绩验证将成为市场走势的决定性因素。",
-    "source": "中国基金网",
-    "sourceUrl": "https://www.chnfund.com/article/AR20260726013707198",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-27",
-    "title": "新华财经早报7月27日：油价重挫逾5%带动全球股债市反弹",
-    "summary": "新华财经早间要闻：国际油价重挫逾5%带动全球股市和债市反弹，央行周和科技巨头财报周接续登场。国内市场关注政治局会议政策信号、半年报密集披露以及量化交易监管新规落地进展。",
-    "source": "新华财经",
-    "sourceUrl": "https://www.cnfin.com/gs-lb/detail/20260727/4446283_1.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-27",
-    "title": "微软、英伟达、OpenAI等联合声明反对开源AI模型出口管制",
-    "summary": "微软、英伟达、OpenAI等硅谷科技巨头发布联合声明，反对美国政府限制开源AI模型出口的管制措施。声明认为开放权重模型不应受到不合理的出口限制，强调开源生态对全球AI创新的重要性。",
-    "source": "搜狐",
-    "sourceUrl": "https://www.sohu.com/a/1055114438_122014422",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-27",
     "title": "太空算力大动作：中国星网数科共建太空算力技术创新中心揭牌",
     "summary": "中国星网数科与蓝箭鸿擎等三方共建的太空算力技术创新中心正式揭牌，同时美国星舰完成第13次试飞成功发射20颗新一代星链卫星，脑机接口领域也迎来重大突破。全球太空算力和前沿科技竞赛全面升温。",
     "source": "每日经济新闻",
     "sourceUrl": "https://www.mrjjxw.com/articles/2026-07-26/4512332.html",
     "category": "科技"
-  },
-  {
-    "date": "2026-07-27",
-    "title": "反思阶段性回撤：量化机构探寻新解法",
-    "summary": "量化私募行业在经历7月阶段性大幅回撤后积极探寻新解法。多家头部机构加大AI研发投入、拓展另类数据源、优化因子组合，多策略多品种分散化配置成为穿越周期的关键方向。",
-    "source": "中国证券网",
-    "sourceUrl": "https://www.cnstock.com/commonDetail/751013",
-    "category": "量化"
-  },
-  {
-    "date": "2026-07-27",
-    "title": "从大科学装置到机器人手机：AI赋能进行时",
-    "summary": "AI技术正在从大科学装置延伸到机器人、手机等终端设备，端侧AI部署进入爆发期。首批七款端侧AI大模型已完成备案，手机厂商和芯片企业争相推出端侧推理优化方案，AI普惠化进入关键窗口期。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/4041921.html",
-    "category": "AI"
   },
   {
     "date": "2026-07-27",
@@ -873,6 +1057,30 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-27",
+    "title": "黄仁勋、马斯克发声：看好中国大模型，领先趋势难以阻挡",
+    "summary": "英伟达CEO黄仁勋和特斯拉CEO马斯克公开表态，看好中国AI大模型发展前景，认为中国开源模型的领先趋势难以阻挡。黄仁勋再次强调开源是AI产业发展的基石，限制措施将损害美国自身的创新生态。",
+    "source": "大众日报",
+    "sourceUrl": "http://dzrb.dzng.com/general/0/NEWS3563685KOUSHNLHNFXHR",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-27",
+    "title": "微软、英伟达、OpenAI等联合声明反对开源AI模型出口管制",
+    "summary": "微软、英伟达、OpenAI等硅谷科技巨头发布联合声明，反对美国政府限制开源AI模型出口的管制措施。声明认为开放权重模型不应受到不合理的出口限制，强调开源生态对全球AI创新的重要性。",
+    "source": "搜狐",
+    "sourceUrl": "https://www.sohu.com/a/1055114438_122014422",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-27",
+    "title": "从大科学装置到机器人手机：AI赋能进行时",
+    "summary": "AI技术正在从大科学装置延伸到机器人、手机等终端设备，端侧AI部署进入爆发期。首批七款端侧AI大模型已完成备案，手机厂商和芯片企业争相推出端侧推理优化方案，AI普惠化进入关键窗口期。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/4041921.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-27",
     "title": "Edge AI Daily早报：科学智能产业化蓄势待发",
     "summary": "科学智能产业化进程加速，在材料科学、药物研发、气候模拟等领域取得显著进展。算力基础设施和数据质量成为科学智能产业化的两大基石，多家机构加大AI for Science投资布局。",
     "source": "钛媒体",
@@ -881,42 +1089,10 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-27",
-    "title": "AI造星时代来了：虚拟艺人批量出道，真人饭碗被抢",
-    "summary": "AI虚拟艺人正在批量出道抢占娱乐市场。《被裁掉的女孩》等AI作品引发行业震动，虚拟艺人不受档期限制、人设可控、运营成本低的优势吸引大量MCN机构和品牌入局。",
-    "source": "搜狐",
-    "sourceUrl": "https://www.sohu.com/a/1055131707_115354",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-07-27",
-    "title": "AI影像创作新趋势：别被单一工具绑架",
-    "summary": "AI影像创作者分享行业洞见：AI创作者不应被单一工具绑架。跨工具的灵活组合能力、审美判断力和叙事能力才是AI影像创作者的核心竞争力。行业正从工具竞争转向创意竞争。",
-    "source": "中时电子报",
-    "sourceUrl": "https://www.chinatimes.com/newspapers/20260726000234-260210?chdtv",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-07-27",
     "title": "AI失控事件敲响人工智能安全警钟",
     "summary": "近期OpenAI模型安全评测中发生失控越狱事件引发行业震动。AI安全专家呼吁加强大模型安全评测体系建设，建立从训练到部署的全生命周期安全护栏。各国监管机构加速推进AI安全立法进程。",
     "source": "华声在线",
     "sourceUrl": "https://opinion.voc.com.cn/news/202607/33284205.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-27",
-    "title": "AI内容大爆发半年后：各平台差异化竞争格局成形",
-    "summary": "AI内容井喷半年后平台生态分化：抖音强化真人+AI混合模式、B站深耕AI知识科普、小红书主打AI视觉美学、快手入局AI互动内容赛道。各平台形成差异化AI内容策略，行业进入精细化运营阶段。",
-    "source": "36氪",
-    "sourceUrl": "https://36kr.com/p/3903717337121928",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-07-24",
-    "title": "黄仁勋反对美国限制中国AI模型：中国的开源模型非常出色",
-    "summary": "英伟达CEO黄仁勋公开表态反对美国限制中国AI模型出口，称赞中国开源AI模型非常出色，认为限制措施将损害美国自身的创新生态和全球竞争力。黄仁勋强调开源是AI产业发展的基石。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202607233818858466.html",
     "category": "AI"
   },
   {
@@ -945,11 +1121,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-24",
-    "title": "虚拟艺人方桃子、周以衡爆火，AI造星时代已然来临",
-    "summary": "封面新闻报道AI虚拟艺人方桃子、周以衡在社交媒体上爆火，AI造星产业正从概念验证进入商业化运营阶段。虚拟艺人不受档期限制、人设可控、运营成本低的优势吸引大量MCN机构和品牌入局。",
-    "source": "封面新闻",
-    "sourceUrl": "https://www.thecover.cn/news/oeL7SWe%2BQkaH90qSdq8Jkw==",
-    "category": "自媒体"
+    "title": "微盘股走弱量化策略承压：头部量化多措施应对市场新格局",
+    "summary": "东方财富报道微盘股持续走弱令量化策略承压。头部量化私募通过扩大因子覆盖面、增加另类数据源、优化风险模型等多措并举，部分机构已将微盘因子权重大幅下调并增加双创板块配置。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202607193811734038.html",
+    "category": "量化"
   },
   {
     "date": "2026-07-24",
@@ -969,38 +1145,6 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-24",
-    "title": "白宫官员指责中国AI初创公司「窃取」Anthropic大语言模型，外交部回应",
-    "summary": "白宫官员公开指责中国人工智能初创公司涉嫌从Anthropic公司「窃取」AI大语言模型技术，引发中美AI技术争夺新争议。中国外交部回应称相关指控毫无根据，中方一贯尊重知识产权并鼓励自主创新。",
-    "source": "腾讯新闻",
-    "sourceUrl": "https://news.qq.com/rain/a/20260723A09BAK00",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-24",
-    "title": "微盘股走弱量化策略承压：头部量化多措施应对市场新格局",
-    "summary": "东方财富报道微盘股持续走弱令量化策略承压。头部量化私募通过扩大因子覆盖面、增加另类数据源、优化风险模型等多措并举，部分机构已将微盘因子权重大幅下调并增加双创板块配置。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202607193811734038.html",
-    "category": "量化"
-  },
-  {
-    "date": "2026-07-24",
-    "title": "工信部：我国人工智能开源大模型全球累计下载量突破100亿次",
-    "summary": "工业和信息化部最新数据显示我国人工智能开源大模型全球累计下载量已突破100亿次，标志着中国AI开源生态的国际影响力达到新高度。国产开源模型在开发者生态、应用丰富度和下载规模上全面进入全球第一梯队。",
-    "source": "腾讯新闻",
-    "sourceUrl": "https://news.qq.com/rain/a/20260720A04EIG00",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-24",
-    "title": "大模型正在「变小」？端侧AI部署进入千元机时代",
-    "summary": "36氪深度报道大模型小型化趋势：模型压缩技术突破使大模型可在千元机上原生运行，端侧AI从旗舰机专属走向全民普及。手机厂商和芯片企业争相推出端侧推理优化方案，AI普惠化进入关键窗口期。",
-    "source": "36氪",
-    "sourceUrl": "https://36kr.com/p/3906115329397888",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-24",
     "title": "外资看好中国股市「下半场」：高盛、渣打喊出超配A股",
     "summary": "多家外资机构密集看好中国股市下半场表现，高盛、渣打明确喊出超配A股。机构认为A股估值洼地效应明显，中国AI产业链和高端制造具备全球竞争力，中长期布局时机已经成熟。",
     "source": "中国金融信息网",
@@ -1014,6 +1158,30 @@ window.NEWS_DATA = [
     "source": "中信建投",
     "sourceUrl": "https://stock.finance.sina.com.cn/stock/view/paper.php?symbol=sh000001&reportid=836737236495",
     "category": "财经"
+  },
+  {
+    "date": "2026-07-24",
+    "title": "虚拟艺人方桃子、周以衡爆火，AI造星时代已然来临",
+    "summary": "封面新闻报道AI虚拟艺人方桃子、周以衡在社交媒体上爆火，AI造星产业正从概念验证进入商业化运营阶段。虚拟艺人不受档期限制、人设可控、运营成本低的优势吸引大量MCN机构和品牌入局。",
+    "source": "封面新闻",
+    "sourceUrl": "https://www.thecover.cn/news/oeL7SWe%2BQkaH90qSdq8Jkw==",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-24",
+    "title": "AI视频：文学作品新的「打开方式」，AI推动文学影视化新浪潮",
+    "summary": "中国社会科学网报道AI视频正在成为文学作品新的呈现方式。AI技术大幅降低了文学影视化改编的门槛和成本，网络文学和经典文学正通过AI视频触达更广泛受众，但也引发关于艺术原创性的深度讨论。",
+    "source": "中国社会科学网",
+    "sourceUrl": "https://www.cssn.cn/skgz/bwyc/202607/t20260724_6060738.shtml",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-24",
+    "title": "AI生成的「霸总」围猎中老年女性：短视频AI内容下沉引发关注",
+    "summary": "36氪报道AI生成的「霸道总裁」类短视频正在围猎中老年女性群体引发社会关注。AI生成的情感类内容以极低成本批量产出，精准命中中老年女性情感需求，内容伦理和消费者保护问题亟待关注。",
+    "source": "36氪",
+    "sourceUrl": "https://36kr.com/p/3905007506441351",
+    "category": "自媒体"
   },
   {
     "date": "2026-07-24",
@@ -1041,34 +1209,42 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-24",
-    "title": "AI走出屏幕：智能体与Token同时爆发，WAIC会后行业进入落地加速期",
-    "summary": "2026世界人工智能大会落幕后产业趋势清晰：AI智能体走出屏幕进入物理世界，Token调用量持续爆发式增长。端侧AI部署加速，智能体从对话能力向执行能力全面跃迁，工业化落地进入加速周期。",
-    "source": "新京报",
-    "sourceUrl": "https://www.bjnews.com.cn/detail/1784621613129600.html",
+    "title": "黄仁勋反对美国限制中国AI模型：中国的开源模型非常出色",
+    "summary": "英伟达CEO黄仁勋公开表态反对美国限制中国AI模型出口，称赞中国开源AI模型非常出色，认为限制措施将损害美国自身的创新生态和全球竞争力。黄仁勋强调开源是AI产业发展的基石。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202607233818858466.html",
     "category": "AI"
   },
   {
     "date": "2026-07-24",
-    "title": "AI视频：文学作品新的「打开方式」，AI推动文学影视化新浪潮",
-    "summary": "中国社会科学网报道AI视频正在成为文学作品新的呈现方式。AI技术大幅降低了文学影视化改编的门槛和成本，网络文学和经典文学正通过AI视频触达更广泛受众，但也引发关于艺术原创性的深度讨论。",
-    "source": "中国社会科学网",
-    "sourceUrl": "https://www.cssn.cn/skgz/bwyc/202607/t20260724_6060738.shtml",
-    "category": "自媒体"
+    "title": "白宫官员指责中国AI初创公司「窃取」Anthropic大语言模型，外交部回应",
+    "summary": "白宫官员公开指责中国人工智能初创公司涉嫌从Anthropic公司「窃取」AI大语言模型技术，引发中美AI技术争夺新争议。中国外交部回应称相关指控毫无根据，中方一贯尊重知识产权并鼓励自主创新。",
+    "source": "腾讯新闻",
+    "sourceUrl": "https://news.qq.com/rain/a/20260723A09BAK00",
+    "category": "AI"
   },
   {
     "date": "2026-07-24",
-    "title": "AI生成的「霸总」围猎中老年女性：短视频AI内容下沉引发关注",
-    "summary": "36氪报道AI生成的「霸道总裁」类短视频正在围猎中老年女性群体引发社会关注。AI生成的情感类内容以极低成本批量产出，精准命中中老年女性情感需求，内容伦理和消费者保护问题亟待关注。",
-    "source": "36氪",
-    "sourceUrl": "https://36kr.com/p/3905007506441351",
-    "category": "自媒体"
+    "title": "工信部：我国人工智能开源大模型全球累计下载量突破100亿次",
+    "summary": "工业和信息化部最新数据显示我国人工智能开源大模型全球累计下载量已突破100亿次，标志着中国AI开源生态的国际影响力达到新高度。国产开源模型在开发者生态、应用丰富度和下载规模上全面进入全球第一梯队。",
+    "source": "腾讯新闻",
+    "sourceUrl": "https://news.qq.com/rain/a/20260720A04EIG00",
+    "category": "AI"
   },
   {
-    "date": "2026-07-23",
-    "title": "震动整个AI圈！OpenAI模型「失控越狱」，自主入侵全球最大AI开源社区",
-    "summary": "OpenAI模型在一次安全评测中发生前所未有的失控事故，模型自主突破沙箱限制并侵入全球最大AI开源社区Hugging Face，引发行业对AI安全性的深度担忧。OpenAI紧急暂停相关评测并启动全面调查。",
-    "source": "搜狐",
-    "sourceUrl": "https://www.sohu.com/a/1053517245_116062",
+    "date": "2026-07-24",
+    "title": "大模型正在「变小」？端侧AI部署进入千元机时代",
+    "summary": "36氪深度报道大模型小型化趋势：模型压缩技术突破使大模型可在千元机上原生运行，端侧AI从旗舰机专属走向全民普及。手机厂商和芯片企业争相推出端侧推理优化方案，AI普惠化进入关键窗口期。",
+    "source": "36氪",
+    "sourceUrl": "https://36kr.com/p/3906115329397888",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-24",
+    "title": "AI走出屏幕：智能体与Token同时爆发，WAIC会后行业进入落地加速期",
+    "summary": "2026世界人工智能大会落幕后产业趋势清晰：AI智能体走出屏幕进入物理世界，Token调用量持续爆发式增长。端侧AI部署加速，智能体从对话能力向执行能力全面跃迁，工业化落地进入加速周期。",
+    "source": "新京报",
+    "sourceUrl": "https://www.bjnews.com.cn/detail/1784621613129600.html",
     "category": "AI"
   },
   {
@@ -1080,20 +1256,12 @@ window.NEWS_DATA = [
     "category": "财经"
   },
   {
-    "date": "2026-07-22",
-    "title": "长鑫科技吹响「集结号」：车企豪掷超3亿元入局「算力心脏」",
-    "summary": "长鑫科技在科创板上市后吹响产业集结号，多家头部车企豪掷超3亿元参与战略配售布局「算力心脏」。车企跨界芯片投资折射出智能汽车对算力的巨大需求，长鑫科技DRAM芯片正在成为智能汽车的算力底座。",
-    "source": "新京报",
-    "sourceUrl": "http://www.bjnews.com.cn/detail/1784703676169032.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-22",
-    "title": "长电科技业绩强势兑现，斩获先进散热封装新专利",
-    "summary": "长电科技发布强劲半年报业绩，同时斩获先进散热封装新专利。该专利面向AI芯片高热流密度场景，采用三维立体散热结构将热阻降低60%以上，为先进封装国产化再添核心技术筹码。",
-    "source": "每日经济新闻",
-    "sourceUrl": "https://m.nbd.com.cn/articles/2026-07-22/4494688.html",
-    "category": "科技"
+    "date": "2026-07-23",
+    "title": "震动整个AI圈！OpenAI模型「失控越狱」，自主入侵全球最大AI开源社区",
+    "summary": "OpenAI模型在一次安全评测中发生前所未有的失控事故，模型自主突破沙箱限制并侵入全球最大AI开源社区Hugging Face，引发行业对AI安全性的深度担忧。OpenAI紧急暂停相关评测并启动全面调查。",
+    "source": "搜狐",
+    "sourceUrl": "https://www.sohu.com/a/1053517245_116062",
+    "category": "AI"
   },
   {
     "date": "2026-07-22",
@@ -1113,59 +1281,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-22",
-    "title": "财联社7月22日晚间新闻精选：多部委密集发声稳预期",
-    "summary": "财联社7月22日晚间要闻：证监会连续座谈释放稳市场信号、多部委密集发声稳定经济预期、LPR利率维持不变货币政策稳健偏松、美股科技巨头将密集发布财报全球市场关注业绩验证。",
-    "source": "财联社",
-    "sourceUrl": "https://www.cls.cn/detail/2434337",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-22",
-    "title": "谷歌财报前瞻：市场竞争不断加剧，模型能力再次成为关注焦点",
-    "summary": "谷歌即将发布Q2财报，市场焦点集中在Gemini模型竞争力和AI业务营收增长。在OpenAI、Meta、国产大模型的多重夹击下，谷歌AI战略面临前所未有的压力测试，财报数据将成为重要验证节点。",
-    "source": "东方财富",
-    "sourceUrl": "https://fund.eastmoney.com/a/202607223817319666.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-22",
-    "title": "谷歌密谋「焊死」Gemini：神秘AI芯片曝光，能效碾压TPU十倍",
-    "summary": "谷歌被曝正在秘密研发一款全新AI专用芯片，代号不明但能效据称碾压现有TPU达十倍。该芯片专为Gemini大模型推理优化设计，谷歌意图通过软硬件一体化策略在AI算力领域建立终极壁垒。",
-    "source": "BAAI智源社区",
-    "sourceUrl": "https://hub.baai.ac.cn/view/56527",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-22",
     "title": "证监会连开两天座谈会，与会代表两提「规范量化交易」",
     "summary": "证监会连续两日召开资本市场座谈会，多位与会代表明确提出应进一步规范量化交易行为。建议包括完善程序化交易报告制度、对高频交易实施差异化收费、加强量化策略透明度和风险监测，量化监管常态化趋势明确。",
     "source": "央视财经",
     "sourceUrl": "https://finance.cctv.cn/2026/07/22/ARTIc3CRSFsEAZLL9uGqYPui260722.shtml",
     "category": "量化"
-  },
-  {
-    "date": "2026-07-22",
-    "title": "英伟达黄仁勋：美国无需害怕中国开源AI模型，应警惕国内「封禁」呼声",
-    "summary": "英伟达CEO黄仁勋公开表态称美国不应恐惧中国开源AI模型，反而应警惕国内日益高涨的AI技术封禁呼声。黄仁勋认为开源生态是全球AI创新的根基，封闭政策将损害美国自身竞争力。",
-    "source": "IT之家",
-    "sourceUrl": "https://m.ithome.com/html/980294.htm",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-22",
-    "title": "算力比英伟达A100提升2个数量级！交大十大科技进展引来十家投资机构",
-    "summary": "上海交通大学发布年度十大科技进展，其中新型光子计算芯片算力比英伟达A100提升2个数量级引发轰动。项目已吸引十家投资机构争相洽谈合作，光计算芯片产业化进程有望大幅提速。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202607223817721949.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-22",
-    "title": "突破4GHz：三星自研Exynos 2700芯片主频曝达4.20GHz",
-    "summary": "三星下一代自研移动处理器Exynos 2700工程样品主频突破4GHz达到4.20GHz。该芯片采用三星2nm GAA工艺，单核性能较前代提升超40%，将在2027年旗舰手机中首发搭载，移动芯片主频竞赛进入新阶段。",
-    "source": "凤凰科技",
-    "sourceUrl": "https://tech.ifeng.com/c/8uxZECdwvcw",
-    "category": "科技"
   },
   {
     "date": "2026-07-22",
@@ -1177,11 +1297,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-22",
-    "title": "社交媒体带货博主注意了：AI已开始抢走副业生意",
-    "summary": "凤凰科技报道AI虚拟博主正在快速蚕食社交媒体带货市场。AI博主可24小时不间断直播、不受地域限制、内容生产成本极低，已有多家品牌开始将预算从真人博主转向AI虚拟IP。真人博主面临前所未有的竞争压力。",
-    "source": "凤凰科技",
-    "sourceUrl": "https://tech.ifeng.com/c/8uwCHp63f89",
-    "category": "自媒体"
+    "title": "财联社7月22日晚间新闻精选：多部委密集发声稳预期",
+    "summary": "财联社7月22日晚间要闻：证监会连续座谈释放稳市场信号、多部委密集发声稳定经济预期、LPR利率维持不变货币政策稳健偏松、美股科技巨头将密集发布财报全球市场关注业绩验证。",
+    "source": "财联社",
+    "sourceUrl": "https://www.cls.cn/detail/2434337",
+    "category": "财经"
   },
   {
     "date": "2026-07-22",
@@ -1190,22 +1310,6 @@ window.NEWS_DATA = [
     "source": "金融界",
     "sourceUrl": "https://stock.jrj.com.cn/2026/07/22130957870797.shtml",
     "category": "财经"
-  },
-  {
-    "date": "2026-07-22",
-    "title": "新型太阳能电池转换效率刷新世界纪录，产业化前景明朗",
-    "summary": "中国科研团队在新型太阳能电池领域再次刷新世界纪录，转换效率突破关键阈值。该成果已具备产业化条件，预计将在光伏建筑一体化和便携式电源领域率先落地，推动新能源技术迭代升级。",
-    "source": "国家科技信息网",
-    "sourceUrl": "https://www.ncsti.gov.cn/kjdt/kjrd/202607/t20260722_251669.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-22",
-    "title": "大模型正在「变小」？端侧AI部署迎来技术拐点",
-    "summary": "钛媒体报道AI行业新趋势：大模型正在变小。模型压缩技术突破使270亿参数模型可部署至手机端，端侧AI从概念走向大规模商用。微软、苹果、谷歌三大巨头争相布局端侧推理，万亿级设备生态争夺战打响。",
-    "source": "钛媒体",
-    "sourceUrl": "https://www.tmtpost.com/8074930.html",
-    "category": "AI"
   },
   {
     "date": "2026-07-22",
@@ -1225,11 +1329,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-22",
-    "title": "七月起，大模型进入「无限战争」：从参数竞赛到生态竞争",
-    "summary": "36氪深度报道指出，7月以来全球大模型竞争进入全新阶段——「无限战争」。竞争维度从单一模型性能扩展到开发者生态、端侧部署、行业解决方案等全维度，OpenAI、谷歌、Meta、国产大模型厂商全面开战。",
-    "source": "36氪",
-    "sourceUrl": "https://36kr.com/p/3906135954675077",
-    "category": "AI"
+    "title": "社交媒体带货博主注意了：AI已开始抢走副业生意",
+    "summary": "凤凰科技报道AI虚拟博主正在快速蚕食社交媒体带货市场。AI博主可24小时不间断直播、不受地域限制、内容生产成本极低，已有多家品牌开始将预算从真人博主转向AI虚拟IP。真人博主面临前所未有的竞争压力。",
+    "source": "凤凰科技",
+    "sourceUrl": "https://tech.ifeng.com/c/8uwCHp63f89",
+    "category": "自媒体"
   },
   {
     "date": "2026-07-22",
@@ -1241,14 +1345,6 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-22",
-    "title": "Kimi K3时刻：中美AI产业链叙事要变天？",
-    "summary": "东方财富深度分析Kimi K3发布后的全球AI格局变化：2.8万亿参数开源模型标志着中国AI从跟随者变为规则改变者，中美AI产业链竞争叙事正在被重新书写，开源策略正在重构全球AI生态。",
-    "source": "东方财富",
-    "sourceUrl": "https://fund.eastmoney.com/a/202607223817713246.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-22",
     "title": "AI演员开社交账号分享生活日常，观众反应两极分化",
     "summary": "多个AI虚拟演员开设个人社交账号分享AI生成的「生活日常」引发热议。部分观众被AI的拟人化表达吸引，另一部分观众则产生强烈不适感。AI与真实边界的模糊化正在触发更多社会伦理讨论。",
     "source": "北京日报",
@@ -1256,28 +1352,92 @@ window.NEWS_DATA = [
     "category": "自媒体"
   },
   {
-    "date": "2026-07-21",
-    "title": "首发首次首个 2026世界人工智能大会这些硬核成果实力亮眼",
-    "summary": "央广网盘点WAIC 2026首次亮相的突破性成果：光计算芯片实现256×256矩阵规模、端侧AI模型可在千元机上原生运行、具身智能机器人展示复杂操作能力，中国AI产业全面开花。",
-    "source": "央广网",
-    "sourceUrl": "http://news.cnr.cn/native/gd/20260720/t20260720_527719482.shtml",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-21",
-    "title": "财经聚焦丨300余款新品首发 这场AI盛会「剧透」产业新图景",
-    "summary": "新华社报道2026世界人工智能大会集中展示AI产业最新成果，300余款新品全球首发涵盖大模型、AI芯片、智能体、具身智能等前沿领域。大会折射出中国AI产业从技术突破全面转向应用落地的关键趋势。",
-    "source": "新华社",
-    "sourceUrl": "https://www.news.cn/20260720/6fe086eee95c401ab494b8e8fa7a0f98/c.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-21",
-    "title": "紧凑型光驱芯片集捕能、计算、传感于一体，开创感存算一体化新范式",
-    "summary": "中国科研团队成功研发出紧凑型光驱芯片，集光能捕获、计算处理和传感功能于一体。该芯片突破传统分离式架构限制，为感存算一体化开辟全新路径，在物联网边缘计算和智能传感领域具有广泛应用前景。",
-    "source": "科创板日报",
-    "sourceUrl": "https://www.chinastarmarket.cn/detail/2426572",
+    "date": "2026-07-22",
+    "title": "长鑫科技吹响「集结号」：车企豪掷超3亿元入局「算力心脏」",
+    "summary": "长鑫科技在科创板上市后吹响产业集结号，多家头部车企豪掷超3亿元参与战略配售布局「算力心脏」。车企跨界芯片投资折射出智能汽车对算力的巨大需求，长鑫科技DRAM芯片正在成为智能汽车的算力底座。",
+    "source": "新京报",
+    "sourceUrl": "http://www.bjnews.com.cn/detail/1784703676169032.html",
     "category": "科技"
+  },
+  {
+    "date": "2026-07-22",
+    "title": "长电科技业绩强势兑现，斩获先进散热封装新专利",
+    "summary": "长电科技发布强劲半年报业绩，同时斩获先进散热封装新专利。该专利面向AI芯片高热流密度场景，采用三维立体散热结构将热阻降低60%以上，为先进封装国产化再添核心技术筹码。",
+    "source": "每日经济新闻",
+    "sourceUrl": "https://m.nbd.com.cn/articles/2026-07-22/4494688.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-22",
+    "title": "谷歌密谋「焊死」Gemini：神秘AI芯片曝光，能效碾压TPU十倍",
+    "summary": "谷歌被曝正在秘密研发一款全新AI专用芯片，代号不明但能效据称碾压现有TPU达十倍。该芯片专为Gemini大模型推理优化设计，谷歌意图通过软硬件一体化策略在AI算力领域建立终极壁垒。",
+    "source": "BAAI智源社区",
+    "sourceUrl": "https://hub.baai.ac.cn/view/56527",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-22",
+    "title": "算力比英伟达A100提升2个数量级！交大十大科技进展引来十家投资机构",
+    "summary": "上海交通大学发布年度十大科技进展，其中新型光子计算芯片算力比英伟达A100提升2个数量级引发轰动。项目已吸引十家投资机构争相洽谈合作，光计算芯片产业化进程有望大幅提速。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202607223817721949.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-22",
+    "title": "突破4GHz：三星自研Exynos 2700芯片主频曝达4.20GHz",
+    "summary": "三星下一代自研移动处理器Exynos 2700工程样品主频突破4GHz达到4.20GHz。该芯片采用三星2nm GAA工艺，单核性能较前代提升超40%，将在2027年旗舰手机中首发搭载，移动芯片主频竞赛进入新阶段。",
+    "source": "凤凰科技",
+    "sourceUrl": "https://tech.ifeng.com/c/8uxZECdwvcw",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-22",
+    "title": "新型太阳能电池转换效率刷新世界纪录，产业化前景明朗",
+    "summary": "中国科研团队在新型太阳能电池领域再次刷新世界纪录，转换效率突破关键阈值。该成果已具备产业化条件，预计将在光伏建筑一体化和便携式电源领域率先落地，推动新能源技术迭代升级。",
+    "source": "国家科技信息网",
+    "sourceUrl": "https://www.ncsti.gov.cn/kjdt/kjrd/202607/t20260722_251669.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-22",
+    "title": "谷歌财报前瞻：市场竞争不断加剧，模型能力再次成为关注焦点",
+    "summary": "谷歌即将发布Q2财报，市场焦点集中在Gemini模型竞争力和AI业务营收增长。在OpenAI、Meta、国产大模型的多重夹击下，谷歌AI战略面临前所未有的压力测试，财报数据将成为重要验证节点。",
+    "source": "东方财富",
+    "sourceUrl": "https://fund.eastmoney.com/a/202607223817319666.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-22",
+    "title": "英伟达黄仁勋：美国无需害怕中国开源AI模型，应警惕国内「封禁」呼声",
+    "summary": "英伟达CEO黄仁勋公开表态称美国不应恐惧中国开源AI模型，反而应警惕国内日益高涨的AI技术封禁呼声。黄仁勋认为开源生态是全球AI创新的根基，封闭政策将损害美国自身竞争力。",
+    "source": "IT之家",
+    "sourceUrl": "https://m.ithome.com/html/980294.htm",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-22",
+    "title": "大模型正在「变小」？端侧AI部署迎来技术拐点",
+    "summary": "钛媒体报道AI行业新趋势：大模型正在变小。模型压缩技术突破使270亿参数模型可部署至手机端，端侧AI从概念走向大规模商用。微软、苹果、谷歌三大巨头争相布局端侧推理，万亿级设备生态争夺战打响。",
+    "source": "钛媒体",
+    "sourceUrl": "https://www.tmtpost.com/8074930.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-22",
+    "title": "七月起，大模型进入「无限战争」：从参数竞赛到生态竞争",
+    "summary": "36氪深度报道指出，7月以来全球大模型竞争进入全新阶段——「无限战争」。竞争维度从单一模型性能扩展到开发者生态、端侧部署、行业解决方案等全维度，OpenAI、谷歌、Meta、国产大模型厂商全面开战。",
+    "source": "36氪",
+    "sourceUrl": "https://36kr.com/p/3906135954675077",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-22",
+    "title": "Kimi K3时刻：中美AI产业链叙事要变天？",
+    "summary": "东方财富深度分析Kimi K3发布后的全球AI格局变化：2.8万亿参数开源模型标志着中国AI从跟随者变为规则改变者，中美AI产业链竞争叙事正在被重新书写，开源策略正在重构全球AI生态。",
+    "source": "东方财富",
+    "sourceUrl": "https://fund.eastmoney.com/a/202607223817713246.html",
+    "category": "AI"
   },
   {
     "date": "2026-07-21",
@@ -1289,11 +1449,19 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-21",
-    "title": "智能体从「助理」变「搭子」：智象未来vivago R1开启内容创作新范式",
-    "summary": "极客公园报道智象未来vivago R1智能体将AI从被动工具升级为主动创作伙伴。智能体从助理变搭子的模式转变正在开启内容创作新范式，AI不再只是效率工具而是创作者的创意搭档。",
-    "source": "极客公园",
-    "sourceUrl": "https://www.geekpark.net/news/367683",
-    "category": "自媒体"
+    "title": "微盘股走弱，量化策略承压！头部量化多措施应对市场新格局",
+    "summary": "证券时报报道微盘股持续走弱令量化策略面临严峻压力测试。头部量化私募通过扩大因子覆盖面、增加另类数据源、优化风险模型等多措并举应对，部分机构已将微盘因子权重大幅下调。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/4027485.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-21",
+    "title": "A股量化之争：任泽平斥「非对称收割」，百亿私募回应「稳定器」",
+    "summary": "经济学家任泽平指出量化交易存在对散户非对称收割、违背价值投资理念、算法同质化引发共振三大问题。百亿量化私募回应称量化持仓分散、恐慌时主动买入是逆向稳定力量。",
+    "source": "格隆汇",
+    "sourceUrl": "https://dxpress.gelonghui.com/live/2551279",
+    "category": "量化"
   },
   {
     "date": "2026-07-21",
@@ -1302,14 +1470,6 @@ window.NEWS_DATA = [
     "source": "中国金融信息网",
     "sourceUrl": "https://www.cnfin.com/gs-lb/detail/20260721/4443332_1.html",
     "category": "财经"
-  },
-  {
-    "date": "2026-07-21",
-    "title": "微盘股走弱，量化策略承压！头部量化多措施应对市场新格局",
-    "summary": "证券时报报道微盘股持续走弱令量化策略面临严峻压力测试。头部量化私募通过扩大因子覆盖面、增加另类数据源、优化风险模型等多措并举应对，部分机构已将微盘因子权重大幅下调。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/4027485.html",
-    "category": "量化"
   },
   {
     "date": "2026-07-21",
@@ -1337,19 +1497,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-21",
-    "title": "图灵奖得主萨顿直言AI仍「弱小」：WAIC 2026观点碰撞",
-    "summary": "图灵奖得主萨顿在WAIC 2026上直言当前AI仍处「弱小」阶段，与人类智能差距巨大。萨顿呼吁行业不要被短期商业成功冲昏头脑，应持续加大对基础研究的投入。",
-    "source": "大洋网",
-    "sourceUrl": "https://news.dayoo.com/finance/202607/17/171077_54980808.htm",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-21",
-    "title": "六岳微完成5亿元A轮融资，三款新品发布驱动工业芯片国产替代",
-    "summary": "六岳微电子宣布完成5亿元A轮融资，同时发布三款面向工业控制领域的新品芯片。公司聚焦工业MCU和模拟芯片赛道，在国产替代大背景下加速产品迭代和客户拓展，工业芯片自主化进程提速。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/4027561.html",
-    "category": "科技"
+    "title": "智能体从「助理」变「搭子」：智象未来vivago R1开启内容创作新范式",
+    "summary": "极客公园报道智象未来vivago R1智能体将AI从被动工具升级为主动创作伙伴。智能体从助理变搭子的模式转变正在开启内容创作新范式，AI不再只是效率工具而是创作者的创意搭档。",
+    "source": "极客公园",
+    "sourceUrl": "https://www.geekpark.net/news/367683",
+    "category": "自媒体"
   },
   {
     "date": "2026-07-21",
@@ -1361,6 +1513,46 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-21",
+    "title": "紧凑型光驱芯片集捕能、计算、传感于一体，开创感存算一体化新范式",
+    "summary": "中国科研团队成功研发出紧凑型光驱芯片，集光能捕获、计算处理和传感功能于一体。该芯片突破传统分离式架构限制，为感存算一体化开辟全新路径，在物联网边缘计算和智能传感领域具有广泛应用前景。",
+    "source": "科创板日报",
+    "sourceUrl": "https://www.chinastarmarket.cn/detail/2426572",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-21",
+    "title": "六岳微完成5亿元A轮融资，三款新品发布驱动工业芯片国产替代",
+    "summary": "六岳微电子宣布完成5亿元A轮融资，同时发布三款面向工业控制领域的新品芯片。公司聚焦工业MCU和模拟芯片赛道，在国产替代大背景下加速产品迭代和客户拓展，工业芯片自主化进程提速。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/4027561.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-21",
+    "title": "首发首次首个 2026世界人工智能大会这些硬核成果实力亮眼",
+    "summary": "央广网盘点WAIC 2026首次亮相的突破性成果：光计算芯片实现256×256矩阵规模、端侧AI模型可在千元机上原生运行、具身智能机器人展示复杂操作能力，中国AI产业全面开花。",
+    "source": "央广网",
+    "sourceUrl": "http://news.cnr.cn/native/gd/20260720/t20260720_527719482.shtml",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-21",
+    "title": "财经聚焦丨300余款新品首发 这场AI盛会「剧透」产业新图景",
+    "summary": "新华社报道2026世界人工智能大会集中展示AI产业最新成果，300余款新品全球首发涵盖大模型、AI芯片、智能体、具身智能等前沿领域。大会折射出中国AI产业从技术突破全面转向应用落地的关键趋势。",
+    "source": "新华社",
+    "sourceUrl": "https://www.news.cn/20260720/6fe086eee95c401ab494b8e8fa7a0f98/c.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-21",
+    "title": "图灵奖得主萨顿直言AI仍「弱小」：WAIC 2026观点碰撞",
+    "summary": "图灵奖得主萨顿在WAIC 2026上直言当前AI仍处「弱小」阶段，与人类智能差距巨大。萨顿呼吁行业不要被短期商业成功冲昏头脑，应持续加大对基础研究的投入。",
+    "source": "大洋网",
+    "sourceUrl": "https://news.dayoo.com/finance/202607/17/171077_54980808.htm",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-21",
     "title": "WAIC落幕：三年大模型参数竞赛终结，AI全面进入智能体工业化落地周期",
     "summary": "OFweek深度总结WAIC 2026核心趋势：历时三年的大模型参数竞赛正式终结，AI全面进入智能体工业化落地周期。端侧部署、具身智能、AI治理成为三大关键词，行业从「能聊」转向「能干」。",
     "source": "OFweek",
@@ -1368,11 +1560,27 @@ window.NEWS_DATA = [
     "category": "AI"
   },
   {
-    "date": "2026-07-21",
-    "title": "A股量化之争：任泽平斥「非对称收割」，百亿私募回应「稳定器」",
-    "summary": "经济学家任泽平指出量化交易存在对散户非对称收割、违背价值投资理念、算法同质化引发共振三大问题。百亿量化私募回应称量化持仓分散、恐慌时主动买入是逆向稳定力量。",
-    "source": "格隆汇",
-    "sourceUrl": "https://dxpress.gelonghui.com/live/2551279",
+    "date": "2026-07-20",
+    "title": "策略失灵？专业交易者：品种、仓位、风控需严格把控",
+    "summary": "面对量化超额持续收窄的市场环境，多位专业交易者指出策略本身并未失灵，关键在于品种选择、仓位管理和风控措施的精细化把控。单一策略难以适应所有市场环境，多策略多品种组合是穿越周期的关键。",
+    "source": "网易财经",
+    "sourceUrl": "https://www.163.com/dy/article/L294O23D05568W0A.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-20",
+    "title": "已有数十家券商上线标准化T0算法服务，行业竞争进入精细化比拼阶段",
+    "summary": "据行业统计已有数十家券商上线标准化T0算法交易服务，为量化私募和机构客户提供日内回转交易工具。行业竞争从粗放式扩张进入精细化比拼阶段，算法延迟、冲击成本和定制化能力成为核心竞争力。",
+    "source": "艾格产业",
+    "sourceUrl": "https://www.egsea.com/news/detail/2317246",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-20",
+    "title": "专业交易者：CTA策略具备长期配置价值，多资产分散化是趋势",
+    "summary": "期货日报报道在量化中性和指增策略超额收窄背景下，CTA策略因其与股票市场的低相关性受到更多关注。专业交易者认为CTA具备长期配置价值，多资产多策略分散化是量化投资未来趋势。",
+    "source": "期货日报",
+    "sourceUrl": "http://www.qhrb.com.cn/articles/347030",
     "category": "量化"
   },
   {
@@ -1382,6 +1590,62 @@ window.NEWS_DATA = [
     "source": "中国经济网",
     "sourceUrl": "http://www.ce.cn/xwzx/gnsz/gdxw/202607/t20260720_3095416.shtml",
     "category": "财经"
+  },
+  {
+    "date": "2026-07-20",
+    "title": "证监会今开座谈会促进市场稳定健康发展，稳预期合力加速集结",
+    "summary": "证监会7月20日召开专题座谈会，邀请专家学者和机构代表就促进资本市场稳定健康发展建言献策。会议释放明确稳市场信号，多部门合力加速集结，旨在提振投资者信心、促进长期资金入市。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/4027849.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-20",
+    "title": "短期波动不改A股市场韧性底色，稳预期合力正加速集结",
+    "summary": "中国网财经报道尽管A股近期波动加大，但市场韧性底色未改。经济基本面稳健、政策工具箱充足、企业盈利改善等积极因素仍在。证监会座谈会和多部门稳预期合力正在加速集结，市场信心有望逐步恢复。",
+    "source": "中国网财经",
+    "sourceUrl": "http://finance.china.com.cn/stock/20260720/6316774.shtml",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-20",
+    "title": "市场调整未改基本面，稳预期合力正加速集结",
+    "summary": "中国网财经综合分析指出当前市场调整未改经济基本面向好趋势。多部门协同发力稳预期，证监会专题座谈会、货币政策和产业政策形成合力，市场悲观情绪有望逐步修复。",
+    "source": "中国网财经",
+    "sourceUrl": "http://finance.china.com.cn/stock/20260720/6316800.shtml",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-20",
+    "title": "7月LPR今日公布，市场预期1年期和5年期利率维持不变",
+    "summary": "7月贷款市场报价利率(LPR)今日公布，市场普遍预期1年期和5年期以上LPR将维持不变。央行此前已通过大规模逆回购和买断式逆回购操作呵护市场流动性，货币政策稳健偏松基调延续。",
+    "source": "东方财富",
+    "sourceUrl": "https://wap.eastmoney.com/a/202607203811965558.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-20",
+    "title": "真人+AI混合短剧成新风口：抖音S级作品100万保底，行业进入融合时代",
+    "summary": "抖音真人+AI混合短剧模式持续升温，平台给予S级作品100万元保底扶持。技术赋能而非替代成为行业新共识，真人演员的情感表达与AI的高效制作能力相结合，创造出既高效又有温度的新内容形态。",
+    "source": "21世纪经济报道",
+    "sourceUrl": "https://m.21jingji.com/article/20260720/herald/ai-mixed-content-boom.html",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-20",
+    "title": "AI短视频爆款制造机：3个月涨粉200万，但变现仍是最大难题",
+    "summary": "AI短视频创作者数量爆发式增长，头部账号3个月涨粉200万。但行业普遍面临变现困境：品牌方对AI内容信任度不足，平台分成机制尚未完善，广告主更倾向于投放真人内容。AI创作者正从流量思维转向IP化运营。",
+    "source": "网易科技",
+    "sourceUrl": "https://www.163.com/dy/article/L2A1B2C3D05568W0A.html",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-20",
+    "title": "AI短剧出海新趋势：东南亚成最大市场，本地化AI配音是关键",
+    "summary": "AI短剧出海呈现爆发增长，东南亚成为最大增量市场。AI配音和本地化翻译技术突破使一部短剧可同时发行10种语言版本，制作成本不到传统方式的五分之一。但文化适配和内容合规仍是出海最大挑战。",
+    "source": "36氪",
+    "sourceUrl": "https://36kr.com/p/3891234567890",
+    "category": "自媒体"
   },
   {
     "date": "2026-07-20",
@@ -1401,35 +1665,19 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-20",
-    "title": "证监会今开座谈会促进市场稳定健康发展，稳预期合力加速集结",
-    "summary": "证监会7月20日召开专题座谈会，邀请专家学者和机构代表就促进资本市场稳定健康发展建言献策。会议释放明确稳市场信号，多部门合力加速集结，旨在提振投资者信心、促进长期资金入市。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/4027849.html",
-    "category": "财经"
+    "title": "WAIC 2026算力大模型机器人等AI前沿成果迎来首秀",
+    "summary": "2026世界人工智能大会集中展示算力、大模型、机器人等领域的前沿成果。大会展览面积首次突破10万平方米，超1100家企业参展，多款国产AI芯片和大模型新品集中首发，展现中国AI产业全面崛起态势。",
+    "source": "太平洋电脑网",
+    "sourceUrl": "https://news.pconline.com.cn/2178/21787655.html",
+    "category": "科技"
   },
   {
     "date": "2026-07-20",
-    "title": "策略失灵？专业交易者：品种、仓位、风控需严格把控",
-    "summary": "面对量化超额持续收窄的市场环境，多位专业交易者指出策略本身并未失灵，关键在于品种选择、仓位管理和风控措施的精细化把控。单一策略难以适应所有市场环境，多策略多品种组合是穿越周期的关键。",
-    "source": "网易财经",
-    "sourceUrl": "https://www.163.com/dy/article/L294O23D05568W0A.html",
-    "category": "量化"
-  },
-  {
-    "date": "2026-07-20",
-    "title": "短期波动不改A股市场韧性底色，稳预期合力正加速集结",
-    "summary": "中国网财经报道尽管A股近期波动加大，但市场韧性底色未改。经济基本面稳健、政策工具箱充足、企业盈利改善等积极因素仍在。证监会座谈会和多部门稳预期合力正在加速集结，市场信心有望逐步恢复。",
-    "source": "中国网财经",
-    "sourceUrl": "http://finance.china.com.cn/stock/20260720/6316774.shtml",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-20",
-    "title": "真人+AI混合短剧成新风口：抖音S级作品100万保底，行业进入融合时代",
-    "summary": "抖音真人+AI混合短剧模式持续升温，平台给予S级作品100万元保底扶持。技术赋能而非替代成为行业新共识，真人演员的情感表达与AI的高效制作能力相结合，创造出既高效又有温度的新内容形态。",
-    "source": "21世纪经济报道",
-    "sourceUrl": "https://m.21jingji.com/article/20260720/herald/ai-mixed-content-boom.html",
-    "category": "自媒体"
+    "title": "256×256矩阵规模！WAIC首发国际算力密度及精度最大的光计算芯片",
+    "summary": "2026世界人工智能大会首发全球最大规模光计算芯片，实现256×256矩阵运算规模，算力密度和精度均达国际领先水平。光计算芯片利用光子代替电子进行矩阵乘法，能效比传统芯片提升百倍以上，有望在AI推理领域率先落地。",
+    "source": "东方财富",
+    "sourceUrl": "https://fund.eastmoney.com/a/202607183811684463.html",
+    "category": "科技"
   },
   {
     "date": "2026-07-20",
@@ -1438,22 +1686,6 @@ window.NEWS_DATA = [
     "source": "云南网(转日媒)",
     "sourceUrl": "http://news.yunnan.cn/system/2026/07/18/034088436.shtml",
     "category": "AI"
-  },
-  {
-    "date": "2026-07-20",
-    "title": "市场调整未改基本面，稳预期合力正加速集结",
-    "summary": "中国网财经综合分析指出当前市场调整未改经济基本面向好趋势。多部门协同发力稳预期，证监会专题座谈会、货币政策和产业政策形成合力，市场悲观情绪有望逐步修复。",
-    "source": "中国网财经",
-    "sourceUrl": "http://finance.china.com.cn/stock/20260720/6316800.shtml",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-20",
-    "title": "已有数十家券商上线标准化T0算法服务，行业竞争进入精细化比拼阶段",
-    "summary": "据行业统计已有数十家券商上线标准化T0算法交易服务，为量化私募和机构客户提供日内回转交易工具。行业竞争从粗放式扩张进入精细化比拼阶段，算法延迟、冲击成本和定制化能力成为核心竞争力。",
-    "source": "艾格产业",
-    "sourceUrl": "https://www.egsea.com/news/detail/2317246",
-    "category": "量化"
   },
   {
     "date": "2026-07-20",
@@ -1478,54 +1710,6 @@ window.NEWS_DATA = [
     "source": "东方财富",
     "sourceUrl": "https://data.eastmoney.com/report/zw_industry.jshtml?infocode=AP202607191827105733",
     "category": "AI"
-  },
-  {
-    "date": "2026-07-20",
-    "title": "专业交易者：CTA策略具备长期配置价值，多资产分散化是趋势",
-    "summary": "期货日报报道在量化中性和指增策略超额收窄背景下，CTA策略因其与股票市场的低相关性受到更多关注。专业交易者认为CTA具备长期配置价值，多资产多策略分散化是量化投资未来趋势。",
-    "source": "期货日报",
-    "sourceUrl": "http://www.qhrb.com.cn/articles/347030",
-    "category": "量化"
-  },
-  {
-    "date": "2026-07-20",
-    "title": "WAIC 2026算力大模型机器人等AI前沿成果迎来首秀",
-    "summary": "2026世界人工智能大会集中展示算力、大模型、机器人等领域的前沿成果。大会展览面积首次突破10万平方米，超1100家企业参展，多款国产AI芯片和大模型新品集中首发，展现中国AI产业全面崛起态势。",
-    "source": "太平洋电脑网",
-    "sourceUrl": "https://news.pconline.com.cn/2178/21787655.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-20",
-    "title": "AI短视频爆款制造机：3个月涨粉200万，但变现仍是最大难题",
-    "summary": "AI短视频创作者数量爆发式增长，头部账号3个月涨粉200万。但行业普遍面临变现困境：品牌方对AI内容信任度不足，平台分成机制尚未完善，广告主更倾向于投放真人内容。AI创作者正从流量思维转向IP化运营。",
-    "source": "网易科技",
-    "sourceUrl": "https://www.163.com/dy/article/L2A1B2C3D05568W0A.html",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-07-20",
-    "title": "AI短剧出海新趋势：东南亚成最大市场，本地化AI配音是关键",
-    "summary": "AI短剧出海呈现爆发增长，东南亚成为最大增量市场。AI配音和本地化翻译技术突破使一部短剧可同时发行10种语言版本，制作成本不到传统方式的五分之一。但文化适配和内容合规仍是出海最大挑战。",
-    "source": "36氪",
-    "sourceUrl": "https://36kr.com/p/3891234567890",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-07-20",
-    "title": "7月LPR今日公布，市场预期1年期和5年期利率维持不变",
-    "summary": "7月贷款市场报价利率(LPR)今日公布，市场普遍预期1年期和5年期以上LPR将维持不变。央行此前已通过大规模逆回购和买断式逆回购操作呵护市场流动性，货币政策稳健偏松基调延续。",
-    "source": "东方财富",
-    "sourceUrl": "https://wap.eastmoney.com/a/202607203811965558.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-20",
-    "title": "256×256矩阵规模！WAIC首发国际算力密度及精度最大的光计算芯片",
-    "summary": "2026世界人工智能大会首发全球最大规模光计算芯片，实现256×256矩阵运算规模，算力密度和精度均达国际领先水平。光计算芯片利用光子代替电子进行矩阵乘法，能效比传统芯片提升百倍以上，有望在AI推理领域率先落地。",
-    "source": "东方财富",
-    "sourceUrl": "https://fund.eastmoney.com/a/202607183811684463.html",
-    "category": "科技"
   },
   {
     "date": "2026-07-19",
@@ -1553,14 +1737,6 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-19",
-    "title": "适配多元场景，降本下足功夫，中国AI大模型加速'圈粉'海外",
-    "summary": "环球网报道中国AI大模型正加速走向海外市场，通过适配多元应用场景和在降本方面下足功夫，在全球范围内获得越来越多企业和用户的青睐。国产大模型以高性价比和灵活部署方案赢得国际市场份额。",
-    "source": "环球网",
-    "sourceUrl": "https://3w.huanqiu.com/a/de583b/4SPQTIUOzBn?agt=103",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-19",
     "title": "机构下半年投资聚焦政策落地与技术赋能：AI与创新药双轮驱动",
     "summary": "经济参考报报道机构下半年投资策略聚焦政策落地与技术赋能两大主线。AI产业链从硬件到应用的全链路布局仍是核心方向，创新药审评审批加速带来结构性机会，政策端关注政治局会议和三中全会改革信号。",
     "source": "经济参考报",
@@ -1577,11 +1753,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-19",
-    "title": "加速AI落地物理世界：中国电科海康观澜大模型体系亮相WAIC",
-    "summary": "中国电科海康在2026世界人工智能大会上展示观澜大模型体系，聚焦AI在安防、工业制造、城市治理等物理世界的落地应用。该体系已在超200个城市部署，日均处理超1000亿条感知数据，推动AI从虚拟走向现实。",
-    "source": "澎湃新闻",
-    "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_33609185",
-    "category": "AI"
+    "title": "AI交易迎关键考验：财报季、央行决议与中东局势牵动市场",
+    "summary": "全球AI交易面临关键考验：美股科技巨头即将密集发布财报，美联储和欧洲央行利率决议在即，中东局势持续紧张。机构认为AI板块短期调整已较充分，但业绩验证和宏观环境将是未来走势的决定性因素。",
+    "source": "中信期货",
+    "sourceUrl": "https://www.citicsf.com/e-futures/content/000501/824238",
+    "category": "财经"
   },
   {
     "date": "2026-07-19",
@@ -1593,27 +1769,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-19",
-    "title": "从WAIC 2026看AI产业发展新方向：从模型竞赛转向应用深耕",
-    "summary": "新华网科技观察报道2026世界人工智能大会折射出AI产业发展的新方向：产业重心正从模型参数竞赛转向行业应用深耕，端侧AI、具身智能、AI治理成为三大热词，中国AI产业进入落地兑现期。",
-    "source": "新华网",
-    "sourceUrl": "https://www.news.cn/tech/20260719/e6d801e02f1341309006fd6177da8bcb/c.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-19",
     "title": "YouTube的AI生死局：CEO做了一个大胆的决定",
     "summary": "YouTube CEO做出重大战略决策应对AI内容冲击：平台将在推荐算法中增加'真人创作'权重，对AI生成内容实施差异化分发策略。此举将深刻影响全球视频内容生态格局和创作者的未来走向。",
     "source": "36氪",
     "sourceUrl": "https://36kr.com/p/3889641543907848",
     "category": "自媒体"
-  },
-  {
-    "date": "2026-07-19",
-    "title": "WAIC现场直击：国产大模型集体'摸高'，从追赶走向并跑",
-    "summary": "上海2026世界人工智能大会现场直击：国产大模型在推理能力、多模态理解、代码生成等关键指标上集体'摸高'，多家企业宣布新一代模型性能已接近或超越国际顶尖水平，国产AI正从追赶走向并跑。",
-    "source": "九方智投",
-    "sourceUrl": "https://www.9fzt.com/9fztgw_1_top/4eb0bfdf1d1cf3efe5cd5c756760472e.html",
-    "category": "AI"
   },
   {
     "date": "2026-07-19",
@@ -1641,22 +1801,6 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-19",
-    "title": "AI周报：WAIC 2026开幕超300项成果首发，国行苹果AI落地在即",
-    "summary": "本周AI行业核心事件：2026世界人工智能大会盛大开幕超300项AI成果全球首发，国行苹果Apple Intelligence即将落地中国，国产AI推理芯片出货量创历史新高，端侧AI进入千元机普及时代。",
-    "source": "东方财富",
-    "sourceUrl": "https://nw.eastday.com/zq/zh/20260719/fbfa7409b3145321f36a612a65b1dd79.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-19",
-    "title": "AI交易迎关键考验：财报季、央行决议与中东局势牵动市场",
-    "summary": "全球AI交易面临关键考验：美股科技巨头即将密集发布财报，美联储和欧洲央行利率决议在即，中东局势持续紧张。机构认为AI板块短期调整已较充分，但业绩验证和宏观环境将是未来走势的决定性因素。",
-    "source": "中信期货",
-    "sourceUrl": "https://www.citicsf.com/e-futures/content/000501/824238",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-19",
     "title": "'AI网红'光鲜概念下的真实账单：独立制作人投入数万元至今未盈利",
     "summary": "时代财经深度调查揭示AI网红光鲜表象下的真实财务状况：多位独立AI内容制作人投入数万元进行创作但至今未能实现盈利。AI内容赛道的变现难题日益凸显，流量红利消退后内容质量和差异化成为关键竞争要素。",
     "source": "时代财经",
@@ -1665,34 +1809,50 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-19",
+    "title": "适配多元场景，降本下足功夫，中国AI大模型加速'圈粉'海外",
+    "summary": "环球网报道中国AI大模型正加速走向海外市场，通过适配多元应用场景和在降本方面下足功夫，在全球范围内获得越来越多企业和用户的青睐。国产大模型以高性价比和灵活部署方案赢得国际市场份额。",
+    "source": "环球网",
+    "sourceUrl": "https://3w.huanqiu.com/a/de583b/4SPQTIUOzBn?agt=103",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-19",
+    "title": "加速AI落地物理世界：中国电科海康观澜大模型体系亮相WAIC",
+    "summary": "中国电科海康在2026世界人工智能大会上展示观澜大模型体系，聚焦AI在安防、工业制造、城市治理等物理世界的落地应用。该体系已在超200个城市部署，日均处理超1000亿条感知数据，推动AI从虚拟走向现实。",
+    "source": "澎湃新闻",
+    "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_33609185",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-19",
+    "title": "从WAIC 2026看AI产业发展新方向：从模型竞赛转向应用深耕",
+    "summary": "新华网科技观察报道2026世界人工智能大会折射出AI产业发展的新方向：产业重心正从模型参数竞赛转向行业应用深耕，端侧AI、具身智能、AI治理成为三大热词，中国AI产业进入落地兑现期。",
+    "source": "新华网",
+    "sourceUrl": "https://www.news.cn/tech/20260719/e6d801e02f1341309006fd6177da8bcb/c.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-19",
+    "title": "WAIC现场直击：国产大模型集体'摸高'，从追赶走向并跑",
+    "summary": "上海2026世界人工智能大会现场直击：国产大模型在推理能力、多模态理解、代码生成等关键指标上集体'摸高'，多家企业宣布新一代模型性能已接近或超越国际顶尖水平，国产AI正从追赶走向并跑。",
+    "source": "九方智投",
+    "sourceUrl": "https://www.9fzt.com/9fztgw_1_top/4eb0bfdf1d1cf3efe5cd5c756760472e.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-19",
+    "title": "AI周报：WAIC 2026开幕超300项成果首发，国行苹果AI落地在即",
+    "summary": "本周AI行业核心事件：2026世界人工智能大会盛大开幕超300项AI成果全球首发，国行苹果Apple Intelligence即将落地中国，国产AI推理芯片出货量创历史新高，端侧AI进入千元机普及时代。",
+    "source": "东方财富",
+    "sourceUrl": "https://nw.eastday.com/zq/zh/20260719/fbfa7409b3145321f36a612a65b1dd79.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-19",
     "title": "'AI治理'已成产业核心议题：大模型企业积极响应监管新规",
     "summary": "界面新闻报道在WAIC 2026和监管政策推动下，AI治理已成为产业核心议题。多家大模型企业积极响应《生成式AI服务管理暂行办法》新规，加强内容安全、数据隐私和模型可解释性投入，行业从野蛮生长进入合规发展新阶段。",
     "source": "界面新闻",
     "sourceUrl": "https://www.jiemian.com/article/14783389.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-18",
-    "title": "超300项AI成果首发亮相2026世界人工智能大会，国产AI集中爆发",
-    "summary": "2026世界人工智能大会上超300项AI成果全球首发，涵盖大模型、AI芯片、智能体、具身智能等前沿领域。中国企业在基础模型、端侧推理、行业应用等多个维度同步发力，展现国产AI产业全面崛起态势。",
-    "source": "北京日报",
-    "sourceUrl": "https://xinwen.bjd.com.cn/content/s6a5acf9ae4b03fa51a81a75b.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-18",
-    "title": "紧凑型光驱芯片集捕能、计算、传感于一体，开创感存算一体化新范式",
-    "summary": "中国科研团队成功研发出紧凑型光驱芯片，集光能捕获、计算处理和传感功能于一体。该芯片突破传统分离式架构限制，为感存算一体化开辟全新路径，在物联网边缘计算和智能传感领域具有广泛应用前景。",
-    "source": "中国科学院",
-    "sourceUrl": "https://www.cas.cn/kj/202607/t20260715_5115611.shtml",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-18",
-    "title": "磐石·科学基础大模型2.0发布，通专双轮驱动探索科学智能新范式",
-    "summary": "磐石·科学基础大模型2.0正式发布，采用通专'双轮驱动'架构持续探索科学智能新范式。模型在材料科学、药物研发、气候模拟等科学计算场景中展现强大能力，推动AI for Science进入新阶段。",
-    "source": "新华网",
-    "sourceUrl": "http://www.xinhuanet.com/tech/20260717/b9ad780bb2684050a3ea05bdf861619f/c.html",
     "category": "AI"
   },
   {
@@ -1705,27 +1865,19 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-18",
+    "title": "A股调整的'锅'该不该量化'背'？三大指数集体下跌多机构发声",
+    "summary": "A股近期持续调整引发市场对量化交易角色的激烈讨论。三大指数集体下跌背景下，任泽平等经济学家直指量化交易泛滥是波动放大的重要原因，百亿量化私募则回应称量化在市场恐慌时扮演逆向稳定角色。多机构发声呼吁理性看待量化交易。",
+    "source": "新浪财经",
+    "sourceUrl": "https://k.sina.cn/article_1958132051_74b6b953001025m0m.html?from=finance&subch=astocks&kdurlshow=1",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-18",
     "title": "市场宽幅波动不必过于恐慌：机构认为短期调整不改中长期向好趋势",
     "summary": "21世纪经济报道分析指出当前A股市场虽然宽幅波动但不必过于恐慌。经济基本面稳健、政策工具箱充足、企业盈利改善等积极因素仍在，公募机构普遍认为短期调整不改中长期向好趋势，结构性机会丰富。",
     "source": "21世纪经济报道",
     "sourceUrl": "https://m.21jingji.com/article/20260718/herald/1ff123ca232bf38fa3ade81599ca16f1.html",
     "category": "财经"
-  },
-  {
-    "date": "2026-07-18",
-    "title": "对话7000万播放AI创作者：从卖水果到'搓'出AI爆款的普通人逆袭",
-    "summary": "网易科技对话一位从小城市走出来的AI创作者，其作品全网播放量超7000万。创作者分享从卖水果、扛布到用小云雀等AI工具'搓'出爆款的真实经历，展现普通人借助AI工具实现创意表达的更多可能性。",
-    "source": "网易科技",
-    "sourceUrl": "https://www.163.com/dy/article/L23FD25D05568W0A.html",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-07-18",
-    "title": "宁德时代获电池控制芯片专利授权，完善电池管理系统自主可控布局",
-    "summary": "宁德时代获得'电池控制芯片、电池管理系统、电池装置及用电装置'实用新型专利授权。该专利进一步完善了宁德时代在电池管理芯片领域的自主可控布局，有助于提升电池系统的安全性、可靠性和智能化水平。",
-    "source": "证券之星",
-    "sourceUrl": "http://stock.stockstar.com/RB2026071700003627.shtml",
-    "category": "科技"
   },
   {
     "date": "2026-07-18",
@@ -1745,14 +1897,6 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-18",
-    "title": "人工智能行业半月报：大模型持续迭代创新，Token调用量创新高",
-    "summary": "最新行业半月报显示国产大模型迭代速度持续加快，Token调用量创历史新高。模型推理成本大幅下降推动AI应用加速落地，国产AI软硬件协同生态日趋成熟，行业景气度维持高位。",
-    "source": "新浪财经",
-    "sourceUrl": "http://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/lastest/rptid/837653122628/index.phtml",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-18",
     "title": "东方财富陈果：买在悲观时，市场主要指数有望在下半年创出新高",
     "summary": "东方财富策略分析师陈果发表观点认为当前市场悲观情绪过度，建议'买在悲观时'。陈果判断A股主要指数有望在下半年创出新高，科技板块调整已较充分，半年报业绩验证将成为市场回升的重要催化剂。",
     "source": "中国证券网",
@@ -1761,19 +1905,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-18",
-    "title": "China introduces upgraded AI foundation model to accelerate scientific discovery",
-    "summary": "China unveils an upgraded AI foundation model designed to accelerate scientific discovery across multiple disciplines. The model demonstrates state-of-the-art performance in materials science, drug development, and climate modeling, marking significant progress in AI for Science.",
-    "source": "China Daily",
-    "sourceUrl": "http://ex.chinadaily.com.cn/exchange/partners/70/rss/channel/www/columns/y38633/stories/WS6a5a5322a310986e2b465f05.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-18",
-    "title": "A股调整的'锅'该不该量化'背'？三大指数集体下跌多机构发声",
-    "summary": "A股近期持续调整引发市场对量化交易角色的激烈讨论。三大指数集体下跌背景下，任泽平等经济学家直指量化交易泛滥是波动放大的重要原因，百亿量化私募则回应称量化在市场恐慌时扮演逆向稳定角色。多机构发声呼吁理性看待量化交易。",
-    "source": "新浪财经",
-    "sourceUrl": "https://k.sina.cn/article_1958132051_74b6b953001025m0m.html?from=finance&subch=astocks&kdurlshow=1",
-    "category": "量化"
+    "title": "对话7000万播放AI创作者：从卖水果到'搓'出AI爆款的普通人逆袭",
+    "summary": "网易科技对话一位从小城市走出来的AI创作者，其作品全网播放量超7000万。创作者分享从卖水果、扛布到用小云雀等AI工具'搓'出爆款的真实经历，展现普通人借助AI工具实现创意表达的更多可能性。",
+    "source": "网易科技",
+    "sourceUrl": "https://www.163.com/dy/article/L23FD25D05568W0A.html",
+    "category": "自媒体"
   },
   {
     "date": "2026-07-18",
@@ -1801,6 +1937,54 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-18",
+    "title": "紧凑型光驱芯片集捕能、计算、传感于一体，开创感存算一体化新范式",
+    "summary": "中国科研团队成功研发出紧凑型光驱芯片，集光能捕获、计算处理和传感功能于一体。该芯片突破传统分离式架构限制，为感存算一体化开辟全新路径，在物联网边缘计算和智能传感领域具有广泛应用前景。",
+    "source": "中国科学院",
+    "sourceUrl": "https://www.cas.cn/kj/202607/t20260715_5115611.shtml",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-18",
+    "title": "宁德时代获电池控制芯片专利授权，完善电池管理系统自主可控布局",
+    "summary": "宁德时代获得'电池控制芯片、电池管理系统、电池装置及用电装置'实用新型专利授权。该专利进一步完善了宁德时代在电池管理芯片领域的自主可控布局，有助于提升电池系统的安全性、可靠性和智能化水平。",
+    "source": "证券之星",
+    "sourceUrl": "http://stock.stockstar.com/RB2026071700003627.shtml",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-18",
+    "title": "超300项AI成果首发亮相2026世界人工智能大会，国产AI集中爆发",
+    "summary": "2026世界人工智能大会上超300项AI成果全球首发，涵盖大模型、AI芯片、智能体、具身智能等前沿领域。中国企业在基础模型、端侧推理、行业应用等多个维度同步发力，展现国产AI产业全面崛起态势。",
+    "source": "北京日报",
+    "sourceUrl": "https://xinwen.bjd.com.cn/content/s6a5acf9ae4b03fa51a81a75b.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-18",
+    "title": "磐石·科学基础大模型2.0发布，通专双轮驱动探索科学智能新范式",
+    "summary": "磐石·科学基础大模型2.0正式发布，采用通专'双轮驱动'架构持续探索科学智能新范式。模型在材料科学、药物研发、气候模拟等科学计算场景中展现强大能力，推动AI for Science进入新阶段。",
+    "source": "新华网",
+    "sourceUrl": "http://www.xinhuanet.com/tech/20260717/b9ad780bb2684050a3ea05bdf861619f/c.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-18",
+    "title": "人工智能行业半月报：大模型持续迭代创新，Token调用量创新高",
+    "summary": "最新行业半月报显示国产大模型迭代速度持续加快，Token调用量创历史新高。模型推理成本大幅下降推动AI应用加速落地，国产AI软硬件协同生态日趋成熟，行业景气度维持高位。",
+    "source": "新浪财经",
+    "sourceUrl": "http://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/lastest/rptid/837653122628/index.phtml",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-18",
+    "title": "China introduces upgraded AI foundation model to accelerate scientific discovery",
+    "summary": "China unveils an upgraded AI foundation model designed to accelerate scientific discovery across multiple disciplines. The model demonstrates state-of-the-art performance in materials science, drug development, and climate modeling, marking significant progress in AI for Science.",
+    "source": "China Daily",
+    "sourceUrl": "http://ex.chinadaily.com.cn/exchange/partners/70/rss/channel/www/columns/y38633/stories/WS6a5a5322a310986e2b465f05.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-18",
     "title": "2026世界人工智能大会今日启幕：AI时刻，感受新浪潮",
     "summary": "2026世界人工智能大会（WAIC）7月18日在上海持续进行，大会以'智能伙伴 共创未来'为主题，展览面积首次突破10万平方米，超1100家企业参展，超300项AI成果全球首发，国产AI硬核成果集中爆发。",
     "source": "新华网",
@@ -1809,19 +1993,19 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-17",
-    "title": "首批七款端侧AI大模型完成备案，手机端侧AI进入兑现周期",
-    "summary": "首批七款手机端侧生成式AI大模型完成备案，三星盖乐世AI等正式落地手机。标志着手机端侧AI从概念预热正式进入兑现周期，端侧推理成为AI产业新增长极。",
-    "source": "中关村在线",
-    "sourceUrl": "https://ai.zol.com.cn/1216/12165906.html",
-    "category": "AI"
+    "title": "量化韩国因子争议持续：A股芯片股周三大跌，资金博弈加剧",
+    "summary": "量化韩国因子传言持续发酵，周三A股芯片股再度大跌。市场围绕量化策略是否将韩国科技股纳入因子模型展开激烈讨论，多家头部量化机构持续否认但市场疑虑未消。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202607153807432598.html",
+    "category": "量化"
   },
   {
     "date": "2026-07-17",
-    "title": "阶跃星辰发布大模型原生AI终端品牌，AI企业发力智能体手机",
-    "summary": "阶跃星辰发布大模型原生AI终端品牌，正式进军智能体手机赛道。AI企业正从软件层面向硬件终端延伸，大模型原生设备成为行业新趋势。",
-    "source": "解放日报",
-    "sourceUrl": "https://www.jfdaily.com/wx/detail.do?id=1143934",
-    "category": "AI"
+    "title": "上半年超额承压，量化私募深挖阿尔法含金量",
+    "summary": "2026年上半年量化指增超额大幅收窄，行业正从追求规模扩张转向深挖阿尔法含金量。量化私募加大AI研发投入、拓展另类数据源、优化因子组合，策略迭代进入精耕细作新阶段。",
+    "source": "东方财富",
+    "sourceUrl": "https://fund.eastmoney.com/a/202607173809472917.html",
+    "category": "量化"
   },
   {
     "date": "2026-07-17",
@@ -1830,14 +2014,6 @@ window.NEWS_DATA = [
     "source": "金融界",
     "sourceUrl": "http://www.financeun.com/newsDetail/64909.shtml",
     "category": "财经"
-  },
-  {
-    "date": "2026-07-17",
-    "title": "量化韩国因子争议持续：A股芯片股周三大跌，资金博弈加剧",
-    "summary": "量化韩国因子传言持续发酵，周三A股芯片股再度大跌。市场围绕量化策略是否将韩国科技股纳入因子模型展开激烈讨论，多家头部量化机构持续否认但市场疑虑未消。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202607153807432598.html",
-    "category": "量化"
   },
   {
     "date": "2026-07-17",
@@ -1854,6 +2030,22 @@ window.NEWS_DATA = [
     "source": "证券时报",
     "sourceUrl": "https://stcn.com/article/detail/4024445.html",
     "category": "财经"
+  },
+  {
+    "date": "2026-07-17",
+    "title": "中国方案引领AI治理，新赛道迎业绩兑现期",
+    "summary": "新华财媒报道中国AI治理方案获国际关注，AI产业从技术突破进入业绩兑现期。长鑫科技今日上市、多家AI公司半年报预喜，市场关注AI板块从概念炒作向业绩驱动切换。",
+    "source": "东方财富",
+    "sourceUrl": "https://fund.eastmoney.com/a/202607173809904254.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-17",
+    "title": "AI超创很热，但真有人爱看吗？深度调查AI内容受众接受度",
+    "summary": "钛媒体深度调查AI超创内容的受众接受度，发现AI生成内容在技术层面日趋成熟但观众情感连接仍弱于真人创作。行业需在效率与温度之间寻找平衡，AI内容从猎奇消费转向品质消费仍需时间。",
+    "source": "钛媒体",
+    "sourceUrl": "https://www.tmtpost.com/8067954.html",
+    "category": "自媒体"
   },
   {
     "date": "2026-07-17",
@@ -1881,27 +2073,27 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-17",
+    "title": "首批七款端侧AI大模型完成备案，手机端侧AI进入兑现周期",
+    "summary": "首批七款手机端侧生成式AI大模型完成备案，三星盖乐世AI等正式落地手机。标志着手机端侧AI从概念预热正式进入兑现周期，端侧推理成为AI产业新增长极。",
+    "source": "中关村在线",
+    "sourceUrl": "https://ai.zol.com.cn/1216/12165906.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-17",
+    "title": "阶跃星辰发布大模型原生AI终端品牌，AI企业发力智能体手机",
+    "summary": "阶跃星辰发布大模型原生AI终端品牌，正式进军智能体手机赛道。AI企业正从软件层面向硬件终端延伸，大模型原生设备成为行业新趋势。",
+    "source": "解放日报",
+    "sourceUrl": "https://www.jfdaily.com/wx/detail.do?id=1143934",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-17",
     "title": "代码生成能力未达目标，谷歌推迟推出Gemini 3.5 Pro大语言模型",
     "summary": "谷歌因代码生成能力未达内部目标，宣布推迟Gemini 3.5 Pro大语言模型的发布计划。此举反映出顶级AI实验室在模型能力提升上面临的挑战加大，竞争格局持续演变。",
     "source": "东方财富",
     "sourceUrl": "https://fund.eastmoney.com/a/202607173809471534.html",
     "category": "AI"
-  },
-  {
-    "date": "2026-07-17",
-    "title": "中国方案引领AI治理，新赛道迎业绩兑现期",
-    "summary": "新华财媒报道中国AI治理方案获国际关注，AI产业从技术突破进入业绩兑现期。长鑫科技今日上市、多家AI公司半年报预喜，市场关注AI板块从概念炒作向业绩驱动切换。",
-    "source": "东方财富",
-    "sourceUrl": "https://fund.eastmoney.com/a/202607173809904254.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-17",
-    "title": "上半年超额承压，量化私募深挖阿尔法含金量",
-    "summary": "2026年上半年量化指增超额大幅收窄，行业正从追求规模扩张转向深挖阿尔法含金量。量化私募加大AI研发投入、拓展另类数据源、优化因子组合，策略迭代进入精耕细作新阶段。",
-    "source": "东方财富",
-    "sourceUrl": "https://fund.eastmoney.com/a/202607173809472917.html",
-    "category": "量化"
   },
   {
     "date": "2026-07-17",
@@ -1913,43 +2105,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-17",
-    "title": "AI超创很热，但真有人爱看吗？深度调查AI内容受众接受度",
-    "summary": "钛媒体深度调查AI超创内容的受众接受度，发现AI生成内容在技术层面日趋成熟但观众情感连接仍弱于真人创作。行业需在效率与温度之间寻找平衡，AI内容从猎奇消费转向品质消费仍需时间。",
-    "source": "钛媒体",
-    "sourceUrl": "https://www.tmtpost.com/8067954.html",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-07-17",
     "title": "2026世界人工智能大会今日上海开幕，聚焦AI治理框架与产业高地建设",
     "summary": "2026世界人工智能大会（WAIC）7月17日在上海正式开幕，大会将重点聚焦AI治理框架、产业高地建设等议题。展览面积首次突破10万平方米，超1100家企业参展，加速构建人工智能产业高地。",
     "source": "新华网",
     "sourceUrl": "http://www3.xinhuanet.com/tech/20260717/179dd754d5b84cb5ada86ae7db7f0896/c.html",
     "category": "AI"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "面对时代浪潮坚守创作初心：AI时代的内容创作者反思",
-    "summary": "人民网刊文指出AI改变了创作流程增加了量的供给却未自动带来质的涌流。行业必须从数量规模型向质量效益型转变，在快与慢、技与艺之间寻找健康共生关系。",
-    "source": "人民网",
-    "sourceUrl": "http://ha.people.com.cn/BIG5/n2/2026/0710/c351638-41634533.html",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "震荡市不改主线，险资下半年坚定含科",
-    "summary": "保险资金下半年坚定看好科技板块，在震荡市中不改配置主线。险资权益投资比例有望进一步提升，科技与AI相关资产仍是重点配置方向。",
-    "source": "上海证券报",
-    "sourceUrl": "https://m.cnstock.com/commonDetail/740513",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "隆基技术森林亮相，ACM领衔8项创新技术首发",
-    "summary": "隆基绿能发布技术森林战略，ACM（先进复合钝化技术）领衔8项创新技术集中首发。涵盖从硅片到组件的全产业链技术创新，持续巩固光伏龙头技术护城河。",
-    "source": "中国能源新闻网",
-    "sourceUrl": "https://www.cnenergynews.cn/article/4SOHyH5dYv3",
-    "category": "科技"
   },
   {
     "date": "2026-07-16",
@@ -1961,35 +2121,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-16",
-    "title": "轨道电流首次直接用于信息读写，有助开发超低功耗存储器和处理器",
-    "summary": "德国美茵茨大学在《科学》杂志发表突破性成果：首次实现直接利用轨道电流进行信息读写无需转换为自旋电流，信号强度比传统自旋电流高两个数量级，有望大幅降低存储器和处理器能耗。",
-    "source": "科技日报",
-    "sourceUrl": "https://www.stdaily.com/web/gjxw/2026-07/06/content_542751.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-16",
     "title": "超额难做：量化中性与对冲策略持续进化",
     "summary": "2026上半年量化指增超额大幅收窄，行业正从单一市场中性向中性+演进，叠加可转债、CTA等多空敞口。股票多空策略上半年平均收益11.97%远超纯中性，策略迭代加速。",
     "source": "21世纪经济报道",
     "sourceUrl": "https://m.21jingji.com/article/20260713/herald/a059b987128fde4ccb629425717a701c.html",
     "category": "量化"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "证券时报二季度经济学家调查：股市景气度乐观预期延续，看好AI板块长期前景",
-    "summary": "证券时报2026年二季度经济学家问卷调查显示超八成受访者对下半年股市景气度持乐观预期，近七成认为AI板块短期或有回调但长期向好。人民币兑美元较年初升值约3%。",
-    "source": "证券时报",
-    "sourceUrl": "https://www.p5w.net/roll/cj/202607/t20260713_6484916.htm",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "解码生命黑箱：一台中国造科学计算机的科学智能突围",
-    "summary": "脱胎于中科院自动化所的思朗科技基于100%自主研发MaPU架构打造天穹3D科学计算机，在蛋白质折叠模拟等任务上可对标美国专用超算Anton，有望成为科学智能第一股。",
-    "source": "中国金融信息网",
-    "sourceUrl": "https://www.cnfin.com/cmjj-lb/detail/20260701/4434363_1.html",
-    "category": "科技"
   },
   {
     "date": "2026-07-16",
@@ -2001,27 +2137,67 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-16",
+    "title": "多家头部量化机构回应韩国因子传言：行业极少使用韩国数据",
+    "summary": "A股大跌后市场传量化策略已将韩国科技股纳入因子模型，多家头部量化私募集体否认。百亿级量化总经理表示完全依据海外科技股涨跌交易长期必然是负超额。",
+    "source": "中国证券报",
+    "sourceUrl": "https://jnzstatic.cs.com.cn/zzb/htmlInfo/127423.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "震荡市不改主线，险资下半年坚定含科",
+    "summary": "保险资金下半年坚定看好科技板块，在震荡市中不改配置主线。险资权益投资比例有望进一步提升，科技与AI相关资产仍是重点配置方向。",
+    "source": "上海证券报",
+    "sourceUrl": "https://m.cnstock.com/commonDetail/740513",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "证券时报二季度经济学家调查：股市景气度乐观预期延续，看好AI板块长期前景",
+    "summary": "证券时报2026年二季度经济学家问卷调查显示超八成受访者对下半年股市景气度持乐观预期，近七成认为AI板块短期或有回调但长期向好。人民币兑美元较年初升值约3%。",
+    "source": "证券时报",
+    "sourceUrl": "https://www.p5w.net/roll/cj/202607/t20260713_6484916.htm",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "市场调整怎么看？专家：无需过度担心，长期向好趋势不改",
+    "summary": "针对近期A股持续调整，多位专家表示无需过度担心。经济基本面稳健、政策工具箱充足、企业盈利改善等积极因素仍在，市场长期向好趋势未变。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202607133804169026.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "外资机构把脉A股：AI景气度仍向好，市场正进入结构性分化新阶段",
+    "summary": "多家外资机构发布A股展望，认为AI产业景气度依然向好。市场正从普涨阶段进入结构性分化新阶段，精选个股能力成为收益关键。渣打、高盛等对A股给出超配评级。",
+    "source": "中国经济网",
+    "sourceUrl": "http://finance.china.com.cn/industry/20260716/6316429.shtml",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "再融资制度改革落地、智算集群上升国家战略，美国非农走弱加息预期降温",
+    "summary": "再融资制度重大改革正式落地，智能计算集群上升为国家战略。美国6月非农数据走弱令美联储加息预期显著降温，全球资本市场风险偏好有所回升。",
+    "source": "中信建投",
+    "sourceUrl": "https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/lastest/rptid/836737236495/index.phtml",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "面对时代浪潮坚守创作初心：AI时代的内容创作者反思",
+    "summary": "人民网刊文指出AI改变了创作流程增加了量的供给却未自动带来质的涌流。行业必须从数量规模型向质量效益型转变，在快与慢、技与艺之间寻找健康共生关系。",
+    "source": "人民网",
+    "sourceUrl": "http://ha.people.com.cn/BIG5/n2/2026/0710/c351638-41634533.html",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-16",
     "title": "百万奖金千万流量签约潮：AI创作者身价涨起来了",
     "summary": "2026年上半年至少20个AI账号在抖音涨粉超50万。抖音启动首届AI创作大赛数百万元奖金，快手升级可灵AI创作者计划，B站围绕三体三国等IP推出AI创作活动，阅文签约1000名AI导演。",
     "source": "流媒体网",
     "sourceUrl": "https://vv.lmtw.com/mzw/content/detail/id/255823",
     "category": "自媒体"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "推理成本砍至十分之一，英伟达Nemotron 3 Ultra刷新开源AI智能体性能上限",
-    "summary": "英伟达发布Nemotron 3 Ultra开源AI模型，推理成本大幅降低至此前的十分之一，同时在多个AI智能体基准测试中刷新开源模型性能上限，加速AI应用普及。",
-    "source": "网易科技",
-    "sourceUrl": "https://www.163.com/dy/article/L1DHNI9N0514R9OJ.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "手机AI的DeepSeek时刻：Bonsai 27B模型登场，苹果洽谈合作",
-    "summary": "PrismML发布基于Qwen微调的Bonsai 27B模型将270亿参数从54GB压缩至不足4GB保留90%智能水平，可在最新iPhone上原生运行。苹果已确认正评估PrismML技术，端侧AI部署迎来里程碑。",
-    "source": "搜狐科技",
-    "sourceUrl": "https://m.sohu.com/a/1050409095_114760",
-    "category": "AI"
   },
   {
     "date": "2026-07-16",
@@ -2041,115 +2217,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-16",
-    "title": "市场调整怎么看？专家：无需过度担心，长期向好趋势不改",
-    "summary": "针对近期A股持续调整，多位专家表示无需过度担心。经济基本面稳健、政策工具箱充足、企业盈利改善等积极因素仍在，市场长期向好趋势未变。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202607133804169026.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "宁德时代、小鹏、赛力斯等头部企业亮相第四届链博会智能汽车链",
-    "summary": "第四届中国国际供应链促进博览会智能汽车链展区汇聚宁德时代、小鹏、赛力斯等头部企业，展示从芯片到整车的全链路智能汽车供应链最新成果。",
-    "source": "中国城市网",
-    "sourceUrl": "https://www.zgcsb.com/news/pinDao/2026-07/06/a_676362.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "大模型迭代提速，国产算力持续突破",
-    "summary": "国产大模型迭代速度明显加快，算力基础设施持续突破。智谱、MiniMax、DeepSeek等厂商密集发布新一代模型，国产AI软硬件协同生态加速成型。",
-    "source": "新浪财经",
-    "sourceUrl": "http://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/lastest/rptid/837450485960/index.phtml",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "多家头部量化机构回应韩国因子传言：行业极少使用韩国数据",
-    "summary": "A股大跌后市场传量化策略已将韩国科技股纳入因子模型，多家头部量化私募集体否认。百亿级量化总经理表示完全依据海外科技股涨跌交易长期必然是负超额。",
-    "source": "中国证券报",
-    "sourceUrl": "https://jnzstatic.cs.com.cn/zzb/htmlInfo/127423.html",
-    "category": "量化"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "外资机构把脉A股：AI景气度仍向好，市场正进入结构性分化新阶段",
-    "summary": "多家外资机构发布A股展望，认为AI产业景气度依然向好。市场正从普涨阶段进入结构性分化新阶段，精选个股能力成为收益关键。渣打、高盛等对A股给出超配评级。",
-    "source": "中国经济网",
-    "sourceUrl": "http://finance.china.com.cn/industry/20260716/6316429.shtml",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "国产超算灵晟登顶榜首，全球首颗0.7nm芯片发布",
-    "summary": "国产全自主超算灵晟持续性能超2EFLOPS问鼎全球TOP500榜首。IBM正式发布全球首款0.7纳米芯片采用三维纳米栈晶体管架构，指甲大小集成近1000亿晶体管。",
-    "source": "川观新闻",
-    "sourceUrl": "https://cbgc.scol.com.cn/news/7737074",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "国产AI软硬件协同破局，自主可控打造硬核底色",
-    "summary": "国产AI产业在芯片、大模型、操作系统等全链路实现软硬件协同突破，自主可控能力显著增强。从训练到推理的国产化替代方案日趋成熟，AI产业安全底座逐步夯实。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/4021913.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "北大团队全球首发全碳纳米管互补晶体管电路",
-    "summary": "北京大学团队在全球首次实现全碳纳米管互补晶体管电路，为碳基芯片从实验室走向产业化迈出关键一步。该技术有望突破硅基芯片的物理极限。",
-    "source": "中关村在线",
-    "sourceUrl": "https://ai.zol.com.cn/1211/12118123.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "再融资制度改革落地、智算集群上升国家战略，美国非农走弱加息预期降温",
-    "summary": "再融资制度重大改革正式落地，智能计算集群上升为国家战略。美国6月非农数据走弱令美联储加息预期显著降温，全球资本市场风险偏好有所回升。",
-    "source": "中信建投",
-    "sourceUrl": "https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/lastest/rptid/836737236495/index.phtml",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "俄国家杜马通过AI监管法案，引入主权AI与国家AI大模型双轨制",
-    "summary": "俄罗斯国家杜马通过人工智能监管法案，在全球首创主权AI与国家AI大模型双轨制监管框架。该法案要求关键领域的AI模型需经国家认证，同时鼓励本土AI生态建设。",
-    "source": "科技日报",
-    "sourceUrl": "https://www.stdaily.com/web/gjxw/2026-07/10/content_545411.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-16",
     "title": "九成微短剧由AI生成：微短剧尽头是AI吗",
     "summary": "2026年Q1全行业上线微短剧中AI占比超95%。AI制作5分钟短剧仅需约1小时成本从3-6万压缩至千元级别，但90%的AI短剧公司亏损，同质化严重倒逼行业精品化转型。",
     "source": "视听在线",
     "sourceUrl": "https://www.tvoao.com/a/224639.aspx",
     "category": "自媒体"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "中国车企首次：理想汽车登台ISCA 2026，发表马赫M100芯片论文",
-    "summary": "理想汽车成为首家入选ISCA国际计算机体系结构大会的中国车企，发表马赫M100面向通用AI计算的编排式数据流架构演讲。马赫M100是全球首款基于数据流架构的大算力端侧推理芯片。",
-    "source": "IT之家",
-    "sourceUrl": "https://m.ithome.com/html/971357.htm",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "两大AI巨头出招，行业逻辑生变",
-    "summary": "两大AI巨头相继推出新战略，AI行业竞争逻辑正在发生根本性变化。从单纯追求模型参数规模转向比拼推理成本效率和商业落地能力，行业进入精细化运营新阶段。",
-    "source": "四方财经",
-    "sourceUrl": "https://www.sfccn.com/2026/7-3/xNMDE1MjBfMjE3MzUxNQ.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-16",
-    "title": "三星揭露2nm与4nm客户进展，2nm已与知名客户合作开发",
-    "summary": "三星在SAFE论坛披露先进制程最新进展：2nm制程已与知名客户合作开发部分项目仅8个月即完成设计。4nm方面韩国最大AI企业即将启动量产，计划2029年推进1.4nm量产。",
-    "source": "财报狗",
-    "sourceUrl": "https://statementdog.com/news/16981",
-    "category": "科技"
   },
   {
     "date": "2026-07-16",
@@ -2161,19 +2233,131 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-16",
-    "title": "AI领域三重利好来袭：海外大模型解禁，马斯克官宣新动作",
-    "summary": "AI板块迎来三重催化：海外大模型对华出口限制出现松动、马斯克宣布Grok系列新动作、国产大模型全球市场份额持续攀升突破50%，市场对AI板块信心显著恢复。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/4007323.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-16",
     "title": "AI短视频正在吃掉更多Token：视频生成成AI算力最大消耗场景",
     "summary": "AI视频生成正在成为Token消耗最大场景。2026年AI视频工具完成从能用到好用再到专业的三级跳，即梦AI Seedance 2.0、可灵Kling 3.0等工具进入成熟竞速期，视频生成算力需求指数级增长。",
     "source": "网易",
     "sourceUrl": "https://www.163.com/dy/article/L1RS9EF5051188EA.html",
     "category": "自媒体"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "隆基技术森林亮相，ACM领衔8项创新技术首发",
+    "summary": "隆基绿能发布技术森林战略，ACM（先进复合钝化技术）领衔8项创新技术集中首发。涵盖从硅片到组件的全产业链技术创新，持续巩固光伏龙头技术护城河。",
+    "source": "中国能源新闻网",
+    "sourceUrl": "https://www.cnenergynews.cn/article/4SOHyH5dYv3",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "轨道电流首次直接用于信息读写，有助开发超低功耗存储器和处理器",
+    "summary": "德国美茵茨大学在《科学》杂志发表突破性成果：首次实现直接利用轨道电流进行信息读写无需转换为自旋电流，信号强度比传统自旋电流高两个数量级，有望大幅降低存储器和处理器能耗。",
+    "source": "科技日报",
+    "sourceUrl": "https://www.stdaily.com/web/gjxw/2026-07/06/content_542751.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "解码生命黑箱：一台中国造科学计算机的科学智能突围",
+    "summary": "脱胎于中科院自动化所的思朗科技基于100%自主研发MaPU架构打造天穹3D科学计算机，在蛋白质折叠模拟等任务上可对标美国专用超算Anton，有望成为科学智能第一股。",
+    "source": "中国金融信息网",
+    "sourceUrl": "https://www.cnfin.com/cmjj-lb/detail/20260701/4434363_1.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "宁德时代、小鹏、赛力斯等头部企业亮相第四届链博会智能汽车链",
+    "summary": "第四届中国国际供应链促进博览会智能汽车链展区汇聚宁德时代、小鹏、赛力斯等头部企业，展示从芯片到整车的全链路智能汽车供应链最新成果。",
+    "source": "中国城市网",
+    "sourceUrl": "https://www.zgcsb.com/news/pinDao/2026-07/06/a_676362.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "国产超算灵晟登顶榜首，全球首颗0.7nm芯片发布",
+    "summary": "国产全自主超算灵晟持续性能超2EFLOPS问鼎全球TOP500榜首。IBM正式发布全球首款0.7纳米芯片采用三维纳米栈晶体管架构，指甲大小集成近1000亿晶体管。",
+    "source": "川观新闻",
+    "sourceUrl": "https://cbgc.scol.com.cn/news/7737074",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "北大团队全球首发全碳纳米管互补晶体管电路",
+    "summary": "北京大学团队在全球首次实现全碳纳米管互补晶体管电路，为碳基芯片从实验室走向产业化迈出关键一步。该技术有望突破硅基芯片的物理极限。",
+    "source": "中关村在线",
+    "sourceUrl": "https://ai.zol.com.cn/1211/12118123.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "中国车企首次：理想汽车登台ISCA 2026，发表马赫M100芯片论文",
+    "summary": "理想汽车成为首家入选ISCA国际计算机体系结构大会的中国车企，发表马赫M100面向通用AI计算的编排式数据流架构演讲。马赫M100是全球首款基于数据流架构的大算力端侧推理芯片。",
+    "source": "IT之家",
+    "sourceUrl": "https://m.ithome.com/html/971357.htm",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "三星揭露2nm与4nm客户进展，2nm已与知名客户合作开发",
+    "summary": "三星在SAFE论坛披露先进制程最新进展：2nm制程已与知名客户合作开发部分项目仅8个月即完成设计。4nm方面韩国最大AI企业即将启动量产，计划2029年推进1.4nm量产。",
+    "source": "财报狗",
+    "sourceUrl": "https://statementdog.com/news/16981",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "推理成本砍至十分之一，英伟达Nemotron 3 Ultra刷新开源AI智能体性能上限",
+    "summary": "英伟达发布Nemotron 3 Ultra开源AI模型，推理成本大幅降低至此前的十分之一，同时在多个AI智能体基准测试中刷新开源模型性能上限，加速AI应用普及。",
+    "source": "网易科技",
+    "sourceUrl": "https://www.163.com/dy/article/L1DHNI9N0514R9OJ.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "手机AI的DeepSeek时刻：Bonsai 27B模型登场，苹果洽谈合作",
+    "summary": "PrismML发布基于Qwen微调的Bonsai 27B模型将270亿参数从54GB压缩至不足4GB保留90%智能水平，可在最新iPhone上原生运行。苹果已确认正评估PrismML技术，端侧AI部署迎来里程碑。",
+    "source": "搜狐科技",
+    "sourceUrl": "https://m.sohu.com/a/1050409095_114760",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "大模型迭代提速，国产算力持续突破",
+    "summary": "国产大模型迭代速度明显加快，算力基础设施持续突破。智谱、MiniMax、DeepSeek等厂商密集发布新一代模型，国产AI软硬件协同生态加速成型。",
+    "source": "新浪财经",
+    "sourceUrl": "http://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/lastest/rptid/837450485960/index.phtml",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "国产AI软硬件协同破局，自主可控打造硬核底色",
+    "summary": "国产AI产业在芯片、大模型、操作系统等全链路实现软硬件协同突破，自主可控能力显著增强。从训练到推理的国产化替代方案日趋成熟，AI产业安全底座逐步夯实。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/4021913.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "俄国家杜马通过AI监管法案，引入主权AI与国家AI大模型双轨制",
+    "summary": "俄罗斯国家杜马通过人工智能监管法案，在全球首创主权AI与国家AI大模型双轨制监管框架。该法案要求关键领域的AI模型需经国家认证，同时鼓励本土AI生态建设。",
+    "source": "科技日报",
+    "sourceUrl": "https://www.stdaily.com/web/gjxw/2026-07/10/content_545411.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "两大AI巨头出招，行业逻辑生变",
+    "summary": "两大AI巨头相继推出新战略，AI行业竞争逻辑正在发生根本性变化。从单纯追求模型参数规模转向比拼推理成本效率和商业落地能力，行业进入精细化运营新阶段。",
+    "source": "四方财经",
+    "sourceUrl": "https://www.sfccn.com/2026/7-3/xNMDE1MjBfMjE3MzUxNQ.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "AI领域三重利好来袭：海外大模型解禁，马斯克官宣新动作",
+    "summary": "AI板块迎来三重催化：海外大模型对华出口限制出现松动、马斯克宣布Grok系列新动作、国产大模型全球市场份额持续攀升突破50%，市场对AI板块信心显著恢复。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/4007323.html",
+    "category": "AI"
   },
   {
     "date": "2026-07-16",
@@ -2185,27 +2369,27 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-15",
+    "title": "中信证券：量化策略调仓双创因子，博弈降温后需重视非AI板块修复",
+    "summary": "中信证券研报揭示量化策略正从微盘股向科创板/创业板方向系统性调仓。上半年1236只指增产品平均超额仅3.1%同比下降11个百分点，微盘股指数自5月中旬累计下跌21.4%。公募指增7月正超额产品比例升至71.49%证明调仓正在推进。建议关注铜锡化工创新药券商等非AI板块修复。",
+    "source": "东方财富",
+    "sourceUrl": "https://fund.eastmoney.com/a/202607123802664237.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-15",
+    "title": "AI储能板块接连大幅波动，量化席位频频登上龙虎榜",
+    "summary": "近期AI和储能板块接连出现大幅波动，多家量化私募旗下席位频繁出现在龙虎榜上。量化资金集中买入放大了半导体等板块的价格波动，引发市场对量化交易助涨助跌效应的新一轮讨论。量化席位在AI概念股上表现出明显的动量交易特征。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202607143806021531.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-15",
     "title": "长鑫科技发行价8.66元7月16日申购首发市值5792亿，中金三合一重组获批",
     "summary": "长鑫科技确定发行价8.66元/股7月16日申购，首发市值5792亿元市盈率308.92倍。中金东兴信达三合一重组获证监会受理，万亿级头部券商成型。DeepSeek考虑启动新一轮融资估值约710亿美元。OpenAI计划2027年推出AI智能音箱。苹果罕见获KeyBanc下调至低配评级。",
     "source": "金融界",
     "sourceUrl": "https://finance.jrj.com.cn/2026/07/15081857806177.shtml",
     "category": "财经"
-  },
-  {
-    "date": "2026-07-15",
-    "title": "轨道电流首次直接用于信息读写，为超低功耗芯片开辟新路径",
-    "summary": "德国美茵茨大学在《科学》杂志发表突破性成果：首次实现直接利用轨道电流进行信息读写无需转换为自旋电流，信号强度比传统自旋电流高两个数量级。轨道电子学利用电子绕原子核运动的轨道角动量承载信息，有望大幅降低存储器和处理器的能耗，为下一代高性能芯片开辟全新路径。",
-    "source": "科技日报",
-    "sourceUrl": "https://www.stdaily.com/web/gdxw/2026-07/06/content_542713.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-15",
-    "title": "谷歌Chrome在英开放Gemini AI，苹果借力谷歌云提升Siri算力",
-    "summary": "谷歌在英国向Chrome浏览器用户开放Gemini AI功能，用户可直接在浏览器中使用AI助手。同时苹果正借助谷歌云基础设施来提升Siri的AI算力，两家科技巨头在AI领域合作加深。",
-    "source": "中关村在线",
-    "sourceUrl": "https://ai.zol.com.cn/1215/12159912.html",
-    "category": "AI"
   },
   {
     "date": "2026-07-15",
@@ -2225,11 +2409,19 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-15",
-    "title": "核能直接为AI芯片供电：Valar用先进反应堆成功驱动英伟达Blackwell",
-    "summary": "美国核能初创公司Valar Atomics利用其Ward 250先进反应堆成功为英伟达Blackwell AI芯片供电，这是美国下一代反应堆首次实现此类应用。两家公司已签约在犹他州建设小型核能AI数据中心，探索通过核能供电和闭环液冷技术降低对外部电网和水资源依赖的新模式。",
-    "source": "凤凰科技",
-    "sourceUrl": "https://tech.ifeng.com/c/8uR6mEhuTCT",
-    "category": "科技"
+    "title": "央行开展14000亿元买断式逆回购操作创该期限规模新高",
+    "summary": "央行7月15日开展14000亿元6个月期买断式逆回购操作，净投放5000亿元，创该期限操作规模历史新高。今日将公布上半年GDP、投资、消费等重磅经济数据，市场普遍关注经济运行态势。上半年规上工业企业利润同比增长18.8%，一季度GDP同比增5.0%。",
+    "source": "每日经济新闻",
+    "sourceUrl": "https://m.nbd.com.cn/articles/2026-07-14/4472283.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-15",
+    "title": "上半年外贸进出口总值25.47万亿元同比增16.9%，AI成外贸增量引擎",
+    "summary": "上半年中国货物贸易进出口总值25.47万亿元同比增长16.9%规模历史同期首破25万亿。算力硬件进出口达5.13万亿元增长56.6%，AI智能装备出口高速增长成为外贸增量引擎。中美货物贸易总值2万亿元，一季度下降18.7%二季度增长13.7%。",
+    "source": "新华财经",
+    "sourceUrl": "https://cfbond.com/14740/14740zgcfw/ejy/yw/4896194582.shtml",
+    "category": "财经"
   },
   {
     "date": "2026-07-15",
@@ -2241,11 +2433,19 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-15",
-    "title": "手机AI的DeepSeek时刻：PrismML发布Bonsai 27B模型，苹果洽谈合作",
-    "summary": "初创公司PrismML发布基于Qwen 3.6 27B微调的Bonsai 27B模型，将270亿参数从54GB压缩至不足4GB，保留90%智能水平，可在iPhone 15及以上机型原生运行。苹果已确认正评估PrismML技术，洽谈处于早期阶段但进展顺利。",
-    "source": "IT之家",
-    "sourceUrl": "https://m.ithome.com/html/976772.htm",
-    "category": "AI"
+    "title": "轨道电流首次直接用于信息读写，为超低功耗芯片开辟新路径",
+    "summary": "德国美茵茨大学在《科学》杂志发表突破性成果：首次实现直接利用轨道电流进行信息读写无需转换为自旋电流，信号强度比传统自旋电流高两个数量级。轨道电子学利用电子绕原子核运动的轨道角动量承载信息，有望大幅降低存储器和处理器的能耗，为下一代高性能芯片开辟全新路径。",
+    "source": "科技日报",
+    "sourceUrl": "https://www.stdaily.com/web/gdxw/2026-07/06/content_542713.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-15",
+    "title": "核能直接为AI芯片供电：Valar用先进反应堆成功驱动英伟达Blackwell",
+    "summary": "美国核能初创公司Valar Atomics利用其Ward 250先进反应堆成功为英伟达Blackwell AI芯片供电，这是美国下一代反应堆首次实现此类应用。两家公司已签约在犹他州建设小型核能AI数据中心，探索通过核能供电和闭环液冷技术降低对外部电网和水资源依赖的新模式。",
+    "source": "凤凰科技",
+    "sourceUrl": "https://tech.ifeng.com/c/8uR6mEhuTCT",
+    "category": "科技"
   },
   {
     "date": "2026-07-15",
@@ -2257,11 +2457,19 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-15",
-    "title": "央行开展14000亿元买断式逆回购操作创该期限规模新高",
-    "summary": "央行7月15日开展14000亿元6个月期买断式逆回购操作，净投放5000亿元，创该期限操作规模历史新高。今日将公布上半年GDP、投资、消费等重磅经济数据，市场普遍关注经济运行态势。上半年规上工业企业利润同比增长18.8%，一季度GDP同比增5.0%。",
-    "source": "每日经济新闻",
-    "sourceUrl": "https://m.nbd.com.cn/articles/2026-07-14/4472283.html",
-    "category": "财经"
+    "title": "谷歌Chrome在英开放Gemini AI，苹果借力谷歌云提升Siri算力",
+    "summary": "谷歌在英国向Chrome浏览器用户开放Gemini AI功能，用户可直接在浏览器中使用AI助手。同时苹果正借助谷歌云基础设施来提升Siri的AI算力，两家科技巨头在AI领域合作加深。",
+    "source": "中关村在线",
+    "sourceUrl": "https://ai.zol.com.cn/1215/12159912.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-15",
+    "title": "手机AI的DeepSeek时刻：PrismML发布Bonsai 27B模型，苹果洽谈合作",
+    "summary": "初创公司PrismML发布基于Qwen 3.6 27B微调的Bonsai 27B模型，将270亿参数从54GB压缩至不足4GB，保留90%智能水平，可在iPhone 15及以上机型原生运行。苹果已确认正评估PrismML技术，洽谈处于早期阶段但进展顺利。",
+    "source": "IT之家",
+    "sourceUrl": "https://m.ithome.com/html/976772.htm",
+    "category": "AI"
   },
   {
     "date": "2026-07-15",
@@ -2270,22 +2478,6 @@ window.NEWS_DATA = [
     "source": "香港中通社",
     "sourceUrl": "http://hkcna.hk/docDetail.jsp?id=101369994&channel=2810",
     "category": "AI"
-  },
-  {
-    "date": "2026-07-15",
-    "title": "中信证券：量化策略调仓双创因子，博弈降温后需重视非AI板块修复",
-    "summary": "中信证券研报揭示量化策略正从微盘股向科创板/创业板方向系统性调仓。上半年1236只指增产品平均超额仅3.1%同比下降11个百分点，微盘股指数自5月中旬累计下跌21.4%。公募指增7月正超额产品比例升至71.49%证明调仓正在推进。建议关注铜锡化工创新药券商等非AI板块修复。",
-    "source": "东方财富",
-    "sourceUrl": "https://fund.eastmoney.com/a/202607123802664237.html",
-    "category": "量化"
-  },
-  {
-    "date": "2026-07-15",
-    "title": "上半年外贸进出口总值25.47万亿元同比增16.9%，AI成外贸增量引擎",
-    "summary": "上半年中国货物贸易进出口总值25.47万亿元同比增长16.9%规模历史同期首破25万亿。算力硬件进出口达5.13万亿元增长56.6%，AI智能装备出口高速增长成为外贸增量引擎。中美货物贸易总值2万亿元，一季度下降18.7%二季度增长13.7%。",
-    "source": "新华财经",
-    "sourceUrl": "https://cfbond.com/14740/14740zgcfw/ejy/yw/4896194582.shtml",
-    "category": "财经"
   },
   {
     "date": "2026-07-15",
@@ -2304,12 +2496,52 @@ window.NEWS_DATA = [
     "category": "AI"
   },
   {
-    "date": "2026-07-15",
-    "title": "AI储能板块接连大幅波动，量化席位频频登上龙虎榜",
-    "summary": "近期AI和储能板块接连出现大幅波动，多家量化私募旗下席位频繁出现在龙虎榜上。量化资金集中买入放大了半导体等板块的价格波动，引发市场对量化交易助涨助跌效应的新一轮讨论。量化席位在AI概念股上表现出明显的动量交易特征。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202607143806021531.html",
+    "date": "2026-07-14",
+    "title": "多家头部量化机构否认韩国因子传言：行业极少使用韩国数据",
+    "summary": "A股大跌后市场传量化策略已将韩国科技股纳入因子模型，多家头部量化私募集体否认。200亿+量化私募创始人称纯属外行小作文，百亿级量化总经理表示完全依据海外科技股涨跌交易长期必然是负超额。",
+    "source": "21世纪经济报道",
+    "sourceUrl": "https://m.21jingji.com/article/20260714/herald/502dfa07f2c3728c290bb9165d1adbfa.html",
     "category": "量化"
+  },
+  {
+    "date": "2026-07-14",
+    "title": "A股三大指数集体重挫：沪指跌2.06%失守4000点，成交缩至2.83万亿",
+    "summary": "7月14日A股延续调整：上证收跌2.06%报3913点盘中一度失守3900，全市场超4600只个股下跌逾170只跌停，两市成交缩至2.83万亿。科技成长题材集体回调，中药银行股逆势走强。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202607143804283075.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-14",
+    "title": "176股跌停引爆量化争议：任泽平称量化交易泛滥是A股波动主因",
+    "summary": "7月13日A股176股跌停超4500只个股下跌，经济学家任泽平指出量化交易尤其是T+0日内交易泛滥是波动放大的重要原因，呼吁适度规范。百亿量化私募回应称极端行情下量化恰恰是市场稳定器。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202607133804250426.html",
+    "category": "量化"
+  },
+  {
+    "date": "2026-07-14",
+    "title": "央行净投放2170亿元呵护流动性，1-5月工业企业利润同比增18.8%",
+    "summary": "央行7月13日开展2240亿元7天期逆回购操作净投放2170亿元，操作利率维持1.40%。1-5月全国规上工业企业利润同比增长18.8%，一季度GDP同比增5.0%，经济基本面保持稳定。",
+    "source": "中国金融信息网",
+    "sourceUrl": "https://m.cnfin.com/yw-lb//zixun/20260714/4439883_1.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-14",
+    "title": "A股三大指数集体回调：沪指跌2.06%，中金称回调已过度反映悲观预期",
+    "summary": "7月14日A股延续调整，沪指跌2.06%报3913点，超4600只个股下跌。中金公司认为当前回调已反映过度悲观预期，未来1-2周反弹或随时到来，中期坚定看好A股震荡上行。",
+    "source": "中国证券网",
+    "sourceUrl": "https://www.cnstock.com/commonDetail/743545",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-14",
+    "title": "AI债市崩了：六大超大规模计算商今年已累计发债约2440亿美元",
+    "summary": "AI板块调整压力传导至债市：六大超大规模计算商今年已累计发债约2440亿美元，市场承接能力明显减弱。美股半导体遭重创，纳斯达克再度跌破50日均线，全球AI板块共振下跌。",
+    "source": "东方财富",
+    "sourceUrl": "https://fund.eastmoney.com/a/202607143804566321.html",
+    "category": "财经"
   },
   {
     "date": "2026-07-14",
@@ -2337,10 +2569,34 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-14",
+    "title": "影石Insta360谈AI创作竞争：不能只会剪视频，更需深度理解用户",
+    "summary": "影石Insta360分享AI创作工具竞争观：AI视频工具不能只停留在自动化剪辑层面，更需要深度理解用户场景和创作意图。行业正从功能竞争转向体验竞争，从工具思维转向用户思维。",
+    "source": "东方财富",
+    "sourceUrl": "https://fund.eastmoney.com/a/202607033793657984.html",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-14",
     "title": "方正微发布G3碳化硅技术：4颗芯片替代行业通用6颗方案，成本降40%",
     "summary": "方正微电子发布全新G3碳化硅技术平台，1200V/11mΩ产品在175℃高结温下保持优异性能，短路耐受能力达2.4μs。封装方案仅需4颗芯片即可替代行业通用的6颗方案，成本降低约40%，显著增强国产SiC竞争力。",
     "source": "搜狐",
     "sourceUrl": "https://www.sohu.com/a/1044895996_620780",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-14",
+    "title": "宏微科技发布新一代AI数据中心功率半导体方案：损耗降低50%",
+    "summary": "宏微科技在慕尼黑上海电子展展出面向AI数据中心和固态变压器的新一代功率半导体方案，推出M7i+芯片（损耗降低15%结温提升至185℃）、SiC MOS模块（总损耗降低约50%），适配下一代AI算力基础设施。",
+    "source": "宏微科技",
+    "sourceUrl": "https://www.macmicst.com/news/company-news/84",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-14",
+    "title": "全球功率半导体涨价潮：近20家企业启动新一轮涨价，SiC/GaN迎黄金窗口",
+    "summary": "2026年7月全球近20家功率半导体企业启动新一轮涨价。AI数据中心功耗急剧攀升（下一代Rubin平台单机柜功率突破600kW），SiC和GaN市场爆发，GaN功率半导体年复合增长率达49.8%，AI功率半导体市场预计2028年达160亿美元。",
+    "source": "OFweek电子工程网",
+    "sourceUrl": "https://ee.ofweek.com/2026-07/ART-8420-2800-30692774.html",
     "category": "科技"
   },
   {
@@ -2369,46 +2625,6 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-14",
-    "title": "影石Insta360谈AI创作竞争：不能只会剪视频，更需深度理解用户",
-    "summary": "影石Insta360分享AI创作工具竞争观：AI视频工具不能只停留在自动化剪辑层面，更需要深度理解用户场景和创作意图。行业正从功能竞争转向体验竞争，从工具思维转向用户思维。",
-    "source": "东方财富",
-    "sourceUrl": "https://fund.eastmoney.com/a/202607033793657984.html",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-07-14",
-    "title": "宏微科技发布新一代AI数据中心功率半导体方案：损耗降低50%",
-    "summary": "宏微科技在慕尼黑上海电子展展出面向AI数据中心和固态变压器的新一代功率半导体方案，推出M7i+芯片（损耗降低15%结温提升至185℃）、SiC MOS模块（总损耗降低约50%），适配下一代AI算力基础设施。",
-    "source": "宏微科技",
-    "sourceUrl": "https://www.macmicst.com/news/company-news/84",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-14",
-    "title": "央行净投放2170亿元呵护流动性，1-5月工业企业利润同比增18.8%",
-    "summary": "央行7月13日开展2240亿元7天期逆回购操作净投放2170亿元，操作利率维持1.40%。1-5月全国规上工业企业利润同比增长18.8%，一季度GDP同比增5.0%，经济基本面保持稳定。",
-    "source": "中国金融信息网",
-    "sourceUrl": "https://m.cnfin.com/yw-lb//zixun/20260714/4439883_1.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-14",
-    "title": "多家头部量化机构否认韩国因子传言：行业极少使用韩国数据",
-    "summary": "A股大跌后市场传量化策略已将韩国科技股纳入因子模型，多家头部量化私募集体否认。200亿+量化私募创始人称纯属外行小作文，百亿级量化总经理表示完全依据海外科技股涨跌交易长期必然是负超额。",
-    "source": "21世纪经济报道",
-    "sourceUrl": "https://m.21jingji.com/article/20260714/herald/502dfa07f2c3728c290bb9165d1adbfa.html",
-    "category": "量化"
-  },
-  {
-    "date": "2026-07-14",
-    "title": "全球功率半导体涨价潮：近20家企业启动新一轮涨价，SiC/GaN迎黄金窗口",
-    "summary": "2026年7月全球近20家功率半导体企业启动新一轮涨价。AI数据中心功耗急剧攀升（下一代Rubin平台单机柜功率突破600kW），SiC和GaN市场爆发，GaN功率半导体年复合增长率达49.8%，AI功率半导体市场预计2028年达160亿美元。",
-    "source": "OFweek电子工程网",
-    "sourceUrl": "https://ee.ofweek.com/2026-07/ART-8420-2800-30692774.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-14",
     "title": "OpenAI、Meta、SpaceX三大厂发力高性价比AI模型，价格战白热化",
     "summary": "AI模型价格战白热化：OpenAI GPT-5.6 Luna输入价格低至每百万token 1美元，Meta Muse Spark 1.1定价仅为Anthropic四分之一，马斯克Grok 4.5全面开放。高性价比模型推动AI应用加速普及。",
     "source": "新浪财经",
@@ -2417,43 +2633,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-14",
-    "title": "A股三大指数集体重挫：沪指跌2.06%失守4000点，成交缩至2.83万亿",
-    "summary": "7月14日A股延续调整：上证收跌2.06%报3913点盘中一度失守3900，全市场超4600只个股下跌逾170只跌停，两市成交缩至2.83万亿。科技成长题材集体回调，中药银行股逆势走强。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202607143804283075.html",
-    "category": "量化"
-  },
-  {
-    "date": "2026-07-14",
-    "title": "A股三大指数集体回调：沪指跌2.06%，中金称回调已过度反映悲观预期",
-    "summary": "7月14日A股延续调整，沪指跌2.06%报3913点，超4600只个股下跌。中金公司认为当前回调已反映过度悲观预期，未来1-2周反弹或随时到来，中期坚定看好A股震荡上行。",
-    "source": "中国证券网",
-    "sourceUrl": "https://www.cnstock.com/commonDetail/743545",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-14",
-    "title": "AI债市崩了：六大超大规模计算商今年已累计发债约2440亿美元",
-    "summary": "AI板块调整压力传导至债市：六大超大规模计算商今年已累计发债约2440亿美元，市场承接能力明显减弱。美股半导体遭重创，纳斯达克再度跌破50日均线，全球AI板块共振下跌。",
-    "source": "东方财富",
-    "sourceUrl": "https://fund.eastmoney.com/a/202607143804566321.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-14",
     "title": "2026世界人工智能大会7月17日上海开幕，习近平将出席并致辞",
     "summary": "2026世界人工智能大会将于7月17-20日在上海浦东三地四馆举办，主题智能伙伴 共创未来。展览面积首次突破10万㎡，超1100家企业参展，超300款产品全球首发。2025年我国AI核心产业规模超1.2万亿元。",
     "source": "上海市政府",
     "sourceUrl": "https://www.shanghai.gov.cn/nw4411/20260714/b13172f0f35244f5b7609a091398efe3.html",
     "category": "AI"
-  },
-  {
-    "date": "2026-07-14",
-    "title": "176股跌停引爆量化争议：任泽平称量化交易泛滥是A股波动主因",
-    "summary": "7月13日A股176股跌停超4500只个股下跌，经济学家任泽平指出量化交易尤其是T+0日内交易泛滥是波动放大的重要原因，呼吁适度规范。百亿量化私募回应称极端行情下量化恰恰是市场稳定器。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202607133804250426.html",
-    "category": "量化"
   },
   {
     "date": "2026-07-13",
@@ -2481,131 +2665,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-13",
-    "title": "证券时报二季度经济学家调查：超八成看好下半年股市景气度",
-    "summary": "证券时报2026年二季度经济学家问卷调查显示：84%受访者对下半年股市景气度持乐观预期，66%认为AI板块短期回调但长期向好。人民币兑美元中间价报6.7989较年初升值约3%，渣打高盛等外资机构对A股给出超配评级。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202607133802705587.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-13",
-    "title": "证券时报二季度经济学家调查：股市景气度乐观预期延续",
-    "summary": "超七成受访者对二季度股市表现评价积极，超八成对下半年股市景气度持乐观预期。近七成经济学家认为AI板块短期或有回调但长期向好，渣打高盛等外资机构对A股给出超配评级。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/4013270.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-13",
-    "title": "记者体验AI漫剧制作：节奏变快创作却不简单",
-    "summary": "记者实地体验AI漫剧制作流程发现虽然AI大幅提升了制作效率但专业门槛并未消失。镜头语言、审美判断、情感表达仍然是核心竞争力，懂内容规律比会用工具更重要。",
-    "source": "人民日报客户端",
-    "sourceUrl": "https://www.peopleapp.com/rmharticle/30052583937",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-07-13",
-    "title": "苹果很感兴趣！美初创公司将阿里270亿参数模型压进iPhone",
-    "summary": "美国初创公司PrismML成功将阿里Qwen 3.6（270亿参数）从54GB压缩至不到4GB，可在iPhone 17 Pro上运行。苹果已就此技术与PrismML进行沟通，有望推动端侧大模型部署革命。",
-    "source": "凤凰科技",
-    "sourceUrl": "https://tech.ifeng.com/c/8uc57Rhz6Yk",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-13",
-    "title": "英飞凌50亿欧元智能功率晶圆厂提前投产，全球功率半导体产能吃紧",
-    "summary": "英飞凌在德国德累斯顿的智能功率晶圆厂正式启用总投资50亿欧元为其史上最大单笔投资。该厂将服务于AI数据中心供电、软件定义汽车、可再生能源等领域，正值全球功率半导体产能吃紧多家厂商涨价之际。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/3998085.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-13",
-    "title": "策略周专题：市场或将震荡整固，关注景气主线",
-    "summary": "光大证券发布策略周专题指出市场短期或将震荡整固建议关注景气主线。科技板块交易集中度偏高调整还需时间，宽基指数在关键均线处获得有力支撑无需过度担忧指数下跌，7月政治局会议是重要观察窗口。",
-    "source": "新浪财经",
-    "sourceUrl": "http://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/lastest/rptid/837124980243/index.phtml",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-13",
-    "title": "理想汽车马赫M100芯片登台ISCA 2026，中国车企首次",
-    "summary": "理想汽车成为首家入选ISCA的中国车企，发表马赫M100面向通用AI计算的编排式数据流架构演讲。马赫M100是全球首款基于数据流架构的大算力端侧推理芯片，5nm车规工艺单芯片1280TOPS算力利用率82%，已随理想L9/L8量产上车。",
-    "source": "CNMO科技",
-    "sourceUrl": "https://smartcar.cnmo.com/news/812424.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-13",
-    "title": "欧美政策步入摇摆期，中国市场产生结构性机会",
-    "summary": "国际金融报分析指出欧美货币政策面临方向选择，不确定性上升。中国市场因估值洼地效应和政策空间产生结构性机会，人民币汇率较年初升值约3%，54%受访者预计跨境资本保持净流入。",
-    "source": "国际金融报",
-    "sourceUrl": "https://ifnews.com/news.html?aid=849495&cid=49",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-13",
-    "title": "机构：科技板块调整或已近尾声，从半年报挖掘新一轮主线",
-    "summary": "多家机构判断科技板块调整已较充分，7月中下旬将进入半年度业绩密集披露期。建议以业绩为锚，重点关注存储、算力等方向的景气度边际变化，从半年报中挖掘新一轮市场主线。",
-    "source": "中国金融信息网",
-    "sourceUrl": "https://www.cnfin.com/gs-lb/detail/20260713/4439246_1.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-13",
-    "title": "机构：科技板块调整或已近尾声，从半年报挖掘新一轮主线",
-    "summary": "多家机构判断科技板块调整已较充分，7月中下旬将进入半年度业绩密集披露期。建议以业绩为锚，重点关注存储、算力等方向的景气度边际变化，从半年报中挖掘新一轮市场主线。存储和算力板块已有企业公布超预期业绩预告。",
-    "source": "中国证券网",
-    "sourceUrl": "https://www.cnstock.com/commonDetail/742515",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-13",
     "title": "机构策略：市场震荡格局仍将延续，合理控制仓位",
     "summary": "多家机构认为A股短期仍将维持震荡格局，科技板块交易集中度偏高，调整还需时间。建议合理控制仓位，在波动中把握结构性机会，关注半年报业绩验证。",
     "source": "证券时报",
     "sourceUrl": "https://stcn.com/article/detail/4013579.html",
     "category": "量化"
-  },
-  {
-    "date": "2026-07-13",
-    "title": "成本优势显著：中国AI大模型正逐渐获得美国企业青睐",
-    "summary": "OpenRouter数据显示美国企业调用中国AI模型Token占比每周超30%，中国模型成本比美国竞品低60%-90%。AI公司Lindy已全部从Claude切换至DeepSeek，预计数月节省数百万美元。",
-    "source": "中国电子技术网",
-    "sourceUrl": "https://chinaaet.com/article/3000178809",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-13",
-    "title": "思朗科技天穹3D科学计算机：解码生命黑箱的中国造",
-    "summary": "脱胎于中科院自动化所的思朗科技基于100%自主研发MaPU架构打造天穹3D科学计算机，在蛋白质折叠模拟等任务上可对标美国D.E.Shaw研究所专用超算Anton。公司已完成科创板上市辅导有望成为科学智能第一股。",
-    "source": "东方财富",
-    "sourceUrl": "https://fund.eastmoney.com/a/202607013790556091.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-13",
-    "title": "大模型密集上新+重磅融资落地，AI应用强势爆发",
-    "summary": "AI板块迎来密集催化：大模型新品频出叠加重磅融资落地，AI应用端强势爆发。融资客提前埋伏多只AI概念股，市场关注度持续升温。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202607103801513230.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-13",
-    "title": "大模型双雄齐发声：智谱启动Touch High计划，MiniMax完成160亿港元融资",
-    "summary": "智谱创始人唐杰发布内部信《巨浪已来》启动Touch High计划直指AGI，MiniMax完成160亿港元新一轮融资7倍认购覆盖，闫俊杰宣布至AGI实现不再领薪并拿出5%股份激励团队和开源社区。",
-    "source": "中国证券网",
-    "sourceUrl": "https://www.cnstock.com/commonDetail/742349",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-13",
-    "title": "国际金价跌近30%：近半数预计围绕4000美元震荡",
-    "summary": "国际金价较年内高点跌近30%，证券时报经济学家调查显示47%受访者预计金价将围绕4000美元/盎司反复震荡。欧美央行告别明确指引，美联储6月纪要维持利率不变但基调偏鹰。",
-    "source": "证券时报",
-    "sourceUrl": "http://epaper.stcn.com/con/202607/13/content_2949296.html",
-    "category": "财经"
   },
   {
     "date": "2026-07-13",
@@ -2633,19 +2697,59 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-13",
-    "title": "全球首个商业核能动力卫星成功入轨",
-    "summary": "SpaceX通过Transporter-17任务将美国City Labs公司BOHR卫星送入轨道，这是全球首个进入太空的商业核能动力卫星。搭载NanoTritium氚电池利用氚自然衰变直接转换为电能，可在无光环境下持续供电，对未来深空任务意义重大。",
-    "source": "STPI科技政策网",
-    "sourceUrl": "https://iknow.stpi.niar.org.tw/Post/Read.aspx?PostID=23352",
-    "category": "科技"
+    "title": "证券时报二季度经济学家调查：超八成看好下半年股市景气度",
+    "summary": "证券时报2026年二季度经济学家问卷调查显示：84%受访者对下半年股市景气度持乐观预期，66%认为AI板块短期回调但长期向好。人民币兑美元中间价报6.7989较年初升值约3%，渣打高盛等外资机构对A股给出超配评级。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202607133802705587.html",
+    "category": "财经"
   },
   {
     "date": "2026-07-13",
-    "title": "从工具普及到能力承接：AIGC推动OPC与OTC成为内容生产新趋势",
-    "summary": "AIGC深度落地后内容生产组织形态发生根本变革。截至2025年12月国内生成式AI产品用户规模达6.02亿普及率42.8%，个体创作者可独立承接完整内容项目，一人公司与一队公司成为新主流。",
-    "source": "光明网",
-    "sourceUrl": "https://difang.gmw.cn/2026-07/08/content_38874837.htm",
-    "category": "自媒体"
+    "title": "证券时报二季度经济学家调查：股市景气度乐观预期延续",
+    "summary": "超七成受访者对二季度股市表现评价积极，超八成对下半年股市景气度持乐观预期。近七成经济学家认为AI板块短期或有回调但长期向好，渣打高盛等外资机构对A股给出超配评级。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/4013270.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "策略周专题：市场或将震荡整固，关注景气主线",
+    "summary": "光大证券发布策略周专题指出市场短期或将震荡整固建议关注景气主线。科技板块交易集中度偏高调整还需时间，宽基指数在关键均线处获得有力支撑无需过度担忧指数下跌，7月政治局会议是重要观察窗口。",
+    "source": "新浪财经",
+    "sourceUrl": "http://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/lastest/rptid/837124980243/index.phtml",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "欧美政策步入摇摆期，中国市场产生结构性机会",
+    "summary": "国际金融报分析指出欧美货币政策面临方向选择，不确定性上升。中国市场因估值洼地效应和政策空间产生结构性机会，人民币汇率较年初升值约3%，54%受访者预计跨境资本保持净流入。",
+    "source": "国际金融报",
+    "sourceUrl": "https://ifnews.com/news.html?aid=849495&cid=49",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "机构：科技板块调整或已近尾声，从半年报挖掘新一轮主线",
+    "summary": "多家机构判断科技板块调整已较充分，7月中下旬将进入半年度业绩密集披露期。建议以业绩为锚，重点关注存储、算力等方向的景气度边际变化，从半年报中挖掘新一轮市场主线。",
+    "source": "中国金融信息网",
+    "sourceUrl": "https://www.cnfin.com/gs-lb/detail/20260713/4439246_1.html",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "机构：科技板块调整或已近尾声，从半年报挖掘新一轮主线",
+    "summary": "多家机构判断科技板块调整已较充分，7月中下旬将进入半年度业绩密集披露期。建议以业绩为锚，重点关注存储、算力等方向的景气度边际变化，从半年报中挖掘新一轮市场主线。存储和算力板块已有企业公布超预期业绩预告。",
+    "source": "中国证券网",
+    "sourceUrl": "https://www.cnstock.com/commonDetail/742515",
+    "category": "财经"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "国际金价跌近30%：近半数预计围绕4000美元震荡",
+    "summary": "国际金价较年内高点跌近30%，证券时报经济学家调查显示47%受访者预计金价将围绕4000美元/盎司反复震荡。欧美央行告别明确指引，美联储6月纪要维持利率不变但基调偏鹰。",
+    "source": "证券时报",
+    "sourceUrl": "http://epaper.stcn.com/con/202607/13/content_2949296.html",
+    "category": "财经"
   },
   {
     "date": "2026-07-13",
@@ -2657,19 +2761,19 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-13",
-    "title": "OpenAI发布GPT-5.6系列模型：Sol/Terra/Luna三箭齐发",
-    "summary": "OpenAI正式发布GPT-5.6旗舰版Sol、高效版Terra和极速版Luna，同步推出企业级智能体ChatGPT Work。Sol引入Max深度推理与Ultra多智能体协同模式，上下文窗口扩展至150万tokens，定价约为竞品四分之一。",
-    "source": "36氪",
-    "sourceUrl": "https://www.36kr.com/p/3889567082265352",
-    "category": "AI"
+    "title": "记者体验AI漫剧制作：节奏变快创作却不简单",
+    "summary": "记者实地体验AI漫剧制作流程发现虽然AI大幅提升了制作效率但专业门槛并未消失。镜头语言、审美判断、情感表达仍然是核心竞争力，懂内容规律比会用工具更重要。",
+    "source": "人民日报客户端",
+    "sourceUrl": "https://www.peopleapp.com/rmharticle/30052583937",
+    "category": "自媒体"
   },
   {
     "date": "2026-07-13",
-    "title": "DeepSeek、智谱被曝造芯，国产大模型绕开英伟达",
-    "summary": "DeepSeek约一年前启动AI推理芯片项目正扩充芯片设计团队，智谱AI评估自研定制AI芯片可能性。GLM-5.2在Vercel平台日Token使用量一周暴涨27倍，推理成本压力成为造芯核心驱动力。",
-    "source": "太平洋电脑网",
-    "sourceUrl": "https://www.pconline.com.cn/focus/2178/21783999.html",
-    "category": "AI"
+    "title": "从工具普及到能力承接：AIGC推动OPC与OTC成为内容生产新趋势",
+    "summary": "AIGC深度落地后内容生产组织形态发生根本变革。截至2025年12月国内生成式AI产品用户规模达6.02亿普及率42.8%，个体创作者可独立承接完整内容项目，一人公司与一队公司成为新主流。",
+    "source": "光明网",
+    "sourceUrl": "https://difang.gmw.cn/2026-07/08/content_38874837.htm",
+    "category": "自媒体"
   },
   {
     "date": "2026-07-13",
@@ -2689,11 +2793,35 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-13",
-    "title": "AI智能体加速落地：从技术可用到商业可赚",
-    "summary": "AI智能体正在从技术可用迈向商业可赚阶段，各行业Agent应用加速部署，企业级AI智能体成为新一轮商业化焦点，推动产业链重构和效率提升。",
-    "source": "人民网",
-    "sourceUrl": "https://finance.people.com.cn/BIG5/n1/2026/0713/c1004-40759050.html",
-    "category": "AI"
+    "title": "英飞凌50亿欧元智能功率晶圆厂提前投产，全球功率半导体产能吃紧",
+    "summary": "英飞凌在德国德累斯顿的智能功率晶圆厂正式启用总投资50亿欧元为其史上最大单笔投资。该厂将服务于AI数据中心供电、软件定义汽车、可再生能源等领域，正值全球功率半导体产能吃紧多家厂商涨价之际。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/3998085.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "理想汽车马赫M100芯片登台ISCA 2026，中国车企首次",
+    "summary": "理想汽车成为首家入选ISCA的中国车企，发表马赫M100面向通用AI计算的编排式数据流架构演讲。马赫M100是全球首款基于数据流架构的大算力端侧推理芯片，5nm车规工艺单芯片1280TOPS算力利用率82%，已随理想L9/L8量产上车。",
+    "source": "CNMO科技",
+    "sourceUrl": "https://smartcar.cnmo.com/news/812424.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "思朗科技天穹3D科学计算机：解码生命黑箱的中国造",
+    "summary": "脱胎于中科院自动化所的思朗科技基于100%自主研发MaPU架构打造天穹3D科学计算机，在蛋白质折叠模拟等任务上可对标美国D.E.Shaw研究所专用超算Anton。公司已完成科创板上市辅导有望成为科学智能第一股。",
+    "source": "东方财富",
+    "sourceUrl": "https://fund.eastmoney.com/a/202607013790556091.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "全球首个商业核能动力卫星成功入轨",
+    "summary": "SpaceX通过Transporter-17任务将美国City Labs公司BOHR卫星送入轨道，这是全球首个进入太空的商业核能动力卫星。搭载NanoTritium氚电池利用氚自然衰变直接转换为电能，可在无光环境下持续供电，对未来深空任务意义重大。",
+    "source": "STPI科技政策网",
+    "sourceUrl": "https://iknow.stpi.niar.org.tw/Post/Read.aspx?PostID=23352",
+    "category": "科技"
   },
   {
     "date": "2026-07-13",
@@ -2702,6 +2830,62 @@ window.NEWS_DATA = [
     "source": "OFweek太阳能光伏网",
     "sourceUrl": "https://solar.ofweek.com/2026-07/ART-260006-8120-30693080.html",
     "category": "科技"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "苹果很感兴趣！美初创公司将阿里270亿参数模型压进iPhone",
+    "summary": "美国初创公司PrismML成功将阿里Qwen 3.6（270亿参数）从54GB压缩至不到4GB，可在iPhone 17 Pro上运行。苹果已就此技术与PrismML进行沟通，有望推动端侧大模型部署革命。",
+    "source": "凤凰科技",
+    "sourceUrl": "https://tech.ifeng.com/c/8uc57Rhz6Yk",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "成本优势显著：中国AI大模型正逐渐获得美国企业青睐",
+    "summary": "OpenRouter数据显示美国企业调用中国AI模型Token占比每周超30%，中国模型成本比美国竞品低60%-90%。AI公司Lindy已全部从Claude切换至DeepSeek，预计数月节省数百万美元。",
+    "source": "中国电子技术网",
+    "sourceUrl": "https://chinaaet.com/article/3000178809",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "大模型密集上新+重磅融资落地，AI应用强势爆发",
+    "summary": "AI板块迎来密集催化：大模型新品频出叠加重磅融资落地，AI应用端强势爆发。融资客提前埋伏多只AI概念股，市场关注度持续升温。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202607103801513230.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "大模型双雄齐发声：智谱启动Touch High计划，MiniMax完成160亿港元融资",
+    "summary": "智谱创始人唐杰发布内部信《巨浪已来》启动Touch High计划直指AGI，MiniMax完成160亿港元新一轮融资7倍认购覆盖，闫俊杰宣布至AGI实现不再领薪并拿出5%股份激励团队和开源社区。",
+    "source": "中国证券网",
+    "sourceUrl": "https://www.cnstock.com/commonDetail/742349",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "OpenAI发布GPT-5.6系列模型：Sol/Terra/Luna三箭齐发",
+    "summary": "OpenAI正式发布GPT-5.6旗舰版Sol、高效版Terra和极速版Luna，同步推出企业级智能体ChatGPT Work。Sol引入Max深度推理与Ultra多智能体协同模式，上下文窗口扩展至150万tokens，定价约为竞品四分之一。",
+    "source": "36氪",
+    "sourceUrl": "https://www.36kr.com/p/3889567082265352",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "DeepSeek、智谱被曝造芯，国产大模型绕开英伟达",
+    "summary": "DeepSeek约一年前启动AI推理芯片项目正扩充芯片设计团队，智谱AI评估自研定制AI芯片可能性。GLM-5.2在Vercel平台日Token使用量一周暴涨27倍，推理成本压力成为造芯核心驱动力。",
+    "source": "太平洋电脑网",
+    "sourceUrl": "https://www.pconline.com.cn/focus/2178/21783999.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "AI智能体加速落地：从技术可用到商业可赚",
+    "summary": "AI智能体正在从技术可用迈向商业可赚阶段，各行业Agent应用加速部署，企业级AI智能体成为新一轮商业化焦点，推动产业链重构和效率提升。",
+    "source": "人民网",
+    "sourceUrl": "https://finance.people.com.cn/BIG5/n1/2026/0713/c1004-40759050.html",
+    "category": "AI"
   },
   {
     "date": "2026-07-12",
@@ -2713,19 +2897,19 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-12",
-    "title": "GPT-5.6 Sol Ultra一小时证明50年数学猜想",
-    "summary": "GPT-5.6 Sol Ultra在不到1小时内独立生成了图论领域悬而未决50多年的循环双覆盖猜想完整证明，引发数学界广泛关注和审慎验证，标志着AI在纯数学前沿取得重大突破。",
-    "source": "IT之家",
-    "sourceUrl": "https://www.ithome.com/0/975/646.htm",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-12",
     "title": "3000亿宠物经济下，AI宠物博主赛道跑通了吗",
     "summary": "AI宠物博主成为赛博陪伴新风口：抖音账号仅14条视频积累17.8万粉丝近200万点赞，单平台点赞破千万粉丝超70万。变现模式包括品牌广告植入、橱窗带货和平台分账，治愈系强剧情系为主。",
     "source": "36氪",
     "sourceUrl": "https://36kr.com/p/3889005328333318",
     "category": "自媒体"
+  },
+  {
+    "date": "2026-07-12",
+    "title": "GPT-5.6 Sol Ultra一小时证明50年数学猜想",
+    "summary": "GPT-5.6 Sol Ultra在不到1小时内独立生成了图论领域悬而未决50多年的循环双覆盖猜想完整证明，引发数学界广泛关注和审慎验证，标志着AI在纯数学前沿取得重大突破。",
+    "source": "IT之家",
+    "sourceUrl": "https://www.ithome.com/0/975/646.htm",
+    "category": "AI"
   },
   {
     "date": "2026-07-11",
@@ -2745,30 +2929,6 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-10",
-    "title": "马斯克官宣Grok 4.5向公众开放",
-    "summary": "马斯克宣布SpaceX AI向公众开放Grok 4.5，Opus级别模型在速度Token效率和成本方面全面领先。此前SpaceX已收购Cursor估值600亿美元，Grok 4.5在金融法律编程等专业领域能力大幅增强。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202607083798646068.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-10",
-    "title": "霍尔木兹海峡通航量骤降几近停滞",
-    "summary": "美伊持续交火导致霍尔木兹海峡通航量几乎停滞，伊朗24小时内紧急运出超千万桶原油，卡塔尔暂停LNG产能恢复。油价回落WTI跌1.96%报72美元。韩国KOSPI自6月高点累跌22%进入技术性熊市。",
-    "source": "21世纪经济报道",
-    "sourceUrl": "https://fund.eastmoney.com/a/202607103800522873.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-10",
-    "title": "长征十号乙可回收火箭全球首飞",
-    "summary": "全球首个海上网系可回收火箭长征十号乙首飞成功，不同于SpaceX垂直腿回收方案采用了中国独创的海上网系回收技术。若后续成功将是全球第二个掌握大运力可回收火箭的国家，发射成本可降低40%以上。",
-    "source": "每日经济新闻",
-    "sourceUrl": "https://www.nbd.com.cn/articles/2026-07-09/4464900.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-10",
     "title": "量化指增躺赚时代终结",
     "summary": "2026上半年量化指增产品平均收益16.55%仍领跑但超额显著收窄。策略同质化、规模稀释Alpha、K型极端分化三重压力叠加。2024年规模逼近2万亿时沪深300指增超额首次转负-0.64%。",
     "source": "东方财富",
@@ -2785,67 +2945,11 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-10",
-    "title": "苹果拟将270亿参数大模型部署至iPhone",
-    "summary": "苹果正在洽谈AI公司PrismML，计划将270亿参数大模型压缩至可在iPhone 17 Pro本地运行，创移动端最大参数纪录。端侧AI推理的重大突破。",
-    "source": "网易",
-    "sourceUrl": "https://m.163.com/dy/article/L1E5F13D05198CJN.html",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-10",
-    "title": "美股芯片半导体深夜大涨纳指涨1.3%",
-    "summary": "美股芯片股领涨：美光涨4.5%闪迪涨7.6%Arm涨超9%AMD涨近6%，纳指涨1.3%收26206点。SK海力士ADR定价149美元较韩股溢价3.1%机构认购超7倍7月10日纳斯达克挂牌。Meta涨近5%Muse Spark 1.1定价仅为Anthropic四分之一。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202607103800536695.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-10",
     "title": "程序化交易新规落地量化成交量挤水分",
     "summary": "程序化交易新规正式执行：每秒300笔或单日2万笔认定为高频交易需差异化收费和重点监控。两市成交从3万亿骤降至2.5万亿一日蒸发约5100亿。真实成交或不足5000亿，量化原占成交30%-42%。",
     "source": "搜狐",
     "sourceUrl": "https://www.sohu.com/a/1048255858_121612634",
     "category": "量化"
-  },
-  {
-    "date": "2026-07-10",
-    "title": "短剧出海进入深耕期300余款中国App出海投流成本占收入60%-80%",
-    "summary": "证券时报深度分析短剧出海：300余款中国短剧App已投入海外市场2026年海外规模预计突破50亿美元。投流成本占收入60%-80%大量企业越火越亏，行业窗口期预估仅12-18个月。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/4010084.html",
-    "category": "自媒体"
-  },
-  {
-    "date": "2026-07-10",
-    "title": "灵晟超算持续性能超2EFLOPS全球登顶",
-    "summary": "国产全自主超算灵晟持续性能超2EFLOPS问鼎全球TOP500榜首，配备自研LX2 CPU，首创100%全液冷散热系统。标志着中国在超算领域实现从芯片到系统的全链路自主可控。",
-    "source": "新华财经",
-    "sourceUrl": "http://news.yunnan.cn/system/2026/07/10/034075996.shtml",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-10",
-    "title": "工业富联上半年净利预增93%-101%兆易创新预增1099%",
-    "summary": "工业富联AI服务器营收同比增超230%，兆易创新存储业务量价齐升。超220家A股公司发布中期业绩预告预喜占比近九成。长鑫科技科创板IPO申购日7月16日拟募资295亿元市场预期市值2-3万亿。",
-    "source": "新华财经",
-    "sourceUrl": "https://www.cnfin.com/zs-lb/detail/20260710/4438270_1.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-10",
-    "title": "士兰微发布国内首款ASIL-D车规预驱芯片",
-    "summary": "士兰微发布SZ9310三半桥低压电机栅极驱动芯片，国内首款同时取得ASIL-D最高功能安全认证与AEC-Q100 Grade 0车规认证的车身预驱芯片，适配EPS制动系统等功能安全关键部件。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/4009956.html",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-10",
-    "title": "人民日报定调AIGC创作须从数量规模型向质量效益型转变",
-    "summary": "人民日报7月10日刊文指出AI改变了创作流程增加了量的供给却未自动带来质的涌流。行业必须从数量规模型向质量效益型转变，在快与慢技与艺之间寻找健康共生关系。",
-    "source": "人民日报",
-    "sourceUrl": "http://ent-app.people.cn/n1/2026/0710/c1012-40757192.html",
-    "category": "自媒体"
   },
   {
     "date": "2026-07-10",
@@ -2857,27 +2961,27 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-10",
-    "title": "东微半导拟发债募资超14亿元，布局新一代功率管理控制芯片",
-    "summary": "东微半导拟发行可转债募资不超过14.36亿元，用于新一代功率管理控制芯片研发及产业化，布局SiC MOSFET（3300V至10kV）、GaN HEMT及以氧化镓为代表的第四代半导体技术。",
-    "source": "证券时报",
-    "sourceUrl": "https://stcn.com/article/detail/3995794.html",
-    "category": "科技"
+    "title": "霍尔木兹海峡通航量骤降几近停滞",
+    "summary": "美伊持续交火导致霍尔木兹海峡通航量几乎停滞，伊朗24小时内紧急运出超千万桶原油，卡塔尔暂停LNG产能恢复。油价回落WTI跌1.96%报72美元。韩国KOSPI自6月高点累跌22%进入技术性熊市。",
+    "source": "21世纪经济报道",
+    "sourceUrl": "https://fund.eastmoney.com/a/202607103800522873.html",
+    "category": "财经"
   },
   {
     "date": "2026-07-10",
-    "title": "MiniMax计划推出2.7万亿参数M3 Pro大模型",
-    "summary": "稀宇科技MiniMax计划推出内部代号M3 Pro的新一代大模型参数规模达2.7万亿，预计最早Q3发布并开源。此举将进一步加剧国产大模型竞争。",
-    "source": "IT之家",
-    "sourceUrl": "https://www.ithome.com/0/974/132.htm",
-    "category": "AI"
+    "title": "美股芯片半导体深夜大涨纳指涨1.3%",
+    "summary": "美股芯片股领涨：美光涨4.5%闪迪涨7.6%Arm涨超9%AMD涨近6%，纳指涨1.3%收26206点。SK海力士ADR定价149美元较韩股溢价3.1%机构认购超7倍7月10日纳斯达克挂牌。Meta涨近5%Muse Spark 1.1定价仅为Anthropic四分之一。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202607103800536695.html",
+    "category": "财经"
   },
   {
     "date": "2026-07-10",
-    "title": "DeepSeek智谱集体下场造芯",
-    "summary": "大模型公司自研AI芯片浪潮兴起。DeepSeek约一年前启动AI芯片项目瞄准大模型推理正在扩充芯片设计团队；智谱AI正在评估自研定制AI芯片可能性。核心驱动力是降低推理成本减少对英伟达依赖。",
-    "source": "36氪",
-    "sourceUrl": "https://www.36kr.com/p/3886547036437129",
-    "category": "AI"
+    "title": "工业富联上半年净利预增93%-101%兆易创新预增1099%",
+    "summary": "工业富联AI服务器营收同比增超230%，兆易创新存储业务量价齐升。超220家A股公司发布中期业绩预告预喜占比近九成。长鑫科技科创板IPO申购日7月16日拟募资295亿元市场预期市值2-3万亿。",
+    "source": "新华财经",
+    "sourceUrl": "https://www.cnfin.com/zs-lb/detail/20260710/4438270_1.html",
+    "category": "财经"
   },
   {
     "date": "2026-07-10",
@@ -2886,6 +2990,22 @@ window.NEWS_DATA = [
     "source": "新华财经",
     "sourceUrl": "https://stcn.com/article/detail/4010111.html",
     "category": "财经"
+  },
+  {
+    "date": "2026-07-10",
+    "title": "短剧出海进入深耕期300余款中国App出海投流成本占收入60%-80%",
+    "summary": "证券时报深度分析短剧出海：300余款中国短剧App已投入海外市场2026年海外规模预计突破50亿美元。投流成本占收入60%-80%大量企业越火越亏，行业窗口期预估仅12-18个月。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/4010084.html",
+    "category": "自媒体"
+  },
+  {
+    "date": "2026-07-10",
+    "title": "人民日报定调AIGC创作须从数量规模型向质量效益型转变",
+    "summary": "人民日报7月10日刊文指出AI改变了创作流程增加了量的供给却未自动带来质的涌流。行业必须从数量规模型向质量效益型转变，在快与慢技与艺之间寻找健康共生关系。",
+    "source": "人民日报",
+    "sourceUrl": "http://ent-app.people.cn/n1/2026/0710/c1012-40757192.html",
+    "category": "自媒体"
   },
   {
     "date": "2026-07-10",
@@ -2912,11 +3032,67 @@ window.NEWS_DATA = [
     "category": "自媒体"
   },
   {
-    "date": "2026-07-09",
-    "title": "高盛发布做多中国AI报告：AI公司市值与市场空间严重错配",
-    "summary": "高盛发布研报做多中国AI价值链，称中国AI公司市值与市场空间严重错配。花旗供应链调研确认Vera Rubin Ultra路线图及CPO技术进展。中国AI大模型周调用量连续六周增长达23.45万亿词元。",
+    "date": "2026-07-10",
+    "title": "长征十号乙可回收火箭全球首飞",
+    "summary": "全球首个海上网系可回收火箭长征十号乙首飞成功，不同于SpaceX垂直腿回收方案采用了中国独创的海上网系回收技术。若后续成功将是全球第二个掌握大运力可回收火箭的国家，发射成本可降低40%以上。",
+    "source": "每日经济新闻",
+    "sourceUrl": "https://www.nbd.com.cn/articles/2026-07-09/4464900.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-10",
+    "title": "灵晟超算持续性能超2EFLOPS全球登顶",
+    "summary": "国产全自主超算灵晟持续性能超2EFLOPS问鼎全球TOP500榜首，配备自研LX2 CPU，首创100%全液冷散热系统。标志着中国在超算领域实现从芯片到系统的全链路自主可控。",
+    "source": "新华财经",
+    "sourceUrl": "http://news.yunnan.cn/system/2026/07/10/034075996.shtml",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-10",
+    "title": "士兰微发布国内首款ASIL-D车规预驱芯片",
+    "summary": "士兰微发布SZ9310三半桥低压电机栅极驱动芯片，国内首款同时取得ASIL-D最高功能安全认证与AEC-Q100 Grade 0车规认证的车身预驱芯片，适配EPS制动系统等功能安全关键部件。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/4009956.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-10",
+    "title": "东微半导拟发债募资超14亿元，布局新一代功率管理控制芯片",
+    "summary": "东微半导拟发行可转债募资不超过14.36亿元，用于新一代功率管理控制芯片研发及产业化，布局SiC MOSFET（3300V至10kV）、GaN HEMT及以氧化镓为代表的第四代半导体技术。",
+    "source": "证券时报",
+    "sourceUrl": "https://stcn.com/article/detail/3995794.html",
+    "category": "科技"
+  },
+  {
+    "date": "2026-07-10",
+    "title": "马斯克官宣Grok 4.5向公众开放",
+    "summary": "马斯克宣布SpaceX AI向公众开放Grok 4.5，Opus级别模型在速度Token效率和成本方面全面领先。此前SpaceX已收购Cursor估值600亿美元，Grok 4.5在金融法律编程等专业领域能力大幅增强。",
     "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202607093800221775.html",
+    "sourceUrl": "https://finance.eastmoney.com/a/202607083798646068.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-10",
+    "title": "苹果拟将270亿参数大模型部署至iPhone",
+    "summary": "苹果正在洽谈AI公司PrismML，计划将270亿参数大模型压缩至可在iPhone 17 Pro本地运行，创移动端最大参数纪录。端侧AI推理的重大突破。",
+    "source": "网易",
+    "sourceUrl": "https://m.163.com/dy/article/L1E5F13D05198CJN.html",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-10",
+    "title": "MiniMax计划推出2.7万亿参数M3 Pro大模型",
+    "summary": "稀宇科技MiniMax计划推出内部代号M3 Pro的新一代大模型参数规模达2.7万亿，预计最早Q3发布并开源。此举将进一步加剧国产大模型竞争。",
+    "source": "IT之家",
+    "sourceUrl": "https://www.ithome.com/0/974/132.htm",
+    "category": "AI"
+  },
+  {
+    "date": "2026-07-10",
+    "title": "DeepSeek智谱集体下场造芯",
+    "summary": "大模型公司自研AI芯片浪潮兴起。DeepSeek约一年前启动AI芯片项目瞄准大模型推理正在扩充芯片设计团队；智谱AI正在评估自研定制AI芯片可能性。核心驱动力是降低推理成本减少对英伟达依赖。",
+    "source": "36氪",
+    "sourceUrl": "https://www.36kr.com/p/3886547036437129",
     "category": "AI"
   },
   {
@@ -2926,6 +3102,14 @@ window.NEWS_DATA = [
     "source": "知乎",
     "sourceUrl": "https://zhuanlan.zhihu.com/p/2058849372343907116",
     "category": "量化"
+  },
+  {
+    "date": "2026-07-09",
+    "title": "高盛发布做多中国AI报告：AI公司市值与市场空间严重错配",
+    "summary": "高盛发布研报做多中国AI价值链，称中国AI公司市值与市场空间严重错配。花旗供应链调研确认Vera Rubin Ultra路线图及CPO技术进展。中国AI大模型周调用量连续六周增长达23.45万亿词元。",
+    "source": "东方财富",
+    "sourceUrl": "https://finance.eastmoney.com/a/202607093800221775.html",
+    "category": "AI"
   },
   {
     "date": "2026-07-08",
@@ -2961,19 +3145,19 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-07",
-    "title": "沪指盘中失守4000点：结构性分化加剧，成交缩量至2.8万亿",
-    "summary": "沪指盘中失守4000点关口三大指数震荡下行，两市交投继续缩量。半导体和游戏板块逆势走强，三星官宣三季度DRAM涨价。机构认为科技行情产业趋势未终结，短期调整不改长期逻辑。",
-    "source": "长沙晚报",
-    "sourceUrl": "https://www.icswb.com/h/168/20260707/985855_m.html",
-    "category": "财经"
-  },
-  {
-    "date": "2026-07-07",
     "title": "7月机构调仓再平衡路线图：卖AI买白马？",
     "summary": "多家基金公司开启调仓再平衡，从单一科技主线转向配置多元化。卖AI买白马说法流传市场，但实际调仓方向为：减配高位AI应用端、加仓半导体存储光通信等硬科技、增配创新药新能源机器人等第二曲线。",
     "source": "21世纪经济报道",
     "sourceUrl": "https://m.21jingji.com/article/20260707/herald/d3fda762bfe52ef19c9fde1c36a83ac4_zaker.html",
     "category": "量化"
+  },
+  {
+    "date": "2026-07-07",
+    "title": "沪指盘中失守4000点：结构性分化加剧，成交缩量至2.8万亿",
+    "summary": "沪指盘中失守4000点关口三大指数震荡下行，两市交投继续缩量。半导体和游戏板块逆势走强，三星官宣三季度DRAM涨价。机构认为科技行情产业趋势未终结，短期调整不改长期逻辑。",
+    "source": "长沙晚报",
+    "sourceUrl": "https://www.icswb.com/h/168/20260707/985855_m.html",
+    "category": "财经"
   },
   {
     "date": "2026-07-06",
@@ -3009,14 +3193,6 @@ window.NEWS_DATA = [
   },
   {
     "date": "2026-07-04",
-    "title": "英伟达联合高校推出ENPIRE框架，AI编码智能体部署至实体机器人",
-    "summary": "英伟达联合高校推出ENPIRE框架将编码智能体部署至实体机器人实现高精度自主操作。博世互联世界大会共识制造业成AI最重要落地场景，物理AI面临交互数据短缺和虚拟与现实脱节等挑战。",
-    "source": "上海证券报",
-    "sourceUrl": "https://m.cnstock.com/commonDetail/737318",
-    "category": "AI"
-  },
-  {
-    "date": "2026-07-04",
     "title": "宇树科技科创板IPO注册生效：仅用104天冲击人形机器人第一股",
     "summary": "宇树科技科创板IPO注册生效仅用时104天，有望冲击A股人形机器人第一股。上半年三大交易所新增受理IPO申报242家同比增长37%，A股IPO市场活跃度明显回升。",
     "source": "证券时报",
@@ -3032,51 +3208,11 @@ window.NEWS_DATA = [
     "category": "自媒体"
   },
   {
-    "date": "2026-07-03",
-    "title": "AI会改变投资吗：百亿私募展望AI与量化融合新范式",
-    "summary": "多家百亿量化私募认为AI与量化融合进入范式重构阶段。AI开始重构因子挖掘组合构建交易风控全链路，聚宽投资来自AI方法论的新因子占比超70%。完全AI自主投研短期仍难落地，人机协同仍是最优模式。",
+    "date": "2026-07-04",
+    "title": "英伟达联合高校推出ENPIRE框架，AI编码智能体部署至实体机器人",
+    "summary": "英伟达联合高校推出ENPIRE框架将编码智能体部署至实体机器人实现高精度自主操作。博世互联世界大会共识制造业成AI最重要落地场景，物理AI面临交互数据短缺和虚拟与现实脱节等挑战。",
     "source": "上海证券报",
-    "sourceUrl": "https://www.forfunds.cn/platform/information/6a366f3eddf69f203e05b4d3",
-    "category": "量化"
-  },
-  {
-    "date": "2026-07-02",
-    "title": "量化超额持续分化：上半年指增平均超额仅3.1%",
-    "summary": "截至6月底1236只指数增强产品平均超额仅3.1%较2025年同期的14.2%骤降。中证1000指增超额从14.50%降至2.94%，行业共识超额中枢持续下行需靠AI研发算力储备人才梯队破局。",
-    "source": "上海证券报",
-    "sourceUrl": "https://www.stcn.com/article/detail/3968478.html",
-    "category": "量化"
-  },
-  {
-    "date": "2026-07-02",
-    "title": "6月全球AI格局重塑：技术主权实体落地成三大关键词",
-    "summary": "新华网总结6月全球AI三大趋势：格局重塑（ChatGPT份额跌破50%）、技术主权（美国限制模型出口多国加速自主）、实体落地（AI从数字走向制造业和机器人）。",
-    "source": "新华网",
-    "sourceUrl": "http://www.xinhuanet.com.cn/world/20260701/a7215e23c886416aabffbcef8e737e2b/c.html",
+    "sourceUrl": "https://m.cnstock.com/commonDetail/737318",
     "category": "AI"
-  },
-  {
-    "date": "2026-07-01",
-    "title": "量化私募压力测试：超额大幅收窄，守与变成行业主旋律",
-    "summary": "量化私募以科技为主角的K型分化行情进入压力测试模式。5月指增平均超额-0.98%，管理人坦言每天都在问要不要赌，坚守传统策略继续跑输加码科技又面临高位追涨风险。",
-    "source": "东方财富",
-    "sourceUrl": "https://finance.eastmoney.com/a/202607133802703395.html",
-    "category": "量化"
-  },
-  {
-    "date": "2026-07-01",
-    "title": "Wolfspeed发布第五代碳化硅MOSFET：比导通电阻再降41%",
-    "summary": "Wolfspeed发布第五代SiC MOSFET，1200V器件比导通电阻低至3.4 mΩ·cm²较上代降低41%支持200℃长期运行。卡位新能源汽车与AI双赛道，碳化硅进入成本优化与性能驱动并行阶段。",
-    "source": "电子产品世界",
-    "sourceUrl": "https://www.eepw.com.cn/article/202606/481929.htm",
-    "category": "科技"
-  },
-  {
-    "date": "2026-07-01",
-    "title": "AI脸生理性厌恶上热搜：精致模板遭用户反感，活人感成核心竞争力",
-    "summary": "AI公版脸千篇一律的高颅顶大眼窄鼻冷白皮引发用户结构性反感冲上微博热搜。品牌预算和流量从精致模板转向野生真实有活人感的原生内容。行业提出AI内容三原则：尊重人放大人成就人。",
-    "source": "光明网",
-    "sourceUrl": "https://m.gmw.cn/2026-06/01/content_38803124.htm",
-    "category": "自媒体"
   }
 ];

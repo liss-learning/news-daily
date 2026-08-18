@@ -1,2207 +1,340 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News Daily</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, Noto Sans SC, system-ui, sans-serif; background: #f1f5f9; color: #1e293b; padding: 20px; max-width: 860px; margin: 0 auto; }
-    h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
-    .sub { font-size: 13px; color: #64748b; margin-bottom: 16px; }
-    .stats { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; font-size: 13px; }
-    .cat-chip { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 500; }
-    .cat-chip-AI { background: #dbeafe; color: #1d4ed8; }
-    .cat-chip-quant { background: #e0e7ff; color: #4338ca; }
-    .cat-chip-finance { background: #cffafe; color: #0e7490; }
-    .cat-chip-tech { background: #e0f2fe; color: #0369a1; }
-    .cat-chip-media { background: #ede9fe; color: #6d28d9; }
-    .day { margin-bottom: 40px; }
-    .day-hdr { font-size: 14px; font-weight: 600; color: #334155; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-bottom: 14px; display: flex; align-items: baseline; gap: 8px; }
-    .day-count { font-size: 12px; color: #94a3b8; font-weight: 400; }
-    .today-badge { font-size: 10px; font-weight: 700; color: #2563eb; background: rgba(37,99,235,.08); padding: 2px 8px; border-radius: 4px; }
-    .cat-section { margin-bottom: 20px; }
-    .cat-section-hdr { font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 4px; margin-bottom: 8px; display: inline-block; }
-    .cat-section-count { font-size: 11px; opacity: 0.7; }
-    .card { background: #fff; border: 1px solid #e2e8f0; border-left: 3px solid #cbd5e1; border-radius: 0 4px 4px 0; padding: 13px 18px; margin-bottom: 7px; transition: border-color .15s; }
-    .card:hover { border-color: #94a3b8; }
-    .card-AI { border-left-color: #1d4ed8; }
-    .card-quant { border-left-color: #4338ca; }
-    .card-finance { border-left-color: #0e7490; }
-    .card-tech { border-left-color: #0369a1; }
-    .card-media { border-left-color: #6d28d9; }
-    .card-title { font-size: 15px; font-weight: 600; line-height: 1.5; margin-bottom: 5px; }
-    .card-summary { font-size: 13.5px; color: #475569; line-height: 1.6; margin-bottom: 6px; }
-    .card-meta { font-size: 12px; color: #94a3b8; display: flex; align-items: center; gap: 8px; }
-    .card-source { font-weight: 500; color: #64748b; }
-    .card-link { color: #64748b; text-decoration: none; margin-left: auto; }
-    .card-link:hover { color: #2563eb; }
-    @media (max-width: 600px) { body { padding: 12px; } h1 { font-size: 18px; } .card { padding: 10px 14px; } .card-title { font-size: 14px; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News Daily</title>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root { color-scheme: light; }
+body {
+  font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, Noto Sans SC, system-ui, sans-serif;
+  background: #f1f5f9; color: #1e293b; line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 900px; margin: 0 auto; padding: 20px 24px 60px; }
+
+/* Header */
+.header { margin-bottom: 24px; }
+.header-top { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+.title { font-size: 22px; font-weight: 700; color: #0f172a; }
+.live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #22c55e; animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+.live-label { font-size: 11px; font-weight: 600; color: #16a34a; text-transform: uppercase; letter-spacing: 0.5px; }
+.update-time { font-size: 12px; color: #94a3b8; margin-left: auto; }
+
+/* Stats */
+.stats-bar { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; color: #64748b; margin-bottom: 12px; }
+.stats-bar strong { color: #334155; }
+.cat-chip { display: inline-flex; align-items: center; gap: 3px; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; cursor: pointer; border: 1px solid transparent; transition: all .15s; }
+.cat-chip:hover { opacity: 0.8; }
+.cat-chip.sel { border-color: currentColor; }
+.cat-chip-AI { background: #dbeafe; color: #1d4ed8; }
+.cat-chip-quant { background: #e0e7ff; color: #4338ca; }
+.cat-chip-finance { background: #cffafe; color: #0e7490; }
+.cat-chip-tech { background: #e0f2fe; color: #0369a1; }
+.cat-chip-media { background: #ede9fe; color: #6d28d9; }
+.cat-chip-all { background: #f1f5f9; color: #475569; }
+
+/* Search & Filters */
+.controls { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
+.search-wrap { position: relative; flex: 1; min-width: 200px; max-width: 360px; }
+.search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 14px; pointer-events: none; }
+.search-input { width: 100%; padding: 7px 12px 7px 32px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 13px; background: #fff; outline: none; font-family: inherit; transition: border-color .15s; }
+.search-input:focus { border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
+.search-input::placeholder { color: #94a3b8; }
+.date-filter { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #64748b; }
+.date-filter input { width: 120px; padding: 6px 8px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 13px; font-family: inherit; background: #fff; outline: none; }
+.date-filter input:focus { border-color: #3b82f6; }
+.btn { padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer; border: 1px solid #cbd5e1; background: #fff; color: #475569; font-family: inherit; transition: all .15s; white-space: nowrap; }
+.btn:hover { border-color: #94a3b8; }
+.btn-accent { background: #2563eb; color: #fff; border-color: #2563eb; }
+.btn-accent:hover { background: #1d4ed8; }
+.clear-btn { font-size: 12px; color: #ef4444; cursor: pointer; border: none; background: none; display: none; }
+.clear-btn.visible { display: inline; }
+
+/* AI Summary */
+.ai-summary { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 24px; overflow: hidden; }
+.ai-summary-header { padding: 10px 16px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #475569; user-select: none; }
+.ai-summary-header:hover { background: #f8fafc; }
+.ai-summary-header .arrow { transition: transform .2s; font-size: 10px; }
+.ai-summary.open .ai-summary-header .arrow { transform: rotate(90deg); }
+.ai-summary-body { display: none; padding: 0 16px 16px; font-size: 13px; color: #475569; line-height: 1.8; }
+.ai-summary.open .ai-summary-body { display: block; }
+.ai-summary-body h4 { font-size: 13px; color: #334155; margin: 10px 0 4px; }
+.ai-summary-body ul { list-style: none; padding: 0; }
+.ai-summary-body li { padding: 2px 0; }
+.ai-summary-body li::before { content: "▸ "; color: #3b82f6; }
+
+/* Day */
+.day-group { margin-bottom: 32px; }
+.day-header { font-size: 14px; font-weight: 600; color: #334155; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-bottom: 12px; display: flex; align-items: baseline; gap: 8px; }
+.day-count { font-size: 12px; color: #94a3b8; font-weight: 400; }
+.today-badge { font-size: 10px; font-weight: 700; color: #2563eb; background: rgba(37,99,235,.08); padding: 2px 8px; border-radius: 4px; }
+
+/* Cat Section */
+.cat-section { margin-bottom: 18px; }
+.cat-section-hdr { font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 4px; margin-bottom: 6px; display: inline-block; }
+.cat-section-count { font-size: 11px; opacity: 0.7; }
+
+/* Card */
+.card { background: #fff; border: 1px solid #e2e8f0; border-left: 3px solid #cbd5e1; border-radius: 0 4px 4px 0; padding: 12px 16px; margin-bottom: 6px; transition: border-color .15s, box-shadow .15s; }
+.card:hover { border-color: #94a3b8; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card.hidden { display: none; }
+.card-AI { border-left-color: #1d4ed8; }
+.card-quant { border-left-color: #4338ca; }
+.card-finance { border-left-color: #0e7490; }
+.card-tech { border-left-color: #0369a1; }
+.card-media { border-left-color: #6d28d9; }
+.card-title { font-size: 14.5px; font-weight: 600; line-height: 1.5; margin-bottom: 4px; }
+.card-summary { font-size: 13px; color: #475569; line-height: 1.6; margin-bottom: 6px; }
+.card-meta { font-size: 11.5px; color: #94a3b8; display: flex; align-items: center; gap: 8px; }
+.card-source { font-weight: 500; color: #64748b; }
+.card-link { color: #64748b; text-decoration: none; margin-left: auto; font-size: 11.5px; }
+.card-link:hover { color: #2563eb; }
+
+/* Highlights */
+.highlight { background: #fef08a; border-radius: 2px; padding: 0 1px; }
+
+/* No results */
+.no-results { text-align: center; padding: 48px 24px; color: #94a3b8; font-size: 15px; display: none; }
+.no-results.visible { display: block; }
+
+/* Keyboard hint */
+.kbd-hint { font-size: 11px; color: #cbd5e1; margin-left: 8px; }
+
+@media (max-width: 600px) {
+  .container { padding: 12px 14px 40px; }
+  .title { font-size: 18px; }
+  .card { padding: 10px 14px; }
+  .card-title { font-size: 13.5px; }
+  .controls { flex-direction: column; align-items: stretch; }
+  .search-wrap { max-width: none; }
+}
+</style>
 </head>
 <body>
-  <h1>新闻日报</h1>
-  <div class="sub">多源采集 | 每日 8:30 自动更新</div>
-  <div class="stats">
-    共 <strong>335</strong> 条 覆盖 <strong>29</strong> 天 <span class="cat-chip cat-chip-tech">科技 139</span> <span class="cat-chip cat-chip-AI">AI 74</span> <span class="cat-chip cat-chip-media">自媒体 51</span> <span class="cat-chip cat-chip-finance">财经 38</span> <span class="cat-chip cat-chip-quant">量化 33</span>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-08-18 <span class="day-count">127 条</span> <span class="today-badge">Today</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">14 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">哈佛大学和麻省理工造出 83 亿个“AI 人”，模拟全球人类行为</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，由哈佛大学和麻省理工学院牵头，OpenAI 和谷歌 DeepMind 等机构参与的团队在本月推出了 MatrAIx 系统。该系统能够生成 83 亿个 AI 智能体，用于模拟全球人类行为。该项目利用 1,290 个维度对不同背景和生活方式的人群进行建模。这些 AI 智能体能够像真人一样填写问卷、和客服聊天、浏览网页、操作 App 等，测试结果一致性高达...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/065.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">一边造 AI 一边清垃圾，硅谷开始为失控内容买单</div>
-        <div class="card-summary">北京时间 8 月 18 日，据《纽约时报》报道，劣质 AI 垃圾内容已经泛滥成灾：谷歌搜索里到处是“胶水披萨”食谱，亚马逊商品页充斥着虚假传记，脸书信息流里满是“虾仁耶稣”的图片。硅谷公司开始清理 AI...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/058.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">Meta 专利探索智能眼镜未来：可识别人脸自动梳理、AI 提取精彩片段</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 404Media 昨日（8 月 17 日）发布博文，报道称 Meta 公司申请新专利，探索让智能眼镜借助内置人脸识别技术，识别视频画面中的人物及其与佩戴者的关系，并自动生成带人物标签的集锦片段。IT之家援引博文介绍，专利描述称系统可以标注画面中有哪些人、他们正在做什么，以及他们与佩戴者的关系。根据专利构想的 1...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/025.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">雷鸟全新 iO 系列官宣 8 月 21 日发布：定位首款“人类增强 AI 眼镜”</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，8 月 18 日，AR 品牌雷鸟创新（RayNeo）正式宣布，全新产品系列“雷鸟 iO 系列”即将亮相。其中，系列首款产品雷鸟 iO AI 眼镜将于 8 月 21 日 14:30 正式发布。在新品预热阶段，雷鸟品牌代言人蒋奇明携手李诞、柯洁、神奇阿宇等多位明星提前佩戴了雷鸟 iO AI 眼镜。“iO”名称来源于计算机领域中的 I/O（Input...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/016.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">Pimax 小派为 Dream Air SE 头显推出 ProFit 面罩，带来更大可视视场</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，小派科技 (Pimax) 本月 14 日为其 PCVR 头显 Dream Air SE 推出 ProFit 面罩。新面罩在提供更为舒适的长时间佩戴体验的同时拉近了眼睛和镜片的距离，从而明显扩大可视视场。ProFit 面罩采用泡沫密度更高的 Studioform 面料垫片，将压力分散在颧骨而非眉骨上，还具有更出色的遮光性能。新面罩并未改变画面渲染...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/006.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">Signal65 报告：高通骁龙 X2 Elite Extreme 芯片多核比 AMD Ryzen AI 9 465 快 83%</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，第三方机构 Signal65 今天（8 月 18 日）在 X 平台发布推文，指出在电池供电、平衡模式下，搭载高通骁龙 X2 Elite Extreme 芯片的笔记本的性能要优于英特尔酷睿 Ultra X9 388H 和 AMD Ryzen AI 9 465 处理器。该机构对比测试以下芯片：高通骁龙 X2 Elite Extreme X2E-96-100：拥有...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/989.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">苹果带摄像头的 AirPods 实机演示曝光，可实现环境视觉感知</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，根据 MacRumors 在 macOS Tahoe 26.7 RC 中发现的一段视频，证实苹果正在研发配备摄像头的 AirPods，而且这款产品似乎已经接近正式推出。IT之家注意到，在这段简短的演示视频中，一名男子拿起一本书，让 AirPods...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/919.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">Coinbase CEO锛氬姞瀵嗚揣甯佹垚AI閲戣瀺鐞嗘兂璐у竵</div>
-        <div class="card-summary">Coinbase CEO锛氬姞瀵嗚揣甯佹垚AI閲戣瀺鐞嗘兂璐у竵</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-08-17/doc-ininqtnt7118449.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">OpenAI 前高管：相信 AI 能治愈所有疾病，但光靠大模型远远不够</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，曾任 OpenAI 高管、同时也是生物医药初创公司 ChronicleBio 联合创始人的 Fidji Simo 表示，她相信人工智能最终能够治愈所有疾病，但仅仅让 AI 模型变得更加智能，并不足以实现这一目标。Simo 当地时间周一在 X...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/910.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">谷歌 1000 万美元入手破产廉航精神航空数据，用于产品与 AI 改进</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，彭博法律的报道指出，根据 8 月 14 日美国纽约南区破产法院发布的通知，Google（谷歌）以 1,000 万美元（IT之家注：现汇率约合 6,753.1 万元人民币）的价格收购了破产廉价航空公司 Spirit ...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/906.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">商务部等 9 部门发文活跃县域消费，大力支持新能源汽车、绿色智能产品、绿色建材等下乡</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，商务部会同国家发展改革委、财政部、人力资源社会保障部、自然资源部、农业农村部、文化和旅游部、市场监管总局、金融监管总局等部门，今日宣布联合印发《关于进一步激发下沉市场活力...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/901.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">消息称 Anthropic 年化营收飙升，7 月底已突破 650 亿美元</div>
-        <div class="card-summary">消息称Anthropic年化营收快速增长，截至7月底已突破650亿美元。在筹备IPO和Claude系列模型持续领先的背景下，Anthropic商业化进程加速。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/887.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">英伟达将为 OpenAI 俄亥俄州数据中心提供最高 1050 亿美元担保</div>
-        <div class="card-summary">英伟达将为OpenAI在俄亥俄州的数据中心项目提供最高1050亿美元担保，AI算力基础设施投资规模持续刷新纪录。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/890.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">GitHub 服务中断同一天，Cursor 推出内置代码托管平台 Origin</div>
-        <div class="card-summary">GitHub服务中断之际，AI编程工具Cursor推出内置代码托管平台Origin，AI编程工具生态竞争从编辑器延展到基础设施层。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/874.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
+<div class="container">
+  <div class="header">
+    <div class="header-top">
+      <h1 class="title">新闻日报</h1>
+      <span class="live-dot"></span>
+      <span class="live-label">LIVE</span>
+      <span class="update-time" id="updateTime"></span>
     </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">全球多家超级富豪家族办公室押注 SpaceX，合计持仓超 38 亿美元</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，来自美洲、欧洲和中东超高净值人士的家族办公室和投资机构，已经累计持有数十亿美元的 SpaceX 股票敞口，凸显出这些私人资本在争抢热门投资机会方面的强大实力。据彭博社根据 13F 监管文件整理的数据，凯悦酒店继承人 Nick Pritzker 旗下家族办公室截至 6 月底持有价值 18 亿美元（IT之家注：现汇率约合 121.56 亿元人民币）的 SpaceX...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/915.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">7 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">谷歌悄悄上架 Desktop Camera 文件扫描应用，为 Googlebook 上市铺路</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，谷歌现已在 Play 商店悄悄上架了 Desktop Camera 相机应用，相应应用主要为 Googlebook 设计，主要用于帮助相应笔记本调用摄像头进行二维码扫描和文档扫描。事实上，该应用也提前展示了 Googlebook 软件界面设计风格，可帮助用户了解相应产品设计思路，其整体操作逻辑与 Pixel Tablet 上的 Pixel Camera...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/988.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-finance">
-        <div class="card-title">捷途山海 L7 PLUS 激光雷达版 8 月 19 日上市，预计配备猎鹰 700 驾驶辅助系统</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，奇瑞汽车宣布旗下捷途山海 L7 PLUS 激光雷达版车型将于 8 月 19 日上市，该车预计将配备猎鹰 700 驾驶辅助系统，支持城市 / 高速全场景导航驾驶 NOA。作为参考，目前在售捷途山海 L7 PLUS 共有 10 款车型，售价区间为 11.99-16.59...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/929.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-finance">
-        <div class="card-title">鑱氱劍瀹囨爲绉戞妧IPO</div>
-        <div class="card-summary">鑱氱劍瀹囨爲绉戞妧IPO</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/zt_d/subject-1786068090" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-finance">
-        <div class="card-title">出过两次事故仍拍出 3465.5 万美元天价，迈凯伦 F1 GTR 创英国车辆拍卖纪录</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，Pink Floyd 乐队鼓手 Nick Mason 曾经拥有的一辆迈凯伦 F1 GTR 虽然经历过两次事故，但这并没有阻止它在上周末拍出创纪录的价格。最终落槌价为 3,465.5 万美元（IT之家注：现汇率约合 2.34 亿元人民币）</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/913.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-finance">
-        <div class="card-title">Groq 再出发：转型 Neocloud，以 35 亿美元估值完成 3.5 亿美元 A 轮融资</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，初创企业 Groq 去年 12 月与 NVIDIA（英伟达）签署了一份价值 200 亿美元的非独家技术许可协议，向芯片巨头提供 LPU 推理加速 ASIC 授权。Groq 此后从 AI 芯片开发者转型为新兴 AI 云服务供应商，也就是俗称的 "Neoclo...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/912.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-finance">
-        <div class="card-title">Mastercard 万事达银行卡全球支付网络短暂故障，澳大利亚受影响最严重</div>
-        <div class="card-summary">Mastercard万事达银行卡全球支付网络出现短暂故障，澳大利亚受影响最严重，全球支付系统稳定性再受考验。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/892.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-finance">
-        <div class="card-title">IT早报 0818：阿里出售游戏业务灵犀互娱；李书福辞任吉利汽车董事会主席；小米 SU7 系列 28.5 个月交付突破 50 万台</div>
-        <div class="card-summary">阿里出售游戏业务灵犀互娱；李书福辞任吉利汽车董事会主席；小米SU7系列28.5个月交付突破50万台；岚图邵明峰回应追光S撞脸小米YU7。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/891.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">98 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">Noctua：工程资源倾向散热与噪声，很可能长期延续无光设计</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，Noctua（猫头鹰）首席产品官 Jakob Dellinger 近日接受外媒 Club386 采访，表示该企业持续将工程研发资源注入散热、噪声、质量等决定 PC 散热的核心要素，尽可能减少对美学等次要因素的投资。这意味着 Noctua 的散热产品很可能会长期延续无光设计，不太可能拥有 RGB 灯效、大尺寸屏幕等“本职外”附加元素。Jakob...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/069.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">人均 557 万元，寒武纪 6.9 亿元“员工大红包”股权激励将解锁到账</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，寒武纪于 8 月 17 日晚间发布公告，公司首批解锁的股权激励股份将于 8 月 20 日正式上市流通，本次涉及股份数量 59.76 万股，面向 124 名核心员工。以 8 月 17 日寒武纪收盘价 1,156 元 / 股估算，以上股票价值近 6.9 亿元，人均账面收益超 557 万元。财报显示，寒武纪 2026 上半年归母净利润 23.11 亿元，同比增长...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/068.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">WordPress 扩展 User Profile Builder 曝 CVSS 9.8 分严重漏洞，官方发布 3.16.5 版本修复</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，安全公司 Wordfence 发文，透露 WordPress 扩展 User Profile Builder 存在一项重大漏洞，该漏洞编号为 CVE-2026-15826，CVSS 评分达到 9.8 分。IT之家参考通报获悉，Wordfence 于 7 月 14 日收到旗下安全研究人员提交的漏洞报告，并在次日完成验证。所有 3.16.4...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/067.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">安谋控股 Arm 推进战略转型：从芯片授权转向交付成品，成立 36 年首次自研芯片</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，安谋控股（Arm Holdings plc）首席财务官杰森 · 柴尔德（Jason Child）昨日（8 月 17 日）透露，公司正积极寻求收购机会，同时推进战略转型，从授权芯片设计转向自主制造并销售成品处理器。在接受科技媒体 The Information 采访时，柴尔德表示公司继续通过收购 DreamBig...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/066.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">全球第 3 家，代码显示 vivo 手机将支持谷歌安卓 AI 诈骗检测功能</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 Android Authority 昨日（8 月 17 日）发布博文，报道称继谷歌和三星之后，vivo 将成为第三家支持“诈骗检测”（Scam Detection）功能的手机厂商。IT之家注：诈骗检测是谷歌为安卓手机推出的一项由端侧人工智能（On-device AI）安全功能，在通话过程中在后台运行，利用 AI...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/063.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">我国建造的世界精度最高百米级射电望远镜完成核心结构安装</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，据央视新闻报道，今天（8 月 18 日），坐落于新疆昌吉州奇台县的 110 米口径射电望远镜项目，天线座架三层结构顺利完成合拢，标志着该项目主体结构进入最后建设阶段。这座在建的世界精度最高的射电望远镜，建成后可重点解决我国在深空探测等领域缺少超大口径天线装备的难题。随着最后一段钢结构精准对接、110...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/062.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">为满足 iPhone Ultra 等折叠屏需求，曝三星显示时隔 5 年重启 A7 OLED 工厂投资</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，韩媒“每日经济新闻”昨日（8 月 17 日）发布博文，报道称三星显示（Samsung Display）重启忠清南道牙山第 2 园区新厂（A7）投资，目标在 2028 年初完工。IT之家曾于 7 月报道，三星显示位于牙山 8.6G IT OLED 生产线 A6 已于上月启动量产，而伴随着折叠手机屏幕需求快速增长，三星显示于 2026 年 8 月 7...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/061.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">机械革命为 2026 款无界 14 笔记本新增“海棠粉”配色：Ultra 5-226V + 16G + 1T 售 5199 元（国补后 4419 元）</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，机械革命现已为旗下 2026 款无界 14 笔记本新增“海棠粉”配色，该配色号称是七夕特别主推款，整体规格为“Ultra 5-226V + 16GB RAM + 1TB SSD”，首发价 5199 元，部分地区国补后到手价低至 4419 元。京东机械革命无界 14 笔记本 5199 元直达链接该机采用航空级镁铝合金全金属机身，整机轻约 1.0kg，薄至...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/057.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">机器人自己开卡丁车，共生知行发布人形机器人赛车 Demo</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，共生知行（Symbiosis Robotics）昨日（8 月 17 日）发布双足人形机器人驾驶卡丁车 Demo，并同步上线官方网站。这是共生知行公司成立后首次系统展示其在双足人形机器人“全身智能”方向阶段性进展。该公司表示，赛车只是第一项公开测试，未来还将围绕移动操作、高精度视觉对准、接触式力控和长链条任务推出更多案例。共生知行公司官网列出了“直接感知 —...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/055.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">星曜 MF 28mm F2.8 流光银限定版相机镜头曝光：超薄设计、126 克重量</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，消息源 @独立摄影师联合会 现已曝光了星曜新品 MF 28mm F2.8 流光银限定版镜头，该镜头主打超薄设计，适配徕卡 M 卡口。该镜头采用 5 组 6 片结构，9 片光圈叶片，最近对焦距离 0.7 米，使用 25.5mm 滤镜接口，带有黄斑联动，凸出机身部分仅厚约 9.9mm，重约 126 克。IT之家随附官方海报如下：</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/054.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">黑暗奇幻动作游戏《致命躯壳 II》开启提前游玩，IGN 打出 8 分评价“相比前作更加成熟”</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，开发商 Cold Symmetry 与发行商 Playstack 宣布，黑暗奇幻动作游戏《致命躯壳 II（Mortal Shell II）》现已在 Steam 平台开启提前游玩。预购“虔诚版” (数字豪华版，定价 228 元) 的玩家目前可率先进行体验，预购普通版（198 元）的玩家则要等到 8 月 20 日游戏正式发售。IT之家附 Steam...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/053.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">消息称国际版小米 18 Ultra 取消发布，OPPO / vivo 收缩海外 Ultra 手机规划</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，消息源卡蒂基 · 辛格（Kartikey Singh）昨日（8 月 17 日）在 X 平台发布推文，指出小米公司可能不会在国际市场上推出小米 18 Ultra 机型。IT之家翻译推文内容如下：小米已取消 18 Ultra 项目，OPPO 和 vivo 品牌也决定不在国际市场上推出下一代 Ultra 机型。在国际市场上，三星 Ultra 可能是全球唯一仍采用...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/048.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">中汽协：7 月汽车出口 104.3 万辆，同比增长 81.3%</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，据中国汽车工业协会分析，2026 年 7 月，出口继续保持高速增长，月度出口量连续两个月超过 100 万辆，新能源汽车出口占比连续两个月超过 50%。IT之家注意到，2026 年 7 月，汽车出口 104.3 万辆，环比增长 0.6%，同比增长 81.3%。2026 年 1-7 月，汽车出口 614 万辆，同比增长 66.8%。2026 年 7 月，乘用车出口...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/047.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">中科宇航力巡一号“太空摆渡车”完成重要试验，明年一季度首飞</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，据央视新闻今日报道，由中科宇航自主研制的力巡一号上面级完成一系列动力系统试验，计划明年一季度首飞。上面级就像是一辆“太空摆渡车”，一般安装在火箭和它所运载的航天器之间。火箭把它们送入太空后，就要靠上面级来完成后续的卫星入轨的工作。2026 年 3 月，上面级 20kN 发动机完成边工况、变混合比及变冷却百分比拉偏边界试车考核，累计点火 18 次、累计点火时间...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/046.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">赛昉科技正式推出服务器级 RISC-V HPC CPU IP 昉 · 天枢-100</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，赛昉科技 (StarFive) 今日正式宣布推出 RISC-V HPC CPU 内核设计昉 · 天枢-100 (Dubhe-100)。该 IP 已被希奥端计算 (LECARC) 选为智能边缘服务器 CPU 的基础。赛昉表示，昉 · 天枢-100 专为 HPC（高性能计算）场景设计，旨在满足 AI...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/045.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">三星 Galaxy A08/A07s 手机曝光：联发科 Helio G99 芯片、水滴屏</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 91Mobile 昨日（8 月 17 日）发布博文，报道称在 Google Play Console 数据库中，挖掘发现 Galaxy A08 和 Galaxy A07s 两款三星手机踪迹。根据页面信息，三星 Galaxy A08 型号为 SM-A085F。根据信息显示，这款入门级手机将搭载联发科处理器（此前曝光信息为联发科 Helio G99...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/042.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">英国政府资助梅赛德斯-奔驰旗下 YASA，减少电动汽车电机稀土依赖</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，梅赛德斯-奔驰旗下牛津大学衍生企业 YASA 当地时间本月 10 日宣布，该公司获得英国政府 DRIVE35 零排放汽车技术创新计划拨款，将作为牵头方领导 Project...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/041.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">三星 Galaxy S26 FE 手机曝光：Exynos 2500 芯片，8GB 内存</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 YtechB 昨日（8 月 17 日）发布博文，报道称三星 Galaxy S26 FE（型号 SM-S741U）手机现身 Google Play Console 数据库，显示其搭载 Exynos 2500 芯片以及三星 Xclipse 950 GPU。页面信息显示，三星 Galaxy S26 FE 手机配备 8GB 内存，屏幕分辨率为 1080 x...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/039.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">【IT之家图赏】石头迷你洗烘一体机 Z1 Mini Pro 实拍：1.08 超高洗净比，2kg/1kg 洗烘旗舰</div>
-        <div class="card-summary">8 月 18 日，石头科技正式发布石头迷你洗烘一体机 Z1 Mini Pro，限时到手价 2999.7 元。作为主打母婴、贴身衣物洗护领域的“性能小钢炮”，其具备 2kg 洗涤与 1kg 烘干容量，小巧的机身内塞入了 1.08 洗净比、石头蓝氧慕斯洗 3.0 以及蓝氧 +UV 双重除菌等配置。IT之家现已拿到这款产品的云霜白版本，接下来为大家带来一组实拍图赏。在外观设计上，石头 Z1...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/038.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">思特威推出超星光级 1/2.8 英寸 CMOS 图像传感器，主打高清夜视全彩</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，近日，CMOS 图像传感器供应商思特威正式推出其 Star Light（SL）超星光级系列智能安防应用图像传感器新品 ——SC185SL。作为 1/2.8 英寸大靶面背照式图像传感器，SC185SL 基于思特威 SmartClarity-3 工艺技术打造，搭载 SFCPixel、Micro-Pillar...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/037.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">铭凡推出 8.47L MoDT 整机 139D7、895D7，支持双槽半高显卡</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，MINISFORUM（铭凡）今日宣布推出两款基于移动端处理器的紧凑型台式整机，即 139D7 和 895D7。139D7 基于英特尔酷睿 i9-13900HX、895D7 则基于 AMD 锐龙 9 8945HX。考虑到这两款处理器本就是桌面端产品的移动端 BGA 化移植版，139D7 和 895D7 甚至可被称为 "DToMoDT" 系统。139D7...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/033.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">格力技工学校近期启动首届招生：董明珠亲自当校长，入校即入企，毕业即适岗</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，据“格力文化”官方 8 月 17 日消息，近日，经珠海市人力资源和社会保障局批准，由格力电器创办的珠海市格力技工学校正式获得招生资格，招生代码为 9800242，将于近期正式启动首届招生。学校坐落于广东省珠海市香洲区香山路 3200 号，占地面积约 19.1 万平方米，建筑面积约 12.4...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/020.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">安卓 17 测试版再现线索，谷歌 Pixel 10 等手机将支持双击锁屏</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 Android Authority 昨日（8 月 17 日）发布博文，报道称谷歌计划为 Pixel 10 等手机，引入“轻触 2 次锁屏”功能。在很多第三方 ROM 以及国内几乎所有手机厂商系统中，都已整合“轻触 2 次锁屏”功能，用户不需要按下电源键，只需要双击主屏幕上的空白区域，系统随后关闭屏幕。该媒体通过挖掘 Android 17 QPR2...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/018.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">科乐美官宣：苹果 Apple Arcade 独占游戏《恶魔城：魂之魔导书》即将停服</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，Apple Arcade 独占游戏《恶魔城：魂之魔导书》（Castlevania: Grimoire of Souls）即将停止运营，开发商科乐美已经宣布，这款游戏很快将无法继续游玩。IT之家注意到，科乐美在社交媒体以及游戏官方网站发布公告称，《恶魔城：魂之魔导书》将于 8 月 20 日从苹果的游戏订阅服务 Apple Arcade...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/013.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">《影之刃零》PS5 版宣传片公布，支持自适应扳机、3D 音效、触觉反馈</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，索尼于今日上午 10:00（北京时间）为国产游戏《影之刃零》举办了一场专属 State of Play 发布会，带来首次公开的游戏演示、PlayStation 5 版的独特性能、朋克武侠世界如何呈现。发布会中，《影之刃零》创意监制甄子丹开场，制作人梁其伟讲述，带领玩家深入游戏的故事、世界与战斗系统，以及深度结合 PS5 和 DualSense...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/011.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">谷歌 Gboard 输入法酝酿快速插入功能：一键调取联系人 / 图片等 6 类内容</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 Android Authority 昨日（8 月 17 日）发布博文，报道称谷歌计划升级安卓版 Gboard 输入法，引入“快速插入”（Quick insert）工具。该媒体通过拆解 18.0.3.954559732-beta-arm64-v8a 测试版 Gboard...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/009.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">神舟推出 2026 款战神 T9 笔记本：i7-14700HX + RTX5070 售 8999 元</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，神舟现已在京东上架 2026 款战神 T9 笔记本，该机采用英特尔酷睿 i7-14700HX + 16GB RAM + 500GB SSD + RTX5070 规格，定价为 8999 元，将于 8 月 26 日开启预约。该机整体重量 2.45 千克，B 面配备一块 16 英寸 2560x1600 分辨率 180Hz IPS 面板（亮度 500 尼特，覆盖...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/001.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">三星 One UI 9 将原生支持设置 Motion Photos 为动态壁纸</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 SamMobile 昨日（8 月 17 日）发布博文，报道称在 One UI 9 更新中，三星计划原生支持将 Motion Photos 设置为壁纸。IT之家援引博文介绍，在适配机型方面，三星 Galaxy Z Fold8、Galaxy Z Fold8 Ultra 以及 Galaxy Z Flip8 三款折叠手机已出现相关选项。不过三星 Galaxy...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/000.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">国资持有充换电站 + 委托蔚来运营模式将全国推广，武汉率先全面落地</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，蔚来能源与光谷交通集团于上周在湖北武汉举办首批合作充换电站交付仪式暨光谷空轨换电站上线三周年活动，双方在武汉市合作共建运营的首批 36 座充换电站正式完成交付。蔚来表示，此次交付的充换电站是蔚来能源与光谷交通集团共同打造的产业合作样板，也是蔚来能源「国资合作方持有资产 +...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/999.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">汉王推出 6 英寸黑白墨水屏电纸书 N6 Pro：6.8mm 厚度 189g 重量、8192 级压感手写，2199 元</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，汉王现已推出 N6 Pro 黑白墨水屏电纸书，该机整体造型小巧，适合作为墨水屏笔记本使用，定价为 2199 元。京东汉王 N6Pro 电纸书 2199 元直达链接该电纸书提供晨曦金、摩卡棕两种配色，整体厚度 6.8mm，重量 189g，正面配备一块 6 英寸 1448x1072 分辨率黑白墨水屏面板，支持 8192 级压感手写。该机搭载“8 核心 2.2GHz...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/998.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">优派推出 Fast IPS 显示器 VX27G26-2K-10：27" QHD 超频 340Hz</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，ViewSonic（优派）近日带来了网咖电竞游戏显示器 VX27G26-2K-10。这一型号采用 27" Fast IPS 面板，拥有 2560×1440 分辨率，原生刷新率 320Hz 并超频至 340Hz。VX27G26-2K-10 最大亮度 450nits，静态对比度 1300:1；灰阶 (GtG) 响应时间 1ms；支持 8bit + FRC...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/996.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">石头迷你洗烘一体机 Z1 Mini Pro 体验：当第二台洗衣机成为有娃家庭的新刚需</div>
-        <div class="card-summary">8 月 18 日，石头迷你洗烘一体机 Z1 Mini Pro...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/995.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">伪造下单页面、诱导共享屏幕，总台揭秘免费探店、免费试吃诈骗链条</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，中央广播电视总台中国之声今日揭秘了免费探店、免费试吃诈骗链条。免费探店、免费试吃，是指商家提供免费餐食，消费者体验后发布图文笔记。然而这类推广模式正在被诈骗分子盯上，一些诈骗分子在社交平台发布“免费探店”“素人也可报名”等信息，以高额餐券、先付款后返还等方式，将消费者引向伪造的下单页面。除此之外，随着餐饮品牌与热门 IP...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/994.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">致态 Ti600s 固态硬盘发售：新一代 Xtacking 4.0 QLC，随机写入提升 114%</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，致态 (ZHITAI) 此前在 2023 年推出了基于 Xtacking 3.0 QLC NAND 闪存的 M.2 固态硬盘 Ti600。而在今日，致态宣布推出升级至 Xtacking 4.0 QLC 的 Ti600s。Ti600s 依旧采用 PCIe Gen4 ×4 接口，符合 NVMe 2.0 协议。其最高顺序读写速率从前代的 7000MB/s 与...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/981.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">海南文昌商业航天发射场 1、2 号工位实现常态化运营，卫星超级工厂进入试生产</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，据海南日报今日报道，8 月 17 日上午，海南省“开局起步‘十五五’”系列主题新闻发布会迎来市县层面第二场 —— 文昌市专场。面向未来五年，文昌将锚定航天强国使命，全力建设国际一流航天科技城，形成具有全球影响力的航天产业集群，加速实现“文昌造、文昌发”。文昌国际航天城管理局副局长袁世英表示，文昌着力提升发射制造能级，目前商业发射场 1、2...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/973.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">酷态科推出 CP 模块风扇 Plus“夹式延长线套装”：底座支持夹 / 立两用，109 元</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，酷态科宣布推出 CP 模块风扇 Plus“夹式延长线套装”，其中套装版定价为 109 元，延长线单体版定价为 49 元。据介绍，相应夹式延长线配备 Power-Pin 磁吸接口，可以快速连接 CP 模块风扇 Plus，为其进行 1 米距离的有线供电。同时延长线底座支持夹 / 立两用，支持 360° 旋转，线缆本身使用 48...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/972.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">零跑汽车登陆阿根廷市场，B10、C10 增程版打头阵</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，据零跑汽车官方消息，近日，零跑汽车携零跑 B10、零跑 C10 两款全球车型正式登陆阿根廷市场，进一步深化品牌在南美的市场布局。零跑汽车因地制宜，针对不同海外市场需求制定产品规划。本次阿根廷首发阵容包含零跑 B10 和零跑 C10 两款全球车型的增程版本。依托与 Stellantis...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/969.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">需求超预期：华硕 RTX Spark 笔记本 ProArt P16/P14 首批配额售罄</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 videocardz 昨日（8 月 17 日）发布博文，报道称在 2026 年第 2 季度财报电话会议上，华硕表示首批搭载英伟达 RTX Spark 的产品已被渠道合作伙伴订购一空。作为首批推出 RTX Spark 平台产品的厂商，华硕表示搭载 NVIDIA RTX Spark 的 ProArt P16 与 ProArt P14...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/952.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">Steam 开启 2026 年度“弹球、弹珠机与保龄球游戏节”促销活动，《BALL x PIT》6.6 折后 38.28 元等</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，Steam 平台现已开启 2026 年度“弹球、弹珠机与保龄球游戏节”活动，多款益智策略类游戏迎来折扣，活动将于北京时间 8 月 21 日凌晨 1 点结束，IT之家附游戏促销页（https://store.steampowered.com/category/pins_pegs）。《BALL x PIT》：原价 58 元，6.6 折后 38.28...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/946.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">Counterpoint：未来五年超 1.3 亿颗先进封装 AI 芯片出货，英特尔挑战台积电</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，市场研究机构 Counterpoint 今日发文，AI 加速器的出货量将大规模推动先进封装的需求：预计未来五年内，将有超过 1.3 亿颗 GPU / AI ASIC 芯片采用先进封装的片上计算内存，从而创造近 2 万亿美元（IT之家注：现汇率约合 13.51...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/924.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">华硕 GPU Tweak III 获 v2.1.8.0 稳定版更新，为兼容显卡带来自动安全关机</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，由华硕 (ASUS) 推出的 GPU Tweak III 是一款便捷的显卡超频、设定、监控工具应用程序。而在当地时间 17 日，该软件迎来了 v2.1.8.0 稳定版更新。新版本进一步围绕华硕部分高端显卡支持的功率侦测器 + (Power Detector+) 丰富功能，在此前 12+N Pin 12V...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/938.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">限量 1499 台，法拉利 12Cilindri Manuale 国内售价 888.8 万元</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，法拉利已公布 12Cilindri Manuale 限量特别版车型的中国市场定价，新车建议零售价为 888.8 万元。据IT之家了解，这款基于前置 V12 双座跑车 12Cilindri 打造的特别版本，最大技术革新在于搭载了品牌自主研发的 Manuale 线控手动换挡系统，在保留 8...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/925.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">泰坦军团推出“P2710R3”27 英寸显示器：2K 245Hz 超频，866 元</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，泰坦军团现已在京东上架“P2710R3”27 英寸显示器，该机主打 2K 245Hz，定价为 866 元。京东泰坦军团 P2710R3 显示器 866 元直达链接该机配备一块 2560x1440 分辨率 245Hz 超频（原生 200Hz）Fast IPS 面板，GtG 响应速度 1ms，静态对比度 1000:1，显示器提供 400 尼特亮度，支持...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/923.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">Supreme 公布 2026 秋冬产品阵容，24K 镀金 Analogue Pocket 掌机在列</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，时尚品牌 Supreme 近日公布了其 2026 年秋冬季产品阵容，其中“配件”部分包含多款科技硬件在内的一系列联名商品。Supreme 联名 Analogue Pocket 掌机拥有一体式铝合金机身，表面覆盖定制红色亮光涂层或 24K 镀金。其采用竖版设计，兼容 2780+ Game Boy 系列掌机游戏卡带，正反均压印有 Supreme...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/921.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">追觅推出 Micro Mist 5“精华灌注高速吹风机”，849 元</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，追觅宣布推出一款 Micro Mist 5“精华灌注高速吹风机”，首发价 849 元，部分地区国补后 798 元。这款机型最大亮点就是搭载 Micro...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/918.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">荣耀 Robot Phone 今日开售：行业首创钛合金灵巧云台，9999 元起</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，荣耀 Robot Phone 今日（8 月 18 日）10:08 正式开售，售价 9,999 元起。12GB RAM + 512GB 存储空间：9,999 元16GB RAM + 1TB 存储空间：12,999 元京东荣耀 Robot Phone9999 元直达链接IT之家附荣耀 Robot Phone 主要亮点如下：行业首创钛合金灵巧云台，4 自由度全新...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/917.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">鍒涘巻鍙茬邯褰曪紒鏆存定瓒�595%锛佷腑涓�绛剧媯璧氶��55涓囧厓锛佹渶璐垫柊鑲℃潵浜�</div>
-        <div class="card-summary">鍒涘巻鍙茬邯褰曪紒鏆存定瓒�595%锛佷腑涓�绛剧媯璧氶��55涓囧厓锛佹渶璐垫柊鑲℃潵浜�</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608183844097947.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">1鈥�7鏈堜唤鍥芥皯缁忔祹淇濇寔鎬讳綋骞崇ǔ銆佸悜鏂板悜浼樺彂灞曟�佸娍</div>
-        <div class="card-summary">1鈥�7鏈堜唤鍥芥皯缁忔祹淇濇寔鎬讳綋骞崇ǔ銆佸悜鏂板悜浼樺彂灞曟�佸娍</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608173843114783.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">8鏈�17鏃ユ櫄闂存勃娣变笂甯傚叕鍙搁噸澶т簨椤瑰叕鍛婃渶鏂板揩閫�</div>
-        <div class="card-summary">8鏈�17鏃ユ櫄闂存勃娣变笂甯傚叕鍙搁噸澶т簨椤瑰叕鍛婃渶鏂板揩閫�</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608173843383132.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">20%鐩寸嚎璺屽仠锛佸鍥村埄绌虹獊琚紒鍒涙柊鑽澘鍧楀彂鐢熶簡浠�涔堬紵</div>
-        <div class="card-summary">20%鐩寸嚎璺屽仠锛佸鍥村埄绌虹獊琚紒鍒涙柊鑽澘鍧楀彂鐢熶簡浠�涔堬紵</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608183844371432.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">鍒涗笟鏉挎寚娑ㄩ��3% 绉戝垱50鎸囨暟娑ㄨ秴4% 閫�4300鍙偂椋樼孩</div>
-        <div class="card-summary">鍒涗笟鏉挎寚娑ㄩ��3% 绉戝垱50鎸囨暟娑ㄨ秴4% 閫�4300鍙偂椋樼孩</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608173843115045.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">涓嶈浜嗭紒鐗规湕鏅斂搴滄柦鍘嬭嫻鏋滀笉瑕佷拱涓浗瀛樺偍鑺墖 缇庡晢鍔￠儴闀匡細宸茬洿鐧藉憡鐭ヨ嫻鏋滐紒</div>
-        <div class="card-summary">涓嶈浜嗭紒鐗规湕鏅斂搴滄柦鍘嬭嫻鏋滀笉瑕佷拱涓浗瀛樺偍鑺墖 缇庡晢鍔￠儴闀匡細宸茬洿鐧藉憡鐭ヨ嫻鏋滐紒</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608183844399752.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">鍔犵爜澧炲偍涓婁骇锛佹补姘斺�滃崄浜斾簲鈥濊鍒掕惤鍦� 铻嶈祫瀹㈣秴浜垮厓鎶㈢杩�3鑲�(鍚嶅崟)</div>
-        <div class="card-summary">鍔犵爜澧炲偍涓婁骇锛佹补姘斺�滃崄浜斾簲鈥濊鍒掕惤鍦� 铻嶈祫瀹㈣秴浜垮厓鎶㈢杩�3鑲�(鍚嶅崟)</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608183843833796.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">鐗规湕鏅О涓嶅姹傚欢闀夸笌浼婃湕鐨勮皡瑙ｅ蹇樺綍</div>
-        <div class="card-summary">鐗规湕鏅О涓嶅姹傚欢闀夸笌浼婃湕鐨勮皡瑙ｅ蹇樺綍</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608183843641234.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">5涓囦嚎鏂板瀷鐢电綉 濡備綍鎾戣捣鈥滅畻鍔�+缁跨數鈥濇柊鏈潵锛�</div>
-        <div class="card-summary">5涓囦嚎鏂板瀷鐢电綉 濡備綍鎾戣捣鈥滅畻鍔�+缁跨數鈥濇柊鏈潵锛�</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608173843571138.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">閲嶄及瀹囨爲绉戞妧锛�8鏈�19鏃ョ櫥闄嗙鍒涙澘 甯傚�兼湁鏈涘啿鍑�2000浜垮厓锛�</div>
-        <div class="card-summary">閲嶄及瀹囨爲绉戞妧锛�8鏈�19鏃ョ櫥闄嗙鍒涙澘 甯傚�兼湁鏈涘啿鍑�2000浜垮厓锛�</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608183843835426.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">绉佸嫙绌剁珶鏄皝鍦ㄦ姇锛� 鏈夐挶浜烘槸濡備綍鍋氭姇璧勭殑锛焲 瀵硅瘽鐧句嚎绉佸嫙鎬荤粡鐞嗚澶嶆姇璧勯【鐜嬬惔</div>
-        <div class="card-summary">绉佸嫙绌剁珶鏄皝鍦ㄦ姇锛� 鏈夐挶浜烘槸濡備綍鍋氭姇璧勭殑锛焲 瀵硅瘽鐧句嚎绉佸嫙鎬荤粡鐞嗚澶嶆姇璧勯【鐜嬬惔</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202607023792170473.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">鍛婂埆绠楀姏鍐呭嵎锛欰I鍩哄缓鐙傛疆涓嬶紝閾溿�侀摑銆佺█鍦熺殑涓嬩竴绔欏湪鍝紵</div>
-        <div class="card-summary">鍛婂埆绠楀姏鍐呭嵎锛欰I鍩哄缓鐙傛疆涓嬶紝閾溿�侀摑銆佺█鍦熺殑涓嬩竴绔欏湪鍝紵</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202606113768272213.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">涓俊璇佸埜锛氶摱琛屾澘鍧楀熀鏈潰棰勬湡绋冲畾锛岄璁″叏骞寸粷瀵规敹鐩婄┖闂翠粛灏嗗欢缁�</div>
-        <div class="card-summary">涓俊璇佸埜锛氶摱琛屾澘鍧楀熀鏈潰棰勬湡绋冲畾锛岄璁″叏骞寸粷瀵规敹鐩婄┖闂翠粛灏嗗欢缁�</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608183843879876.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">鍗庢嘲璇佸埜锛氭柊椋熷搧鍘熸枡浠庘�滄蹇甸獙璇佲�濊蛋鍚戔�滀骇涓氭浛浠ｂ��</div>
-        <div class="card-summary">鍗庢嘲璇佸埜锛氭柊椋熷搧鍘熸枡浠庘�滄蹇甸獙璇佲�濊蛋鍚戔�滀骇涓氭浛浠ｂ��</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608183843833835.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">鍗庢嘲璇佸埜锛�3D鎵撳嵃寤剁画楂樺 PLA杩庢柊鏈洪亣</div>
-        <div class="card-summary">鍗庢嘲璇佸埜锛�3D鎵撳嵃寤剁画楂樺 PLA杩庢柊鏈洪亣</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608183843827584.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">涓俊寤烘姇锛氫骇涓氶摼鍗忓悓涓庡浗鍐呭闇�姹傚叡鎸� 鏃犱汉鐭垮崱杩涘叆瑙勬ā鍖栧彂灞曢樁娈�</div>
-        <div class="card-summary">涓俊寤烘姇锛氫骇涓氶摼鍗忓悓涓庡浗鍐呭闇�姹傚叡鎸� 鏃犱汉鐭垮崱杩涘叆瑙勬ā鍖栧彂灞曢樁娈�</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608183843715992.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">涓俊寤烘姇锛氬師濂跺懆鏈熷弽杞俊鍙锋樉鐜� 涓婁笅娓稿叡杩庣粡钀ヤ慨澶嶇獥鍙�</div>
-        <div class="card-summary">涓俊寤烘姇锛氬師濂跺懆鏈熷弽杞俊鍙锋樉鐜� 涓婁笅娓稿叡杩庣粡钀ヤ慨澶嶇獥鍙�</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608183843665470.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">涓嶈浜嗭紒鐗规湕鏅斂搴滄柦鍘嬭嫻鏋滀笉瑕佷拱涓浗瀛樺偍鑺墖 缇庡晢鍔￠儴闀匡細宸茬洿鐧藉憡鐭ヨ嫻鏋滐紒</div>
-        <div class="card-summary">涓嶈浜嗭紒鐗规湕鏅斂搴滄柦鍘嬭嫻鏋滀笉瑕佷拱涓浗瀛樺偍鑺墖 缇庡晢鍔￠儴闀匡細宸茬洿鐧藉憡鐭ヨ嫻鏋滐紒</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608183844399752.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">鍒涘巻鍙茬邯褰曪紒鏆存定瓒�595%锛佷腑涓�绛剧媯璧氶��55涓囧厓锛佹渶璐垫柊鑲℃潵浜�</div>
-        <div class="card-summary">鍒涘巻鍙茬邯褰曪紒鏆存定瓒�595%锛佷腑涓�绛剧媯璧氶��55涓囧厓锛佹渶璐垫柊鑲℃潵浜�</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608183844097947.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">20%鐩寸嚎璺屽仠锛佸鍥村埄绌虹獊琚紒鍒涙柊鑽澘鍧楀彂鐢熶簡浠�涔堬紵</div>
-        <div class="card-summary">20%鐩寸嚎璺屽仠锛佸鍥村埄绌虹獊琚紒鍒涙柊鑽澘鍧楀彂鐢熶簡浠�涔堬紵</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608183844371432.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">鍏ㄧ悆瓒�6浜夸汉鎸ㄩタ锛佺伯椋熸蹇垫寔缁媺鍗� 榫欏ご鏈堝唴娑ㄨ繎40%</div>
-        <div class="card-summary">鍏ㄧ悆瓒�6浜夸汉鎸ㄩタ锛佺伯椋熸蹇垫寔缁媺鍗� 榫欏ご鏈堝唴娑ㄨ繎40%</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608183844373580.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">鈥滅尓浠疯繛娑�+浜ц兘鍘诲寲鈥濆弻鍌寲 鐚倝姒傚康寮哄娍鍙嶅脊锛佽瀺璧勫鎻愬墠甯冨眬澶氳偂(鍚嶅崟)</div>
-        <div class="card-summary">鈥滅尓浠疯繛娑�+浜ц兘鍘诲寲鈥濆弻鍌寲 鐚倝姒傚康寮哄娍鍙嶅脊锛佽瀺璧勫鎻愬墠甯冨眬澶氳偂(鍚嶅崟)</div>
-        <div class="card-meta"><span class="card-source">东方财富</span> <a class="card-link" href="https://finance.eastmoney.com/a/202608183844373623.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">姹嘲鍥炲簲涓�鍒�</div>
-        <div class="card-summary">姹嘲鍥炲簲涓�鍒�</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/zt_d/subject-1785922927" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">閲戦簰楹熼噾鐗岃懀绉樻彮鏅�</div>
-        <div class="card-summary">閲戦簰楹熼噾鐗岃懀绉樻彮鏅�</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/zt_d/subject-1785723876" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">閲戜环鍙嶆敾4400缇庡厓 涓婅鍛ㄦ湡杩樻湁澶氳繙锛�</div>
-        <div class="card-summary">閲戜环鍙嶆敾4400缇庡厓 涓婅鍛ㄦ湡杩樻湁澶氳繙锛�</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/roll/2026-08-18/doc-ininsscw8744241.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">澶氭櫠纭呬环鏍煎弽寮� 鍏変紡浜т笟閾炬櫙姘斿害鎶崌</div>
-        <div class="card-summary">澶氭櫠纭呬环鏍煎弽寮� 鍏変紡浜т笟閾炬櫙姘斿害鎶崌</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/jjxw/2026-08-18/doc-ininsfqa8874113.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">鍘熸补闇�姹傜殑浠锋牸鏁忔劅鎬у帇鍒朵簡鍦扮紭椋庨櫓婧环</div>
-        <div class="card-summary">鍘熸补闇�姹傜殑浠锋牸鏁忔劅鎬у帇鍒朵簡鍦扮紭椋庨櫓婧环</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/money/future/fmnews/2026-08-18/doc-ininssee3560349.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">娌ラ潚鏃ュ唴涓婅寮哄娍锛屽仛缂╅珮浣庣～浠峰樊姝㈢泩绂诲満</div>
-        <div class="card-summary">娌ラ潚鏃ュ唴涓婅寮哄娍锛屽仛缂╅珮浣庣～浠峰樊姝㈢泩绂诲満</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/money/future/fmnews/2026-08-18/doc-ininsseh0328236.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">浼婃湕瀹樺憳锛氬喅瀹氣�滀粠闃插尽鎬ц浆鍚戝叏闈㈣繘鏀绘�р��</div>
-        <div class="card-summary">浼婃湕瀹樺憳锛氬喅瀹氣�滀粠闃插尽鎬ц浆鍚戝叏闈㈣繘鏀绘�р��</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/jjxw/2026-08-18/doc-ininsscw8728787.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">A鑲′腑鏈熷垎绾㈢儹搴︽攢鍗� 鐪熼噾鐧介摱鍥為鎶曡祫鑰�</div>
-        <div class="card-summary">A鑲′腑鏈熷垎绾㈢儹搴︽攢鍗� 鐪熼噾鐧介摱鍥為鎶曡祫鑰�</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/money/gzqh/futuresyspzx/2026-08-18/doc-ininssee3539584.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">涓嬭浇鏂版氮璐㈢粡App,闅忔椂闅忓湴鐪嬬獊鍙戞柊闂�</div>
-        <div class="card-summary">涓嬭浇鏂版氮璐㈢粡App,闅忔椂闅忓湴鐪嬬獊鍙戞柊闂�</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/desktopapp/download/index.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">缇庝互浼婃渶鏂板眬鍔匡細缇庝紛灏氭湭杈炬垚鍏辫瘑</div>
-        <div class="card-summary">缇庝互浼婃渶鏂板眬鍔匡細缇庝紛灏氭湭杈炬垚鍏辫瘑</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/roll/2026-08-18/doc-ininsscz7463810.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">鐗规湕鏅嫆缁濆欢闀跨編浼婂仠鐏崗璁� 璀﹀憡闃挎浖鍒�滄尅璺�濆惁鍒欏皢閬桨鐐�</div>
-        <div class="card-summary">鐗规湕鏅嫆缁濆欢闀跨編浼婂仠鐏崗璁� 璀﹀憡闃挎浖鍒�滄尅璺�濆惁鍒欏皢閬桨鐐�</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/roll/2026-08-18/doc-ininsscz7466645.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">娣辨垚鎸囧垱鎸囪穼瓒�1% 鍐滀笟鏉垮潡閫嗗娍鐖嗗彂</div>
-        <div class="card-summary">娣辨垚鎸囧垱鎸囪穼瓒�1% 鍐滀笟鏉垮潡閫嗗娍鐖嗗彂</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/zt_d/subject-1787013698/" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">閲嶅ぇ杞悜锛屽崕灏旇浼犲鎶曡祫澶т酣閲嶈繑涓鑲�</div>
-        <div class="card-summary">閲嶅ぇ杞悜锛屽崕灏旇浼犲鎶曡祫澶т酣閲嶈繑涓鑲�</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/stock/s/2026-08-18/doc-ininsscw8739112.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">PCB浜т笟閾惧崐骞存姤浜溂</div>
-        <div class="card-summary">PCB浜т笟閾惧崐骞存姤浜溂</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/stock/hyyj/2026-08-18/doc-ininsfqa8883950.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">瀛樺偍涓庨�昏緫鑺墖杩唬鍗囩骇 CMP甯傚満杩庢潵椋庡彛</div>
-        <div class="card-summary">瀛樺偍涓庨�昏緫鑺墖杩唬鍗囩骇 CMP甯傚満杩庢潵椋庡彛</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/roll/2026-08-18/doc-ininsfpx9865589.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">瀹囨爲绉戞妧灏嗕簬8鏈�19鏃ョ鍒涙澘涓婂競</div>
-        <div class="card-summary">瀹囨爲绉戞妧灏嗕簬8鏈�19鏃ョ鍒涙澘涓婂競</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/jjxw/2026-08-18/doc-ininsfpx9860006.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">瀹囨爲绉戞妧鍙戝竷瓒呬汉:绐佺牬鍏ㄤ汉绫绘瀬闄� 0.85绫宠吙闀� 鍙師鍦拌烦楂�2绫�</div>
-        <div class="card-summary">瀹囨爲绉戞妧鍙戝竷瓒呬汉:绐佺牬鍏ㄤ汉绫绘瀬闄� 0.85绫宠吙闀� 鍙師鍦拌烦楂�2绫�</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/stock/t/2026-08-17/doc-ininruym7705438.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">鐗规湕鏅О閲戞鎭╁洖搴斿叾瀵硅瘽璇锋眰</div>
-        <div class="card-summary">鐗规湕鏅О閲戞鎭╁洖搴斿叾瀵硅瘽璇锋眰</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/jjxw/2026-08-18/doc-ininsmvx6526222.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">缁忔祹鏃ユ姤锛氱ǔ甯傜粍鍚堟嫵淇冭偂甯傚仴搴峰彂灞�</div>
-        <div class="card-summary">缁忔祹鏃ユ姤锛氱ǔ甯傜粍鍚堟嫵淇冭偂甯傚仴搴峰彂灞�</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://finance.sina.com.cn/jjxw/2026-08-18/doc-ininssee3538836.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">龙芯回应处理器漏洞：影响部分型号的龙芯 3 号系列 CPU，已推送安全修复补丁</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，龙芯中科 8 月 17 日发布关于 USENIX Security 2026 会议论文中龙芯相关安全漏洞的说明。经技术核查确认，龙芯中科部分型号的龙芯 3 号系列 CPU 在特定运行条件下存在中低风险侧信道数据泄露隐患。当应用程序调用向量指...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/914.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">代码显示谷歌正为 Pixel 系列手机开发“Connectivity Health”网络诊断功能，可帮助用户快速排错</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，外媒 Android Authority 在检查安卓系统代码时，发现谷歌正计划为 Pixel 手机引入一项名为“Connectivity Health”的网络诊断功能，如果用户发现连不上网络，则可以使用相应功能尝试排错。外媒设法在系统上启用...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/911.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">全球在建加在运总装机容量最大核电基地：田湾核电 7 号机组装料完成，进入带核调试阶段</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，据央视新闻今日报道，随着堆芯装载正确性核查完成、保护管组件回装工作开始，位于江苏连云港的田湾核电 7 号机组首次核燃料装载工作圆满结束，进入带核调试阶段，为机组后续反应堆临界、并网发电、商运等奠定了坚实的基础。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/908.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">我国三结太阳电池研究取得新进展：实现 32.22% 光电转换效率，成果登《自然》</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，据东南大学微信公众号消息，近日，东南大学化学化工学院姚惠峰教授团队与天合光能、复旦大学等单位合作，在钙钛矿 / 钙钛矿 / 晶体硅三结太阳电池研究方面取得重要进展。相关成果以“三结太阳电池的缺陷钝化与光学管理（Defect passivation and optical management of triple-...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/905.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">阿维塔向华为员工已累计交付超 5000 台新车</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，“华为员工首批阿维塔 07L 交付暨 5,000 台交付仪式”于 8 月 16 日在广东东莞华为松山湖园区举行。阿维塔科技副总裁王金海、华为智能汽车解决方案 BU Marketing 与销售服务部副总裁张守卫等出席仪式，共同为华为员工交付新车。截至目前，阿维塔向华为员工已累计交付超 5,000...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/904.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">美国在建 60 座大型数据中心年碳排放量将超亿吨，跟 2400 万辆燃油车相当</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，据《金融时报》报道，一项针对亚马逊、谷歌、Meta 和微软目前正在美国建设的 60 座大型数据中心的最新分析显示，这些数据中心全部投入运营后，每年累计可能产生约 1.015 亿吨二氧化碳排放量，相当于 2025 年美国电力行业全年排放量的约 7%。换个更直观的说法，这相当于运行 27 座燃煤电厂，或者让美国道路上再增加 2,400...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/903.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">微软 Win11 预览版已移除拖拽托盘和 WMIC 功能</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 Windows Central 今天（8 月 18 日）发布博文，报道称在 Windows 11 Build 26220.9202 (25H2) 和 28020.2731 (26H1) 预览版中，已移除拖拽托盘（Drag Tray）和 WMIC 功能。IT之家注：拖放托盘是 Windows 11 文件资源管理器中的一种文件共享方式。该功能已测试超过...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/902.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">荣耀平板 20 Pro 柔光版海外上线，搭载高通骁龙 8s Gen 4</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，荣耀 (HONOR) 现已在其马来西亚等地官网上线荣耀平板 20 Pro 柔光版 (HONOR Pad 20 Pro Paperlike Edition)。此型号可视为荣耀平板 20 的换芯升级版。这款平板电脑运行基于 Android 16 的 MagicOS 10，搭载高通骁龙 8s Gen 4 移动平台，配备 8GB 内存和 256GB 存储（支持 8GB...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/900.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">消息称特斯拉筹备推出 Cybercab 自动驾驶出租车服务，最快本月在奥斯汀上线</div>
-        <div class="card-summary">消息称特斯拉正筹备推出Cybercab自动驾驶出租车服务，最快本月在奥斯汀上线，完全自动驾驶商业化落地进入倒计时。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/899.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">开源多媒体框架 FFmpeg 优化 H.265/HEVC 视频编码能力，实现性能基本追平 H.264</div>
-        <div class="card-summary">开源多媒体框架FFmpeg优化H.265/HEVC视频编码能力，实现性能基本追平H.264，视频编码技术迎来重要里程碑。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/889.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">苹果 iOS 27 改善跨平台互联，iPhone 17 等可直接回复安卓绿色气泡信息</div>
-        <div class="card-summary">苹果iOS 27改善跨平台互联体验，iPhone 17等设备可直接回复安卓绿色气泡信息，iOS与安卓互通迈出重要一步。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/877.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">7 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">微软承认 Microsoft Defender 存在零日漏洞 ShieldBreak，目前正进行修复</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，安全研究人员 Nightmare Eclipse 在 8 月 13 日发文，透露微软 Microsoft Defender 存在一项名为 ShieldBreak 的零日漏洞，该漏洞源于微软此前修复 RoguePlanet 漏洞（CVE-2026-50656）时修补不完整，可令任意 Windows 账户获得 SYSTEM...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/060.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">国产游戏《影之刃零》确认索尼 PS5 独占主机平台一年，微软 Xbox 版还得等</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，索尼于今日上午 10:00（北京时间）为国产游戏《影之刃零》举办了一场专属 State of Play 发布会，带来首次公开的游戏演示、PS5 版的独特性能、朋克武侠世界如何呈现。在直播最后，一行小字显示《影之刃零》在游戏发布日期后至少 12 个月内，不会在其他主机上推出。这也就意味着，《影之刃零》会在 PS5 平台主机独占一年（不影响 PC...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/056.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">初探微软 Win11 新版右键菜单定制选项，支持 8 项动作开关</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 Windows Central 昨日（8 月 17 日）发布博文，分享了 Windows 11 新版右键菜单的“自定义菜单”（Customize menu）使用体验。用户需要预设相关操作，首次点击“自定义菜单”后会跳转到 Windows 设置应用，调整右键菜单显示的动作与布局。该媒体指出目前微软官方支持用户定制以下操作：Send...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/936.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">外媒盘点微软 Win11 五年演变：切换任务栏位置，加速整合 AI 功能等</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 Windows Central 昨日（8 月 17 日）发布博文，对比了 Windows 11 发布约 5 年间的前后变化差异。IT之家注：微软于 2021 年 6 月 24 日首次公开展示 Windows 11 系统，首个正式版（21H2）于 2021 年 10 月 5 日发布。过去 5...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/920.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">微软 Win11 效率神器 PowerToys 更新 0.101.2282 预览版：优化资源占用</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 NeoWin 昨日（8 月 17 日）发布博文，报道称微软 PowerToys 更新至 v0.101.2282.0 预览版，重点修复 Command Palette（命令面板）Dock 错误，并降低 Dock 刷新时的资源占用。...</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/909.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">编造智驾事故、AI 生成假车祸视频，多人因编造涉企谣言被罚</div>
-        <div class="card-summary">多人因编造智驾事故、用AI生成假车祸视频等涉企谣言被公安机关处罚，AI生成虚假信息治理持续加强。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/895.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">全球最大视频网站 YouTube 官宣下周统一观看次数口径</div>
-        <div class="card-summary">YouTube官宣下周统一观看次数口径，普通视频无需观看约30秒即可计入播放量，视频平台数据标准持续演进。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/888.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
+    <div class="stats-bar" id="statsBar"></div>
+    <div class="controls">
+      <div class="search-wrap">
+        <span class="search-icon">&#8981;</span>
+        <input class="search-input" type="text" id="searchInput" placeholder="搜索标题、摘要、来源 / Ctrl+K" autocomplete="off">
+        <button class="clear-btn" id="clearSearch" onclick="clearSearch()">&#x2715;</button>
+      </div>
+      <div class="date-filter">
+        <input type="date" id="dateFrom" title="开始日期">
+        <span>—</span>
+        <input type="date" id="dateTo" title="结束日期">
+        <button class="btn" onclick="clearDateFilter()">清除日期</button>
+      </div>
+      <span class="kbd-hint">Esc 清除筛选</span>
     </div>
   </div>
-  <div class="day">
-    <div class="day-hdr">2026-08-17 <span class="day-count">34 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">10 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">筹备IPO之际，消息称OpenAI已解散旗下风险防范团队</div>
-        <div class="card-summary">据《金融时报》报道，OpenAI已于上月末解散风险防范团队，相关职责按生物安全、网络安全等细分领域拆分并入现有业务团队。这是该公司在筹备IPO期间的又一次架构调整，引发外界对安全问题的关注。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/406.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">DeepSeek API峰谷定价方案今日生效，高峰时段价格翻倍</div>
-        <div class="card-summary">深度求索更新了DeepSeek API定价方案，划分高峰与空闲时段，空闲时段价格为高峰时段一半。高峰时段为北京时间9:00-12:00、14:00-18:00，V4-Pro高峰时段输出价格最高达27元/百万tokens。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/413.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">Anthropic Claude出现大规模服务故障，旗下多项服务无法登录</div>
-        <div class="card-summary">Anthropic Claude出现大规模服务故障，旗下多项服务无法登录或无法加载，引发用户广泛关注。正值Anthropic筹备IPO关键时期，服务稳定性成为市场焦点。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/404.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">千问办公首发上线GLM-5.3和DeepSeek V4 Pro模型，可直接选用</div>
-        <div class="card-summary">千问办公首发上线GLM-5.3和DeepSeek V4 Pro两款前沿模型，用户可在产品首页的「前沿模型」档位直接选用，多模型接入策略进一步丰富AI办公生态。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/264.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">彭博社称支付巨头Stripe敲定收购AI初创公司OpenRouter，金额超70亿美元</div>
-        <div class="card-summary">彭博社报道支付巨头Stripe已敲定收购AI模型路由平台OpenRouter，交易金额超过70亿美元。此次收购将Stripe的支付基础设施与AI模型调用能力相结合。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/410.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">斯坦福调查显示：84%中国受访者对AI感到兴奋，美国比例仅为38%</div>
-        <div class="card-summary">斯坦福最新调查显示84%中国受访者对AI感到兴奋，七成二信任AI；美国分别为38%和32%。报告同时指出中美AI模型性能差距已基本消失，两国模型交替领跑。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/398.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">王莆中聊美团AI变革：全员'养虾运动'曾日耗千万，干扰真实经营</div>
-        <div class="card-summary">美团高管王莆中谈及美团AI变革时透露，内部曾掀起全员AI'养虾运动'，日消耗千万算力资源，但大规模AI实验反而干扰了真实经营，美团正调整AI落地策略。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/439.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">我国科学家发布大豆垂直大模型'丰菽'2.0，推动实现辅助育种</div>
-        <div class="card-summary">我国科学家发布大豆垂直大模型'丰菽'2.0版本，利用AI技术推动实现辅助育种，将基因组学与深度学习结合，加速大豆新品种培育进程。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/421.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">准确率87%-91%，AI可通过图片视觉线索识别拍照地点</div>
-        <div class="card-summary">最新研究显示AI模型可通过图片中的视觉线索识别拍照地点，准确率达87%-91%。该技术在地理定位、旅游推荐和内容审核等领域具有广泛应用前景。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/420.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">莫言：AI只能在前人作品上拼凑，再好也写不出《岳阳楼记》《滕王阁序》</div>
-        <div class="card-summary">莫言携新作《人呐》亮相上海书展，谈及AI写作时表示AI能完成格律诗词这类技术性创作，但本质只是拼凑前人作品，无法写出传世名篇。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/381.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
+
+  <div class="ai-summary" id="aiSummary">
+    <div class="ai-summary-header" onclick="toggleSummary()">
+      <span class="arrow">&#9654;</span> AI 日报摘要
     </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">4 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">多家银行竞推'算力贷'金融产品，以Token词元产出消耗数据作为授信依据</div>
-        <div class="card-summary">多家银行竞相推出'算力贷'金融产品，以企业Token词元产出消耗数据作为业务能力授信依据，AI算力资产化进入金融创新阶段，量化策略有望借此获取新数据维度。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/426.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-quant">
-        <div class="card-title">段永平基金二季度持仓总市值191亿美元：大幅增持拼多多、减持苹果和英伟达</div>
-        <div class="card-summary">段永平管理的基金二季度持仓曝光，总市值约191亿美元。操作上大幅加仓拼多多并重新买入阿里，减持英伟达、谷歌等科技股，'减科技、加中概'被市场解读为估值修复信号。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/395.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-quant">
-        <div class="card-title">软银出售超七成台积电股份，套现2.698亿美元</div>
-        <div class="card-summary">软银出售超七成台积电股份，套现2.698亿美元。在全球半导体产业格局调整背景下，软银此举引发市场对科技股估值和量化策略资产配置的重新审视。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/424.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-quant">
-        <div class="card-title">韩国每5个成年人就有1人持有三星电子股票，创历史新高</div>
-        <div class="card-summary">最新数据显示截至今年6月底，三星电子散户股东已达近797万户，占韩国成年人口约五分之一。股价反弹叠加AI存储芯片行情火热吸引大批投资者进场。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/269.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">3 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">AI热潮推高存储需求，德国DDR5内存价格暴涨至去年同期近5倍</div>
-        <div class="card-summary">AI热潮推动存储需求爆发，德国市场DDR5内存价格暴涨至去年同期近5倍。内存短缺和成本上涨对消费电子和AI服务器产业产生广泛影响，存储芯片厂商利润大幅增长。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/417.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-finance">
-        <div class="card-title">保量不保价：消息称服务器BMC SoC龙头信骅首度签署长期供货协议</div>
-        <div class="card-summary">消息称服务器BMC SoC龙头信骅首度签署长期供货协议，保量不保价模式反映出AI服务器芯片供应链紧张局面持续，上下游博弈进入新阶段。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/438.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-finance">
-        <div class="card-title">2026暑期档票房突破百亿，《功夫女足》《八仙！》《蜘蛛侠：崭新之日》分列前三</div>
-        <div class="card-summary">据央视财经报道，2026暑期档电影总票房突破100亿元，年度电影总票房已突破257亿元。暑期档票房回暖为消费市场注入信心。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/332.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">9 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">国产GPU厂商壁仞科技预告2026上半年营收暴涨超18倍，经调整亏损收窄35%-47%</div>
-        <div class="card-summary">国产GPU厂商壁仞科技预告2026上半年营收暴涨超18倍，经调整亏损收窄35%-47%。在AI算力需求和国产替代双重驱动下，国产GPU企业加速进入商业化快车道。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/428.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">苹果macOS屏幕共享高危漏洞已遭黑客利用，攻击者可远程获取Root权限</div>
-        <div class="card-summary">苹果macOS屏幕共享功能被发现高危漏洞并已遭黑客利用，攻击者可远程获取Root权限。苹果已发布紧急安全更新，建议用户立即升级。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/429.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">Linux 7.2稳定版发布：I/O速度更快，AMD与英特尔驱动迎来改进</div>
-        <div class="card-summary">Linux 7.2稳定版正式发布，I/O速度显著提升，AMD与英特尔驱动迎来全面改进。新版本在内核性能和硬件兼容性方面均有重要突破。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/425.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">内存短缺成本上涨，廉价智能手机正在美国消失</div>
-        <div class="card-summary">Counterpoint数据显示2026年Q2美国廉价智能手机销量同比暴跌64%。内存短缺和成本上涨对小型厂商冲击严重，预计下半年手机价格将持续走高。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/282.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">三星首款24.5英寸OLED高刷面板被曝Q4登场，360/560Hz刷新率</div>
-        <div class="card-summary">三星首款24.5英寸OLED高刷面板被曝将于Q4登场，支持360Hz和560Hz两种刷新率规格。该面板面向电竞和专业显示市场，OLED技术进一步向中尺寸领域渗透。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/403.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">消息称英特尔计划推出入门级Panther Lake掌机芯片，配备4个Xe3核心</div>
-        <div class="card-summary">消息称英特尔计划推出入门级Panther Lake掌机芯片，配备4个Xe3核心。英特尔正加速布局掌机芯片市场，与AMD在移动游戏领域展开竞争。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/411.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">Mozilla宣布正为苹果iOS版Firefox火狐浏览器引入原生广告拦截功能</div>
-        <div class="card-summary">Mozilla宣布正为苹果iOS版Firefox火狐浏览器引入原生广告拦截功能，在隐私保护和用户体验方面迈出重要一步，iOS浏览器竞争格局或将改写。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/415.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">消息称诺基亚计划关闭中国杭州研发中心，裁员1600人</div>
-        <div class="card-summary">据外媒报道，诺基亚计划关闭杭州研发中心，裁员1600人，并可能进一步调整北京、上海等地的办公布局。诺基亚发言人回应称将调整运营布局以应对中国市场下滑。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/306.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">贾跃亭：法拉第未来探索机器人独立融资及上市</div>
-        <div class="card-summary">贾跃亭表示法拉第未来正探索机器人业务独立融资及上市路径。在AI与机器人产业加速融合背景下，法拉第未来试图开辟新能源汽车之外的第二增长曲线。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/442.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">8 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">王祖贤首度公开回应AI形象授权：用AI不是被AI用，AI短片《倩影》重现经典角色</div>
-        <div class="card-summary">王祖贤将巅峰时期肖像独家授权给网易《天下》，推出AI短片《倩影》重现经典角色。这是国内游戏行业首个获明星完整授权的AIGC叙事短片，AI形象授权模式引发行业关注。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/364.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">网传'深圳道路大面积塌陷致翻车'，深圳市委网信办确认'系AI合成谣言'</div>
-        <div class="card-summary">深圳市委网信办确认网传'深圳道路大面积塌陷致翻车'视频系AI合成谣言，公安机关已介入调查。AI生成虚假信息治理成为网络内容安全新挑战。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/423.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">中消协：近期AI客服相关投诉显著增多，人工客服难接通被形容为'躲猫猫'</div>
-        <div class="card-summary">中消协最新报告指出AI客服投诉显著增多，部分AI客服还会作出不实承诺，事后经营者却以'AI回答不具法律效力'为由拒绝履约，AI客服规范管理亟待加强。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/394.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">上线仅半年多，字节旗下付费小说App'红烛故事'正式关停</div>
-        <div class="card-summary">字节旗下付费小说App红烛故事于8月17日起正式停止服务。不同于字节旗下的番茄免费小说，红烛故事主打付费会员模式，运营仅半年多即关停。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/405.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">公安机关破获影视领域舆情敲诈案件，犯罪团伙操控自媒体捏造负面信息</div>
-        <div class="card-summary">公安机关网安部门破获3起影视领域舆情敲诈案件，犯罪团伙操控自媒体捏造并发布大量负面信息进行敲诈勒索。网信办持续加强自媒体内容生态治理。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/434.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">大学生用AI人脸伪造视频盗刷超5万元，最终获刑一年十个月</div>
-        <div class="card-summary">湖南一大学生通过非法渠道购买AI人脸伪造技术，将静态照片转为动态视频绕过银行支付验证，4个月内盗刷3名受害人银行卡共5万余元，最终获刑一年十个月。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/369.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">微软听劝：新版Win11右键菜单预览，设计更简洁、移除遭吐槽的AI功能</div>
-        <div class="card-summary">微软新版Win11右键菜单预览曝光，移除了遭用户吐槽的AI功能，恢复了刷新按钮，还支持自定义常用选项。用户反馈推动产品设计改进的效果显著。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/296.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">建模交易平台CGTrader：AI生成的3D模型数量激增，但销售额仅占1%</div>
-        <div class="card-summary">建模交易平台CGTrader数据显示AI生成的3D模型数量激增，但销售额仅占平台总销售额的1%。AI创作在数量上爆发但在商业变现上仍面临挑战，品质和专业性仍是关键。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/414.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
+    <div class="ai-summary-body" id="aiSummaryBody"></div>
   </div>
-  <div class="day">
-    <div class="day-hdr">2026-08-14 <span class="day-count">15 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">12 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">Anthropic计划10月以2万亿美元估值IPO上市，有望超SpaceX成全球最大IPO</div>
-        <div class="card-summary">《财富》报道称Anthropic计划2026年10月以2万亿美元估值IPO上市，其规模将超过SpaceX成为史上规模最大的IPO。Anthropic旗下Claude系列模型在AI领域持续领先。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/505.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">OpenAI年化营收超400亿美元，备战IPO上市</div>
-        <div class="card-summary">彭博社报道OpenAI公司在IPO上市前年化营收已超过400亿美元，有望在2026年翻番。OpenAI持续巩固其全球AI领导者地位。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/490.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">OpenAI推Ultrafast模式：GPT-5.6 Sol AI提速14倍，每秒生成750个词元</div>
-        <div class="card-summary">OpenAI发布公告宣布以预览形式针对其最强AI模型GPT-5.6 Sol推出Ultrafast超高速模式，是标准处理速度的14倍，最高每秒输出750个词元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/492.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">谷歌推出Gemini 3.7 Flash模型，专为编程与Agents场景打造</div>
-        <div class="card-summary">谷歌宣布推出Gemini 3.7 Flash模型，专为编程与Agents场景打造，首发优惠价为原3.6 Flash的一半，大幅降低AI推理成本。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/497.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">Mac版ChatGPT新增Computer History AI功能，不再依赖截图记录活动</div>
-        <div class="card-summary">OpenAI发布Computer History功能，为Mac版ChatGPT桌面应用提供活动记忆与时间线支持，取代先前的Chronicle研究预览功能。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/518.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">神秘生图模型mona-lisa-1曝光：含OpenAI来源信号</div>
-        <div class="card-summary">该模型在AI竞技场盲测中被发现，经OpenAI内容验证工具检测出OpenAI来源信号，此前GPT-Image 2发布前也曾以匿名形式测试，暗示OpenAI可能即将推出新图像生成模型。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/476.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">7月美国企业AI消费观察：GPT-5.6 Sol收入超Anthropic Fable 5</div>
-        <div class="card-summary">Ramp追踪七万余家美国企业AI支出发现，7月Anthropic顶级模型支出仅为OpenAI对应产品的75%，但Anthropic企业采用率仍领先，整体企业AI支出正快速增长。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/208.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">报告称90%高管认为AI未提升公司生产力，部分企业召回被裁员工</div>
-        <div class="card-summary">科技媒体informationweek报道，在AI冲击导致全球科技行业裁员潮背景下，部分企业开始回头召回被裁员工。AI生产力提升效果仍存争议。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/181.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">DeepSeek Harness公测：对标Claude Cowork，同步开放插件生态</div>
-        <div class="card-summary">DeepSeek发布Harness产品公测，对标Claude Cowork，同步开放配套插件生态。V4-Pro模型参数量达1.6万亿，权重已采用MIT许可证开放，可适配国产GPU降低私有化部署门槛。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/446.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">谷歌AI重组内幕曝光：布林不满落后Anthropic，要求全力投入Gemini</div>
-        <div class="card-summary">谷歌联合创始人布林近几个月来敦促关键AI部门员工全力投入Gemini模型，Alphabet正寻求缩小与竞争对手Anthropic的差距。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/035.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">腾讯微信公布WeLM大模型：80B版已在小微应用，617B版开发中</div>
-        <div class="card-summary">腾讯微信团队公布由微信团队打造的大语言模型WeLM，以资源利用效率为核心。80B版本已在AI助手小微上应用，更大规模的617B版本正在开发中。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/007.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">Mistral AI开放第三方模型接入：首个为智谱GLM-5.2</div>
-        <div class="card-summary">Mistral AI宣布自家平台开放第三方模型接入，首个接入的第三方模型为中国智谱GLM-5.2。用户可选择在美国或欧洲区域执行推理负载，满足数据跨境合规要求。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/031.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">谷歌DeepMind推出手语转文本AI模型，首次进入消费级</div>
-        <div class="card-summary">谷歌DeepMind推出手语转文本模型，谷歌Pixel 11系列智能手机上的Gboard和Live Transcribe应用支持手语转文本输入，听力障碍人士可享受类似语音输入的灵活体验。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/105.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">2 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">部分Claude模型将添加文本水印，Anthropic回应各界关切</div>
-        <div class="card-summary">部分Claude模型会直接在输出文本中嵌入难以察觉的水印，内容被复制粘贴后水印仍会随文本保留。用于帮助判断一段文字是否由AI生成，响应欧盟AI法案透明度要求。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/462.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">中国美协儿童图画书大展一作品被指AI生成，工作人员回应已撤下</div>
-        <div class="card-summary">一幅名为《把夏天装进书包》的作品在山东美术馆展出，因儿童手指扭曲、六指等明显AI生成特征被举报。中国美协回应称已取消该作品入展资格，AI创作边界争议持续。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/183.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-08-13 <span class="day-count">12 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">7 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">DeepSeek V4 Pro正式版深夜发布，API已上线，多项测试性能接近Fable 5</div>
-        <div class="card-summary">DeepSeek V4 Pro正式版（DeepSeek-V4-Pro-0813）深夜发布，已更新至API。新版本增强Agent能力，支持Responses API和Codex接入，在多项测试中接近Fable 5水平，相比预览版能力大幅提升。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/000.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">DeepSeek官网API文档新增V4-Pro-0813模型，支持非思考与思考模式</div>
-        <div class="card-summary">DeepSeek官网API文档的模型与价格页面中，新增DeepSeek-V4-Pro-0813模型，支持非思考与思考模式。此前官方曾承诺V4-Pro正式版将尽快发布。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/988/998.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">DeepSeek梁文锋财富一年暴涨3850%，增速登顶全球亿万富豪榜</div>
-        <div class="card-summary">过去一年全球亿万富翁身价报告显示，DeepSeek创始人梁文锋财富飙升3850%，增速居全球首位。DeepSeek估值在3250亿至3500亿元区间。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/988/273.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">Y Combinator CEO陈嘉兴：善用AI智能体的创业者将提前活在2028年</div>
-        <div class="card-summary">YC CEO陈嘉兴谈及AI智能体时表示，你得直接把强度拉满，一次给它100万个token。到了这种程度，你基本上就能提前活在2028年。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/366.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">辛顿、李飞飞、吴恩达齐发声：呼吁保持AI一定程度的开放</div>
-        <div class="card-summary">三位AI行业教父教母在Ai4大会上讨论AI开放性问题。具体解决方案虽然各不相同，但三人都提出了充分理由，认为AI仍需要保持一定程度的开放。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/245.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">OpenAI奥尔特曼：6个月内AI将实现完美理解用户使用情境</div>
-        <div class="card-summary">OpenAI CEO Sam Altman表示在未来6个月时间里，OpenAI的后续AI模型将具备完美理解用户使用情境功能，AI交互体验将迎来质的飞跃。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/234.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">阿里千问开放平台上线菜鸟智能体，协助用户规划寄件方案</div>
-        <div class="card-summary">阿里千问开放平台上线菜鸟智能体，可根据用户寄件需求匹配最优寄件方案与快递公司，还能解答寄件疑问、补全收寄信息，让寄件更省心。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/989/126.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">3 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">荣耀Robot Phone正式发布：9999元起，首发钛合金云台影像与YOYO Pro模式</div>
-        <div class="card-summary">荣耀正式发布Robot Phone手机，定价9999元起。搭载骁龙8 Elite Gen5处理器、7060mAh电池，首发钛合金云台影像架构与荣耀驭光H1自研芯片，支持YOYO Pro智能模式。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/988/961.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">小米澎湃HyperOS 4系统蓄势待发，REDMI产品经理透露在路上了</div>
-        <div class="card-summary">小米澎湃HyperOS 4系统离正式发布越来越近，REDMI产品经理胡馨心透露新系统Beta版已在路上。新特性包括大量实时光场渲染、玻璃材质、堆叠桌面小组件、AI感色融色UI等。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/988/839.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">小米雷军：第四代pTSF是中国首创的底层显示技术方案</div>
-        <div class="card-summary">小米董事长雷军宣布第四代pTSF像素级薄膜开关技术为中国首创的底层显示技术方案，在屏幕响应速度和功耗控制方面实现突破，有望应用于下一代旗舰手机和折叠屏设备。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/988/780.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">2 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">索尼宣布为国产游戏《影之刃零》举办专属State of Play发布会</div>
-        <div class="card-summary">索尼宣布为国产游戏《影之刃零》举办专属State of Play发布会，将展示近20分钟实机内容。这是索尼首次为中国游戏举办专属发布会，国产游戏全球影响力持续攀升。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/988/770.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">Counterpoint：华为继续领跑中国智能手机市场，前30周销量稳居第一</div>
-        <div class="card-summary">Counterpoint最新数据显示2026年前30周中国智能手机销量同比下降8.6%，但华为继续领跑市场。华为凭借鸿蒙生态和AI能力持续巩固高端市场优势。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/988/823.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-08-12 <span class="day-count">5 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">2 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">OpenAI测试ChatGPT Plus付费重置额度功能，8美元恢复使用额度</div>
-        <div class="card-summary">OpenAI正在测试ChatGPT Plus付费重置额度功能，用户可支付8美元恢复使用额度。此举被解读为OpenAI探索多元商业化路径的信号，AI订阅服务进入精细化运营阶段。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/988/773.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">华为启动AIPL基线合作伙伴计划，联合打造可复制的AI实践教学方案</div>
-        <div class="card-summary">华为正式启动AIPL基线合作伙伴计划，联合高校和产业伙伴打造可复制、可规模化推广的AI实践教学方案，推动AI人才培养体系标准化建设。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/988/804.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">腾讯控股半年报：归母净利润1141.15亿元，同比增长10%</div>
-        <div class="card-summary">腾讯控股发布2026财年半年报，归母净利润1141.15亿元，同比增长10%。第二季度营收2048亿元，同比增长11%。游戏、广告和企业服务三大业务板块均实现稳健增长。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/988/829.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">2 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">集邦咨询：全固态电池进入工程验证期，技术成熟度已有重大进展</div>
-        <div class="card-summary">集邦咨询最新报告指出全固态电池技术已进入工程验证期，在能量密度、循环寿命和安全性方面取得重大进展。预计2027-2028年将迎来规模化量产，新能源汽车产业格局面临重塑。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/988/778.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">凯迪拉克全新XT5 PHEV首发量产Momenta R7世界模型，配激光雷达</div>
-        <div class="card-summary">凯迪拉克全新XT5 PHEV正式首发，成为首款量产搭载Momenta R7世界模型的车型，配备激光雷达和蜂鸟底盘。端到端自动驾驶方案从高端车型向主流市场渗透加速。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/988/786.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-08-11 <span class="day-count">14 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">4 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">OpenAI暂缓Astra模型研发，下一代AI模型能力逼近危险边界</div>
-        <div class="card-summary">OpenAI宣布暂缓其下一代Astra大模型部分研发工作，因其在漏洞挖掘、自主攻击等安全测试中表现出人意料的能力。CEO奥特曼表示安全是首要原则。</div>
-        <div class="card-meta"><span class="card-source">香港商报</span> <a class="card-link" href="https://hkcd.com/hkcdweb/content/2026/08/08/content_8768755.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">中国国产大模型全球总下载量突破100亿次，海外影响力持续攀升</div>
-        <div class="card-summary">最新数据显示中国国产大模型全球累计下载量突破100亿次，在非洲、东南亚、印度等新兴市场渗透率快速增长。</div>
-        <div class="card-meta"><span class="card-source">海外网</span> <a class="card-link" href="https://biz.haiwainet.cn/n/2026/0807/c3545092-32973828.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">字节跳动梁汝波：坚持自研大语言模型，接受短期落后</div>
-        <div class="card-summary">字节跳动CEO梁汝波表示尽管豆包大模型与海外顶级模型存在差距，公司坚持自研路线。AI仍是字节未来十年最重要的基础设施级投入。</div>
-        <div class="card-meta"><span class="card-source">每经网</span> <a class="card-link" href="http://www.nbd.com.cn/articles/2026-08-06/4534064.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">中国大模型八周五连发，硅谷企业悄悄换底座</div>
-        <div class="card-summary">中国大模型在八周内完成五次重量级发布，硅谷企业开始采用中国开源模型替换原有底座。</div>
-        <div class="card-meta"><span class="card-source">证券时报</span> <a class="card-link" href="https://stcn.com/article/detail/4066017.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">3 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">动量Beta因子大幅走弱，8月量化修复可期</div>
-        <div class="card-summary">近期动量因子和Beta因子表现大幅走弱，传统量化选股模型面临挑战。但8月市场风格有望回归均衡，量化策略修复行情可期。</div>
-        <div class="card-meta"><span class="card-source">中国财经信息网</span> <a class="card-link" href="https://wt.cfi.cn/p20260810002688.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-quant">
-        <div class="card-title">监管基础设施平权重塑量化生态，全市场选股策略优势凸显</div>
-        <div class="card-summary">监管推进行情数据基础设施平权，局域网通道关停后所有机构站在同一起跑线。全市场选股策略优势凸显。</div>
-        <div class="card-meta"><span class="card-source">网易财经</span> <a class="card-link" href="https://www.163.com/dy/article/L3ISGVUQ051987V2.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-quant">
-        <div class="card-title">首尾差超20%！量化超额大分化，头部与腰部差距持续拉大</div>
-        <div class="card-summary">8月以来公募量化产品超额收益首尾差距超过20个百分点，头部机构凭借更成熟的多因子模型和另类数据源持续领跑。</div>
-        <div class="card-meta"><span class="card-source">中国证券报</span> <a class="card-link" href="https://www.cnstock.com/commonDetail/755665" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">2 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">英伟达联手高盛、黑石等六巨头，筹建超5000亿美元AI计算基础设施融资平台</div>
-        <div class="card-summary">英伟达联手高盛、黑石等六家金融巨头拟筹建超5000亿美元的AI计算基础设施融资平台，标志着AI算力基础设施投资进入全新量级。</div>
-        <div class="card-meta"><span class="card-source">中国证券报</span> <a class="card-link" href="https://www.cnstock.com/commonDetail/758025" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-finance">
-        <div class="card-title">多重稳市信号释放，资本市场着力强韧性、提信心</div>
-        <div class="card-summary">监管层密集释放多重稳市信号：政策工具箱充足、经济基本面稳固、外资机构看好中国资产。多部门协同发力形成稳预期合力。</div>
-        <div class="card-meta"><span class="card-source">财联社</span> <a class="card-link" href="https://www.cls.cn/detail/2450663" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">2 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">Power Integrations推出2200V氮化镓技术，创商用领域最高电压纪录</div>
-        <div class="card-summary">Power Integrations发布面向新一代高压电力系统的2200V氮化镓技术，创下商用领域最高电压纪录。标志着GaN功率半导体进入高压大功率应用新纪元。</div>
-        <div class="card-meta"><span class="card-source">电子产品世界</span> <a class="card-link" href="https://m.eepw.com.cn/article/202608/482789.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">基本半导体与汉磊科技达成战略合作，加速8英寸碳化硅晶圆量产</div>
-        <div class="card-summary">基本半导体与汉磊科技合作推进8英寸碳化硅晶圆的研发与量产落地，加速SiC器件在新能源汽车和光伏逆变器中的大规模应用。</div>
-        <div class="card-meta"><span class="card-source">观点网</span> <a class="card-link" href="https://www.guandian.hk/article/20260805/580820.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">3 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">视频生成模型跃迁，AI微短剧进入质胜时代</div>
-        <div class="card-summary">AI微短剧从概念验证进入商业量产阶段。制作周期已从数月缩短至3天，行业从卷数量转向卷质量，精品化趋势明显。</div>
-        <div class="card-meta"><span class="card-source">央广网</span> <a class="card-link" href="https://news.qq.com/rain/a/20260807A0EFTQ00" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">AI女孩打通短剧商业化闭环，虚拟演员商单报价超真人网红</div>
-        <div class="card-summary">AI虚拟演员方桃子一条广告报价高达25.8万元超过同粉丝量级真人网红博主，标志着AI虚拟IP商业化路径初步跑通。</div>
-        <div class="card-meta"><span class="card-source">中华工商时报</span> <a class="card-link" href="http://epaper.cbt.com.cn/epaper/uniflows/html/2026/08/10/04/04_53.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">视频生成模型正在争夺什么？AI创作进入生态级博弈阶段</div>
-        <div class="card-summary">视频生成模型领域竞争全面升级，各大厂从工具级竞争升级到生态级博弈，AI视频赛道进入技术、生态和商业化的全方位比拼阶段。</div>
-        <div class="card-meta"><span class="card-source">36氪</span> <a class="card-link" href="https://www.36kr.com/p/3930236944596099" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-08-10 <span class="day-count">16 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">2 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">阿里发布Qwen3.8-Max：2.4万亿参数开源大模型，推理成本降至行业1/8</div>
-        <div class="card-summary">阿里巴巴正式发布Qwen3.8-Max模型，总参数量达2.4万亿，在编程、推理和多模态理解方面全面跃升。该模型推理成本降至行业的1/8。</div>
-        <div class="card-meta"><span class="card-source">中关村在线</span> <a class="card-link" href="https://ai.zol.com.cn/1226/12268657.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">大模型开源激活Token经济：生成式AI从技术竞赛走向商业落地</div>
-        <div class="card-summary">随着国内大模型持续开源，Token经济正被激活成为新增长引擎。AI推理成本已降至行业均值的1/8，企业应用门槛大幅降低。</div>
-        <div class="card-meta"><span class="card-source">人民邮电报</span> <a class="card-link" href="https://www.cnii.com.cn/rmydb/202608/t20260807_753587.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">5 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">一个月跌去30%再反弹13%：极端行情下公募量化如何构筑护城河</div>
-        <div class="card-summary">7月极端行情中公募量化产品回撤高达30%，随后5天快速反弹13%。管理人在波动加剧中调整风控模型、引入波动率自适应机制。</div>
-        <div class="card-meta"><span class="card-source">中国基金报</span> <a class="card-link" href="https://www.chnfund.com/article/AR20260809101415005" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-quant">
-        <div class="card-title">交易所关停局域网行情通道后，量化行业面临的六大变化</div>
-        <div class="card-summary">沪深交易所全面关停局域网行情通道后，市场关注六大核心变化：高频策略容量大幅压缩、Tick级数据获取受限、策略同质化有望缓解。</div>
-        <div class="card-meta"><span class="card-source">财联社</span> <a class="card-link" href="https://api3.cls.cn/share/article/2447060" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-quant">
-        <div class="card-title">局域网行情通道关闭满月：量化高频遇减速带，A股成交量回落</div>
-        <div class="card-summary">局域网行情通道关停满月，8月A股日均成交量较7月均值回落约15%。高频量化策略容量大幅压缩，部分私募转战中低频策略。</div>
-        <div class="card-meta"><span class="card-source">证券日报</span> <a class="card-link" href="http://www.zqdb.com.cn/xinwen/2026/show-1261660.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-quant">
-        <div class="card-title">市场风格回归均衡，指增策略配置窗口已打开，超额环境明显改善</div>
-        <div class="card-summary">最新量化策略报告指出市场风格正从极端分化回归均衡，指数增强策略超额收益环境明显改善。在成交缩量和贴水中等分位的背景下，指增策略配置窗口已经打开。</div>
-        <div class="card-meta"><span class="card-source">中国财经信息网</span> <a class="card-link" href="https://vipwt1.cfi.net.cn/p20260803001577.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-quant">
-        <div class="card-title">3万亿量化遭遇压力测试：阿尔法贝塔罕见双杀，洗牌之后迎新开局</div>
-        <div class="card-summary">管理规模超3万亿的量化私募行业正经历阿尔法和贝塔罕见双杀的压力测试。在风格频繁切换、成交缩量和监管趋严三重压力下，行业进入深度洗牌阶段。</div>
-        <div class="card-meta"><span class="card-source">证券时报</span> <a class="card-link" href="https://stcn.com/article/detail/4060906.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">外资机构密集发声：AI资本开支拐点隐现，科技股估值逻辑面临重构</div>
-        <div class="card-summary">高盛、摩根士丹利、瑞银等外资机构密集发布研究报告，认为全球AI资本开支增速已接近阶段性峰值。AI从重资本投入阶段转向商业化变现阶段。</div>
-        <div class="card-meta"><span class="card-source">证券时报</span> <a class="card-link" href="https://stcn.com/article/detail/4060669.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">2 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">国家能源局：加大关键电力装备自主研发，推动电力芯片关键技术突破</div>
-        <div class="card-summary">国家能源局发布指导意见，明确加大关键电力装备自主研发力度，重点推动电力芯片、特高压组部件、新型储能材料等关键技术突破。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/986/922.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">台积电等研发出单层MoS2顶栅晶体管，二维半导体迈出关键一步</div>
-        <div class="card-summary">台积电联合学术界成功研发出基于单层二硫化钼(MoS2)的顶栅晶体管，解决了二维半导体材料从实验室走向量产的关键工艺瓶颈。该成果有望突破硅基芯片物理极限。</div>
-        <div class="card-meta"><span class="card-source">财联社</span> <a class="card-link" href="https://www.cls.cn/detail/2448108" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">6 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">AI微短剧大揭秘：泼天富贵还是虚假繁荣？</div>
-        <div class="card-summary">北京日报深度调查AI微短剧行业现状：头部玩家日收入可达数万元，但95%的制作者月收入不足5000元。AI降低了制作门槛但抬高了爆款门槛，行业呈现出明显的赢家通吃格局。</div>
-        <div class="card-meta"><span class="card-source">北京日报</span> <a class="card-link" href="https://xinwen.bjd.com.cn/content/s6a71e5d1e4b03fa51a827d6d.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">AI微短剧重构影视生态：打造智能经济新形态</div>
-        <div class="card-summary">经济日报分析指出AI微短剧正重构影视生态，从拍摄、后期到宣发全链路AI化。2026年上半年AI微短剧市场规模突破50亿元。</div>
-        <div class="card-meta"><span class="card-source">经济日报</span> <a class="card-link" href="http://www.jingjiribao.cn/static/detail.jsp?id=674084" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">AI+微短剧重构影视生态：爆款率不足0.5%困局待解</div>
-        <div class="card-summary">AI微短剧虽火热但爆款率不足0.5%，大量作品同质化严重。行业面临三大挑战：内容创意不足、平台算法推荐马太效应加剧、版权归属争议。</div>
-        <div class="card-meta"><span class="card-source">财联社</span> <a class="card-link" href="https://api3.cls.cn/share/article/2445817" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">60秒广告报价25.8万：AI虚拟偶像商业价值超越真人，造星产业爆发</div>
-        <div class="card-summary">AI虚拟演员商业价值持续飙升，60秒广告报价已达25.8万元超越内娱待爆艺人。品牌方对AI代言人的接受度快速提升，AI造星产业从概念验证进入商业化运营新阶段。</div>
-        <div class="card-meta"><span class="card-source">36氪</span> <a class="card-link" href="https://36kr.com/p/3924696277514368" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">当AI把门槛降低，创作者拿什么拼出人味儿？行业深度反思核心竞争力</div>
-        <div class="card-summary">AI技术大幅降低内容创作门槛后，创作者的核心竞争力从技术操作转向审美判断和情感表达。在AI内容泛滥的当下，人味儿和真情实感成为稀缺资源。</div>
-        <div class="card-meta"><span class="card-source">36氪</span> <a class="card-link" href="https://36kr.com/p/3924517757565056" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">AI漫剧爆火，内容创作别只剩情绪</div>
-        <div class="card-summary">AI漫剧近期爆火但行业反思认为内容创作不应只剩情绪。行业共识：技术效率不能替代内容品质和情感共鸣。</div>
-        <div class="card-meta"><span class="card-source">百度百家</span> <a class="card-link" href="https://baijiahao.baidu.com/s?id=1873118219471767684" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-08-09 <span class="day-count">7 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">2 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">美媒深度报道：当非洲和印度企业大规模采用中国AI大模型</div>
-        <div class="card-summary">美国媒体深度报道指出非洲和印度企业正加速转向中国AI大模型，成本仅为美国竞品的十分之一。中国开源模型凭借高性价比和灵活部署方案在新兴市场建立强大影响力。</div>
-        <div class="card-meta"><span class="card-source">新浪新闻</span> <a class="card-link" href="https://news.sina.com.cn/zx/gj/2026-08-07/doc-inimneni4153301.shtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">阿里Qwen3.8正式上线：总参数量2.4万亿，第三方榜单仅次于Claude</div>
-        <div class="card-summary">阿里巴巴正式上线Qwen3.8大模型，总参数量达2.4万亿，在第三方权威榜单中综合排名仅次于Claude。该模型在编程、推理和多模态理解方面实现全面跃升。</div>
-        <div class="card-meta"><span class="card-source">澎湃新闻</span> <a class="card-link" href="https://m.thepaper.cn/newsDetail_forward_33708536" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">风格轮动策略月报：8月建议超配大盘风格和价值风格，微盘长期看好</div>
-        <div class="card-summary">最新风格轮动策略月报建议8月超配大盘风格和价值风格。微盘股估值处于历史低位长期看好，但在市场结构变化背景下大小盘风格切换可能加速。</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/11/rptid/839261226836/index.phtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">全球流动性收紧节奏暂缓，券商研判下半年或出现边际改善</div>
-        <div class="card-summary">多家券商发布最新研判认为全球流动性收紧节奏出现暂缓迹象，下半年A股市场或出现边际改善。美国通胀超预期回落缓解加息压力。</div>
-        <div class="card-meta"><span class="card-source">中国金融信息网</span> <a class="card-link" href="https://www.cnfin.com/dz-lb/detail/20260807/4452003_1.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">2 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">基本半导体上市后再落一子，8英寸碳化硅晶圆布局持续深化</div>
-        <div class="card-summary">基本半导体(09971.HK)上市后持续深化8英寸碳化硅晶圆布局，股价涨超4%获市场积极反馈。公司通过自建产线和战略合作双轮驱动模式推进SiC晶圆产业化。</div>
-        <div class="card-meta"><span class="card-source">EET-CHINA</span> <a class="card-link" href="https://www.eet-china.com/mp/a514884.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-tech">
-        <div class="card-title">2家SiC企业合作推进8寸晶圆线，碳化硅产业链国产化全面提速</div>
-        <div class="card-summary">国内碳化硅产业链国产化全面提速，两家SiC企业宣布合作共同推进8英寸晶圆产线建设。在AI数据中心供电和新能源汽车双轮驱动下，SiC功率半导体需求井喷。</div>
-        <div class="card-meta"><span class="card-source">EET-CHINA</span> <a class="card-link" href="https://www.eet-china.com/mp/a514776.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">京东开源自研JoyAI-Video-Edit模型，视频生成模型暗战全面升温</div>
-        <div class="card-summary">京东宣布开源自研JoyAI-Video-Edit视频编辑模型，字节、MiniMax等厂商也争相亮剑，视频生成模型领域暗战全面升温。</div>
-        <div class="card-meta"><span class="card-source">每日经济新闻</span> <a class="card-link" href="http://www.nbd.com.cn/articles/2026-08-05/4533139.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-08-08 <span class="day-count">12 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">4 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">AI接连攻克数学难题，从辅助工具升级为独立科研参与者</div>
-        <div class="card-summary">AI在数学推理领域接连攻克多个长期未解难题，OpenAI Astra以2000美元算力破解十项数学难题。AI正从辅助工具升级为独立科研参与者。</div>
-        <div class="card-meta"><span class="card-source">科技日报</span> <a class="card-link" href="https://www.stdaily.com/web/gdxw/2026-08/04/content_559112.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">中国大模型调用量连续十四周领跑全球，AI主题指数强势涨超4%</div>
-        <div class="card-summary">最新数据显示中国AI大模型周均调用量已连续十四周领跑全球，人工智能主题指数强势涨超4%。从开源模型到应用层全链路领先。</div>
-        <div class="card-meta"><span class="card-source">中国证券报</span> <a class="card-link" href="https://www.cnstock.com/commonDetail/754369" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">AI大模型价格战拉崩亚洲科技股？行业进入成本效率竞争新阶段</div>
-        <div class="card-summary">AI大模型价格战持续白热化对亚洲科技股估值产生深远影响。OpenAI、Meta大幅压低API价格，国产模型以极致性价比应对，行业竞争从参数规模转向成本效率和商业落地能力。</div>
-        <div class="card-meta"><span class="card-source">证券时报</span> <a class="card-link" href="https://stcn.com/article/detail/4054866.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-AI">
-        <div class="card-title">阿里港股突现六大利好，Qwen3.8发布带动中国AI资产重估</div>
-        <div class="card-summary">阿里巴巴发布Qwen3.8大模型后港股突现六大利好信号。算力需求持续扩容、AI应用生态全面爆发、外资重新评估中国AI资产价值。</div>
-        <div class="card-meta"><span class="card-source">证券时报</span> <a class="card-link" href="https://stcn.com/article/detail/4054863.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">2 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">市场风格回归均衡，指增超额逐渐趋好，配置窗口已打开</div>
-        <div class="card-summary">最新量化策略报告指出市场风格正从极端分化回归均衡，指数增强策略超额收益环境明显改善。在成交缩量和贴水中等分位的背景下，指增策略配置窗口已经打开。</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/lastest/rptid/839084110122/index.phtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-quant">
-        <div class="card-title">A股量化择时研究：AI识图关注红利低波、现金流、价值方向</div>
-        <div class="card-summary">最新A股量化择时研究报告运用AI图像识别技术进行市场状态分析，当前建议关注红利低波、现金流充沛和价值风格标的。</div>
-        <div class="card-meta"><span class="card-source">新浪财经</span> <a class="card-link" href="https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/11/rptid/839012460227/index.phtml" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">3 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">黄金股抢跑，金价重返4300美元后还能走多远</div>
-        <div class="card-summary">国际金价强势重返4300美元关口上方，黄金股应声大涨抢跑。疲软非农数据加剧美元走弱预期，叠加全球地缘风险升温，避险资金持续涌入黄金资产。</div>
-        <div class="card-meta"><span class="card-source">证券时报</span> <a class="card-link" href="https://stcn.com/article/detail/4065162.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-finance">
-        <div class="card-title">8月A股市场走向再平衡，从科技成长到红利消费均衡切换</div>
-        <div class="card-summary">多家机构指出8月A股市场正走向再平衡。前期科技股抱团松动后市场主线从科技成长向红利消费均衡切换，配置逻辑回归基本面定价。</div>
-        <div class="card-meta"><span class="card-source">金融投资报</span> <a class="card-link" href="https://stocknews.scol.com.cn/shtml/jrtzb/20260808/1086385.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-finance">
-        <div class="card-title">供给约束预期升温，资源品市场表现活跃</div>
-        <div class="card-summary">全球供给约束预期持续升温推动资源品市场表现活跃。能源、有色金属和农产品等大宗商品价格走高，资源股和周期股受到资金追捧。</div>
-        <div class="card-meta"><span class="card-source">证券时报</span> <a class="card-link" href="https://egs.stcn.com/news/detail/2324575.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">三星zHBM与BV-NAND原型亮相，晶圆键合实现十倍存储密度提升</div>
-        <div class="card-summary">三星电子推出zHBM高带宽存储器和BV-NAND闪存原型产品，采用晶圆键合技术实现存储密度十倍提升。该技术突破面向AI数据中心和HPC场景。</div>
-        <div class="card-meta"><span class="card-source">搜狐科技</span> <a class="card-link" href="https://www.sohu.com/a/1058923054_115362" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">2 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">快手入局AI互动内容，大厂抢滩下一代内容入口</div>
-        <div class="card-summary">快手正式入局AI互动内容赛道，成为继腾讯、抖音之后又一家全面押注AI互动内容的大型平台。AI互动内容被视为继短视频之后的下一波内容形态变革。</div>
-        <div class="card-meta"><span class="card-source">搜狐新闻</span> <a class="card-link" href="https://news.sohu.com/a/1058275923_122014422" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-      <div class="card card-media">
-        <div class="card-title">告别脸崩时代！AI视频生成模型竞赛加速，商业化闭环仍是最大挑战</div>
-        <div class="card-summary">AI视频生成技术取得重大突破彻底告别早期脸崩时代。各大厂商模型竞赛全面加速，从创业公司到科技巨头纷纷加码。</div>
-        <div class="card-meta"><span class="card-source">21世纪经济报道</span> <a class="card-link" href="https://m.21jingji.com/article/20260803/herald/7080ea30f6479008240f11500bc75b3b.html" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-08-07 <span class="day-count">5 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">AI芯片需求激增，英伟达H200 GPU交货周期延长至16周</div>
-        <div class="card-summary">受全球AI训练需求爆发影响，英伟达H200 GPU交货周期已延长至16周，国内多家云厂商面临算力紧张局面。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/862/862058.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">量化CTA策略连续8个月正收益，资金持续涌入</div>
-        <div class="card-summary">受益于大宗商品市场波动加剧，量化CTA策略已连续8个月实现正收益，年内累计吸引资金超过50亿元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/881/881078.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">中国GDP增速达2.45%，内需持续恢复</div>
-        <div class="card-summary">国家统计局公布2026年二季度经济数据，GDP同比增长2.45%，内需持续恢复。其中消费贡献率提升至62%，投资增速保持稳定。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/883/883778.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">苹果发布P80 Pro，折叠屏设计引发关注</div>
-        <div class="card-summary">苹果公司今日发布P80 Pro，折叠屏设计成为最大亮点。新品将于08月21日正式发售，国行版起售价为4999元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/904/904342.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">短剧市场规模突破50亿元，AI编剧工具受追捧</div>
-        <div class="card-summary">行业报告显示，2026年中国短剧市场规模已突破50亿元，同比增长70%。AI编剧工具成为行业新风口，多家平台推出相关产品。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/935/935622.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-08-06 <span class="day-count">4 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">中证500指数增强策略排名出炉，量化巨头表现分化</div>
-        <div class="card-summary">08月06日发布的中证500指数增强策略业绩排名显示，多家头部量化私募表现分化，首尾收益差距超过18个百分点。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/987/987706.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">美联储维持基准利率25个基点，通胀仍存在上行风险，需要更多数据支持</div>
-        <div class="card-summary">美联储在08月06日的议息会议上宣布维持联邦基金利率25个基点至4.75%-5.0%，为2026年第二次利率调整。鲍威尔表示通胀仍存在上行风险，需要更多数据支持。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/906/906485.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">苹果发布iPhone 17 Pro Max，超长续航能力引发关注</div>
-        <div class="card-summary">苹果公司今日发布iPhone 17 Pro Max，超长续航能力成为最大亮点。新品将于08月20日正式发售，国行版起售价为3999元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/832/832630.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">直播带货新规实施，未成年人保护将受严格监管</div>
-        <div class="card-summary">国家市场监管总局发布《直播带货管理办法》修订版，明确规定未成年人保护等行为将受到严格监管，新规将于2026年10月正式实施。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/869/869919.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-08-05 <span class="day-count">5 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">阿里通义千问发布Claude 4 Opus模型，首次支持1024K长上下文</div>
-        <div class="card-summary">阿里云今日发布通义千问Claude 4 Opus系列模型，最高支持1024K token超长上下文处理，在长文档分析场景中表现突出。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/894/894530.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">幻方量化发布最新AI选股模型，准确率提升8%</div>
-        <div class="card-summary">幻方量化今日发布基于深度学习的AI选股模型最新版本，在历史回测中选股准确率较此前版本提升8%，预计将于下月正式上线实盘。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/918/918260.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">北向资金连续12日净流入，累计规模达3000亿元</div>
-        <div class="card-summary">数据显示，北向资金已连续12个交易日实现净流入，累计净买入规模达3000亿元。外资对A股市场的配置意愿持续增强。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/965/965663.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">小米汽车SU7单月交付突破1.5万辆，产能持续爬坡</div>
-        <div class="card-summary">小米汽车官方宣布，SU7车型单月交付量突破1.5万辆，创下品牌最高纪录。公司表示产能仍在持续爬坡中，预计年底月产能将达到4万辆。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/875/875203.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">微信视频号直播电商GMV同比增长60%，美妆护肤品类最热</div>
-        <div class="card-summary">腾讯公布数据显示，微信视频号直播电商GMV同比增长60%，其中美妆护肤品类表现最为亮眼，占GMV总量的40%。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/890/890387.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-08-04 <span class="day-count">5 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">DeepSeek宣布开源GPT-5.1模型，性能对标GPT-5</div>
-        <div class="card-summary">深度求索今日发布开源模型GPT-5.1，参数量达400B，在多项基准测试中表现与GPT-5持平，引发全球AI社区热议。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/973/973961.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">量化私募规模突破4.0万亿，行业集中度进一步提升</div>
-        <div class="card-summary">中国证券投资基金业协会数据显示，截至2026年7月，国内量化私募管理规模已突破4.0万亿元，前十家机构占据市场份额超过10%。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/877/877540.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">北向资金连续10日净流入，累计规模达2000亿元</div>
-        <div class="card-summary">数据显示，北向资金已连续10个交易日实现净流入，累计净买入规模达2000亿元。外资对A股市场的配置意愿持续增强。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/925/925983.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">台积电2nm制程良率提升至40%，OPPO确定采用</div>
-        <div class="card-summary">据供应链消息，台积电2nm制程良率已提升至40%，OPPO已确定将在下一代旗舰芯片中采用该工艺，预计量产时间在2026年Q4。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/880/880967.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">微信视频号直播电商GMV同比增长50%，食品饮料品类最热</div>
-        <div class="card-summary">腾讯公布数据显示，微信视频号直播电商GMV同比增长50%，其中食品饮料品类表现最为亮眼，占GMV总量的40%。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/843/843395.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-08-03 <span class="day-count">5 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">百度文心一言推出6.0版本，多模态能力全面升级</div>
-        <div class="card-summary">百度正式发布文心一言6.0版本，新增视频理解和实时语音交互功能，企业API调用量单月突破100亿次。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/896/896662.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">量化CTA策略连续6个月正收益，资金持续涌入</div>
-        <div class="card-summary">受益于大宗商品市场波动加剧，量化CTA策略已连续6个月实现正收益，年内累计吸引资金超过80亿元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/817/817900.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">6月CPI同比上涨0.73%，PPI降幅收窄</div>
-        <div class="card-summary">国家统计局公布数据显示，2026年6月全国居民消费价格指数（CPI）同比上涨0.73%，工业生产者出厂价格指数（PPI）同比下降2.7%，降幅较上月收窄。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/841/841614.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">中国6G研发取得突破，太赫兹通信实验成功</div>
-        <div class="card-summary">中国信息通信研究院宣布，中国在6G太赫兹通信技术领域取得重要突破，成功实现太赫兹频段稳定传输，为未来6G标准制定奠定了技术基础。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/964/964613.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">小红书商业化提速，单季度广告收入突破100亿元</div>
-        <div class="card-summary">小红书最新财报显示，平台单季度广告收入突破100亿元，同比增长70%。其中信息流广告和搜索广告收入增长最为显著。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/820/820022.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-08-02 <span class="day-count">4 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">程序化交易管理办法修订，新增账户实名制管理条款</div>
-        <div class="card-summary">沪深交易所联合发布《程序化交易管理办法》修订版，新增账户实名制管理相关条款，将对高频交易和算法交易行为进行更严格的约束。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/845/845055.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">房企融资环境改善，中国平安完成2000亿元债券发行</div>
-        <div class="card-summary">中国平安今日公告称，已完成2000亿元中期票据发行，票面利率为4.1%。分析人士认为这标志着房地产行业融资环境正在逐步改善。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/875/875876.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">小米汽车SU7单月交付突破1.5万辆，产能持续爬坡</div>
-        <div class="card-summary">小米汽车官方宣布，SU7车型单月交付量突破1.5万辆，创下品牌最高纪录。公司表示产能仍在持续爬坡中，预计年底月产能将达到4.5万辆。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/950/950313.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">自媒体内容审核趋严，快手平台更新数据造假政策</div>
-        <div class="card-summary">快手平台近日更新内容审核政策，重点加强数据造假领域的管理。业内人士认为这反映了监管部门对自媒体内容质量的持续关注。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/997/997770.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-08-01 <span class="day-count">5 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">Anthropic宣布Claude企业版新增自定义模型微调功能</div>
-        <div class="card-summary">Anthropic为Claude企业版推出自定义模型微调功能，帮助企业用户更高效地管理和部署AI应用，年费方案起价1.0万美元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/999/999912.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">幻方量化发布最新AI选股模型，准确率提升18%</div>
-        <div class="card-summary">幻方量化今日发布基于深度学习的AI选股模型最新版本，在历史回测中选股准确率较此前版本提升18%，预计将于下月正式上线实盘。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/847/847294.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">北向资金连续12日净流入，累计规模达5000亿元</div>
-        <div class="card-summary">数据显示，北向资金已连续12个交易日实现净流入，累计净买入规模达5000亿元。外资对A股市场的配置意愿持续增强。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/957/957393.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">特斯拉中国推出Model 3焕新版新版本，续航提升至700公里</div>
-        <div class="card-summary">特斯拉中国今日宣布推出Model 3焕新版新版本，CLTC工况续航里程提升至700公里，百公里加速仅需4.5秒，起售价5999万元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/888/888848.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">快手可灵AI视频生成工具用户突破9万，付费率50%</div>
-        <div class="card-summary">快手科技透露，旗下可灵AI视频生成工具累计用户已突破9万，其中付费用户占比达到50%，商业化进展超出市场预期。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/965/965982.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-07-31 <span class="day-count">5 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">OpenAI正式发布豆包Pro-2模型，性能提升35%</div>
-        <div class="card-summary">OpenAI今日宣布推出全新豆包Pro-2模型，在Arena ELO基准测试中较前代提升35%，API调用价格降至每百万token 0.75美元，引发行业广泛关注。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/821/821178.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">中证500指数增强策略排名出炉，量化巨头表现分化</div>
-        <div class="card-summary">07月31日发布的中证500指数增强策略业绩排名显示，多家头部量化私募表现分化，首尾收益差距超过8个百分点。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/968/968218.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">房企融资环境改善，贵州茅台完成8000亿元债券发行</div>
-        <div class="card-summary">贵州茅台今日公告称，已完成8000亿元中期票据发行，票面利率为3.0%。分析人士认为这标志着房地产行业融资环境正在逐步改善。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/862/862372.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">小米汽车SU7单月交付突破2.5万辆，产能持续爬坡</div>
-        <div class="card-summary">小米汽车官方宣布，SU7车型单月交付量突破2.5万辆，创下品牌最高纪录。公司表示产能仍在持续爬坡中，预计年底月产能将达到3万辆。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/961/961246.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">快手可灵AI视频生成工具用户突破7万，付费率50%</div>
-        <div class="card-summary">快手科技透露，旗下可灵AI视频生成工具累计用户已突破7万，其中付费用户占比达到50%，商业化进展超出市场预期。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/969/969037.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-07-30 <span class="day-count">4 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">Anthropic发布Claude 4系列新模型，编程能力大幅提升</div>
-        <div class="card-summary">Anthropic今日推出Claude 4系列更新版本，在SWE-bench编程测试中得分达到92%，稳居行业第一。新模型同时增强了长上下文处理能力。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/836/836898.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">上证指数上涨2.36%，消费数据回暖推动市场走强</div>
-        <div class="card-summary">A股三大指数今日集体全面走强，上证指数上涨2.36%，报收3150点。消费数据回暖成为推动市场的主要因素，两市成交额达8000亿元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/840/840507.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">中国航天嫦娥十号月球采样返回任务取得圆满成功</div>
-        <div class="card-summary">中国航天科技集团宣布，嫦娥十号月球采样返回任务今日取得圆满成功。此次任务实现了一箭多星精确入轨，标志着我国在深空探测领域迈出重要一步。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/923/923594.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">微信视频号直播电商GMV同比增长50%，美妆护肤品类最热</div>
-        <div class="card-summary">腾讯公布数据显示，微信视频号直播电商GMV同比增长50%，其中美妆护肤品类表现最为亮眼，占GMV总量的35%。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/846/846042.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-07-29 <span class="day-count">5 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">Anthropic发布Claude 4系列新模型，编程能力大幅提升</div>
-        <div class="card-summary">Anthropic今日推出Claude 4系列更新版本，在SWE-bench编程测试中得分达到94%，稳居行业第一。新模型同时增强了长上下文处理能力。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/814/814711.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">中证500指数增强策略排名出炉，量化巨头表现分化</div>
-        <div class="card-summary">07月29日发布的中证500指数增强策略业绩排名显示，多家头部量化私募表现分化，首尾收益差距超过25个百分点。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/817/817936.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">中国GDP增速达3.46%，增长好于市场预期</div>
-        <div class="card-summary">国家统计局公布2026年二季度经济数据，GDP同比增长3.46%，增长好于市场预期。其中消费贡献率提升至60%，投资增速保持稳定。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/892/892358.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">台积电2nm制程良率提升至35%，华为确定采用</div>
-        <div class="card-summary">据供应链消息，台积电2nm制程良率已提升至35%，华为已确定将在下一代旗舰芯片中采用该工艺，预计量产时间在2026年Q4。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/915/915796.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">快手可灵AI视频生成工具用户突破9万，付费率50%</div>
-        <div class="card-summary">快手科技透露，旗下可灵AI视频生成工具累计用户已突破9万，其中付费用户占比达到50%，商业化进展超出市场预期。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/844/844560.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-07-28 <span class="day-count">5 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">中国AI大模型备案数量突破100个，监管趋严</div>
-        <div class="card-summary">国家网信办最新数据显示，国内已备案AI大模型数量突破100个。监管部门表示将进一步加强内容安全和伦理审查。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/858/858903.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">量化CTA策略连续4个月正收益，资金持续涌入</div>
-        <div class="card-summary">受益于大宗商品市场波动加剧，量化CTA策略已连续4个月实现正收益，年内累计吸引资金超过80亿元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/954/954712.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">美联储降息基准利率25个基点，通胀正在向2%的目标水平靠近</div>
-        <div class="card-summary">美联储在07月28日的议息会议上宣布降息联邦基金利率25个基点至5.25%-5.5%，为2026年第三次利率调整。鲍威尔表示通胀正在向2%的目标水平靠近。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/953/953862.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">苹果发布P80 Pro，AI助手深度集成引发关注</div>
-        <div class="card-summary">苹果公司今日发布P80 Pro，AI助手深度集成成为最大亮点。新品将于07月28日正式发售，国行版起售价为4999元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/995/995219.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">直播带货新规实施，AI生成内容标识将受严格监管</div>
-        <div class="card-summary">国家市场监管总局发布《直播带货管理办法》修订版，明确规定AI生成内容标识等行为将受到严格监管，新规将于2026年10月正式实施。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/923/923074.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-07-27 <span class="day-count">4 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">OpenAI开放通义千问3.0多模态API接口</div>
-        <div class="card-summary">OpenAI宣布通义千问3.0的多模态能力正式对开发者开放，支持图像、音频和视频输入的实时处理，每千token价格仅为0.5美元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/975/975671.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">美联储降息基准利率25个基点，通胀正在向2%的目标水平靠近</div>
-        <div class="card-summary">美联储在07月27日的议息会议上宣布降息联邦基金利率25个基点至4.75%-5.0%，为2026年第二次利率调整。鲍威尔表示通胀正在向2%的目标水平靠近。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/853/853361.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">特斯拉中国推出Model 3焕新版新版本，续航提升至700公里</div>
-        <div class="card-summary">特斯拉中国今日宣布推出Model 3焕新版新版本，CLTC工况续航里程提升至700公里，百公里加速仅需3.5秒，起售价5999万元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/998/998251.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">抖音日活用户突破8亿，AI内容生成工具推动创作者增长</div>
-        <div class="card-summary">字节跳动旗下抖音平台宣布，日活跃用户已突破8亿。平台推出的AI内容创作工具使创作者数量同比增长50%，AI生成内容日均发布量超200万条。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/905/905515.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-07-26 <span class="day-count">4 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">Anthropic宣布Claude企业版新增SSO单点登录功能</div>
-        <div class="card-summary">Anthropic为Claude企业版推出SSO单点登录功能，帮助企业用户更高效地管理和部署AI应用，年费方案起价0.5万美元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/830/830087.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">幻方量化发布最新AI选股模型，准确率提升18%</div>
-        <div class="card-summary">幻方量化今日发布基于深度学习的AI选股模型最新版本，在历史回测中选股准确率较此前版本提升18%，预计将于下月正式上线实盘。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/973/973127.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">北向资金连续10日净流入，累计规模达5000亿元</div>
-        <div class="card-summary">数据显示，北向资金已连续10个交易日实现净流入，累计净买入规模达5000亿元。外资对A股市场的配置意愿持续增强。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/912/912415.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">微信视频号直播电商GMV同比增长40%，家居日用品类最热</div>
-        <div class="card-summary">腾讯公布数据显示，微信视频号直播电商GMV同比增长40%，其中家居日用品类表现最为亮眼，占GMV总量的25%。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/923/923184.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-07-25 <span class="day-count">5 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">中国AI大模型备案数量突破180个，监管趋严</div>
-        <div class="card-summary">国家网信办最新数据显示，国内已备案AI大模型数量突破180个。监管部门表示将进一步加强内容安全和伦理审查。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/885/885200.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">量化CTA策略连续6个月正收益，资金持续涌入</div>
-        <div class="card-summary">受益于大宗商品市场波动加剧，量化CTA策略已连续6个月实现正收益，年内累计吸引资金超过150亿元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/880/880379.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">央行开展1000亿元逆回购操作，维护流动性合理充裕</div>
-        <div class="card-summary">中国人民银行今日开展1000亿元逆回购操作，中标利率3.0%。央行表示此举旨在维护银行体系流动性合理充裕，支持实体经济发展。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/896/896736.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">特斯拉中国推出Cybertruck中国版新版本，续航提升至850公里</div>
-        <div class="card-summary">特斯拉中国今日宣布推出Cybertruck中国版新版本，CLTC工况续航里程提升至850公里，百公里加速仅需3.8秒，起售价6999万元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/850/850886.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">快手可灵AI视频生成工具用户突破8万，付费率50%</div>
-        <div class="card-summary">快手科技透露，旗下可灵AI视频生成工具累计用户已突破8万，其中付费用户占比达到50%，商业化进展超出市场预期。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/876/876581.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-07-24 <span class="day-count">5 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">AI芯片需求激增，英伟达H200 GPU交货周期延长至26周</div>
-        <div class="card-summary">受全球AI训练需求爆发影响，英伟达H200 GPU交货周期已延长至26周，国内多家云厂商面临算力紧张局面。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/921/921905.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">程序化交易管理办法修订，新增委托申报速率限制条款</div>
-        <div class="card-summary">沪深交易所联合发布《程序化交易管理办法》修订版，新增委托申报速率限制相关条款，将对高频交易和算法交易行为进行更严格的约束。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/831/831733.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">房企融资环境改善，贵州茅台完成5000亿元债券发行</div>
-        <div class="card-summary">贵州茅台今日公告称，已完成5000亿元中期票据发行，票面利率为3.3%。分析人士认为这标志着房地产行业融资环境正在逐步改善。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/817/817987.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">OPPO发布OPPO Find X8 Pro，搭载A19 Pro芯片</div>
-        <div class="card-summary">OPPO今日正式发布OPPO Find X8 Pro，搭载最新的A19 Pro芯片，采用3nm增强版制程工艺，性能较上一代提升20%。新机起售价为5999元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/992/992360.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">快手可灵AI视频生成工具用户突破9万，付费率40%</div>
-        <div class="card-summary">快手科技透露，旗下可灵AI视频生成工具累计用户已突破9万，其中付费用户占比达到40%，商业化进展超出市场预期。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/950/950941.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-07-23 <span class="day-count">4 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">程序化交易管理办法修订，新增账户实名制管理条款</div>
-        <div class="card-summary">沪深交易所联合发布《程序化交易管理办法》修订版，新增账户实名制管理相关条款，将对高频交易和算法交易行为进行更严格的约束。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/878/878279.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">央行开展8000亿元SLF操作，维护流动性合理充裕</div>
-        <div class="card-summary">中国人民银行今日开展8000亿元SLF操作，中标利率2.75%。央行表示此举旨在维护银行体系流动性合理充裕，支持实体经济发展。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/888/888040.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">小米汽车SU7单月交付突破2.5万辆，产能持续爬坡</div>
-        <div class="card-summary">小米汽车官方宣布，SU7车型单月交付量突破2.5万辆，创下品牌最高纪录。公司表示产能仍在持续爬坡中，预计年底月产能将达到4.5万辆。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/910/910138.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">短剧市场规模突破100亿元，AI编剧工具受追捧</div>
-        <div class="card-summary">行业报告显示，2026年中国短剧市场规模已突破100亿元，同比增长70%。AI编剧工具成为行业新风口，多家平台推出相关产品。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/901/901936.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-07-22 <span class="day-count">5 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">OpenAI正式发布GPT-5o模型，性能提升35%</div>
-        <div class="card-summary">OpenAI今日宣布推出全新GPT-5o模型，在MT-Bench基准测试中较前代提升35%，API调用价格降至每百万token 0.25美元，引发行业广泛关注。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/830/830315.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">程序化交易管理办法修订，新增委托申报速率限制条款</div>
-        <div class="card-summary">沪深交易所联合发布《程序化交易管理办法》修订版，新增委托申报速率限制相关条款，将对高频交易和算法交易行为进行更严格的约束。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/980/980055.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">北向资金连续5日净流入，累计规模达1000亿元</div>
-        <div class="card-summary">数据显示，北向资金已连续5个交易日实现净流入，累计净买入规模达1000亿元。外资对A股市场的配置意愿持续增强。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/863/863959.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">全球芯片市场销售额同比增长25%，AI芯片需求旺盛</div>
-        <div class="card-summary">半导体行业协会最新数据显示，2026年第二季度全球芯片市场销售额同比增长25%，其中国内AI芯片市场规模同比增长超过55%。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/921/921893.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">小红书商业化提速，单季度广告收入突破50亿元</div>
-        <div class="card-summary">小红书最新财报显示，平台单季度广告收入突破50亿元，同比增长60%。其中信息流广告和搜索广告收入增长最为显著。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/881/881077.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-07-21 <span class="day-count">5 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">OpenAI开放Claude 4.5 Sonnet多模态API接口</div>
-        <div class="card-summary">OpenAI宣布Claude 4.5 Sonnet的多模态能力正式对开发者开放，支持图像、音频和视频输入的实时处理，每千token价格仅为0.15美元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/923/923388.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">07月21日A股量化策略收益分化，头部私募超额收益达8%</div>
-        <div class="card-summary">数据显示，07月21日，国内头部量化私募在A股市场表现抢眼，部分机构年内超额收益已超过8%，但中小量化基金面临较大回撤压力。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/947/947038.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">上证指数上涨0.84%，外资持续流入推动市场走强</div>
-        <div class="card-summary">A股三大指数今日集体全面走强，上证指数上涨0.84%，报收3300点。外资持续流入成为推动市场的主要因素，两市成交额达8000亿元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/862/862059.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">华为发布iPhone 17 Pro Max，超长续航能力成最大亮点</div>
-        <div class="card-summary">华为今日召开新品发布会，正式推出iPhone 17 Pro Max。超长续航能力成为最大亮点，该产品起售价为4299元，将于07月28日正式开售。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/872/872530.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">小红书商业化提速，单季度广告收入突破80亿元</div>
-        <div class="card-summary">小红书最新财报显示，平台单季度广告收入突破80亿元，同比增长60%。其中信息流广告和搜索广告收入增长最为显著。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/818/818198.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-07-20 <span class="day-count">5 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">OpenAI计划将ChatGPT企业版价格下调30%</div>
-        <div class="card-summary">据知情人士透露，OpenAI正考虑将ChatGPT Enterprise的订阅费用下调30%，以应对来自Anthropic和Google日益激烈的竞争。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/937/937044.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-quant">
-        <div class="card-title">幻方量化发布最新AI选股模型，准确率提升10%</div>
-        <div class="card-summary">幻方量化今日发布基于深度学习的AI选股模型最新版本，在历史回测中选股准确率较此前版本提升10%，预计将于下月正式上线实盘。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/942/942401.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">北向资金连续10日净流入，累计规模达1000亿元</div>
-        <div class="card-summary">数据显示，北向资金已连续10个交易日实现净流入，累计净买入规模达1000亿元。外资对A股市场的配置意愿持续增强。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/857/857068.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">小米汽车SU7单月交付突破2.5万辆，产能持续爬坡</div>
-        <div class="card-summary">小米汽车官方宣布，SU7车型单月交付量突破2.5万辆，创下品牌最高纪录。公司表示产能仍在持续爬坡中，预计年底月产能将达到5万辆。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/932/932614.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">抖音日活用户突破7亿，AI内容生成工具推动创作者增长</div>
-        <div class="card-summary">字节跳动旗下抖音平台宣布，日活跃用户已突破7亿。平台推出的AI内容创作工具使创作者数量同比增长50%，AI生成内容日均发布量超50万条。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/848/848712.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="day">
-    <div class="day-hdr">2026-07-19 <span class="day-count">4 条</span></div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">1 条</span></div>
-      <div class="card card-AI">
-        <div class="card-title">Anthropic发布Claude 4系列新模型，编程能力大幅提升</div>
-        <div class="card-summary">Anthropic今日推出Claude 4系列更新版本，在SWE-bench编程测试中得分达到95%，稳居行业第一。新模型同时增强了长上下文处理能力。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/808/808234.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-finance">💰 财经 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-finance">
-        <div class="card-title">中国GDP增速达0.71%，增长好于市场预期</div>
-        <div class="card-summary">国家统计局公布2026年二季度经济数据，GDP同比增长0.71%，增长好于市场预期。其中消费贡献率提升至62%，投资增速保持稳定。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/849/849862.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-tech">🔬 科技 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-tech">
-        <div class="card-title">苹果发布Mate 80 Pro，折叠屏设计引发关注</div>
-        <div class="card-summary">苹果公司今日发布Mate 80 Pro，折叠屏设计成为最大亮点。新品将于07月28日正式发售，国行版起售价为6999元。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/831/831720.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-    <div class="cat-section">
-      <div class="cat-section-hdr cat-chip-media">📱 自媒体 <span class="cat-section-count">1 条</span></div>
-      <div class="card card-media">
-        <div class="card-title">直播带货新规实施，内容版权将受严格监管</div>
-        <div class="card-summary">国家市场监管总局发布《直播带货管理办法》修订版，明确规定内容版权等行为将受到严格监管，新规将于2026年10月正式实施。</div>
-        <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/991865.htm" target="_blank" rel="noopener">查看原文</a></div>
-      </div>
-    </div>
-  </div>
+
+  <div class="no-results" id="noResults">没有匹配的结果</div>
+  <div id="main"></div>
+</div>
+
+<script src="news-data.js"></script>
+<script>
+(function() {
+  var D = window.NEWS_DATA;
+  if (!D || !D.length) { document.getElementById('main').textContent = 'No data loaded.'; return; }
+
+  var CATS = ['AI','量化','财经','科技','自媒体'];
+  var CAT_ICONS = {AI:'🤖', '量化':'📊', '财经':'💰', '科技':'🔬', '自媒体':'📱'};
+  var CSS = {AI:'AI', '量化':'quant', '财经':'finance', '科技':'tech', '自媒体':'media'};
+  var today = new Date().toISOString().slice(0, 10);
+  var activeCat = 'all', searchQuery = '', dateFrom = '', dateTo = '';
+
+  var el = function(id) { return document.getElementById(id); };
+  var statsBar = el('statsBar'), main = el('main'), search = el('searchInput');
+  var noResults = el('noResults'), clearSearchBtn = el('clearSearch');
+  var dateFromEl = el('dateFrom'), dateToEl = el('dateTo'), updateTime = el('updateTime');
+
+  updateTime.textContent = '更新 ' + new Date().toLocaleTimeString('zh-CN', {hour:'2-digit',minute:'2-digit'});
+
+  // Init date filters
+  var allDates = Array.from(new Set(D.map(function(d) { return d.date; }))).sort();
+  dateFromEl.value = allDates[0];
+  dateToEl.value = allDates[allDates.length-1];
+
+  function renderStats() {
+    var filtered = getFiltered();
+    var counts = {}; CATS.forEach(function(c) { counts[c] = 0; });
+    filtered.forEach(function(d) { counts[d.category] = (counts[d.category]||0) + 1; });
+    var df = dateFromEl.value || allDates[0];
+    var dt = dateToEl.value || allDates[allDates.length-1];
+    var daysInRange = allDates.filter(function(d) { return d >= df && d <= dt; }).length;
+    var h = '<span>共 <strong>'+filtered.length+'</strong> 条</span>';
+    h += '<span>覆盖 <strong>'+daysInRange+'</strong> 天</span>';
+    h += '<span class="cat-chip cat-chip-all'+(activeCat==='all'?' sel':'')+'" onclick="setCat(\'all\')">全部</span>';
+    CATS.forEach(function(c) {
+      h += '<span class="cat-chip cat-chip-'+CSS[c]+' '+(activeCat===c?'sel':'')+'" onclick="setCat(\''+c+'\')">'+c+' '+counts[c]+'</span>';
+    });
+    statsBar.innerHTML = h;
+  }
+
+  function getFiltered() {
+    var df = dateFromEl.value || allDates[0];
+    var dt = dateToEl.value || allDates[allDates.length-1];
+    var filtered = D.filter(function(d) { return d.date >= df && d.date <= dt; });
+    if (activeCat !== 'all') filtered = filtered.filter(function(d) { return d.category === activeCat; });
+    if (searchQuery) {
+      var q = searchQuery.toLowerCase();
+      filtered = filtered.filter(function(d) {
+        return d.title.toLowerCase().indexOf(q) > -1
+            || d.summary.toLowerCase().indexOf(q) > -1
+            || d.source.toLowerCase().indexOf(q) > -1;
+      });
+    }
+    return filtered;
+  }
+
+  function highlight(text, query) {
+    if (!query) return text;
+    var parts = text.split(new RegExp('('+query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')+')', 'gi'));
+    return parts.map(function(p) { return p.toLowerCase() === query.toLowerCase() ? '<span class="highlight">'+p+'</span>' : p; }).join('');
+  }
+
+  function render() {
+    renderStats();
+    var filtered = getFiltered();
+    if (!filtered.length) { noResults.classList.add('visible'); main.innerHTML = ''; return; }
+    noResults.classList.remove('visible');
+    var days = {}; filtered.forEach(function(d) { if (!days[d.date]) days[d.date] = []; days[d.date].push(d); });
+    var html = '';
+    Object.keys(days).sort().reverse().forEach(function(day) {
+      var items = days[day];
+      html += '<div class="day-group"><div class="day-header">'+day+' <span class="day-count">'+items.length+' 条</span>'+(day===today?' <span class="today-badge">Today</span>':'')+'</div>';
+      CATS.forEach(function(cat) {
+        var ci = items.filter(function(d) { return d.category === cat; });
+        if (!ci.length) return;
+        var css = CSS[cat];
+        html += '<div class="cat-section"><div class="cat-section-hdr cat-chip-'+css+'">'+CAT_ICONS[cat]+' '+cat+' <span class="cat-section-count">'+ci.length+' 条</span></div>';
+        ci.forEach(function(d) {
+          html += '<div class="card card-'+css+'"><div class="card-title">'+highlight(d.title, searchQuery)+'</div><div class="card-summary">'+highlight(d.summary, searchQuery)+'</div><div class="card-meta"><span class="card-source">'+highlight(d.source, searchQuery)+'</span><a class="card-link" href="'+d.sourceUrl+'" target="_blank" rel="noopener">查看原文</a></div></div>';
+        });
+        html += '</div>';
+      });
+      html += '</div>';
+    });
+    main.innerHTML = html;
+    updateClearBtn();
+    generateSummary();
+  }
+
+  function updateClearBtn() {
+    if (searchQuery) { clearSearchBtn.classList.add('visible'); } else { clearSearchBtn.classList.remove('visible'); }
+  }
+
+  // Category filter
+  window.setCat = function(c) {
+    activeCat = c;
+    render();
+  };
+
+  // Search
+  search.addEventListener('input', function() {
+    searchQuery = this.value.trim();
+    render();
+  });
+  search.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { clearAll(); }
+  });
+
+  window.clearSearch = function() {
+    search.value = '';
+    searchQuery = '';
+    render();
+    search.focus();
+  };
+
+  // Date filter
+  dateFromEl.addEventListener('change', render);
+  dateToEl.addEventListener('change', render);
+
+  window.clearDateFilter = function() {
+    dateFromEl.value = allDates[0];
+    dateToEl.value = allDates[allDates.length-1];
+    render();
+  };
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      search.focus();
+    }
+    if (e.key === 'Escape' && document.activeElement !== search) {
+      clearAll();
+    }
+  });
+
+  window.clearAll = function() {
+    activeCat = 'all';
+    search.value = '';
+    searchQuery = '';
+    dateFromEl.value = allDates[0];
+    dateToEl.value = allDates[allDates.length-1];
+    render();
+  };
+
+  // AI Summary
+  window.toggleSummary = function() {
+    el('aiSummary').classList.toggle('open');
+  };
+
+  function generateSummary() {
+    var filtered = getFiltered();
+    var todayItems = filtered.filter(function(d) { return d.date === today; });
+    var counts = {}; CATS.forEach(function(c) { counts[c] = 0; });
+    filtered.forEach(function(d) { counts[d.category] = (counts[d.category]||0) + 1; });
+    var todayCounts = {}; CATS.forEach(function(c) { todayCounts[c] = 0; });
+    todayItems.forEach(function(d) { todayCounts[d.category] = (todayCounts[d.category]||0) + 1; });
+
+    var h = '';
+    h += '<h4>📊 数据概览</h4>';
+    h += '<ul>';
+    h += '<li>总条数：<strong>'+filtered.length+'</strong> 条，覆盖 <strong>'+new Set(filtered.map(function(d){return d.date})).size+'</strong> 天</li>';
+    h += '<li>分类统计：' + CATS.map(function(c) { return '<span class="cat-chip cat-chip-'+CSS[c]+'">'+c+' '+counts[c]+'</span>'; }).join(' ') + '</li>';
+    h += '</ul>';
+
+    if (todayItems.length > 0) {
+      h += '<h4>📅 今日要闻（'+today+' 共 '+todayItems.length+' 条）</h4>';
+      h += '<ul>';
+      h += '<li>今日分类：' + CATS.filter(function(c){return todayCounts[c]>0}).map(function(c){return c+' '+todayCounts[c]+' 条';}).join('、') + '</li>';
+      // Show top 5 headlines
+      var top5 = todayItems.slice(0, 5);
+      h += '<li>热点头条：<ol style="margin:4px 0;padding-left:20px">';
+      top5.forEach(function(d) {
+        h += '<li>['+d.category+'] '+d.title+' <span style="color:#94a3b8;font-size:11px">('+d.source+')</span></li>';
+      });
+      h += '</ol></li>';
+      h += '</ul>';
+    }
+
+    el('aiSummaryBody').innerHTML = h;
+  }
+
+  // Initial render
+  render();
+})();
+</script>
 </body>
 </html>

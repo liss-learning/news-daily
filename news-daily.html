@@ -16,10 +16,13 @@
     .cat-chip-finance { background: #cffafe; color: #0e7490; }
     .cat-chip-tech { background: #e0f2fe; color: #0369a1; }
     .cat-chip-media { background: #ede9fe; color: #6d28d9; }
-    .day { margin-bottom: 28px; }
-    .day-hdr { font-size: 14px; font-weight: 600; color: #334155; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-bottom: 10px; display: flex; align-items: baseline; gap: 8px; }
+    .day { margin-bottom: 40px; }
+    .day-hdr { font-size: 14px; font-weight: 600; color: #334155; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-bottom: 14px; display: flex; align-items: baseline; gap: 8px; }
     .day-count { font-size: 12px; color: #94a3b8; font-weight: 400; }
     .today-badge { font-size: 10px; font-weight: 700; color: #2563eb; background: rgba(37,99,235,.08); padding: 2px 8px; border-radius: 4px; }
+    .cat-section { margin-bottom: 20px; }
+    .cat-section-hdr { font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 4px; margin-bottom: 8px; display: inline-block; }
+    .cat-section-count { font-size: 11px; opacity: 0.7; }
     .card { background: #fff; border: 1px solid #e2e8f0; border-left: 3px solid #cbd5e1; border-radius: 0 4px 4px 0; padding: 13px 18px; margin-bottom: 7px; transition: border-color .15s; }
     .card:hover { border-color: #94a3b8; }
     .card-AI { border-left-color: #1d4ed8; }
@@ -30,11 +33,10 @@
     .card-title { font-size: 15px; font-weight: 600; line-height: 1.5; margin-bottom: 5px; }
     .card-summary { font-size: 13.5px; color: #475569; line-height: 1.6; margin-bottom: 6px; }
     .card-meta { font-size: 12px; color: #94a3b8; display: flex; align-items: center; gap: 8px; }
+    .card-source { font-weight: 500; color: #64748b; }
     .card-link { color: #64748b; text-decoration: none; margin-left: auto; }
     .card-link:hover { color: #2563eb; }
-    .cat-section { margin-bottom: 20px; }
-    .cat-section-hdr { font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 4px; margin-bottom: 8px; display: inline-block; }
-    .cat-section-count { font-size: 11px; opacity: 0.7; }
+    @media (max-width: 600px) { body { padding: 12px; } h1 { font-size: 18px; } .card { padding: 10px 14px; } .card-title { font-size: 14px; } }
   </style>
 </head>
 <body>
@@ -49,32 +51,32 @@
       <div class="cat-section-hdr cat-chip-AI">🤖 AI <span class="cat-section-count">13 条</span></div>
       <div class="card card-AI">
         <div class="card-title">一边造 AI 一边清垃圾，硅谷开始为失控内容买单</div>
-        <div class="card-summary">北京时间 8 月 18 日，据《纽约时报》报道，劣质 AI 垃圾内容已经泛滥成灾：谷歌搜索里到处是“胶水披萨”食谱，亚马逊商品页充斥着虚假传记，脸书信息流里满是“虾仁耶稣”的图片。<p style="text-align: center;" data-vmark...</div>
+        <div class="card-summary">北京时间 8 月 18 日，据《纽约时报》报道，劣质 AI 垃圾内容已经泛滥成灾：谷歌搜索里到处是“胶水披萨”食谱，亚马逊商品页充斥着虚假传记，脸书信息流里满是“虾仁耶稣”的图片。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/058.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-AI">
         <div class="card-title">Meta 专利探索智能眼镜未来：可识别人脸自动梳理、AI 提取精彩片段</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 404Media 昨日（8 月 17 日）发布博文，报道称 Meta 公司申请新专利，探索让智能眼镜借助内置人脸识别技术，识别视频画面中的人物及其与佩戴者的关系，并自动生成带人物标签的集锦片段。<p data-vmark...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 404Media 昨日（8 月 17 日）发布博文，报道称 Meta 公司申请新专利，探索让智能眼镜借助内置人脸识别技术，识别视频画面中的人物及其与佩戴者的关系，并自动生成带人物标签的集锦片段。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/025.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-AI">
         <div class="card-title">雷鸟全新 iO 系列官宣 8 月 21 日发布：定位首款“人类增强 AI 眼镜”</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，8 月 18 日，AR 品牌雷鸟创新（RayNeo）正式宣布，全新产品系列“雷鸟 iO 系列”即将亮相。其中，系列首款产品雷鸟 iO AI 眼镜将于 8 月 21 日 14:30 正式发布。<p style="text-align: center;" data-vmark="95f3"</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，8 月 18 日，AR 品牌雷鸟创新（RayNeo）正式宣布，全新产品系列“雷鸟 iO 系列”即将亮相。其中，系列首款产品雷鸟 iO AI 眼镜将于 8 月 21 日 14:30 正式发布。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/016.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-AI">
         <div class="card-title">Pimax 小派为 Dream Air SE 头显推出 ProFit 面罩，带来更大可视视场</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，小派科技 (Pimax) 本月 14 日为其 PCVR 头显 Dream Air SE 推出 ProFit 面罩。新面罩在提供更为舒适的长时间佩戴体验的同时拉近了眼睛和镜片的距离，从而明显扩大可视视场。<p data-vmark=...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，小派科技 (Pimax) 本月 14 日为其 PCVR 头显 Dream Air SE 推出 ProFit 面罩。新面罩在提供更为舒适的长时间佩戴体验的同时拉近了眼睛和镜片的距离，从而明显扩大可视视场。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/006.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-AI">
         <div class="card-title">Signal65 报告：高通骁龙 X2 Elite Extreme 芯片多核比 AMD Ryzen AI 9 465 快 83%</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，第三方机构 Signal65 今天（8 月 18 日）在 X 平台发布推文，指出在电池供电、平衡模式下，搭载高通骁龙 X2 Elite Extreme 芯片的笔记本的性能要优于英特尔酷睿 Ultra X9 388H 和 AMD Ryzen AI 9 465 处理器。</stron...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，第三方机构 Signal65 今天（8 月 18 日）在 X 平台发布推文，指出在电池供电、平衡模式下，搭载高通骁龙 X2 Elite Extreme 芯片的笔记本的性能要优于英特尔酷睿 Ultra X9 388H 和 AMD Ryzen AI 9 465 处理器。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/989.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-AI">
         <div class="card-title">苹果带摄像头的 AirPods 实机演示曝光，可实现环境视觉感知</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，根据 MacRumors 在 macOS Tahoe 26.7 RC 中发现的一段视频，证实苹果正在研发配备摄像头的 AirPods，而且这款产品似乎已经接近正式推出。<img ...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，根据 MacRumors 在 macOS Tahoe 26.7 RC 中发现的一段视频，证实苹果正在研发配备摄像头的 AirPods，而且这款产品似乎已经接近正式推出。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/919.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-AI">
@@ -94,7 +96,7 @@
       </div>
       <div class="card card-AI">
         <div class="card-title">商务部等 9 部门发文活跃县域消费，大力支持新能源汽车、绿色智能产品、绿色建材等下乡</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，商务部会同国家发展改革委、财政部、人力资源社会保障部、自然资源部、农业农村部、文化和旅游部、市场监管总局、金融监管总局等部门，今日宣布联合印发《关于进一步激发下沉市场活力 活跃县域消费的意见》（以下简称《意见》），系统部署激发下沉市场活力重点工作。《意见》提出活跃县域消费重点支持措施：一是支持县域消费渠道升级，加快存量商业设施更新，优化商业网点布局，完善商业服务配套...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，商务部会同国家发展改革委、财政部、人力资源社会保障部、自然资源部、农业农村部、文化和旅游部、市场监管总局、金融监管总局等部门，今日宣布联合印发《关于进一步激发下沉市场活力...</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/901.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-AI">
@@ -117,7 +119,7 @@
       <div class="cat-section-hdr cat-chip-quant">📊 量化 <span class="cat-section-count">1 条</span></div>
       <div class="card card-quant">
         <div class="card-title">全球多家超级富豪家族办公室押注 SpaceX，合计持仓超 38 亿美元</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，来自美洲、欧洲和中东超高净值人士的家族办公室和投资机构，已经累计持有数十亿美元的 SpaceX 股票敞口，凸显出这些私人资本在争抢热门投资机会方面的强大实力。<img src="...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，来自美洲、欧洲和中东超高净值人士的家族办公室和投资机构，已经累计持有数十亿美元的 SpaceX 股票敞口，凸显出这些私人资本在争抢热门投资机会方面的强大实力。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/915.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
     </div>
@@ -130,12 +132,12 @@
       </div>
       <div class="card card-finance">
         <div class="card-title">零跑汽车登陆阿根廷市场，B10、C10 增程版打头阵</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，据零跑汽车官方消息，近日，零跑汽车携零跑 B10、零跑 C10 两款全球车型正式登陆阿根廷市场，进一步深化品牌在南美的市场布局。<img src="https://img.ith...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，据零跑汽车官方消息，近日，零跑汽车携零跑 B10、零跑 C10 两款全球车型正式登陆阿根廷市场，进一步深化品牌在南美的市场布局。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/969.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-finance">
         <div class="card-title">捷途山海 L7 PLUS 激光雷达版 8 月 19 日上市，预计配备猎鹰 700 驾驶辅助系统</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，奇瑞汽车宣布旗下捷途山海 L7 PLUS 激光雷达版车型将于 8 月 19 日上市，该车预计将配备猎鹰 700 驾驶辅助系统，支持城市 / 高速全场景导航驾驶 NOA。作为参考，目前在售捷途山海 L7 PLUS 共有 10 款车型，售价区间为 11.99-16.59 万元。<p styl...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，奇瑞汽车宣布旗下捷途山海 L7 PLUS 激光雷达版车型将于 8 月 19 日上市，该车预计将配备猎鹰 700 驾驶辅助系统，支持城市 / 高速全场景导航驾驶 NOA。作为参考，目前在售捷途山海 L7 PLUS 共有 10 款车型，售价区间为 11.99-16.59 万元。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/929.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-finance">
@@ -173,17 +175,17 @@
       </div>
       <div class="card card-tech">
         <div class="card-title">机械革命为 2026 款无界 14 笔记本新增“海棠粉”配色：Ultra 5-226V + 16G + 1T 售 5199 元（国补后 4419 元）</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，机械革命现已为旗下 2026 款无界 14 笔记本新增“海棠粉”配色，该配色号称是七夕特别主推款，整体规格为“Ultra 5-226V + 16GB RAM + 1TB SSD”，首发价 5199 元，部分地区国补后到手价低至 4419 元。</p</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，机械革命现已为旗下 2026 款无界 14 笔记本新增“海棠粉”配色，该配色号称是七夕特别主推款，整体规格为“Ultra 5-226V + 16GB RAM + 1TB SSD”，首发价 5199 元，部分地区国补后到手价低至 4419 元。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/057.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">机器人自己开卡丁车，共生知行发布人形机器人赛车 Demo</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，共生知行（Symbiosis Robotics）昨日（8 月 17 日）发布双足人形机器人驾驶卡丁车 Demo，并同步上线官方网站。<p data-vmark="64e6" style="text-align: center;"</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，共生知行（Symbiosis Robotics）昨日（8 月 17 日）发布双足人形机器人驾驶卡丁车 Demo，并同步上线官方网站。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/055.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">星曜 MF 28mm F2.8 流光银限定版相机镜头曝光：超薄设计、126 克重量</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，消息源 @独立摄影师联合会 现已曝光了星曜新品 MF 28mm F2.8 流光银限定版镜头，该镜头主打超薄设计，适配徕卡 M 卡口。<p data-vmark="8c77" style="t...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，消息源 @独立摄影师联合会 现已曝光了星曜新品 MF 28mm F2.8 流光银限定版镜头，该镜头主打超薄设计，适配徕卡 M 卡口。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/054.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
@@ -193,12 +195,12 @@
       </div>
       <div class="card card-tech">
         <div class="card-title">消息称国际版小米 18 Ultra 取消发布，OPPO / vivo 收缩海外 Ultra 手机规划</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，消息源卡蒂基 · 辛格（Kartikey Singh）昨日（8 月 17 日）在 X 平台发布推文，指出小米公司可能不会在国际市场上推出小米 18 Ultra 机型。<p data-vmark="e644" style="text...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，消息源卡蒂基 · 辛格（Kartikey Singh）昨日（8 月 17 日）在 X 平台发布推文，指出小米公司可能不会在国际市场上推出小米 18 Ultra 机型。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/048.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">中汽协：7 月汽车出口 104.3 万辆，同比增长 81.3%</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，据中国汽车工业协会分析，2026 年 7 月，出口继续保持高速增长，月度出口量连续两个月超过 100 万辆，新能源汽车出口占比连续两个月超过 50%。<img src="http...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，据中国汽车工业协会分析，2026 年 7 月，出口继续保持高速增长，月度出口量连续两个月超过 100 万辆，新能源汽车出口占比连续两个月超过 50%。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/047.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
@@ -208,22 +210,22 @@
       </div>
       <div class="card card-tech">
         <div class="card-title">赛昉科技正式推出服务器级 RISC-V HPC CPU IP 昉 · 天枢-100</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，赛昉科技 (StarFive) 今日正式宣布推出 RISC-V HPC CPU 内核设计昉 · 天枢-100 (Dubhe-100)。该 IP 已被希奥端计算 (LECARC) 选为智能边缘服务器 CPU 的基础。<p data-vmark="0542" style="text-alig...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，赛昉科技 (StarFive) 今日正式宣布推出 RISC-V HPC CPU 内核设计昉 · 天枢-100 (Dubhe-100)。该 IP 已被希奥端计算 (LECARC) 选为智能边缘服务器 CPU 的基础。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/045.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">三星 Galaxy A08/A07s 手机曝光：联发科 Helio G99 芯片、水滴屏</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 91Mobile 昨日（8 月 17 日）发布博文，报道称在 Google Play Console 数据库中，挖掘发现 Galaxy A08 和 Galaxy A07s 两款三星手机踪迹。<p data-vmark="...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 91Mobile 昨日（8 月 17 日）发布博文，报道称在 Google Play Console 数据库中，挖掘发现 Galaxy A08 和 Galaxy A07s 两款三星手机踪迹。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/042.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">英国政府资助梅赛德斯-奔驰旗下 YASA，减少电动汽车电机稀土依赖</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，梅赛德斯-奔驰旗下牛津大学衍生企业 YASA 当地时间本月 10 日宣布，该公司获得英国政府 DRIVE35 零排放汽车技术创新计划拨款，将作为牵头方领导 Project Resilience“韧性计划”。<p data-vmar...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，梅赛德斯-奔驰旗下牛津大学衍生企业 YASA 当地时间本月 10 日宣布，该公司获得英国政府 DRIVE35 零排放汽车技术创新计划拨款，将作为牵头方领导 Project Resilience“韧性计划”。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/041.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">三星 Galaxy S26 FE 手机曝光：Exynos 2500 芯片，8GB 内存</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 YtechB 昨日（8 月 17 日）发布博文，报道称<span class="hot-topic" data-topic-logo="//pimg.ithome.com/products/2026/03/03/145cd156-9595-430b-80ee-f727a...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 YtechB 昨日（8 月 17 日）发布博文，报道称</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/039.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
@@ -243,7 +245,7 @@
       </div>
       <div class="card card-tech">
         <div class="card-title">格力技工学校近期启动首届招生：董明珠亲自当校长，入校即入企，毕业即适岗</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，据“格力文化”官方 8 月 17 日消息，近日，经珠海市人力资源和社会保障局批准，由格力电器创办的珠海市格力技工学校正式获得招生资格，招生代码为 9800242，将于近期正式启动首届招生。<p data-vmark="a2ee"</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，据“格力文化”官方 8 月 17 日消息，近日，经珠海市人力资源和社会保障局批准，由格力电器创办的珠海市格力技工学校正式获得招生资格，招生代码为 9800242，将于近期正式启动首届招生。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/020.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
@@ -263,7 +265,7 @@
       </div>
       <div class="card card-tech">
         <div class="card-title">神舟推出 2026 款战神 T9 笔记本：i7-14700HX + RTX5070 售 8999 元</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，神舟现已在京东上架 2026 款战神 T9 笔记本，该机采用英特尔酷睿 i7-14700HX + 16GB RAM + 500GB SSD + RTX5070 规格，定价为 8999 元，将于 8 月 26 日开启预约。<p st...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，神舟现已在京东上架 2026 款战神 T9 笔记本，该机采用英特尔酷睿 i7-14700HX + 16GB RAM + 500GB SSD + RTX5070 规格，定价为 8999 元，将于 8 月 26 日开启预约。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/991/001.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
@@ -278,57 +280,57 @@
       </div>
       <div class="card card-tech">
         <div class="card-title">汉王推出 6 英寸黑白墨水屏电纸书 N6 Pro：6.8mm 厚度 189g 重量、8192 级压感手写，2199 元</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，汉王现已推出 N6 Pro 黑白墨水屏电纸书，该机整体造型小巧，适合作为墨水屏笔记本使用，定价为 2199 元。<a contenteditable="false" href="https://u.jd.co...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，汉王现已推出 N6 Pro 黑白墨水屏电纸书，该机整体造型小巧，适合作为墨水屏笔记本使用，定价为 2199 元。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/998.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">优派推出 Fast IPS 显示器 VX27G26-2K-10：27" QHD 超频 340Hz</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，ViewSonic（优派）近日带来了网咖电竞游戏显示器 VX27G26-2K-10。这一型号采用 27" Fast IPS 面板，拥有 2560×1440 分辨率，原生刷新率 320Hz 并超频至 340Hz。<p data-vm...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，ViewSonic（优派）近日带来了网咖电竞游戏显示器 VX27G26-2K-10。这一型号采用 27" Fast IPS 面板，拥有 2560×1440 分辨率，原生刷新率 320Hz 并超频至 340Hz。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/996.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">石头迷你洗烘一体机 Z1 Mini Pro 体验：当第二台洗衣机成为有娃家庭的新刚需</div>
-        <div class="card-summary">8 月 18 日，石头迷你洗烘一体机 Z1 Mini Pro 正式上市。这是一款面向精细化洗护场景的迷你洗烘产品，重点放在了小容量机身下的洗净、除菌、烘干以及衣物护理能力上，满足宝宝衣物、贴身衣物等小件织物的独立洗护需求。<p data-vmar...</div>
+        <div class="card-summary">8 月 18 日，石头迷你洗烘一体机 Z1 Mini Pro 正式上市。这是一款面向精细化洗护场景的迷你洗烘产品，重点放在了小容量机身下的洗净、除菌、烘干以及衣物护理能力上，满足宝宝衣物、贴身衣物等小件织物的独立洗护需求。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/995.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">伪造下单页面、诱导共享屏幕，总台揭秘免费探店、免费试吃诈骗链条</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，中央广播电视总台中国之声今日揭秘了免费探店、免费试吃诈骗链条。免费探店、免费试吃，是指商家提供免费餐食，消费者体验后发布图文笔记。然而这类推广模式正在被诈骗分子盯上，一些诈骗分子在社交平台发布“免费探店”“素人也可报名”等信息，<st...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，中央广播电视总台中国之声今日揭秘了免费探店、免费试吃诈骗链条。免费探店、免费试吃，是指商家提供免费餐食，消费者体验后发布图文笔记。然而这类推广模式正在被诈骗分子盯上，一些诈骗分子在社交平台发布“免费探店”“素人也可报名”等信息，</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/994.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">致态 Ti600s 固态硬盘发售：新一代 Xtacking 4.0 QLC，随机写入提升 114%</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，致态 (ZHITAI) 此前在 2023 年推出了基于 Xtacking 3.0 QLC NAND 闪存的 M.2 固态硬盘 Ti600。而在今日，致态宣布推出升级至 Xtacking 4.0 QLC 的 Ti600s</...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，致态 (ZHITAI) 此前在 2023 年推出了基于 Xtacking 3.0 QLC NAND 闪存的 M.2 固态硬盘 Ti600。而在今日，致态宣布推出升级至 Xtacking 4.0 QLC 的 Ti600s</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/981.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">海南文昌商业航天发射场 1、2 号工位实现常态化运营，卫星超级工厂进入试生产</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，据海南日报今日报道，8 月 17 日上午，海南省“开局起步‘十五五’”系列主题新闻发布会迎来市县层面第二场 —— 文昌市专场。面向未来五年，文昌将锚定航天强国使命，全力建设国际一流航天科技城，形成具有全球影响力的航天产业集群，加速实现“文昌造、文昌发”。<p data-vmark="94...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，据海南日报今日报道，8 月 17 日上午，海南省“开局起步‘十五五’”系列主题新闻发布会迎来市县层面第二场 —— 文昌市专场。面向未来五年，文昌将锚定航天强国使命，全力建设国际一流航天科技城，形成具有全球影响力的航天产业集群，加速实现“文昌造、文昌发”。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/973.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">酷态科推出 CP 模块风扇 Plus“夹式延长线套装”：底座支持夹 / 立两用，109 元</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，酷态科宣布推出 CP 模块风扇 Plus“夹式延长线套装”，其中套装版定价为 109 元，延长线单体版定价为 49 元。<...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，酷态科宣布推出 CP 模块风扇 Plus“夹式延长线套装”，其中套装版定价为 109 元，延长线单体版定价为 49 元。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/972.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">需求超预期：华硕 RTX Spark 笔记本 ProArt P16/P14 首批配额售罄</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 videocardz 昨日（8 月 17 日）发布博文，报道称在 2026 年第 2 季度财报电话会议上，华硕表示首批搭载英伟达 RTX Spark 的产品已被渠道合作伙伴订购一空。<p data-vmark="3b3a...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 videocardz 昨日（8 月 17 日）发布博文，报道称在 2026 年第 2 季度财报电话会议上，华硕表示首批搭载英伟达 RTX Spark 的产品已被渠道合作伙伴订购一空。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/952.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">Steam 开启 2026 年度“弹球、弹珠机与保龄球游戏节”促销活动，《BALL x PIT》6.6 折后 38.28 元等</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，Steam 平台现已开启 2026 年度“弹球、弹珠机与保龄球游戏节”活动，多款益智策略类游戏迎来折扣，活动将于北京时间 8 月 21 日凌晨 1 点结束，IT之家附游戏促销页（<a href="https://store.steampowered....</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，Steam 平台现已开启 2026 年度“弹球、弹珠机与保龄球游戏节”活动，多款益智策略类游戏迎来折扣，活动将于北京时间 8 月 21 日凌晨 1 点结束，IT之家附游戏促销页（</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/946.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">Counterpoint：未来五年超 1.3 亿颗先进封装 AI 芯片出货，英特尔挑战台积电</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，市场研究机构 Counterpoint 今日发文，AI 加速器的出货量将大规模推动先进封装的需求：预计未来五年内，将有超过 1.3 亿颗 GPU / AI ASIC 芯片采用先进封装的片上计算内存，从而创造近 2 万亿美元<span class="e...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，市场研究机构 Counterpoint 今日发文，AI 加速器的出货量将大规模推动先进封装的需求：预计未来五年内，将有超过 1.3 亿颗 GPU / AI ASIC 芯片采用先进封装的片上计算内存，从而创造近 2 万亿美元</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/924.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">华硕 GPU Tweak III 获 v2.1.8.0 稳定版更新，为兼容显卡带来自动安全关机</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，由华硕 (ASUS) 推出的 GPU Tweak III 是一款便捷的显卡超频、设定、监控工具应用程序。而在当地时间 17 日，该软件迎来了 v2.1.8.0 稳定版更新。<im...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，由华硕 (ASUS) 推出的 GPU Tweak III 是一款便捷的显卡超频、设定、监控工具应用程序。而在当地时间 17 日，该软件迎来了 v2.1.8.0 稳定版更新。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/938.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
@@ -338,22 +340,22 @@
       </div>
       <div class="card card-tech">
         <div class="card-title">泰坦军团推出“P2710R3”27 英寸显示器：2K 245Hz 超频，866 元</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，泰坦军团现已在京东上架“P2710R3”27 英寸显示器，该机主打 2K 245Hz，定价为 866 元。<a contenteditable="false" href="https://u.jd.com/k...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，泰坦军团现已在京东上架“P2710R3”27 英寸显示器，该机主打 2K 245Hz，定价为 866 元。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/923.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">Supreme 公布 2026 秋冬产品阵容，24K 镀金 Analogue Pocket 掌机在列</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，时尚品牌 Supreme 近日公布了其 2026 年秋冬季产品阵容，其中“配件”部分包含多款科技硬件在内的一系列联名商品。<img src="https://img.ithome...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，时尚品牌 Supreme 近日公布了其 2026 年秋冬季产品阵容，其中“配件”部分包含多款科技硬件在内的一系列联名商品。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/921.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">追觅推出 Micro Mist 5“精华灌注高速吹风机”，849 元</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，追觅宣布推出一款 Micro Mist 5“精华灌注高速吹风机”，首发价 849 元，部分地区国补后 798 元。<im...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，追觅宣布推出一款 Micro Mist 5“精华灌注高速吹风机”，首发价 849 元，部分地区国补后 798 元。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/918.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">荣耀 Robot Phone 今日开售：行业首创钛合金灵巧云台，9999 元起</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，<span class="hot-topic" data-topic-logo="//pimg.ithome.com/products/2026/08/13/99ad895f-5f92-4642-831a-8cf82cd57363.png?x-bce-process=image/format,f_auto"...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/917.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
@@ -368,7 +370,7 @@
       </div>
       <div class="card card-tech">
         <div class="card-title">全球在建加在运总装机容量最大核电基地：田湾核电 7 号机组装料完成，进入带核调试阶段</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，据央视新闻今日报道，随着堆芯装载正确性核查完成、保护管组件回装工作开始，位于江苏连云港的田湾核电 7 号机组首次核燃料装载工作圆满结束，进入带核调试阶段，为机组后续反应堆临界、并网发电、商运等奠定了坚实的基础。<p data-vm...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，据央视新闻今日报道，随着堆芯装载正确性核查完成、保护管组件回装工作开始，位于江苏连云港的田湾核电 7 号机组首次核燃料装载工作圆满结束，进入带核调试阶段，为机组后续反应堆临界、并网发电、商运等奠定了坚实的基础。</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/908.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
@@ -418,22 +420,22 @@
       </div>
       <div class="card card-tech">
         <div class="card-title">阿维塔向华为员工已累计交付超 5000 台新车</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，“华为员工首批阿维塔 07L 交付暨 5,000 台交付仪式”于 8 月 16 日在广东东莞华为松山湖园区举行。阿维塔科技副总裁王金海、华为智能汽车解决方案 BU Marketing 与销售服务部副总裁张守卫等出席仪式，共同为华为员工交付新车。截至目前，阿维塔向华为员工已累计交付超 5,000 台新车。交付仪式现场，阿维塔科技副总裁王金海表示：“华为的伙伴们可以说是...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，“华为员工首批阿维塔 07L 交付暨 5,000 台交付仪式”于 8 月 16 日在广东东莞华为松山湖园区举行。阿维塔科技副总裁王金海、华为智能汽车解决方案 BU Marketing 与销售服务部副总裁张守卫等出席仪式，共同为华为员工交付新车。截至目前，阿维塔向华为员工已累计交付超 5,000...</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/904.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">美国在建 60 座大型数据中心年碳排放量将超亿吨，跟 2400 万辆燃油车相当</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，据《金融时报》报道，一项针对亚马逊、谷歌、Meta 和微软目前正在美国建设的 60 座大型数据中心的最新分析显示，这些数据中心全部投入运营后，每年累计可能产生约 1.015 亿吨二氧化碳排放量，相当于 2025 年美国电力行业全年排放量的约 7%。换个更直观的说法，这相当于运行 27 座燃煤电厂，或者让美国道路上再增加 2,400 万辆燃油汽车。IT之家注意到，美国...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，据《金融时报》报道，一项针对亚马逊、谷歌、Meta 和微软目前正在美国建设的 60 座大型数据中心的最新分析显示，这些数据中心全部投入运营后，每年累计可能产生约 1.015 亿吨二氧化碳排放量，相当于 2025 年美国电力行业全年排放量的约 7%。换个更直观的说法，这相当于运行 27 座燃煤电厂，或者让美国道路上再增加 2,400...</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/903.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">微软 Win11 预览版已移除拖拽托盘和 WMIC 功能</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 Windows Central 今天（8 月 18 日）发布博文，报道称在 Windows 11 Build 26220.9202 (25H2) 和 28020.2731 (26H1) 预览版中，已移除拖拽托盘（Drag Tray）和 WMIC 功能。IT之家注：拖放托盘是 Windows 11 文件资源管理器中的一种文件共享方式。该功能已测试超过 1 年...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，科技媒体 Windows Central 今天（8 月 18 日）发布博文，报道称在 Windows 11 Build 26220.9202 (25H2) 和 28020.2731 (26H1) 预览版中，已移除拖拽托盘（Drag Tray）和 WMIC 功能。IT之家注：拖放托盘是 Windows 11 文件资源管理器中的一种文件共享方式。该功能已测试超过 1...</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/902.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
         <div class="card-title">荣耀平板 20 Pro 柔光版海外上线，搭载高通骁龙 8s Gen 4</div>
-        <div class="card-summary">IT之家 8 月 18 日消息，荣耀 (HONOR) 现已在其马来西亚等地官网上线荣耀平板 20 Pro 柔光版 (HONOR Pad 20 Pro Paperlike Edition)。此型号可视为荣耀平板 20 的换芯升级版。这款平板电脑运行基于 Android 16 的 MagicOS 10，搭载高通骁龙 8s Gen 4 移动平台，配备 8GB 内存和 256GB 存储（支持 8GB 内存...</div>
+        <div class="card-summary">IT之家 8 月 18 日消息，荣耀 (HONOR) 现已在其马来西亚等地官网上线荣耀平板 20 Pro 柔光版 (HONOR Pad 20 Pro Paperlike Edition)。此型号可视为荣耀平板 20 的换芯升级版。这款平板电脑运行基于 Android 16 的 MagicOS 10，搭载高通骁龙 8s Gen 4 移动平台，配备 8GB 内存和 256GB 存储（支持 8GB...</div>
         <div class="card-meta"><span class="card-source">IT之家</span> <a class="card-link" href="https://www.ithome.com/0/990/900.htm" target="_blank" rel="noopener">查看原文</a></div>
       </div>
       <div class="card card-tech">
